@@ -1,0 +1,12 @@
+#content {
+    border: 1px black solid;
+}
+
+.outstanding-products,
+.high-end-product,
+.mid-range-product,
+.cheap-products,
+.accessory,
+.product-list {
+    border: 1px black solid;
+}
