@@ -1,0 +1,73 @@
+#content, .accessory, .cheap-products, .high-end-product, .mid-range-product, .outstanding-products {
+    border: 1px #00ffc4 solid;
+
+}
+
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+body {
+
+}
+
+#content {
+    width: 80%;
+
+}
+
+.product-list-title {
+    display: flex;
+    overflow: auto;
+
+
+    height: 40px;
+
+    margin: 10px 0;
+    flex-direction: row;
+}
+
+.title-product {
+    font-size: 22px;
+}
+
+.list-related-tag {
+    margin-left: 50%;
+
+
+}
+
+.product-list-title .list-related-tag .brands {
+    /*display: block;*/
+    padding: 5px 10px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin-right: 10px;
+    float: right;
+
+}
+
+.product-list {
+    display: flex;
+}
+
+.product-list-sub {
+
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    height: calc(95% - 20px);
+    margin: auto;
+    min-height: 250px;
+
+
+
+
+
+}
+
+
+
+
