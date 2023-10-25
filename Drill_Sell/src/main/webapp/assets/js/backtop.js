@@ -1,8 +1,6 @@
-$(document).ready(function () {
+function backToTop() {
     $(window).scroll(function () {
-        // khoảng cách giữa màng hình và đầu lề bằng 0
         if ($(this).scrollTop()) {
-            // ẩn nút
             $('#backtop').fadeIn();
         } else {
             $('#backtop').fadeOut();
@@ -11,4 +9,4 @@ $(document).ready(function () {
     $('#backtop').click(function () {
         $('html, body').animate({ scrollTop: 0 }, 500);
     });
-});
+}
