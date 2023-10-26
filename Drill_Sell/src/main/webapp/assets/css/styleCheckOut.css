@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav-bg-class .nav-outer{
+    margin-top: 0;
+}
+
