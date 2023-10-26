@@ -2617,7 +2617,6 @@ header{background:#157ed2}
   -moz-transition: all 200ms ease-out 0s;
   -o-transition: all 200ms ease-out 0s;
   transition: all 200ms ease-out 0s;
-  bottom: none;
   bottom: 0px;
 }
 .cnt-homepage .homepage-container .btn-primary {
@@ -5321,7 +5320,7 @@ age-container #owl-main .owl-next {
 }
 .shopping-cart .shopping-cart-table table tbody tr .romove-item a:hover,
 .shopping-cart .shopping-cart-table table tbody tr .romove-item a:focus {
-  color: #ff000 !important;
+
 }
 .shopping-cart .shopping-cart-table table tbody tr .cart-image .entry-thumbnail {
   display: block;
