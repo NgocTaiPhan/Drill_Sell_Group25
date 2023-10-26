@@ -154,6 +154,26 @@ img[src="assets/images/blank.gif"] {
   border-radius:2px
 
 }
+.nameLogo{
+  margin: 0;
+  padding: 0;
+}
+.nameLogo .name{
+  margin-top: 0;
+   padding-left: 520px;
+  font-weight: bold;
+  color:white;
+}
+.logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 70%;
+
+}
+.top-cart-row .dropdown-cart{
+  margin-right: 100px;
+}
+
 .btn-black {
   -webkit-transition: all linear 0.2s;
   -moz-transition: all linear 0.2s;
