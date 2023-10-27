@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets\css\bootstrap.min.css">
 
     <!-- Customizable CSS -->
-    <link rel="stylesheet" href="assets/css/styleCheckOut.css">
+
     <link rel="stylesheet" href="assets\css\main.css">
     <!-- Icons/Glyphs -->
     <link rel="stylesheet" href="assets\css\font-awesome.css">
@@ -25,6 +25,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800'
           rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/styleCheckOut.css">
     <link rel="stylesheet" href="assets\css\StyleCard.css">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
@@ -55,7 +56,7 @@
     <!-- Helper CSS -->
     <link rel="stylesheet" href="css/helper.css">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Modernizr js -->
@@ -235,14 +236,17 @@
     </div>
 </div>
 <div class="address">
-    <p>Địa chỉ nhận hàng</p>
-    <div class="thongTin">
-        <input type="text" id="id_cua_phan_tu_nhap_lieu" name="name" placeholder="Tên và số điện thoại">
-        <input type="text" id="diaChi" name="addres" placeholder="Địa chỉ của bạn">
-        <button>Thay đổi</button>
-    </div>
+   <div class="nhanHang">
+       <p>Địa chỉ nhận hàng</p>
+       <div class="thongTin">
+           <input type="text" id="id_cua_phan_tu_nhap_lieu" name="name" placeholder="Tên và số điện thoại">
+           <input type="text" id="diaChi" name="addres" placeholder="Địa chỉ của bạn">
+           <button class="apDung">Áp dụng</button>
+           <button class="thayDoi">Thay đổi</button>
+       </div>
+   </div>
     <div class="sanPham">
-        <table>
+        <table class="table">
             <thead>
             <tr>
                 <th class="cart-product-name">Sản phẩm</th>
@@ -263,20 +267,21 @@
                 <td class="product-subtotal"><span class="amount">468.000 VND</span></td>
             </tr>
         </table>
-        <div class="thongKe">
+    </div>
+    <div class="thongKe">
            <label>Lời nhắn: </label>
-            <input type="text" name="loiNhan" id="loiNhan" placeholder="Lưu ý cho người bán hàng">
-            <div class="vanChuyen">
-                <p>Phí vận chuyển: </p>
-                <input type="text" name="soTien" value="28.000 VND">
-            </div>
-        </div>
+           <input type="text" name="loiNhan" id="loiNhan" placeholder="Lưu ý cho người bán hàng">
         <div class="tongTien">
             <p>Tổng tiền (1 sản phẩm): </p>
             <input type="text" name="tongTien" value="468.000 VND">
         </div>
+        <div class="vanChuyen">
+            <p>Phí vận chuyển: </p>
+            <input class="v" type="text" name="soTien" value="28.000 VND">
+        </div>
 
     </div>
+
 
     <div class="thanhToan">
         <div class="phuongThuc">
@@ -294,22 +299,22 @@
                     <th></th>
                 </tr>
                 <tr> <td>  <label>Tổng tiền hàng: </label></td>
-                    <td> <input type="text" name="tienHang" value="4564"> <br></td>
+                    <td> <input type="text" name="tienHang" value="468.000 VND"> <br></td>
                 </tr>
 
                 <tr>
-                    <td> <label>Ph vận chuyển: </label></td>
-                    <td>  <input type="text" name="tienHang" value="4564"> <br></td>
+                    <td> <label>Phí vận chuyển: </label></td>
+                    <td>  <input type="text" name="tienHang" value="28.000 VND"> <br></td>
                 </tr>
                 <tr>
                     <td> <label>Tổng thanh toán: </label></td>
-                    <td> <input type="text" name="tienHang" value="4564"></td>
+                    <td> <input type="text" name="tienHang" value=" 496.000 VND"></td>
 
                 </tr>
             </table>
 
         </div>
-        <button>Đặt hàng</button>
+        <button class="datHang">Đặt hàng</button>
     </div>
 </div>
 </body>
