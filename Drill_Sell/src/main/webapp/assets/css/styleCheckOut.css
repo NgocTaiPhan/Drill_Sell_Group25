@@ -3,9 +3,163 @@
     padding: 0;
     list-style: none;
     font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
+
+}
+.list-unstyled a{
+    font-size: 13px;
 }
 .nav-bg-class .nav-outer{
     margin-top: 0;
+}
+.address{
+    width: 1200px;
+    height: 1200px;
+    margin: auto;
+}
+.address .nhanHang{
+    padding-top: 10px;
+    border: 0.5px solid #c3c3c3;
+    background: white;
+    height: 100px;
+}
+.address .nhanHang p{
+    font-size: 23px;
+    font-weight: bold;
+    color: #2a6496;
+    margin-left: 30px;
+}
+#id_cua_phan_tu_nhap_lieu{
+    margin-left: 30px;
+    width: 250px;
+    height: 30px;
+    border: #c3c3c3;
+}
+#diaChi{
+    margin-left: 15px;
+    width: 690px;
+    height: 30px;
+    border: #c3c3c3;
+
+}
+.thongTin button{
+    margin-left: 15px;
+    background: #157ed2;
+    border: none;
+    color: white;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s; /* Thêm hiệu ứng chuyển đổi cho đổ bóng */
+}
+.thongTin button:hover{
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Thiết lập đổ bóng khi nút được hover */
+}
+
+.sanPham{
+    border: 0.5px solid #c3c3c3;
+    background: white;
+    height: 250px;
+}
+.sanPham .li-product-thumbnail img{
+    width: 50px;
+    height: 50px;
+}
+#loiNhan{
+
+    height: 100px;
+    width: 400px;
+    margin: 4px;
+}
+
+.sanPham th{
+    color: #2a6496;
+}
+.vanChuyen{
+    float: right;
+    margin-right: 30px;
+    margin-top: 40px;
+}
+.vanChuyen p, .v{
+    display: inline;
+}
+.thongKe label{
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2a6496;
+}
+.thongKe p{
+    font-weight: bold;
+    color: #2a6496;
+}
+.thongKe{
+    border: 0.5px solid #c3c3c3;
+    background: white;
+}
+.thongKe .vanChuyen input{
+    width: 110px;
+    border: none;
+}
+.tongTien{
+    margin-top: 40px;
+    float: right;
+    margin-right: 47px;
+
+}
+.tongTien input{
+    border: none;
+
+}
+.thanhToan{
+    border: 0.5px solid #c3c3c3;
+    background: white;
+    height: 200px;
+
+}
+.thanhToan .phuongThuc{
+    border-bottom: 0.5px solid #c3c3c3;
+    height:30px;
+    margin-top: 7px;
+    color: #2a6496;
+}
+.thanhToan .phuongThuc label{
+
+    margin-left:10px;
+}
+#luachon{
+    float: right;
+    margin-right: 40px;
+    color: black;
+}
+.thanhToan .container table{
+    float: right;
+    margin-top: 20px;
+}
+.thanhToan .datHang{
+    margin-top: 20px;
+    float: right;
+}
+.container label{
+    color: #2a6496;
+}
+.container table input{
+    border: none;
+    width: 150px;
+}
+.thanhToan .datHang{
+    margin-left: 15px;
+    background: #157ed2;
+    border: none;
+    color: white;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+   margin-right: 30px;
+    transition: box-shadow 0.3s; /* Thêm hiệu ứng chuyển đổi cho đổ bóng */
+}
+.thanhToan .datHang:hover{
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Thiết lập đổ bóng khi nút được hover */
 }
 
