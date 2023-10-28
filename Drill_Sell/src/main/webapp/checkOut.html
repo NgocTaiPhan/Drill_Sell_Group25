@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html><!doctype html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets\css\bootstrap.min.css">
 
     <!-- Customizable CSS -->
+
     <link rel="stylesheet" href="assets\css\main.css">
     <!-- Icons/Glyphs -->
     <link rel="stylesheet" href="assets\css\font-awesome.css">
@@ -24,6 +25,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800'
           rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/styleCheckOut.css">
     <link rel="stylesheet" href="assets\css\StyleCard.css">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
@@ -71,15 +73,9 @@
             <div class="header-top-inner">
                 <div class="cnt-account">
                     <ul class="list-unstyled">
-                        <li><a href="account.html"><i class="icon fa fa-user"></i>Tài khoản</a></li>
+                        <li><a href="#"><i class="icon fa fa-user"></i>Tài khoản</a></li>
                         <li><a href="card.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-
-
-
-                        <li><a href="checkout.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-
                         <li><a href="checkOut.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-
                         <li><a href="login.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
@@ -234,94 +230,92 @@
         <div class="breadcrumb-content">
             <ul>
                 <li><a href="home.html">Trang chủ</a></li>
-                <li class="active">Giỏ hàng</li>
+                <li class="active">Thanh toán</li>
             </ul>
         </div>
     </div>
 </div>
-<!-- Li's Breadcrumb Area End Here -->
-<!--Shopping Cart Area Strat-->
-<div class="Shopping-cart-area pt-60 pb-60">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <form action="#">
-                    <div class="table-content table-responsive">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th class="li-product-remove">Xóa</th>
-                                <th class="li-product-sub">Chọn</th>
-                                <th class="li-product-thumbnail">Hình ảnh</th>
-                                <th class="cart-product-name">Thông tin</th>
-                                <th class="li-product-price">Đơn Gía</th>
-                                <th class="li-product-quantity">Số lượng</th>
-                                <th class="li-product-subtotal">Thành tiền</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                <td class="sub"><input type="checkbox"></td>
-                                <td class="li-product-thumbnail"><a href="#"><img src="assets/images/shoppingCart/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"></a></td>
-                                <td class="li-product-name"><a href="#">Máy khoan động lực Bosch GSB 16 RE -
-                                    06012281K1</a></td>
-                                <td class="li-product-price"><span class="amount">468.00 VND</span></td>
-                                <td class="quantity">
-                                    <div class="cart-plus-minus">
-                                        <input class="cart-plus-minus-box" value="1" type="number">
-                                    </div>
-                                </td>
-                                <td class="product-subtotal"><span class="amount">468.00 VND</span></td>
-                            </tr>
-                            <tr>
-                                <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                <td class="sub"><input type="checkbox"></td>
-                                <td class="li-product-thumbnail"><a href="#"><img src="assets/images/shoppingCart/dau-khoan-co-khoa-13mm-bosch-2608571079-g.jpg" alt="Li's Product Image"></a></td>
-                                <td class="li-product-name"><a href="#">Mũi khoan động lực Bosch GSB </a></td>
-                                <td class="li-product-price"><span class="amount">500.000 VND</span></td>
-                                <td class="quantity">
-
-                                    <div class="cart-plus-minus">
-                                        <input class="cart-plus-minus-box"  value="1" type="number">
-
-                                    </div>
-                                </td>
-                                <td class="product-subtotal"><span class="amount">500.000 VND</span></td>
-                            </tr>
-                            </tbody>
-                        </table>
+<div class="address">
+   <div class="nhanHang">
+       <p>Địa chỉ nhận hàng</p>
+       <div class="thongTin">
+           <input type="text" id="id_cua_phan_tu_nhap_lieu" name="name" placeholder="Tên và số điện thoại">
+           <input type="text" id="diaChi" name="addres" placeholder="Địa chỉ của bạn">
+           <button class="apDung">Áp dụng</button>
+           <button class="thayDoi">Thay đổi</button>
+       </div>
+   </div>
+    <div class="sanPham">
+        <table class="table">
+            <thead>
+            <tr>
+                <th class="cart-product-name">Sản phẩm</th>
+                <th class="li-product-price">Đơn Gía</th>
+                <th class="li-product-quantity">Số lượng</th>
+                <th class="li-product-subtotal">Thành tiền</th>
+            </tr>
+            </thead>
+            <tr>
+                <td class="li-product-thumbnail"><a href="#"><img src="assets/images/shoppingCart/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"> Máy khoan động lực Bosch GSB 16 RE -
+                    06012281K1</a></td>
+                <td class="li-product-price"><span class="amount">468.00 VND</span></td>
+                <td class="quantity">
+                    <div class="cart-plus-minus">
+                        <input class="cart-plus-minus-box" value="1" type="number">
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="coupon-all">
-                                <div class="coupon">
-                                    <input id="coupon_code" class="input-text" name="coupon_code" value="" placeholder="Nhập mã" type="text">
-                                    <input class="button" name="apply_coupon" value="Áp mã" type="submit">
-                                </div>
-                                <div class="coupon2">
-                                    <input class="button" name="update_cart" value="Cập nhật giỏ hàng" type="submit">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rows">
-                        <div class="col-md-5 ml-auto">
-                            <div class="cart-page-total">
-                                <h2>Thanh toán</h2>
-                                <ul>
-                                    <li>Đơn giá <span>968.000 VND</span></li>
-                                    <li>Tổng tiền <span>968.000 VND</span></li>
-                                </ul>
-                                <a href="#">Thanh toán</a>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
+                </td>
+                <td class="product-subtotal"><span class="amount">468.000 VND</span></td>
+            </tr>
+        </table>
+    </div>
+    <div class="thongKe">
+           <label>Lời nhắn: </label>
+           <input type="text" name="loiNhan" id="loiNhan" placeholder="Lưu ý cho người bán hàng">
+        <div class="tongTien">
+            <p>Tổng tiền (1 sản phẩm): </p>
+            <input type="text" name="tongTien" value="468.000 VND">
         </div>
+        <div class="vanChuyen">
+            <p>Phí vận chuyển: </p>
+            <input class="v" type="text" name="soTien" value="28.000 VND">
+        </div>
+
+    </div>
+
+
+    <div class="thanhToan">
+        <div class="phuongThuc">
+            <label for="luachon">Phương Thức thanh toán:</label>
+            <select id="luachon" name="luachon">
+                <option value="lua-chon-1">Thanh toán khi nhận hàng</option>
+                <option value="lua-chon-2">Thanh toán qua ngân hàng</option>
+            </select>
+
+        </div>
+        <div class="container">
+            <table>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr> <td>  <label>Tổng tiền hàng: </label></td>
+                    <td> <input type="text" name="tienHang" value="468.000 VND"> <br></td>
+                </tr>
+
+                <tr>
+                    <td> <label>Phí vận chuyển: </label></td>
+                    <td>  <input type="text" name="tienHang" value="28.000 VND"> <br></td>
+                </tr>
+                <tr>
+                    <td> <label>Tổng thanh toán: </label></td>
+                    <td> <input type="text" name="tienHang" value=" 496.000 VND"></td>
+
+                </tr>
+            </table>
+
+        </div>
+        <button class="datHang">Đặt hàng</button>
     </div>
 </div>
-
 </body>
 </html>

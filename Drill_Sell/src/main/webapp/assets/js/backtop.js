@@ -1,4 +1,4 @@
-function backToTop() {
+$(document).ready(function(){
     $(window).scroll(function () {
         if ($(this).scrollTop()) {
             $('#backtop').fadeIn();
@@ -6,7 +6,7 @@ function backToTop() {
             $('#backtop').fadeOut();
         }
     });
-    $('#backtop').click(function () {
+    $('#backtop').click(function() {
         $('html, body').animate({ scrollTop: 0 }, 500);
     });
-}
+});
