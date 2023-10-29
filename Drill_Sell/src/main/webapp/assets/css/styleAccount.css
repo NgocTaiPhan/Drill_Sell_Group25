@@ -1,0 +1,118 @@
+body{
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container .left{
+    width: 250px;
+    height: 320px;
+
+}
+.left{
+    margin-top: 20px;
+}
+
+ #img{
+    width: 50px;
+    height: 50px;
+     border-radius: 60%;
+     border: 0.5px solid #9e9e9e;
+}
+ #name{
+     border: none;
+ }
+
+ .left .daiDien{
+     display: flex;
+     margin-top: 10px;
+ }
+ #name{
+     margin-top: 5px;
+     height: 40px;
+     background: #f3f3f3;
+ }
+
+ #img, #name{
+     display: inline-block;
+     margin-left: 5px;
+
+ }
+.myAccount .top{
+    display: flex;
+    margin-top: 10px;
+
+}
+
+.top .fa-solid,
+.top .accounts{
+    display: inline-block;
+    padding-left: 25px;
+
+}
+
+.myAccount .list{
+    margin-left: 70px;
+}
+
+.myAccount .list li a{
+    color: black;
+}
+.myAccount .list li{
+    padding-top: 10px;
+}
+.myAccount .list .first{
+    padding-top: 0px;
+}
+.container .borders{
+    display: flex;
+}
+.borders .center{
+    margin-top: 10px;
+    background: white;
+    width: 850px;
+    height: 700px;
+}
+.container .center .top{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 700px;
+
+    padding-left: 45px;
+}
+.borders .center .first{
+    font-size: 23px;
+    padding-top: 5px;
+}
+
+.center_information #tenDangNhap{
+    border: none;
+
+}
+.center_information .table{
+    width: 750px;
+    margin: auto;
+}
+.center_information .change{
+    color: #2a6496;
+}
+
+
+.container  .save{
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-left: 15px;
+    background: #157ed2;
+    border: none;
+    color: white;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    transition: box-shadow 0.3s; /* Thêm hiệu ứng chuyển đổi cho đổ bóng */
+}
+.container  .save:hover{
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Thiết lập đổ bóng khi nút được hover */
+}

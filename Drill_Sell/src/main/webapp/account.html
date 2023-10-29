@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets\css\bootstrap.min.css">
 
     <!-- Customizable CSS -->
-
+    <link rel="stylesheet" href="assets/css/styleAccount.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="assets\css\main.css">
@@ -52,11 +52,9 @@
             <div class="header-top-inner">
                 <div class="cnt-account">
                     <ul class="list-unstyled">
-                        <li><a href="#"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                        <li><a href="main.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-
-
-                        <li><a href="#"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="account.html"><i class="icon fa fa-user"></i>Tài khoản</a></li>
+                        <li><a href="card.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="checkOut.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
@@ -82,6 +80,10 @@
                     <!-- ============================================================= LOGO : END ============================================================= -->
                 </div>
                 <!-- /.logo-holder -->
+                <div class="nameLogo">
+                    <h1 class="name">MÁY KHOAN</h1>
+
+                </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder">
                     <!-- /.contact-row -->
@@ -201,33 +203,46 @@
 
 </header>
 
-<div class="container">
-    <div class="left">
-        <div class="daiDien">
-                <li> <a href="#" ><img src="#" alt="image"></a> </li>
-                <li><input type="text" name="tenTK" placeholder="Tên tài khoản"></li>
+<div class="breadcrumb-area">
+    <div class="container">
+        <div class="breadcrumb-content">
+            <ul>
+                <li><a href="home.html">Trang chủ</a></li>
+                <li class="active">Tài khoản</li>
+            </ul>
         </div>
+    </div>
+</div>
 
-        <div class="myAccount">
-            <div class="top">
-                <i class="fa-solid fa-user"></i>
-                <p>Tài khoản của tôi</p>
+<div class="container">
+    <div class="borders">
+        <div class="left">
+            <div class="daiDien">
+                <div>  <input  id="img" type="image" name="img" src="assets/images/logo4.png"></div>
+                <div ><input id="name" type="text" name="tenTK" placeholder="Tên tài khoản"></div>
+            </div>
+
+            <div class="myAccount">
+                <div class="top">
+                    <i class="fa-solid fa-user"></i>
+                    <p class="accounts">Tài khoản của tôi</p>
+                </div>
+
+                <ul class="list">
+                    <li class="first"><a href="#">Hồ sơ</a> </li>
+                    <li> <a href="#">Ngân hàng</a> </li>
+                    <li><a href="#">Địa chỉ</a> </li>
+                    <li><a href="#"> Đổi mật khẩu </a></li>
+                    <li><a href="#">Thông báo</a> </li>
+                    <li><a href="#">Đơn mua</a> </li>
+
+                </ul>
 
             </div>
-            <ul class="list">
-                <li><a href="#">Hồ sơ</a> </li>
-                <li> <a href="#">Ngân hàng</a> </li>
-                <li><a href="#">Địa chỉ</a> </li>
-                <li><a href="#"> Đổi mật khẩu </a></li>
-                <li><a href="#">Thông báo</a> </li>
-                <li><a href="#">Đơn mua</a> </li>
-
-            </ul>
-
         </div>
         <div class="center">
             <div class="top">
-                <p>Hồ sơ của tôi</p>
+                <p class="first">Hồ sơ của tôi</p>
                 <p>Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
             </div>
             <div class="center_information">
@@ -236,17 +251,17 @@
 
                     <tr>
                         <td>Tên đăng nhập: </td>
-                        <td><input type="text" name="tenDangNhap" id="tenDangNhap"></td>
+                        <td><input type="text" name="tenDangNhap" id="tenDangNhap" placeholder="Tên đăng nhập..."></td>
                     </tr>
                     <tr>
                         <td>Email: </td>
                         <td><input type="text" name="email" id="email"></td>
-                        <td><li><a href="#">Thay đổi</a> </li></td>
+                        <td><li><a class="change" href="#">Thay đổi</a> </li></td>
                     </tr>
                     <tr>
                         <td>Số điện thoại: </td>
                         <td><input type="text" name="sdt" id="sdt"></td>
-                        <td><li><a href="#">Thay đổi</a> </li></td>
+                        <td><li><a class="change" href="#">Thay đổi</a> </li></td>
 
                     </tr>
                     <tr>
@@ -336,8 +351,8 @@
 
             <button class="save">Lưu</button>
         </div>
-
     </div>
+
 </div>
 
 </body>
