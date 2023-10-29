@@ -209,7 +209,7 @@
 
 </header>
 <div class="breadcrumb">
-    <div class="container">
+    <div class="container" style="white-space: nowrap">
         <div class="breadcrumb-inner">
             <ul class="list-inline list-unstyled">
                 <li><a href="home.html">Trang chủ</a></li>
@@ -259,27 +259,45 @@
                     <p class="text title-tag-line"> Nhập thông tin bên dưới để tạo tài khoản mới</p>
                     <form class="register-form outer-top-xs" role="form">
                         <div class="form-group">
+                            <label class="info-title" for="exampleInputEmail2">Họ và tên <span>*</span></label>
+                            <input type="text" class="form-control unicase-form-control text-input"
+                                   id="full-name">
+                        </div>
+                        <div class="form-group">
+                            <label class="info-title" for="exampleInputEmail2">Địa chỉ <span>*</span></label>
+                            <input type="text" class="form-control unicase-form-control text-input"
+                                   id="">
+                        </div>
+                        <div class="form-group">
+                            <label class="info-title" for="phone-number">Số điện thoại <span>*</span></label>
+                            <input type="tel" class="form-control unicase-form-control text-input" id="phone-number">
+                        </div>
+                        <div class="form-group">
                             <label class="info-title" for="exampleInputEmail2">Địa chỉ email <span>*</span></label>
                             <input type="email" class="form-control unicase-form-control text-input"
                                    id="exampleInputEmail2">
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="username">Tên đăng nhập <span>*</span></label>
-                            <input type="email" class="form-control unicase-form-control text-input" id="username">
-                        </div>
-                        <div class="form-group">
-                            <label class="info-title" for="phone-number">Số điện thoại <span>*</span></label>
-                            <input type="email" class="form-control unicase-form-control text-input" id="phone-number">
+                            <input type="text" class="form-control unicase-form-control text-input" id="username">
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="password">Mật khẩu <span>*</span></label>
-                            <input type="email" class="form-control unicase-form-control text-input" id="password">
+                            <input type="password" class="form-control unicase-form-control text-input" id="password">
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="confirm-password">Nhập lại mật khẩu <span>*</span></label>
-                            <input type="email" class="form-control unicase-form-control text-input"
+                            <input type="password" class="form-control unicase-form-control text-input"
                                    id="confirm-password">
                         </div>
+                        <div class="form-group" style="white-space: nowrap;  ">
+                            <input type="checkbox" class=" form-checkbox-input" id="agree-to-terms"
+                                   style="margin-right: 5px;">
+                            <label class="info-title" for="agree-to-terms">Đồng ý với <a href="rules.html">điều khoản</a> của chúng tôi
+                                <span>*</span></label>
+                        </div>
+
+
                         <button type="submit" class="btn-upper btn btn-primary checkout-page-button">Đăng kí</button>
                     </form>
 
