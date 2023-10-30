@@ -3,7 +3,6 @@
     padding: 0;
     list-style: none;
     font-size: 17px;
-
 }
 .list-unstyled a{
     font-size: 13px;
@@ -13,8 +12,9 @@
 }
 .address{
     width: 1200px;
-    height: 1200px;
+    height: 650px;
     margin: auto;
+    background: white; !important;
 }
 .address .nhanHang{
     padding-top: 10px;
