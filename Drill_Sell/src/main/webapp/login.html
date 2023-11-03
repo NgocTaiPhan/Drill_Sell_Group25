@@ -75,7 +75,7 @@
     </div>
     <!-- /.header-top -->
     <!-- ============================================== TOP MENU : END ============================================== -->
-    <div class="main-header">
+    <div class="main-header" style="position: relative">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
@@ -99,10 +99,18 @@
                     <!-- ============================================================= SEARCH AREA ============================================================= -->
                     <div class="search-area">
                         <form>
-                            <div class="control-group">
+                            <div class="control-group dropdown">
 
-                                <input class="search-field" placeholder="Tìm kiếm...">
+                                <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
+                                       placeholder="Tìm kiếm...">
                                 <a class="search-button" href="#"></a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Máy khoan động lực Bosch GSB 16 RE -
+                                        06012281K1</a></li>
+                                    <li><a href="#">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
+                                    <li><a href="#">Máy khoan pin Makute CD027</a></li>
+                                </ul>
                             </div>
                         </form>
                     </div>
@@ -118,7 +126,7 @@
                                                            href="#">
                         <div class="items-cart-inner">
                             <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
-                            <div class="basket-item-count"><span class="count">4</span></div>
+                            <div class="basket-item-count"><span class="count">1</span></div>
 
                         </div>
                     </a>
@@ -301,7 +309,8 @@
                             <input class="form-control unicase-form-control text-input" id="password" type="password">
                         </div>
                         <div class="form-group">
-                            <label class="info-title" for="confirm-password-register">Nhập lại mật khẩu <span>*</span></label>
+                            <label class="info-title" for="confirm-password-register">Nhập lại mật khẩu
+                                <span>*</span></label>
                             <input class="form-control unicase-form-control text-input" id="confirm-password-register"
                                    type="password">
                         </div>
@@ -326,6 +335,14 @@
 </body>
 <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
 <script>
+    const admin = {
+        email: "admin@gmai.com",
+        password: "123"
+    };
+    const users = {
+        email: "users@gmail.com",
+        password: "123"
+    };
     $(document).ready(function () {
         $('#login-form').submit(function (e) {
             e.preventDefault(); // Ngăn chặn gửi biểu mẫu mặc định
@@ -368,16 +385,36 @@
                     icon: 'error',
                     confirmButtonText: 'Đóng',
                 });
-            } else {
+            } else if (emailLogin === admin.email && passwordLogin === admin.password) {
+                Swal.fire({
+                    title: 'Bạn đang đăng nhập với quyển quản trị',
+                    text: 'Chào mừng',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                });
+                window.location.href = "admin.html";
+            } else if (emailLogin === users.email && passwordLogin === users.password) {
+
                 Swal.fire({
                     title: 'Đăng nhập thành công',
                     text: 'Chào mừng',
                     icon: 'success',
                     confirmButtonText: 'OK',
                 });
+                window.location.href = "account.html";
+            } else {
+                Swal.fire({
+                    title: 'Đăng nhập thất bại',
+                    text: 'Không tìm thấy dữ liệu đăng nhập',
+                    icon: 'error',
+                    confirmButtonText: 'OK',
+                });
+
             }
+
         });
-    });
+    })
+    ;
     $(document).ready(function () {
         $('#register-form').submit(function (e) {
             e.preventDefault(); // Ngăn chặn gửi biểu mẫu mặc định
@@ -461,6 +498,18 @@
         });
     });
 
+    $(document).ready(function () {
+        $("#search").on("keyup", function () {
+            var keyword = $(this).val().toLowerCase();
+            $("#list li").each(function () {
+                if ($(this).text().toLowerCase().indexOf(keyword) === -1) {
+                    $(this).hide();
+                } else {
+                    $(this).show();
+                }
+            });
+        });
+    });
 
 
 </script>

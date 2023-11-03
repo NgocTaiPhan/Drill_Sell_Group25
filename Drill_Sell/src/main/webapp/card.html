@@ -90,14 +90,14 @@
     </div>
     <!-- /.header-top -->
     <!-- ============================================== TOP MENU : END ============================================== -->
-    <div class="main-header">
+    <div class="main-header" style="position: relative">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
 
                     <div class="logo " style="margin:25px 0 50px 100px"><a href="home.html"> <img
-                            src="assets/images/logo4.png" alt="logo"
+                            alt="logo" src="assets/images/logo4.png"
                             style="height: 100px"> </a></div>
 
 
@@ -115,10 +115,18 @@
                     <!-- ============================================================= SEARCH AREA ============================================================= -->
                     <div class="search-area">
                         <form>
-                            <div class="control-group">
+                            <div class="control-group dropdown">
 
-                                <input class="search-field" placeholder="Tìm kiếm...">
+                                <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
+                                       placeholder="Tìm kiếm...">
                                 <a class="search-button" href="#"></a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Máy khoan động lực Bosch GSB 16 RE -
+                                        06012281K1</a></li>
+                                    <li><a href="#">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
+                                    <li><a href="#">Máy khoan pin Makute CD027</a></li>
+                                </ul>
                             </div>
                         </form>
                     </div>
@@ -130,11 +138,11 @@
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 
-                    <div class="dropdown dropdown-cart"><a href="#" class="dropdown-toggle lnk-cart"
-                                                           data-toggle="dropdown">
+                    <div class="dropdown dropdown-cart"><a class="dropdown-toggle lnk-cart" data-toggle="dropdown"
+                                                           href="#">
                         <div class="items-cart-inner">
                             <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
-                            <div class="basket-item-count"><span class="count">4</span></div>
+                            <div class="basket-item-count"><span class="count">1</span></div>
 
                         </div>
                     </a>
@@ -144,8 +152,9 @@
                                     <div class="row">
                                         <div class="col-xs-4">
                                             <div class="image"><a href="#"><img
-                                                    src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                    alt="Ảnh sản phẩm"></a></div>
+                                                    alt="Ảnh sản phẩm"
+                                                    src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"></a>
+                                            </div>
                                         </div>
                                         <div class="col-xs-7">
                                             <h3 class="name"><a href="">Máy khoan động lực Bosch GSB 16 RE -
@@ -162,7 +171,7 @@
                                     <div class="pull-right"><span class="text">Tổng tiền :</span><span class='price'>1.599.000đ</span>
                                     </div>
                                     <div class="clearfix"></div>
-                                    <a href="checkout.html" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
+                                    <a class="btn btn-upper btn-primary btn-block m-t-20" href="checkout.html">Thanh
                                         toán</a>
                                 </div>
                                 <!-- /.cart-total-->
@@ -198,8 +207,8 @@
                 <!--                </div>-->
                 <div class="nav-bg-class">
                     <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse"
-                         style="margin: auto; width: 50%;">
-                        <div class="nav-outer" style="width: 80%;margin-left: 30%">
+                    >
+                        <div class="nav-outer">
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.html">Trang chủ</a></li>
                                 <li class="active  yamm-fw"><a href="product.html">Sản phẩm</a></li>
@@ -240,7 +249,7 @@
 </div>
 <!-- Li's Breadcrumb Area End Here -->
 <!--Shopping Cart Area Strat-->
-<div class="Shopping-cart-area pt-60 pb-60">
+<div class="body-content outer-top-xs" id="top-banner-and-menu">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -262,7 +271,9 @@
                             <tr>
                                 <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
                                 <td class="sub"><input type="checkbox"></td>
-                                <td class="li-product-thumbnail"><a href="#"><img src="assets/images/shoppingCart/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"></a></td>
+                                <td class="li-product-thumbnail"><a href="#"><img
+                                        src="assets/images/shoppingCart/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"></a>
+                                </td>
                                 <td class="li-product-name"><a href="#">Máy khoan động lực Bosch GSB 16 RE -
                                     06012281K1</a></td>
                                 <td class="li-product-price"><span class="amount">468.00 VND</span></td>
@@ -276,13 +287,15 @@
                             <tr>
                                 <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
                                 <td class="sub"><input type="checkbox"></td>
-                                <td class="li-product-thumbnail"><a href="#"><img src="assets/images/shoppingCart/dau-khoan-co-khoa-13mm-bosch-2608571079-g.jpg" alt="Li's Product Image"></a></td>
+                                <td class="li-product-thumbnail"><a href="#"><img
+                                        src="assets/images/shoppingCart/dau-khoan-co-khoa-13mm-bosch-2608571079-g.jpg"
+                                        alt="Li's Product Image"></a></td>
                                 <td class="li-product-name"><a href="#">Mũi khoan động lực Bosch GSB </a></td>
                                 <td class="li-product-price"><span class="amount">500.000 VND</span></td>
                                 <td class="quantity">
 
                                     <div class="cart-plus-minus">
-                                        <input class="cart-plus-minus-box"  value="1" type="number">
+                                        <input class="cart-plus-minus-box" value="1" type="number">
 
                                     </div>
                                 </td>
@@ -295,11 +308,17 @@
                         <div class="col-12">
                             <div class="coupon-all">
                                 <div class="coupon">
-                                    <input id="coupon_code" class="input-text" name="coupon_code" value="" placeholder="Nhập mã" type="text">
+                                    <input id="coupon_code" class="input-text" name="coupon_code" value=""
+                                           placeholder="Nhập mã" type="text">
                                     <input class="button" name="apply_coupon" value="Áp mã" type="submit">
                                 </div>
                                 <div class="coupon2">
+
                                     <input class="button" name="update_cart" value="Cập nhật giỏ hàng" type="submit">
+
+                                    <input class="btn btn-primary" name="update_cart" value="Cập nhật giỏ hàng"
+                                           type="submit">
+
                                 </div>
                             </div>
                         </div>

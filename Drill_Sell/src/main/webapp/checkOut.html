@@ -94,14 +94,14 @@
     </div>
     <!-- /.header-top -->
     <!-- ============================================== TOP MENU : END ============================================== -->
-    <div class="main-header">
+    <div class="main-header" style="position: relative">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
 
                     <div class="logo " style="margin:25px 0 50px 100px"><a href="home.html"> <img
-                            src="assets/images/logo4.png" alt="logo"
+                            alt="logo" src="assets/images/logo4.png"
                             style="height: 100px"> </a></div>
 
 
@@ -119,10 +119,18 @@
                     <!-- ============================================================= SEARCH AREA ============================================================= -->
                     <div class="search-area">
                         <form>
-                            <div class="control-group">
+                            <div class="control-group dropdown">
 
-                                <input class="search-field" placeholder="Tìm kiếm...">
+                                <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
+                                       placeholder="Tìm kiếm...">
                                 <a class="search-button" href="#"></a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Máy khoan động lực Bosch GSB 16 RE -
+                                        06012281K1</a></li>
+                                    <li><a href="#">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
+                                    <li><a href="#">Máy khoan pin Makute CD027</a></li>
+                                </ul>
                             </div>
                         </form>
                     </div>
@@ -134,11 +142,11 @@
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 
-                    <div class="dropdown dropdown-cart"><a href="#" class="dropdown-toggle lnk-cart"
-                                                           data-toggle="dropdown">
+                    <div class="dropdown dropdown-cart"><a class="dropdown-toggle lnk-cart" data-toggle="dropdown"
+                                                           href="#">
                         <div class="items-cart-inner">
                             <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
-                            <div class="basket-item-count"><span class="count">4</span></div>
+                            <div class="basket-item-count"><span class="count">1</span></div>
 
                         </div>
                     </a>
@@ -148,8 +156,9 @@
                                     <div class="row">
                                         <div class="col-xs-4">
                                             <div class="image"><a href="#"><img
-                                                    src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                    alt="Ảnh sản phẩm"></a></div>
+                                                    alt="Ảnh sản phẩm"
+                                                    src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"></a>
+                                            </div>
                                         </div>
                                         <div class="col-xs-7">
                                             <h3 class="name"><a href="">Máy khoan động lực Bosch GSB 16 RE -
@@ -166,7 +175,7 @@
                                     <div class="pull-right"><span class="text">Tổng tiền :</span><span class='price'>1.599.000đ</span>
                                     </div>
                                     <div class="clearfix"></div>
-                                    <a href="checkout.html" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
+                                    <a class="btn btn-upper btn-primary btn-block m-t-20" href="checkout.html">Thanh
                                         toán</a>
                                 </div>
                                 <!-- /.cart-total-->
@@ -202,8 +211,8 @@
                 <!--                </div>-->
                 <div class="nav-bg-class">
                     <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse"
-                         style="margin: auto; width: 50%;">
-                        <div class="nav-outer" style="width: 80%;margin-left: 30%">
+                    >
+                        <div class="nav-outer">
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.html">Trang chủ</a></li>
                                 <li class="active  yamm-fw"><a href="product.html">Sản phẩm</a></li>
@@ -242,6 +251,7 @@
         </div>
     </div>
 </div>
+
 <div class="address">
     <div class="nhanHang">
         <p>Địa chỉ nhận hàng</p>
@@ -287,41 +297,95 @@
             <input class="v" type="text" name="soTien" value="28.000 VND">
         </div>
 
-    </div>
 
 
-    <div class="thanhToan">
-        <div class="phuongThuc">
-            <label for="luachon">Phương Thức thanh toán:</label>
-            <select id="luachon" name="luachon">
-                <option value="lua-chon-1">Thanh toán khi nhận hàng</option>
-                <option value="lua-chon-2">Thanh toán qua ngân hàng</option>
-            </select>
+<div class="body-content outer-top-xs" id="top-banner-and-menu">
+    <div class="container">
+        <div class="address">
+            <div class="nhanHang">
+                <p>Địa chỉ nhận hàng</p>
+                <div class="thongTin">
+                    <input type="text" id="id_cua_phan_tu_nhap_lieu" name="name" placeholder="Tên và số điện thoại">
+                    <input type="text" id="diaChi" name="addres" placeholder="Địa chỉ của bạn">
+                    <button class="apDung">Áp dụng</button>
+                    <button class="thayDoi">Thay đổi</button>
+                </div>
+            </div>
+            <div class="sanPham">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th class="cart-product-name">Sản phẩm</th>
+                        <th class="li-product-price">Đơn Gía</th>
+                        <th class="li-product-quantity">Số lượng</th>
+                        <th class="li-product-subtotal">Thành tiền</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td class="li-product-thumbnail"><a href="#"><img
+                                src="assets/images/shoppingCart/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"> Máy khoan
+                            động lực Bosch GSB 16 RE -
+                            06012281K1</a></td>
+                        <td class="li-product-price"><span class="amount">468.00 VND</span></td>
+                        <td class="quantity">
+                            <div class="cart-plus-minus">
+                                <input class="cart-plus-minus-box" value="1" type="number">
+                            </div>
+                        </td>
+                        <td class="product-subtotal"><span class="amount">468.000 VND</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="thongKe">
+                <label>Lời nhắn: </label>
+                <input type="text" name="loiNhan" id="loiNhan" placeholder="Lưu ý cho người bán hàng">
+                <div class="tongTien">
+                    <p>Tổng tiền (1 sản phẩm): </p>
+                    <input type="text" name="tongTien" value="468.000 VND">
+                </div>
+                <div class="vanChuyen">
+                    <p>Phí vận chuyển: </p>
+                    <input class="v" type="text" name="soTien" value="28.000 VND">
+                </div>
 
+            </div>
+
+
+            <div class="thanhToan">
+                <div class="phuongThuc">
+                    <label for="luachon">Phương Thức thanh toán:</label>
+                    <select id="luachon" name="luachon">
+                        <option value="lua-chon-1">Thanh toán khi nhận hàng</option>
+                        <option value="lua-chon-2">Thanh toán qua ngân hàng</option>
+                    </select>
+
+                </div>
+                <div class="container">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td><label>Tổng tiền hàng: </label></td>
+                            <td><input type="text" name="tienHang" value="468.000 VND"> <br></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Phí vận chuyển: </label></td>
+                            <td><input type="text" name="tienHang" value="28.000 VND"> <br></td>
+                        </tr>
+                        <tr>
+                            <td><label>Tổng thanh toán: </label></td>
+                            <td><input type="text" name="tienHang" value=" 496.000 VND"></td>
+
+                        </tr>
+                    </table>
+
+                </div>
+                <button class="datHang">Đặt hàng</button>
+            </div>
         </div>
-        <div class="container">
-            <table>
-                <tr>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr> <td>  <label>Tổng tiền hàng: </label></td>
-                    <td> <input type="text" name="tienHang" value="468.000 VND"> <br></td>
-                </tr>
-
-                <tr>
-                    <td> <label>Phí vận chuyển: </label></td>
-                    <td>  <input type="text" name="tienHang" value="28.000 VND"> <br></td>
-                </tr>
-                <tr>
-                    <td> <label>Tổng thanh toán: </label></td>
-                    <td> <input type="text" name="tienHang" value=" 496.000 VND"></td>
-
-                </tr>
-            </table>
-
-        </div>
-        <button class="datHang">Đặt hàng</button>
     </div>
 </div>
 </body>
