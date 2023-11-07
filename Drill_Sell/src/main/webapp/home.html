@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    <link rel="icon" href="assets/images/logo.jpg" type="image/png">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
     <title>Bán máy khoan</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
@@ -83,7 +83,7 @@
                     <!-- ============================================================= LOGO ============================================================= -->
 
                     <div class="logo " style="margin:25px 0 50px 100px"><a href="home.html"> <img
-                            src="assets/images/logo4.png" alt="logo"
+                            src="assets/images/logo.png" alt="logo"
                             style="height: 100px"> </a></div>
 
 
@@ -120,7 +120,7 @@
                                                            data-toggle="dropdown">
                         <div class="items-cart-inner">
                             <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
-                            <div class="basket-item-count"><span class="count">4</span></div>
+                            <div class="basket-item-count"><span class="count">1</span></div>
 
                         </div>
                     </a>
@@ -243,10 +243,11 @@
                             </li>
 
 
-                            <li class="">
-                                <a href="#" class="dropdown-med" data-toggle="dropdown">Phụ kiện máy khoan <b
-                                        class="caret"></b></a>
-                                <ul class="dropdown-menu">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-menu-left" data-hover="dropdown" >Phụ kiện máy
+                                    khoan <b
+                                            class=""></b></a>
+                                <ul class="dropdown-menu dropdown-menu-right">
                                     <li><a href="#">Pin máy khoan</a></li>
                                     <li><a href="#">Sạc pin máy khoan</a></li>
                                     <li><a href="#">Mũi khoan</a>
@@ -1652,10 +1653,9 @@
             </div>
         </div>
     </div>
-    <div class="h">kiểm tra xung đột</div>
 </footer>
 <!-- ============================================================= FOOTER : END============================================================= -->
-<button onclick="topFunction()" id="myBtn"  title="Go to top"><i class=" icon fa    fa-arrow-up"></i></button>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class=" icon fa    fa-arrow-up"></i></button>
 <style>
     #myBtn {
         display: none; /* Hidden by default */
@@ -1665,10 +1665,10 @@
         z-index: 99; /* Make sure it does not overlap */
         border: none; /* Remove borders */
         outline: none; /* Remove outline */
-        background-color: #0f6cb2; /* Set a background color */
+        background-color: #fdd922; /* Set a background color */
         color: white; /* Text color */
         cursor: pointer; /* Add a mouse pointer on hover */
-        padding: 15px; /* Some padding */
+        padding: 15px 20px; /* Some padding */
         border-radius: 10px; /* Rounded corners */
         font-size: 18px; /* Increase font size */
     }
@@ -1693,8 +1693,7 @@
     }
 
     function topFunction() {
-        // Scroll to the top smoothly
-        scrollToTop(1000); // Scroll to the top in 1000 milliseconds (1 second)
+        scrollToTop(700);
     }
 
     function scrollToTop(duration) {
