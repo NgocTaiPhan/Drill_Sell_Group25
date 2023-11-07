@@ -1,12 +1,12 @@
-<!doctype html>
-<html lang="en">
+<!Doctype html>
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="assets/images/logo.png" type="image/png">
-    <title>Quản trị</title>
+    <link rel="icon" href="assets/images/logo4.png" type="image/png">
+    <title>movers</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
     <!-- Customizable CSS -->
@@ -39,9 +39,7 @@
           rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
-</head>
 <body>
-
 <header class="header-style-1 ">
 
     <!-- ============================================== TOP MENU ============================================== -->
@@ -50,11 +48,13 @@
             <div class="header-top-inner">
                 <div class="cnt-account">
                     <ul class="list-unstyled">
-                        <li><a href="#"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                        <li><a href="main.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+
+                        <li><a href="account.html"><i class="icon fa fa-user"></i>Tài khoản</a></li>
+                        <li><a href="card.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
 
 
-                        <li><a href="#"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="checkOut.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+
                         <li><a href="login.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
@@ -76,7 +76,7 @@
                     <!-- ============================================================= LOGO ============================================================= -->
 
                     <div class="logo " style="margin:25px 0 50px 100px"><a href="home.html"> <img
-                            src="assets/images/logo.png" alt="logo"
+                            src="assets/images/logo4.png" alt="logo"
                             style="height: 100px"> </a></div>
 
 
@@ -177,8 +177,8 @@
                 <!--                </div>-->
                 <div class="nav-bg-class">
                     <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse"
-                    >
-                        <div class="nav-outer">
+                         style="margin: auto; width: 50%;">
+                        <div class="nav-outer" style="width: 80%;margin-left: 30%">
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.html">Trang chủ</a></li>
                                 <li class="active  yamm-fw"><a href="product.html">Sản phẩm</a></li>
@@ -206,163 +206,15 @@
     <!-- ============================================== NAVBAR : END ============================================== -->
 
 </header>
-<div class="body-content outer-top-xs" id="top-banner-and-menu" style="font-size: medium">
-    <div class="container">
-        <div class="row">
-            <div class="product-tabs inner-bottom-xs  wow fadeInUp">
-                <div class="row">
-                    <div class="col-sm-3" style="white-space: nowrap">
-                        <ul id="product-tabs" class="nav nav-tabs nav-tab-cell">
-                            <li class="active"><a data-toggle="tab" href="#users-management">Quản lý người dùng</a></li>
-                            <li><a data-toggle="tab" href="#products-management">Quản lý sản phẩm</a>
-                            </li>
-                            <li><a data-toggle="tab" href="#statistics">Doanh thu</a></li>
-                        </ul><!-- /.nav-tabs #product-tabs -->
-                    </div>
-                    <div class="col-sm-9">
-
-                        <div class="tab-content">
-
-                            <div id="users-management" class="tab-pane in active">
-                                <div class="product-tab">
-                                    <div class="container">
-
-
-                                        <table class="table table-bordered ">
-                                            <thead style="text-align: center">
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Tên người dùng</th>
-                                                <th>Email</th>
-                                                <th>Hành động</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>John</td>
-                                                <td>example@gmail.com</td>
-                                                <td>
-                                                    <button class="btn btn-danger">Xóa</button>
-                                                    <button class="btn btn-primary">Sửa</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Mary</td>
-                                                <td>example@gmail.com</td>
-                                                <td>
-                                                    <button class="btn btn-danger">Xóa</button>
-                                                    <button class="btn btn-primary">Sửa</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>July</td>
-                                                <td>example@gmail.com</td>
-                                                <td>
-                                                    <button class="btn btn-danger">Xóa</button>
-                                                    <button class="btn btn-primary">Sửa</button>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-
-                                    </div>
-                                </div>
-                            </div><!-- /.tab-pane -->
-
-                            <div id="products-management" class="tab-pane">
-                                <div class="product-tab">
-
-                                    <table class="table table-bordered " style="white-space: nowrap">
-                                        <thead>
-                                        <tr>
-                                            <th>Mã sản phẩm</th>
-                                            <th>Tên sản phẩm</th>
-                                            <th>Ngày nhập</th>
-                                            <th>Số lượng đã bán</th>
-                                            <th>Số lượng còn lại</th>
-                                            <th>Hành động</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Máy khoan động lực Bosch GSB 16 RE
-                                                -06012281K1
-                                            </td>
-                                            <td>01/01/2023</td>
-                                            <td>10</td>
-                                            <td>20</td>
-                                            <td>
-                                                <button class="btn btn-danger">Xóa</button>
-                                                <button class="btn btn-primary">Sửa</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Pin Bosch 12V 2.0Ah 1600A00F6X (1607A350C5)</td>
-                                            <td>01/01/2023</td>
-                                            <td>10</td>
-                                            <td>20</td>
-                                            <td>
-                                                <button class="btn btn-danger">Xóa</button>
-                                                <button class="btn btn-primary">Sửa</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Máy khoan vặn vít dùng pin 12V
-                                                Bosch GSR 120-LI GEN II
-                                            </td>
-                                            <td>01/01/2023</td>
-                                            <td>10</td>
-                                            <td>20</td>
-                                            <td>
-                                                <button class="btn btn-danger">Xóa</button>
-                                                <button class="btn btn-primary">Sửa</button>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-
-                                </div><!-- /.product-tab -->
-                            </div><!-- /.tab-pane -->
-
-                            <div id="statistics" class="tab-pane">
-                                <div class="product-tag">
-
-                                    <table class="table table-bordered ">
-                                        <thead>
-                                        <tr>
-                                            <th>Số lượng bán ra</th>
-                                            <th>Tổng doan thu</th>
-
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-
-                                        <tr>
-                                            <td>100</td>
-                                            <td>10.000.000đ</td>
-
-                                        </tr>
-                                        </tbody>
-                                    </table>
-
-                                </div><!-- /.product-tab -->
-                            </div><!-- /.tab-pane -->
-
-                        </div><!-- /.tab-content -->
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div>
-
-        </div>
-    </div>
+<div class="breadcrumb">
+    <div class="container" style="white-space: nowrap">
+        <div class="breadcrumb-inner">
+            <ul class="list-inline list-unstyled">
+                <li><a href="home.html">Trang chủ</a></li>
+                <li class='active'>Máy Khoang Động Lực</li>
+            </ul>
+        </div><!-- /.breadcrumb-inner -->
+    </div><!-- /.container -->
 </div>
-
-
 </body>
 </html>
