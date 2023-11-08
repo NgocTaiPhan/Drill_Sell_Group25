@@ -17,6 +17,10 @@
     <title>Đăng nhập/Đăng kí</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
+
+    <!--    Css tự viết-->
+    <link rel="stylesheet" href="assets/css/my-css/logo-page.css">
+    <!--Css tự viết-->
     <!-- Customizable CSS -->
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/blue.css" rel="stylesheet">
@@ -60,7 +64,6 @@
                         <li><a href="account.html"><i class="icon fa fa-user"></i>Tài khoản</a></li>
                         <li><a href="card.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
                         <li><a href="checkOut.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-
                         <li><a href="login.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
@@ -75,26 +78,20 @@
     </div>
     <!-- /.header-top -->
     <!-- ============================================== TOP MENU : END ============================================== -->
-    <div class="main-header" style="position: relative">
+    <div class="main-header">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
-
-
-                    <div class="logo " style="margin:25px 0 50px 100px"><a href="home.html"> <img
-                            alt="logo" src="assets/images/logo.png"
-                            style="height: 100px"> </a></div>
-
-
-                    <div class="logo"><a href="home.html"> <img src="assets/images/logo4.png" alt="logo"
-                                                                style="height: 100px"> </a></div>
+                    <link rel="stylesheet" href="assets/css/my-css/logo-page.css">
+                    <div class="logo-page"><a href="home.html"> <img
+                            src="assets/images/logo.png" alt="logo"
+                    > </a></div>
 
 
                     <!-- /.logo -->
                     <!-- ============================================================= LOGO : END ============================================================= -->
                 </div>
-
                 <!-- /.logo-holder -->
                 <div class="nameLogo">
                     <h1 class="name">MÁY KHOAN</h1>
@@ -129,8 +126,8 @@
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 
-                    <div class="dropdown dropdown-cart"><a class="dropdown-toggle lnk-cart" data-toggle="dropdown"
-                                                           href="#">
+                    <div class="dropdown dropdown-cart"><a href="#" class="dropdown-toggle lnk-cart"
+                                                           data-toggle="dropdown">
                         <div class="items-cart-inner">
                             <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
                             <div class="basket-item-count"><span class="count">1</span></div>
@@ -143,9 +140,8 @@
                                     <div class="row">
                                         <div class="col-xs-4">
                                             <div class="image"><a href="#"><img
-                                                    alt="Ảnh sản phẩm"
-                                                    src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"></a>
-                                            </div>
+                                                    src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
+                                                    alt="Ảnh sản phẩm"></a></div>
                                         </div>
                                         <div class="col-xs-7">
                                             <h3 class="name"><a href="">Máy khoan động lực Bosch GSB 16 RE -
@@ -162,7 +158,7 @@
                                     <div class="pull-right"><span class="text">Tổng tiền :</span><span class='price'>1.599.000đ</span>
                                     </div>
                                     <div class="clearfix"></div>
-                                    <a class="btn btn-upper btn-primary btn-block m-t-20" href="checkout.html">Thanh
+                                    <a href="checkout.html" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
                                         toán</a>
                                 </div>
                                 <!-- /.cart-total-->
@@ -203,7 +199,26 @@
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.html">Trang chủ</a></li>
                                 <li class="active  yamm-fw"><a href="product.html">Sản phẩm</a></li>
-                                <li class="active  yamm-fw"><a href="cskh.html">Tư vấn</a></li>
+                                <li class="dropdown active  ">
+                                    <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
+                                    <ul class="dropdown-menu ">
+                                        <li><a href="battery_drill.html"></i>Máy khoan pin</a>
+
+                                        </li>
+                                        <li><a href="movers.html"></i>Máy khoan động lực</a>
+
+                                        </li>
+                                        <li><a href="hammer_drill.html"></i>Máy khoan bê tông, Máy khoan búa</a>
+
+                                        </li>
+                                        <li><a href="Hand_drill.html"></i>Máy khoan cầm tay gia đình</a>
+
+                                        </li>
+                                        <li><a href="mini_drill.html"></i>Máy khoan mini</a>
+
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li class="active  yamm-fw"><a href="contact.html">Liên hệ</a></li>
 
 
@@ -341,187 +356,9 @@
 </div>
 </body>
 <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
-<script>
-    const admin = {
-        email: "admin@gmai.com",
-        password: "123"
-    };
-    const users = {
-        email: "users@gmail.com",
-        password: "123"
-    };
-    $(document).ready(function () {
-        $('#login-form').submit(function (e) {
-            e.preventDefault(); // Ngăn chặn gửi biểu mẫu mặc định
 
-            var emailLogin = $('#email-login').val();
-            var passwordLogin = $('#password-login').val();
-            var errorEmailLogin = $('#error-email-login');
-
-            errorEmailLogin.html(''); // Xóa thông báo lỗi trước đó
-
-            // Định nghĩa biểu thức chính quy để kiểm tra địa chỉ email
-            var emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
-
-            if (emailLogin.trim() === "" && passwordLogin.trim() === "") {
-                Swal.fire({
-                    title: 'Lỗi',
-                    text: 'Chưa nhập email và mật khẩu',
-                    icon: 'error',
-                    confirmButtonText: 'Đóng',
-                });
-            } else if (emailLogin.trim() === "") {
-                Swal.fire({
-                    title: 'Lỗi',
-                    text: 'Chưa nhập email ',
-                    icon: 'error',
-                    confirmButtonText: 'Đóng',
-                });
-            } else if (passwordLogin.trim() === "") {
-                Swal.fire({
-                    title: 'Lỗi',
-                    text: 'Chưa nhập mật khẩu',
-                    icon: 'error',
-                    confirmButtonText: 'Đóng',
-                });
-            } else if (!emailRegex.test(emailLogin)) {
-                // Kiểm tra tính hợp lệ của địa chỉ email bằng biểu thức chính quy
-                Swal.fire({
-                    title: 'Lỗi',
-                    text: 'Địa chỉ email không hợp lệ',
-                    icon: 'error',
-                    confirmButtonText: 'Đóng',
-                });
-            } else if (emailLogin === admin.email && passwordLogin === admin.password) {
-                Swal.fire({
-                    title: 'Bạn đang đăng nhập với quyển quản trị',
-                    text: 'Chào mừng',
-                    icon: 'success',
-                    confirmButtonText: 'OK',
-                });
-                window.location.href = "admin.html";
-            } else if (emailLogin === users.email && passwordLogin === users.password) {
-
-                Swal.fire({
-                    title: 'Đăng nhập thành công',
-                    text: 'Chào mừng',
-                    icon: 'success',
-                    confirmButtonText: 'OK',
-                    timeout:1000,
-                });
-                window.location.href = "account.html";
-            } else {
-                Swal.fire({
-                    title: 'Đăng nhập thất bại',
-                    text: 'Không tìm thấy dữ liệu đăng nhập',
-                    icon: 'error',
-                    confirmButtonText: 'OK',
-                });
-
-            }
-
-        });
-    })
-    ;
-    $(document).ready(function () {
-        $('#register-form').submit(function (e) {
-            e.preventDefault(); // Ngăn chặn gửi biểu mẫu mặc định
-
-            var fullName = $('#full-name').val();
-            var address = $('#address').val();
-            var phoneNumber = $('#phone-number').val();
-            var email = $('#email-register').val();
-            var username = $('#username-register').val();
-            var password = $('#password-register').val();
-            var confirmPassword = $('#confirm-password-register');
-            var errorFullName = $('#error-full-name');
-            var errorPhoneNumber = $('#error-phone-number');
-
-            errorFullName.html(''); // Xóa thông báo lỗi trước đó
-            errorPhoneNumber.html(''); // Xóa thông báo lỗi trước đó
-
-            // Định nghĩa biểu thức chính quy để kiểm tra tên không chứa số
-            var nameRegex = /^[A-Za-z ]+$/;
-
-            // Định nghĩa biểu thức chính quy để kiểm tra số điện thoại chỉ chứa 10 số
-            var phoneRegex = /^\d{10}$/;
-
-            if (fullName.trim() === "" || !nameRegex.test(fullName)) {
-                Swal.fire({
-                    title: 'Lỗi',
-                    text: 'Họ và tên không hợp lệ',
-                    icon: 'error',
-                    confirmButtonText: 'Đóng',
-                });
-            } else if (address.trim() === "") {
-                Swal.fire({
-                    title: 'Lỗi',
-                    text: 'Chưa nhập địa chỉ',
-                    icon: 'error',
-                    confirmButtonText: 'Đóng',
-                });
-            } else if (phoneNumber.trim() === "" || !phoneRegex.test(phoneNumber)) {
-                Swal.fire({
-                    title: 'Lỗi',
-                    text: 'Số điện thoại không hợp lệ',
-                    icon: 'error',
-                    confirmButtonText: 'Đóng',
-                });
-            } else if (email.trim() === "") {
-                Swal.fire({
-                    title: 'Lỗi',
-                    text: 'Chưa nhập địa chỉ email',
-                    icon: 'error',
-                    confirmButtonText: 'Đóng',
-                });
-            } else if (username.trim() === "") {
-                Swal.fire({
-                    title: 'Lỗi',
-                    text: 'Chưa nhập tên đăng nhập',
-                    icon: 'error',
-                    confirmButtonText: 'Đóng',
-                });
-            } else if (password.trim() === "" || confirmPassword.trim() === "" || password !== confirmPassword) {
-                Swal.fire({
-                    title: 'Lỗi',
-                    text: 'Mật khẩu và xác nhận mật khẩu không trùng khớp',
-                    icon: 'error',
-                    confirmButtonText: 'Đóng',
-                });
-            } else if (!$('#agree-to-terms').is(':checked')) {
-                Swal.fire({
-                    title: 'Lỗi',
-                    text: 'Bạn phải đồng ý với điều khoản của chúng tôi',
-                    icon: 'error',
-                    confirmButtonText: 'Đóng',
-                });
-            } else {
-                Swal.fire({
-                    title: 'Đăng kí thành công',
-                    text: 'Chào mừng bạn đã tạo tài khoản',
-                    icon: 'success',
-                    confirmButtonText: 'OK',
-                });
-            }
-        });
-    });
-
-    $(document).ready(function () {
-        $("#search").on("keyup", function () {
-            var keyword = $(this).val().toLowerCase();
-            $("#list li").each(function () {
-                if ($(this).text().toLowerCase().indexOf(keyword) === -1) {
-                    $(this).hide();
-                } else {
-                    $(this).show();
-                }
-            });
-        });
-    });
-
-
-</script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="assets/js/my-js/login-register.js"></script>
 
 
 </html>

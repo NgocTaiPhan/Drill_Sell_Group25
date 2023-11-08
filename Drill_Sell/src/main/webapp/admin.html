@@ -50,11 +50,10 @@
             <div class="header-top-inner">
                 <div class="cnt-account">
                     <ul class="list-unstyled">
-                        <li><a href="#"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                        <li><a href="main.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
 
-
-                        <li><a href="#"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="account.html"><i class="icon fa fa-user"></i>Tài khoản</a></li>
+                        <li><a href="card.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="checkOut.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
@@ -74,10 +73,10 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
-
-                    <div class="logo " style="margin:25px 0 50px 100px"><a href="home.html"> <img
+                    <link rel="stylesheet" href="assets/css/my-css/logo-page.css">
+                    <div class="logo-page"><a href="home.html"> <img
                             src="assets/images/logo.png" alt="logo"
-                            style="height: 100px"> </a></div>
+                    > </a></div>
 
 
                     <!-- /.logo -->
@@ -94,10 +93,18 @@
                     <!-- ============================================================= SEARCH AREA ============================================================= -->
                     <div class="search-area">
                         <form>
-                            <div class="control-group">
+                            <div class="control-group dropdown">
 
-                                <input class="search-field" placeholder="Tìm kiếm...">
+                                <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
+                                       placeholder="Tìm kiếm...">
                                 <a class="search-button" href="#"></a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Máy khoan động lực Bosch GSB 16 RE -
+                                        06012281K1</a></li>
+                                    <li><a href="#">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
+                                    <li><a href="#">Máy khoan pin Makute CD027</a></li>
+                                </ul>
                             </div>
                         </form>
                     </div>
@@ -113,7 +120,7 @@
                                                            data-toggle="dropdown">
                         <div class="items-cart-inner">
                             <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
-                            <div class="basket-item-count"><span class="count">4</span></div>
+                            <div class="basket-item-count"><span class="count">1</span></div>
 
                         </div>
                     </a>
@@ -182,7 +189,26 @@
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.html">Trang chủ</a></li>
                                 <li class="active  yamm-fw"><a href="product.html">Sản phẩm</a></li>
-                                <li class="active  yamm-fw"><a href="cskh.html">Tư vấn</a></li>
+                                <li class="dropdown active  ">
+                                    <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
+                                    <ul class="dropdown-menu ">
+                                        <li><a href="battery_drill.html"></i>Máy khoan pin</a>
+
+                                        </li>
+                                        <li><a href="movers.html"></i>Máy khoan động lực</a>
+
+                                        </li>
+                                        <li><a href="hammer_drill.html"></i>Máy khoan bê tông, Máy khoan búa</a>
+
+                                        </li>
+                                        <li><a href="Hand_drill.html"></i>Máy khoan cầm tay gia đình</a>
+
+                                        </li>
+                                        <li><a href="mini_drill.html"></i>Máy khoan mini</a>
+
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li class="active  yamm-fw"><a href="contact.html">Liên hệ</a></li>
 
 
@@ -322,6 +348,16 @@
                                             <td>
                                                 <button class="btn btn-danger">Xóa</button>
                                                 <button class="btn btn-primary">Sửa</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tổng</td>
+                                            <td>3</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                                <button class="btn btn-danger">Thêm sản phẩm</button>
                                             </td>
                                         </tr>
                                         </tbody>
