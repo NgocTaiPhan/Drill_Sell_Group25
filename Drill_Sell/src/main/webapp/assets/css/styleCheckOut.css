@@ -22,6 +22,20 @@
     background: white;
     height: 100px;
 }
+table.table {
+    border: none;
+    border-collapse: collapse;
+}
+
+/* Add this style to remove borders from table rows */
+table.table tr {
+    border: none;
+}
+
+/* Add this style to remove borders from table cells */
+table.table th, table.table td {
+    border: none;
+}
 .address .nhanHang p{
     font-size: 23px;
     font-weight: bold;
