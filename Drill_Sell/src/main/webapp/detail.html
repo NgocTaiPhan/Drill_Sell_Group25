@@ -48,31 +48,35 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="icon" href="assets/images/logo.png" type="image/png">
     <title>Chi tiết sản phẩm</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="assets\css\bootstrap.min.css">
     <!-- Customizable CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/blue.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/owl.transitions.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/rateit.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
-    <script src="assets/js/jquery-1.11.1.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/echo.min.js"></script>
-    <script src="assets/js/jquery.easing-1.3.min.js"></script>
-    <script src="assets/js/bootstrap-slider.min.js"></script>
-    <script src="assets/js/jquery.rateit.min.js"></script>
-    <script type="text/javascript" src="assets/js/lightbox.min.js"></script>
-    <script src="assets/js/bootstrap-select.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <link rel="stylesheet" href="assets/css/styleAccount.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets\css\main.css">
+    <link rel="stylesheet" href="assets\css\blue.css">
+    <link rel="stylesheet" href="assets\css\owl.carousel.css">
+    <link rel="stylesheet" href="assets\css\owl.transitions.css">
+    <link rel="stylesheet" href="assets\css\animate.min.css">
+    <link rel="stylesheet" href="assets\css\rateit.css">
+    <link rel="stylesheet" href="assets\css\bootstrap-select.min.css">
+    <script src="assets\js\jquery-1.11.1.min.js"></script>
+    <script src="assets\js\bootstrap.min.js"></script>
+    <script src="assets\js\bootstrap-hover-dropdown.min.js"></script>
+    <script src="assets\js\owl.carousel.min.js"></script>
+    <script src="assets\js\echo.min.js"></script>
+    <script src="assets\js\jquery.easing-1.3.min.js"></script>
+    <script src="assets\js\bootstrap-slider.min.js"></script>
+    <script src="assets\js\jquery.rateit.min.js"></script>
+    <script type="text/javascript" src="assets\js\lightbox.min.js"></script>
+    <script src="assets\js\bootstrap-select.min.js"></script>
+    <script src="assets\js\wow.min.js"></script>
+    <script src="assets\js\scripts.js"></script>
 
     <!-- Icons/Glyphs -->
-    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets\css\font-awesome.css">
 
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
@@ -92,7 +96,7 @@
 
                         <li><a href="account.html"><i class="icon fa fa-user"></i>Tài khoản</a></li>
                         <li><a href="card.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="checkOut.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="checkout.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
@@ -477,7 +481,7 @@
                                         </div>
 
                                         <div class="col-sm-7">
-                                            <a href="checkOut.html" class="btn btn-danger" style="margin-bottom: 10px"><i
+                                            <a href="checkout.html" class="btn btn-danger" style="margin-bottom: 10px"><i
                                                     class="fa fa-check inner-right-vs"></i> Mua ngay</a>
                                             <a href="card.html" class="btn btn-primary"><i
                                                     class="fa fa-shopping-cart inner-right-vs"></i> Thêm vào giỏ
@@ -580,22 +584,42 @@
                                 <!-- /.tab-pane -->
 
                                 <div id="reviews" class="tab-pane">
+                                    <div class="name-custumor">
+                                        <i class="fa-solid fa-user"></i>
+                                        <input class="name" placeholder="Tên khách hàng">
+                                    </div>
                                     <div class="rating">
                                         <input type="radio" id="star5" name="rating" value="5"/>
-                                        <label for="star5">&#9733;</label>
+                                        <label class="s" for="star5"></label>
                                         <input type="radio" id="star4" name="rating" value="4"/>
-                                        <label for="star4">&#9733;</label>
+                                        <label class="s" for="star4"></label>
                                         <input type="radio" id="star3" name="rating" value="3"/>
-                                        <label for="star3">&#9733;</label>
+                                        <label class="s" for="star3"></label>
                                         <input type="radio" id="star2" name="rating" value="2"/>
-                                        <label for="star2">&#9733;</label>
+                                        <label class="s" for="star2"></label>
                                         <input type="radio" id="star1" name="rating" value="1"/>
-                                        <label for="star1">&#9733;</label>
+                                        <label class="s" for="star1"></label>
                                     </div><!-- /.product-tab -->
+                                    <div class="messger">
+                                        <input class="mess" placeholder="Mô tả của khách hàng">
+                                    </div>
                                 </div><!-- /.tab-pane -->
                                 <style>
-
-
+                                    .rating .s{
+                                        font-size: 17px;
+                                    }
+                                    .name-custumor i{
+                                        font-size: 12px;
+                                    }
+                                    .name-custumor input{
+                                        border: none;
+                                        font-size: 12px;
+                                    }
+                                    .messger .mess{
+                                        width: 500px;
+                                        height: 50px;
+                                        font-size: 12px;
+                                    }
                                     .rating {
                                         display: inline-block;
                                     }
@@ -607,6 +631,7 @@
                                     .rating label {
                                         cursor: pointer;
                                         width: 20px;
+                                        height: 10px;
                                         font-size: 30px;
                                         color: #ccc;
                                     }
@@ -630,6 +655,8 @@
                                     .rating input:checked ~ label:hover ~ label {
                                         color: #ffbf00;
                                     }
+
+
                                 </style>
                             </div><!-- /.tab-content -->
                         </div><!-- /.col -->
