@@ -308,8 +308,8 @@ button:focus {
 	border-bottom: 0;
 }
 .cart-page-total>a {
-	background-color: #333;
-	border: 1px solid #333;
+	background-color: #2a6496;
+
 	color: #fff;
 	display: inline-block;
 	margin-top: 30px;
@@ -317,8 +317,4 @@ button:focus {
 	text-transform: capitalize;
 	-webkit-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
-}
-.cart-page-total>a:hover {
-	background: #fed700;
-	border-color: #fed700;
 }
