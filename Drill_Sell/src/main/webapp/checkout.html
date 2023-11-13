@@ -27,34 +27,29 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/css/styleCheckOut.css">
     <link rel="stylesheet" href="assets\css\StyleCard.css">
+
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-    <!-- Material Design Iconic Font-V2.2.0 -->
-    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- Font Awesome Stars-->
-    <link rel="stylesheet" href="css/fontawesome-stars.css">
-    <!-- Meanmenu CSS -->
-    <link rel="stylesheet" href="css/meanmenu.css">
-    <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <!-- Slick Carousel CSS -->
-    <link rel="stylesheet" href="css/slick.css">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- Jquery-ui CSS -->
-    <link rel="stylesheet" href="css/jquery-ui.min.css">
-    <!-- Venobox CSS -->
-    <link rel="stylesheet" href="css/venobox.css">
-    <!-- Nice Select CSS -->
-    <link rel="stylesheet" href="css/nice-select.css">
-    <!-- Magnific Popup CSS -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <!-- Bootstrap V4.1.3 Fremwork CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Helper CSS -->
-    <link rel="stylesheet" href="css/helper.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/blue.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/owl.transitions.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/rateit.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/echo.min.js"></script>
+    <script src="assets/js/jquery.easing-1.3.min.js"></script>
+    <script src="assets/js/bootstrap-slider.min.js"></script>
+    <script src="assets/js/jquery.rateit.min.js"></script>
+    <script type="text/javascript" src="assets/js/lightbox.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Responsive CSS -->
@@ -78,7 +73,7 @@
                         <li><a href="card.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
 
 
-                        <li><a href="checkOut.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="checkout.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
 
                         <li><a href="login.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
@@ -202,13 +197,6 @@
     <div class="header-nav animate-dropdown">
         <div class="container">
             <div class="yamm navbar navbar-default" role="navigation">
-                <!--                <div class="navbar-header">-->
-                <!--                    <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse"-->
-                <!--                            class="navbar-toggle collapsed"-->
-                <!--                            type="button">-->
-                <!--                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span-->
-                <!--                            class="icon-bar"></span> <span class="icon-bar"></span></button>-->
-                <!--                </div>-->
                 <div class="nav-bg-class">
                     <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse"
                     >
@@ -253,16 +241,15 @@
 </div>
 
 <div class="address">
-    <div class="nhanHang">
+    <div class="receive">
         <p>Địa chỉ nhận hàng</p>
-        <div class="thongTin">
-            <input type="text" id="id_cua_phan_tu_nhap_lieu" name="name" placeholder="Tên và số điện thoại">
-            <input type="text" id="diaChi" name="addres" placeholder="Địa chỉ của bạn">
-            <button class="apDung">Áp dụng</button>
-            <button class="thayDoi">Thay đổi</button>
+        <div class="information">
+            <input type="text" id="informations" name="name" placeholder="Tên và số điện thoại">
+            <input type="text" id="address" name="addres" placeholder="Địa chỉ của bạn">
+
         </div>
     </div>
-    <div class="sanPham">
+    <div class="product">
         <table class="table">
             <thead>
             <tr>
@@ -285,78 +272,22 @@
             </tr>
         </table>
     </div>
-    <div class="thongKe">
-        <label>Lời nhắn: </label>
-        <input type="text" name="loiNhan" id="loiNhan" placeholder="Lưu ý cho người bán hàng">
-        <div class="tongTien">
+    <div class="statistical">
+        <div class="total-money">
             <p>Tổng tiền (1 sản phẩm): </p>
-            <input type="text" name="tongTien" value="468.000 VND">
+            <input type="text" name="total-money" value="468.000 VND">
         </div>
-        <div class="vanChuyen">
+        <div class="transport">
             <p>Phí vận chuyển: </p>
-            <input class="v" type="text" name="soTien" value="28.000 VND">
+            <input class="v" type="text" name="money" value="28.000 VND">
         </div>
 
-
-
-<div class="body-content outer-top-xs" id="top-banner-and-menu">
-    <div class="container">
-        <div class="address">
-            <div class="nhanHang">
-                <p>Địa chỉ nhận hàng</p>
-                <div class="thongTin">
-                    <input type="text" id="id_cua_phan_tu_nhap_lieu" name="name" placeholder="Tên và số điện thoại">
-                    <input type="text" id="diaChi" name="addres" placeholder="Địa chỉ của bạn">
-                    <button class="apDung">Áp dụng</button>
-                    <button class="thayDoi">Thay đổi</button>
-                </div>
-            </div>
-            <div class="sanPham">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th class="cart-product-name">Sản phẩm</th>
-                        <th class="li-product-price">Đơn Gía</th>
-                        <th class="li-product-quantity">Số lượng</th>
-                        <th class="li-product-subtotal">Thành tiền</th>
-                    </tr>
-                    </thead>
-                    <tr>
-                        <td class="li-product-thumbnail"><a href="#"><img
-                                src="assets/images/shoppingCart/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"> Máy khoan
-                            động lực Bosch GSB 16 RE -
-                            06012281K1</a></td>
-                        <td class="li-product-price"><span class="amount">468.00 VND</span></td>
-                        <td class="quantity">
-                            <div class="cart-plus-minus">
-                                <input class="cart-plus-minus-box" value="1" type="number">
-                            </div>
-                        </td>
-                        <td class="product-subtotal"><span class="amount">468.000 VND</span></td>
-                    </tr>
-                </table>
-            </div>
-            <div class="thongKe">
-                <label>Lời nhắn: </label>
-                <input type="text" name="loiNhan" id="loiNhan" placeholder="Lưu ý cho người bán hàng">
-                <div class="tongTien">
-                    <p>Tổng tiền (1 sản phẩm): </p>
-                    <input type="text" name="tongTien" value="468.000 VND">
-                </div>
-                <div class="vanChuyen">
-                    <p>Phí vận chuyển: </p>
-                    <input class="v" type="text" name="soTien" value="28.000 VND">
-                </div>
-
-            </div>
-
-
-            <div class="thanhToan">
-                <div class="phuongThuc">
-                    <label for="luachon">Phương Thức thanh toán:</label>
-                    <select id="luachon" name="luachon">
-                        <option value="lua-chon-1">Thanh toán khi nhận hàng</option>
-                        <option value="lua-chon-2">Thanh toán qua ngân hàng</option>
+            <div class="pay">
+                <div class="method">
+                    <label for="section">Phương Thức thanh toán:</label>
+                    <select id="section" name="section">
+                        <option value="section1">Thanh toán khi nhận hàng</option>
+                        <option value="section2">Thanh toán qua ngân hàng</option>
                     </select>
 
                 </div>
@@ -383,7 +314,7 @@
                     </table>
 
                 </div>
-                <button class="datHang">Đặt hàng</button>
+               <a href="order_details.html">  <button class="order">Đặt hàng</button></a>
             </div>
         </div>
     </div>
