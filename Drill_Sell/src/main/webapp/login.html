@@ -259,13 +259,13 @@
             <div class="row">
                 <!-- Sign-in -->
                 <div class="col-md-6 col-sm-6 sign-in">
-                    <h4 class="">Đăng nhập</h4>
+                    <h3 class="">Đăng nhập</h3>
                     <p class=""></p>
                     <!--                    <div class="social-sign-in outer-top-xs">-->
                     <!--                        <a href="#" class="facebook-sign-in"><i class="fa fa-facebook"></i> Sign In with Facebook</a>-->
                     <!--                        <a href="#" class="twitter-sign-in"><i class="fa fa-twitter"></i> Sign In with Twitter</a>-->
                     <!--                    </div>-->
-                    <form class="register-form outer-top-xs" id="login-form" role="form">
+                    <form class=" outer-top-xs" id="login-form" role="form">
                         <div class="form-group">
                             <label class="info-title" for="email-login">Địa chỉ email <span>*</span>
 
@@ -300,35 +300,47 @@
 
                 <!-- create a new account -->
                 <div class="col-md-6 col-sm-6 create-new-account">
-                    <h4 class="checkout-subtitle">Tạo tài khoản mới</h4>
+                    <h3 class="checkout-subtitle">Tạo tài khoản mới</h3>
                     <p class="text title-tag-line"> Nhập thông tin bên dưới để tạo tài khoản mới</p>
-                    <form class="register-form outer-top-xs" role="form">
+                    <form class="register-form outer-top-xs" role="form" id="register-form">
+                        <h4>Thông tin người dùng</h4>
                         <div class="form-group">
-                            <label class="info-title" for="full-name">Họ và tên <span>*</span></label>
-                            <input class="form-control unicase-form-control text-input" id="full-name"
+                            <label class="info-title" for="full-name-register">Họ và tên <span>*</span></label>
+                            <input class="form-control unicase-form-control text-input" id="full-name-register"
                                    type="text">
                         </div>
                         <div class="form-group">
-                            <label class="info-title" for="address">Địa chỉ <span>*</span></label>
-                            <input class="form-control unicase-form-control text-input" id="address"
+                            <label class="info-title" for="birth-date-register">Ngày, tháng, năm sinh
+                                <span>*</span></label>
+                            <input class="form-control unicase-form-control text-input" id="birth-date-register"
+                                   type="date">
+                        </div>
+                        <div class="form-group">
+                            <label class="info-title" for="address-register">Địa chỉ <span>*</span></label>
+                            <input class="form-control unicase-form-control text-input" id="address-register"
                                    type="text">
                         </div>
                         <div class="form-group">
-                            <label class="info-title" for="phone-number">Số điện thoại <span>*</span></label>
-                            <input class="form-control unicase-form-control text-input" id="phone-number" type="tel">
+                            <label class="info-title" for="phone-number-register">Số điện thoại <span>*</span></label>
+                            <input class="form-control unicase-form-control text-input" id="phone-number-register"
+                                   type="tel">
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="email-register">Địa chỉ email <span>*</span></label>
                             <input class="form-control unicase-form-control text-input" id="email-register"
-                                   type="email">
+                                   type="text">
+                        </div>
+                        <h4>Thông tin tài khoản</h4>
+                        <div class="form-group">
+
+                            <label class="info-title" for="username-register">Tên đăng nhập <span>*</span></label>
+                            <input class="form-control unicase-form-control text-input" id="username-register"
+                                   type="text">
                         </div>
                         <div class="form-group">
-                            <label class="info-title" for="username">Tên đăng nhập <span>*</span></label>
-                            <input class="form-control unicase-form-control text-input" id="username" type="text">
-                        </div>
-                        <div class="form-group">
-                            <label class="info-title" for="password">Mật khẩu <span>*</span></label>
-                            <input class="form-control unicase-form-control text-input" id="password" type="password">
+                            <label class="info-title" for="password-register">Mật khẩu <span>*</span></label>
+                            <input class="form-control unicase-form-control text-input" id="password-register"
+                                   type="password">
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="confirm-password-register">Nhập lại mật khẩu
