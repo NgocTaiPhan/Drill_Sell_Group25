@@ -50,12 +50,15 @@ $(document).ready(function () {
             });
         } else if (emailLogin === admin.email && passwordLogin === admin.password) {
             Swal.fire({
-                title: 'Bạn đang đăng nhập với quyển quản trị',
+                title: 'Bạn đang đăng nhập với quyền quản trị',
                 text: 'Chào mừng',
                 icon: 'success',
                 confirmButtonText: 'OK',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "admin.html";
+                }
             });
-            window.location.href = "admin.html";
         } else if (emailLogin === users.email && passwordLogin === users.password) {
 
             Swal.fire({
@@ -79,6 +82,7 @@ $(document).ready(function () {
     });
 })
 ;
+
 
 
 
