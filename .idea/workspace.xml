@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c2a3fc51-47df-4d5a-9967-714b95133871" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Drill_Sell_Group25.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/assets/css/style-oder-details.css" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/assets/css/style-oder-details.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/assets/css/styleCheckOut.css" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/assets/css/styleCheckOut.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/order_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/order_details.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2XzGnaXK8TPTxYYPfcSuPJeWLor" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;hoa&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Drill_Sell_Group25-main&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2a3fc51-47df-4d5a-9967-714b95133871" name="Changes" comment="" />
+      <created>1699624663217</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699624663217</updated>
+      <workItem from="1699624664257" duration="467000" />
+      <workItem from="1699626927249" duration="1509000" />
+      <workItem from="1699704755395" duration="15933000" />
+      <workItem from="1699722155845" duration="45000" />
+      <workItem from="1699723866459" duration="874000" />
+      <workItem from="1699764481283" duration="1799000" />
+      <workItem from="1699772463355" duration="526000" />
+      <workItem from="1699773016340" duration="515000" />
+      <workItem from="1699773551103" duration="615000" />
+      <workItem from="1699859585084" duration="486000" />
+      <workItem from="1699861051258" duration="2592000" />
+      <workItem from="1699889673628" duration="1882000" />
+      <workItem from="1700037195609" duration="2545000" />
+      <workItem from="1700112773718" duration="9000" />
+      <workItem from="1700112828195" duration="4554000" />
+      <workItem from="1700138512781" duration="19000" />
+      <workItem from="1700138615428" duration="2180000" />
+      <workItem from="1700140821176" duration="3279000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

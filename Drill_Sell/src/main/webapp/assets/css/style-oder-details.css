@@ -6,7 +6,7 @@ body{
 }
 .generality{
     width: 600px;
-    height: 600px;
+    height: 630px;
     margin: auto;
     border-radius: 10px;
     background: white;
@@ -92,4 +92,15 @@ body{
 }
 .code-orders .code{
   margin-left: 205px;
+}
+.btn{
+    margin-top: 40px;
+    width: 50px;
+    height: 20px;
+    margin-left: 270px;
+
+}
+.btn a{
+    text-decoration: none;
+
 }

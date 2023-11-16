@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <link rel="icon" href="assets/images/logo.png" type="image/png">
-    <title>Bán máy khoan</title>
+    <title>Thanh toán</title>
     <link rel="stylesheet" href="assets\css\bootstrap.min.css">
 
     <!-- Customizable CSS -->
@@ -338,7 +338,7 @@
                     </table>
 
                 </div>
-               <a href="order_details.html">  <button class="order">Đặt hàng</button></a>
+               <a >  <button onclick="f()" class="order">Đặt hàng</button></a>
             </div>
         </div>
     </div>
@@ -383,5 +383,21 @@
 <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class=" icon fa    fa-arrow-up"></i></button>
 <link rel="stylesheet" href="assets/css/my-css/backtop.css">
 <script src="assets/js/my-js/backtop.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+    function f() {
+        Swal.fire({
+            title: 'Đơn hàng đã đặt thành công',
+            text: 'Cảm ơn quý khách',
+            icon: 'success',
+            confirmButtonText: 'OK',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "order_details.html";
+            }
+        });
+    }
+
+</script>
 </body>
 </html>
