@@ -183,6 +183,7 @@
 
     <!-- ============================================== NAVBAR ============================================== -->
     <div class="header-nav animate-dropdown">
+
         <div class="container">
             <div class="yamm navbar navbar-default" role="navigation">
                 <!--                <div class="navbar-header">-->
@@ -256,30 +257,41 @@
 <div class="body-content">
     <div class="container">
         <div class="col-md-6 col-sm-6 center-block">
-            <h2>Add Product</h2>
+            <h2>Thêm sản phẩm</h2>
             <form action="/add-product" method="post" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="productImage"></label>
-                    <input type="file" class="form-control" id="productImage" name="productImage" accept="image/*"
-                           required>
-                </div>
-                <div class="form-group">
+
+                <div class="showImg    ">
+                    <div class="center-block" style="margin: auto;">
+
+
+                        <img class="center-block" src="../assets/images/products/normal/may-khoan-dong-luc-bosch-gsb-13-re-hop.jpg" alt="Ảnh sản phẩm" style="width: 150px; height: 120px">
+                    </div>
+                    <input type="file" class="form-control" id="productImgae" name="productID" required>
 
                 </div>
                 <div class="form-group">
-                    <label for="productName">Product Name:</label>
+                    <label for="productID">Mã sản phẩm</label>
+                    <input type="text" class="form-control" id="productID" name="productID" required>
+                </div>
+                <div class="form-group">
+                    <label for="productName">Tên sản phẩm</label>
                     <input type="text" class="form-control" id="productName" name="productName" required>
                 </div>
                 <div class="form-group">
-                    <label for="productDescription">Product Description:</label>
+                    <label for="productDescription">Mô tả</label>
                     <textarea class="form-control" id="productDescription" name="productDescription" rows="3"
                               required></textarea>
                 </div>
+
                 <div class="form-group">
-                    <label for="productPrice">Product Price:</label>
+                    <label for="productPrice">Giá bán</label>
                     <input type="number" class="form-control" id="productPrice" name="productPrice" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Add Product</button>
+                <div class="form-group">
+                    <label for="productQuality">Số lượng</label>
+                    <input type="number" class="form-control" id="productQuality" name="productQuality" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Thêm</button>
             </form>
         </div>
     </div>

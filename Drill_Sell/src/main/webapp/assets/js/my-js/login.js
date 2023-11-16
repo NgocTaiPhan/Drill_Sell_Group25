@@ -66,9 +66,11 @@ $(document).ready(function () {
                 text: 'Chào mừng',
                 icon: 'success',
                 confirmButtonText: 'OK',
-                timeout: 1000,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "home.html";
+                }
             });
-            window.location.href = "./home.html";
         } else {
             Swal.fire({
                 title: 'Đăng nhập thất bại',
