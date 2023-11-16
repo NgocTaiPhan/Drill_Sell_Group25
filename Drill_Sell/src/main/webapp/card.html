@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/rateit.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets/css/my-css/footermenu.css">
 
     <script src="assets/js/jquery-1.11.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -45,6 +46,7 @@
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/my-js/footermenu.js"></script>
 
 
     <!-- Main Style CSS -->
@@ -68,7 +70,6 @@
 
                         <li><a href="account.html"><i class="icon fa fa-user"></i>Tài khoản</a></li>
                         <li><a href="card.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-
                         <li><a href="checkout.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
@@ -84,15 +85,15 @@
     </div>
     <!-- /.header-top -->
     <!-- ============================================== TOP MENU : END ============================================== -->
-    <div class="main-header" style="position: relative">
+    <div class="main-header">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
-
-                    <div class="logo " style="margin:25px 0 50px 100px"><a href="home.html"> <img
-                            alt="logo" src="assets/images/logo.png"
-                            style="height: 100px"> </a></div>
+                    <link rel="stylesheet" href="assets/css/my-css/logo-page.css">
+                    <div class="logo-page"><a href="home.html"> <img
+                            src="assets/images/logo.png" alt="logo"
+                    > </a></div>
 
 
                     <!-- /.logo -->
@@ -113,13 +114,13 @@
 
                                 <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
                                        placeholder="Tìm kiếm...">
-                                <a class="search-button" href="#"></a>
+                                <a class="search-button" href="detail.html"></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Máy khoan động lực Bosch GSB 16 RE -
+                                    <li><a href="detail.html">Máy khoan động lực Bosch GSB 16 RE -
                                         06012281K1</a></li>
-                                    <li><a href="#">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
-                                    <li><a href="#">Máy khoan pin Makute CD027</a></li>
+                                    <li><a href="detail.html">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
+                                    <li><a href="detail.html">Máy khoan pin Makute CD027</a></li>
                                 </ul>
                             </div>
                         </form>
@@ -132,8 +133,8 @@
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 
-                    <div class="dropdown dropdown-cart"><a class="dropdown-toggle lnk-cart" data-toggle="dropdown"
-                                                           href="#">
+                    <div class="dropdown dropdown-cart"><a href="detail.html" class="dropdown-toggle lnk-cart"
+                                                           data-toggle="dropdown">
                         <div class="items-cart-inner">
                             <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
                             <div class="basket-item-count"><span class="count">1</span></div>
@@ -145,17 +146,17 @@
                                 <div class="cart-item product-summary">
                                     <div class="row">
                                         <div class="col-xs-4">
-                                            <div class="image"><a href="#"><img
-                                                    alt="Ảnh sản phẩm"
-                                                    src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"></a>
-                                            </div>
+                                            <div class="image"><a href="detail.html"><img
+                                                    src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
+                                                    alt="Ảnh sản phẩm"></a></div>
                                         </div>
                                         <div class="col-xs-7">
-                                            <h3 class="name"><a href="">Máy khoan động lực Bosch GSB 16 RE -
+                                            <h3 class="name"><a href="detail.html">Máy khoan động lực Bosch GSB 16 RE -
                                                 06012281K1</a></h3>
                                             <div class="price">1.599.000đ</div>
                                         </div>
-                                        <div class="col-xs-1 action"><a href="#"><i class="fa fa-trash"></i></a></div>
+                                        <div class="col-xs-1 action"><a href="detail.html"><i
+                                                class="fa fa-trash"></i></a></div>
                                     </div>
                                 </div>
                                 <!-- /.cart-item -->
@@ -165,7 +166,7 @@
                                     <div class="pull-right"><span class="text">Tổng tiền :</span><span class='price'>1.599.000đ</span>
                                     </div>
                                     <div class="clearfix"></div>
-                                    <a class="btn btn-upper btn-primary btn-block m-t-20" href="checkout.html">Thanh
+                                    <a href="checkout.html" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
                                         toán</a>
                                 </div>
                                 <!-- /.cart-total-->
@@ -193,7 +194,7 @@
         <div class="container">
             <div class="yamm navbar navbar-default" role="navigation">
                 <!--                <div class="navbar-header">-->
-                <!--                    <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse"-->
+                <!--                    <button data-target="detail.htmlmc-horizontal-menu-collapse" data-toggle="collapse"-->
                 <!--                            class="navbar-toggle collapsed"-->
                 <!--                            type="button">-->
                 <!--                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span-->
@@ -206,7 +207,26 @@
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.html">Trang chủ</a></li>
                                 <li class="active  yamm-fw"><a href="product.html">Sản phẩm</a></li>
-                                <li class="active  yamm-fw"><a href="cskh.html">Tư vấn</a></li>
+                                <li class="dropdown active  ">
+                                    <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
+                                    <ul class="dropdown-menu ">
+                                        <li><a href="battery_drill.html"></i>Máy khoan pin</a>
+
+                                        </li>
+                                        <li><a href="movers.html"></i>Máy khoan động lực</a>
+
+                                        </li>
+                                        <li><a href="hammer_drill.html"></i>Máy khoan bê tông, Máy khoan búa</a>
+
+                                        </li>
+                                        <li><a href="Hand_drill.html"></i>Máy khoan cầm tay gia đình</a>
+
+                                        </li>
+                                        <li><a href="mini_drill.html"></i>Máy khoan mini</a>
+
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li class="active  yamm-fw"><a href="contact.html">Liên hệ</a></li>
 
 
@@ -334,6 +354,45 @@
         </div>
     </div>
 </div>
-
+<!-- ============================================================= FOOTER : MENU============================================================= -->
+<div class="social-button">
+    <div class="social-button-content">
+      <a href="tel:0353933224" class="call-icon" rel="nofollow">
+        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        <div class="animated alo-circle"></div>
+        <div class="animated alo-circle-fill"></div>
+        <span>Hotline: 035 393 3224</span>
+      </a>
+      <a href="sms:0353933224" class="sms">
+        <i class="fa fa-weixin" aria-hidden="true"></i>
+        <div class="animated alo-circle"></div>
+        <div class="animated alo-circle-fill"></div>
+        <span>SMS: 035 393 3224</span>
+      </a>
+      <a href="https://www.facebook.com/Ngocthang.net/" class="mes">
+        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+        <div class="animated alo-circle"></div>
+        <div class="animated alo-circle-fill"></div>
+        <span>Nhắn tin Facebook</span>
+      </a>
+      <a href="http://zalo.me/0353933224" class="zalo">
+        <i class="fa fa-commenting-o" aria-hidden="true"></i>
+        <div class="animated alo-circle"></div>
+        <div class="animated alo-circle-fill"></div>
+        <span>Zalo: 035.393.3224</span>
+      </a>
+    </div>
+    <a href="#" class="user-support">
+      <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+      <div class="animated alo-circle"></div>
+      <div class="animated alo-circle-fill"></div>
+    </a>
+  </div>
+  
+<!-- ============================================================= FOOTER : MENU============================================================= -->
+<!-- ============================================================= Backtop ============================================================= -->
+<button onclick="topFunction()" id="back-to-top" title="Go to top"><i class=" icon fa    fa-arrow-up"></i></button>
+<link rel="stylesheet" href="assets/css/my-css/backtop.css">
+<script src="assets/js/my-js/backtop.js"></script>
 </body>
 </html>

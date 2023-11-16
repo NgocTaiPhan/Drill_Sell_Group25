@@ -1,0 +1,154 @@
+.social-button{
+      position: fixed;
+      bottom: 15px;
+      left: 45px;
+      min-width: 45px;
+      text-align: center;
+      z-index: 99999;
+  }
+  .social-button-content{
+     display: none;  /* ẩn ngay từ đầu */
+  }
+  .social-button-content{   
+    display: inline-grid;
+  }
+  .social-button a {
+    position: relative;
+    padding:8px 0;
+    cursor: pointer;
+    
+  }
+  .social-button i{
+      width: 40px;
+      height: 40px;
+      background: #43a1f3;
+      color: #fff;
+      border-radius: 100%;
+      font-size: 20px;
+      text-align: center;
+      line-height: 1.9;
+      position: relative;
+      z-index: 999;
+  }
+  .social-button span{
+    display: none;
+  }
+  .alo-circle {
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: zoomIn;
+    width: 50px;
+    height: 50px;
+    top: 3px;
+    right: -3px;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%; /* Sử dụng border-radius để làm hình tròn */
+    border: 2px solid rgba(30, 30, 30, 0.4);
+    opacity: 0.5; /* Chỉ sử dụng một lần opacity */
+    border-color: #0089B9;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1); /* Kích thước ban đầu */
+      opacity: 0.1;
+    }
+    100% {
+      transform: scale(1.5); /* Kích thước khi hoàn thành animation */
+      opacity: 0; /* Ẩn phần tử */
+    }
+  }
+  
+  .alo-circle-fill {
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: pulse;
+    width: 60px;
+    height: 60px;
+    top: -2px;
+    right: -8px;
+    position: absolute;
+    transition: all 0.2s ease-in-out; /* Chỉ sử dụng thuộc tính transition một lần */
+    border-radius: 50%; /* Sử dụng border-radius để làm hình tròn */
+    border: 2px solid transparent;
+    background-color: rgba(0, 175, 242, 0.5);
+    opacity: 0.75;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9); /* Kích thước nhỏ hơn khi bắt đầu */
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.1); /* Kích thước lớn hơn giữa chặn thời gian */
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9); /* Kích thước nhỏ hơn khi kết thúc */
+      opacity: 0.5;
+    }
+  }
+  
+  .call-icon > span,
+.mes > span,
+.sms > span,
+.zalo > span {
+  display: none; /* Ẩn span từ đầu */
+}
+
+.call-icon:hover > span,
+.mes:hover > span,
+.sms:hover > span,
+.zalo:hover > span {
+  display: block; /* Hiển thị span khi hover */
+}
+
+.social-button a:hover span {
+  display: block; /* Hiển thị span khi hover vào phần tử <a> */
+}
+
+.social-button a span {
+  border-radius: 2px;
+  text-align: center;
+  background: rgb(103, 182, 52);
+  padding: 9px;
+  display: none;
+  width: 180px;
+  margin-left: 10px;
+  position: absolute;
+  color: #ffffff;
+  z-index: 999;
+  top: 9px;
+  left: 40px;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-animation: headerAnimation 0.7s 1;
+  -webkit-animation: headerAnimation 0.7s 1;
+  -o-animation: headerAnimation 0.7s 1;
+  animation: headerAnimation 0.7s 1;
+}
+
+@-webkit-keyframes headerAnimation {
+  0% { margin-top: -70px; }
+  100% { margin-top: 0; }
+}
+
+@keyframes headerAnimation {
+  0% { margin-top: -70px; }
+  100% { margin-top: 0; }
+}
+
+.social-button a span:before {  /* pseudo-elements */
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgb(103, 182, 52) transparent transparent;
+  position: absolute;
+  left: -10px;
+  top: 10px;
+}
