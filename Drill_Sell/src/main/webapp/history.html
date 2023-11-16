@@ -5,14 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="assets/images/logo.jpg" type="image/png">
-    <title>Bán máy khoan</title>
-    <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+    <title>Lịch sử mua hàng</title>
 
-    <!-- Customizable CSS -->
-    <link rel="stylesheet" href="assets/css/styleAccount.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Customizable CSS ================================================================================-->
+
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/blue.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
@@ -20,6 +18,9 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/rateit.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets/css/my-css/footermenu.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styleHistory.css">
 
     <script src="assets/js/jquery-1.11.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -33,16 +34,18 @@
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/my-js/footermenu.js"></script>
 
-    <!-- Icons/Glyphs -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets\css\font-awesome.css">
 
-    <!-- Fonts -->
+    <!-- Icons/Glyphs ==============================================================================================-->
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+
+    <!-- Fonts =========================================================================================================-->
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800'
           rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 <header class="header-style-1 ">
@@ -241,170 +244,36 @@
         <div class="breadcrumb-content">
             <ul>
                 <li><a href="home.html">Trang chủ</a></li>
-                <li class="active">Tài khoản</li>
+                <li class="active">Lịch sử mua hàng</li>
             </ul>
-            <style>
-
-                .breadcrumb-area {
-                    height: 15px;
-
-                }
-                .breadcrumb-content li{
-                    font-size: 17px;
-                    margin-top: 0;!important;
-                    padding-top: 0;!important;
-                    color: black;
-                }
-                .body-content{
-                    margin-top: 0;
-                }
-                .myAccount .list li{
-                    padding-bottom: 10px;
-                }
-
-            </style>
         </div>
     </div>
 </div>
-
-<div class="body-content outer-top-xs" id="top-banner-and-menu">
-    <div class="container">
-        <div class="borders">
-            <div class="left">
-                <div class="daiDien">
-                    <div><input id="img" type="image" name="img" src="assets/images/logo.png"></div>
-                    <div><input id="name" type="text" name="tenTK" placeholder="Tên tài khoản"></div>
-                </div>
-
-                <div class="myAccount">
-                    <div class="top">
-                        <i class="fa-solid fa-user"></i>
-                        <p class="accounts">Tài khoản của tôi</p>
-                    </div>
-
-                    <ul class="list">
-                        <li class="first"><a href="#">Hồ sơ</a></li>
-                        <li class="first"><a href="history.html">Lịch sử đặt hàng</a></li>
-                    </ul>
-
-                </div>
-            </div>
-            <div class="center">
-                <div class="top">
-                    <p class="first">Hồ sơ của tôi</p>
-                    <p>Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
-                </div>
-                <div class="center_information">
-                    <table class="table">
-                        <thead>
-
-                        <tr>
-                            <td>Tên đăng nhập:</td>
-                            <td><input type="text" name="tenDangNhap" id="tenDangNhap" placeholder="Tên đăng nhập...">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Email:</td>
-                            <td><input type="text" name="email" id="email"></td>
-
-                        </tr>
-                        <tr>
-                            <td>Số điện thoại:</td>
-                            <td><input type="text" name="sdt" id="sdt"></td>
-
-
-                        </tr>
-                        <tr>
-                            <td>Giới tính:</td>
-                            <td><input type="radio" name="sex" id="sex">Nam</td>
-                            <td><input type="radio" name="sex" id="sex2">Nữ</td>
-                            <td><input type="radio" name="sex" id="sex3">Khác</td>
-
-                        </tr>
-                        <tr>
-                            <td>Ngày sinh:</td>
-                            <td>
-                                <select id="day" name="day">
-                                    <option value="select1">1</option>
-                                    <option value="select2">2</option>
-                                    <option value="select3">3</option>
-                                    <option value="select4">4</option>
-                                    <option value="select5">5</option>
-                                    <option value="select6">6</option>
-                                    <option value="select7">7</option>
-                                    <option value="select8">8</option>
-                                    <option value="select9">9</option>
-                                    <option value="select10">10</option>
-                                    <option value="select11">11</option>
-                                    <option value="select12">12</option>
-                                    <option value="select13">13</option>
-                                    <option value="select14">14</option>
-                                    <option value="select15">15</option>
-                                    <option value="select16">16</option>
-                                    <option value="select17">17</option>
-                                    <option value="select18">18</option>
-                                    <option value="select19">19</option>
-                                    <option value="select20">20</option>
-                                    <option value="select21">21</option>
-                                    <option value="select22">22</option>
-                                    <option value="select23">23</option>
-                                    <option value="select24">24</option>
-                                    <option value="select25">25</option>
-                                    <option value="select26">26</option>
-                                    <option value="select27">27</option>
-                                    <option value="select28">28</option>
-                                    <option value="select29">29</option>
-                                    <option value="select30">30</option>
-                                    <option value="select31">31</option>
-
-                                </select>
-                            </td>
-
-                            <td>
-                                <select id="year" name="year">
-                                    <option value="select1"> Tháng 1</option>
-                                    <option value="select2">Tháng 2</option>
-                                    <option value="select3">Tháng 3</option>
-                                    <option value="select4">Tháng 4</option>
-                                    <option value="selectn5">Tháng 5</option>
-                                    <option value="select6">Tháng 6</option>
-                                    <option value="select7">Tháng 7</option>
-                                    <option value="select8">Tháng 8</option>
-                                    <option value="select9">Tháng 9</option>
-                                    <option value="select10">Tháng 10</option>
-                                    <option value="select11">Tháng 11</option>
-                                    <option value="select12">Tháng 12</option>
-                                </select>
-                            </td>
-
-
-                            <td>
-                                <select id="month" name="month">
-                                    <option value="select1">2003</option>
-                                    <option value="select2">2004</option>
-                                    <option value="select3">1990</option>
-                                    <option value="select4">1991</option>
-                                    <option value="select5">1992</option>
-                                    <option value="select6">1993</option>
-                                    <option value="select7">1994</option>
-                                    <option value="select8">1995</option>
-                                    <option value="select9">1996</option>
-                                    <option value="select10">1997</option>
-
-                                </select>
-                            </td>
-
-                        </tr>
-                        </thead>
-                    </table>
-                </div>
-
-                <button class="save">Lưu</button>
-            </div>
-        </div>
-
-    </div>
+<div class="cartHistory">
+    <table class="table">
+        <thead>
+        <tr>
+            <th class="orderDate">Ngày đặt hàng</th>
+            <th class="codeProduct">Mã đơn hàng</th>
+            <th class="quantity">Số lượng </th>
+            <th class="product-subtotal">Tổng tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="orderDate"> <input value="20/05/2020"></td>
+            <td class="codeProduct"> <input placeholder="001"></td>
+            <td class="quantity"><input value="1"></td>
+            <td class="product-subtotal"><span class="amount">468.00 VND</span></td>
+        </tr>
+        <tr>
+            <td class="orderDate"> <input value="20/05/2020"></td>
+            <td class="codeProduct"> <input placeholder="002"></td>
+            <td class="quantity"><input value="4"></td>
+            <td class="product-subtotal"><span class="amount">1700.000 VND</span></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
-
 </body>
 </html>

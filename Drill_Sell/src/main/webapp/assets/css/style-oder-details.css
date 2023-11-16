@@ -86,7 +86,10 @@ body{
     margin-left: 400px;
     width: 60px;
 }
-.code-orders {
-    float: right;
-    margin-right: 20px;
+
+.code-orders .orderDate{
+    float: left;
+}
+.code-orders .code{
+  margin-left: 205px;
 }
