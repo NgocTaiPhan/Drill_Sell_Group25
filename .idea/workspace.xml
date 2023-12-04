@@ -5,23 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2a3fc51-47df-4d5a-9967-714b95133871" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Drill_Sell_Group25.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/assets/css/style-oder-details.css" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/assets/css/style-oder-details.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/assets/css/styleCheckOut.css" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/assets/css/styleCheckOut.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/order_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/order_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/admin/insert-products.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/admin/insert-products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/bosh.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/bosh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/classic.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/classic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/dewalt.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/dewalt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/feg.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/feg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/gomes.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/gomes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/makita.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/makita.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/sasuke.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/sasuke.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/sencan.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/sencan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/tolsen.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/tolsen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/product.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,21 +46,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hoa&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Drill_Sell_Group25-main&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "hoa",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Study/BTLTW/BTTHSO5",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Study\DoAnWeb\Project\Drill_Sell_Group25\Drill_Sell\Drill_Sell\src\main\webapp\producers" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Drill_Sell" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Drill_Sell" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -89,7 +107,9 @@
       <workItem from="1700112828195" duration="4554000" />
       <workItem from="1700138512781" duration="19000" />
       <workItem from="1700138615428" duration="2180000" />
-      <workItem from="1700140821176" duration="3279000" />
+      <workItem from="1700140821176" duration="13553000" />
+      <workItem from="1700315896758" duration="94000" />
+      <workItem from="1700318233524" duration="298000" />
     </task>
     <servers />
   </component>
