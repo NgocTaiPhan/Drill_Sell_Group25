@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Drill_Sell:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/drill_sell/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Hand_drill.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/accessory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/account.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/insert-products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/animate.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/blue.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/bootstrap-select.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/images/delete.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/images/star-small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/lightbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/my-css/backtop.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/my-css/footermenu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/my-css/logo-page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/owl.carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/owl.transitions.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/rateit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/style-oder-details.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/styleAccount.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/styleCard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/styleCheckOut.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/styleHistory.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont-1.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/glyphicons-halflings-regular-1.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/ajax.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/banners/LHS-banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/banners/banner-canva.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/banners/banner-side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/banners/cat-banner-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/banners/home-banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/banners/home-banner1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/banners/home-banner2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/banners/top-menu-banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/blank.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/blog-post/may-khoan-nhap-khau.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/1bo-mui-khoan-kim-loai-13-chi-tiet-15-65-bosch-2608577349-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/1bo-mui-khoan-va-van-vit-bosch-2608522422-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/1chup-bui-may-khoan-1600a00d6h-nho.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/1pin-21v-4ah-amax-ap40040sm-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/1pin-bosch-gba-12v-3-0ah-1600a028tp-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/1sac-nhanh-bosch-gal-18v-160-c-14-4v-18v-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/1sac-pin-makita-dc18wc-1910g0-1-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/bo-may-bat-vit-dung-pin-makita-clx228s-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/bo-san-pham-may-khoan-van-vit-makita-clx224s-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/combo-2-may-khoan-pin-16v-beiter-c16-2b1-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/combo-maykhoandonglucvamayvanvitdungpin12v-makita.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/may-khoan-dong-luc-dung-pin-18v-bosch-gsb-185-li-06019k31k1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/may-khoan-dong-luc-pin-60v-dewalt-dcd996t1-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/may-khoan-dung-pin-ken-bl6212hb-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/may-khoan-pin-20v-makute-cd029-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/may-khoan-pin-dong-luc-dewalt-dcd996n-kr-400.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/may-khoan-pin-makute-cd027-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/may-khoan-van-vit-dong-luc-dung-pin-bosch-gsb-120-li-500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/may-khoan-van-vit-dong-luc-dung-pin-stanley-sch20c2k-500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/may-khoan-van-vit-dung-pin-bosch-gsb-180-li-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/may-khoan-van-vit-dung-pin-bosch-gsb-180-li-k2-promo-06019f83k2-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/may-khoan-van-vit-dung-pin-bosch-gsr-180-li-a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/may-khoan-van-vit-dung-pin-dewalt-12v-dcf601d2-kr-nho.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/may-khoan-van-vit-dung-pin-makita-df488d002-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/than-may-khoan-pin-amax-aki6510sm-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/battery/tolsen-87240-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/11o173975v82_1617000132_bo_pro_u_a_1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/11o174976v82_2608572146_bo_pro_u_a_1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/11o178457v82_1607950041_bo_pro_u_a_1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/11o183288v82_2608572059_bo_pro_u_a_1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/11o183948v82_1608571062_bo_pro_u_f_1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-be-tong-26mm-feg-eg-2601-sre-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-be-tong-classic-cla-5425-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-be-tong-gomes-gb-2603sre-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-be-tong-htcom-ht-8228-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-be-tong-ken-2826bs-400.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-be-tong-makita-hr166dsae1-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-be-tong-sencan-722615-nho.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-bosch-gbh-220-kem-phu-kien-06112a60k1-a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-bua-bosch-gbh-2-24-dfr-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-bua-bosch-gbh-2-24-dre-790w-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-bua-bosch-gbh-2-24-re-790w.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-bua-bosch-gbh-2-26-de-a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-bua-bosch-gbh-2-26-dre-500x500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-bua-bosch-gbh-2-28-dfv-avar-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-bua-bosch-gbh-2-28-dv-400.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-bua-bosch-gbh-220-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-bua-dung-pin-bosch-gbh-180-li-bl-solo-300.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-duc-dung-pin-makita-dhr202z-chua-pin-sac-nho.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/may-khoan-pin-makute-chd001-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hammer/than-may-khoan-be-tong-amax-a3cn28sm-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/11320x320-SDS_Plus_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/11320x320-bo-mui-khoan-va-van-vit-xline-34mon-Bosch.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/11320x320-mui-khoan-da-nang-hex-9-bosch-2608579840-9x90x150-1-1664510717.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-bosch-gbm-10-re-a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-bosch-gbm-320.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-bosch-gbm-6-re-400.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-cam-tay-makita-m6000b-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-dien-makute-ed002-500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-feg-eg-513-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-feg-eg-515-nho1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-feg-eg-516-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-khuay-son-makute-ed006-500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-makita-6411-a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-makita-m6001b-400.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-sat-chuyen-dung-keyang-d-23-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-sat-toc-do-cao-makita-dp2010-s3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-van-vit-dung-pin-gsr-120-li-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-xoay-bosch-gbm-13-re-500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/hand/may-khoan-xoay-bosch-gbm-400-06011c10k0-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/1111320x320-dau-van-vit-bosch-2608522489-t30-power-bit-1-dau-1pc-1-1664504354.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/1111320x320-dau-van-vit-t40-power-bit-bosch-2608522490-1-dau-1pc-1664504683.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/1111320x320-mui-khoan-da-nang-hex-9-3x45x90-bosch-2607002773-1-1664505219.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/bo-may-khoan-mai-khac-mini-da-nang-150pc-12_large.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/bo-may-mai-khi-nen-cao-cap-1__3__863e286c1ca74196bef02d8b0cb47961_large.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/may-khac-mai-mini-da-nang-wl-800-1_large.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/may-khac-mai-mini-pin-sac-hilda-7_0a9288792af046ed9a9e509a0d60a25e_large.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/may-khoan-10mm-devon-1818-4-10re-nho.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/may-khoan-crown-ct10070-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/may-khoan-dau-maxpro-10mm-mped320vuf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/may-khoan-davitec-dv2450-10mm-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/may-khoan-feg-eg-512-a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/may-khoan-goc-chay-pin-makita-da331dz-b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/may-khoan-pin-makita-18v-dhp453sfx8-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/may-khoan-sat-stanley-stdr5510-10mm-500w.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/may-khoan-sencan-530603-230w-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/mini/may-khoan-xoay-bosch-gbm-13-re-500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/11may-khoan-bua-26-cai-phu-kien-makita-m8103kx2b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/bo-may-khoan-bosch-gsb-550-freedom-500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/bo-set-may-khoan-dong-luc-bosch-gsb-550e-a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-16mm-makita-hp1630-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-bua-26-phu-kien-makita-m8100kx2b-710w-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-dong-luc-bosch-gsb-10-re-a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-dong-luc-bosch-gsb-13-re-500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-dong-luc-bosch-gsb-13-re-gom-bo-set.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-dong-luc-bosch-gsb-550-a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-dong-luc-bosch-gsb-550-mp-set-19-chi-tiet.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-dong-luc-bosch-gsb-550-re-bo-set-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-dong-luc-bosch-gsb-600-06011a03k1-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-dong-luc-bosch-gsb-600-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-dong-luc-dewalt-dwd024-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-dong-luc-makita-m8101b-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-dong-luc-makita-m8104b-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-dong-luc-makute-id003-x.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-dong-luc-stanley-stdh7213-13mm-800w-500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-pin-dong-luc-dewalt-dcd996n-kr-400.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/movers/may-khoan-van-vit-dong-luc-dewalt-dcd796m2-500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/poster_battery.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/poster_hamer.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/poster_hand.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/poster_mini.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/caterogy/poster_moves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/details/may-khoan-dong-luc-bosch-gsb-16-re-kt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/details/may-khoan-dong-luc-bosch-gsb-16-re-t4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/details/may-khoan-dong-luc-bosch-gsb-16-re-t5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/label.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/payments/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/payments/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/payments/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/payments/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/payments/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/prev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/accessory/dau-khoan-co-khoa-13mm-bosch-2608571079-g.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/accessory/de-sac-nhanh-makita-12v-max-dc10sb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/accessory/mui-duc-nhon-makita-d-08682.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/accessory/pin-makita-18v.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/accessory/plus-1-hammer-drill-bits-2868938-ocs-ac-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/accessory/sac-nhanh-bosch-gal-18v-20-14-4v-18v-g.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/best-seller/bo-may-bat-vit-dung-pin-makita-clx228s-g.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/best-seller/bo-mui-khoan-kim-loai-13-chi-tiet-15-65-bosch-2608577349-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/best-seller/may-khoan-be-tong-classic-cla-5425-g.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/best-seller/may-khoan-dong-luc-bosch-gsb-16-re-g1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/best-seller/may-khoan-dong-luc-bosch-gsb-550.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/best-seller/may-khoan-van-vit-dung-pin-12v-bosch-gsr-120-li-gen-ii-06019g80l1-g.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/best-seller/pin-bosch-12v-2-0ah-g.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/best-seller/sac-pin-bosch-gal-12v-40-10-8v-12v-g.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/normal/may-khoan-be-tong-26mm-feg-eg-2601-sre.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/normal/may-khoan-be-tong-gomes-gb-2603sre.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/normal/may-khoan-bosch-gbm-320.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/normal/may-khoan-bua-makita-m0801b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/normal/may-khoan-dong-luc-bosch-gsb-13-re-hop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/normal/may-khoan-dong-luc-bosch-gsb-13-re.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/normal/may-khoan-dong-luc-makita-m8101b-g.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/normal/may-khoan-pin-makute-cd027-g1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/normal/may-khoan-rut-loi-gomes-gcd-120-g.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/normal/may-khoan-van-vit-dong-luc-dung-pin-stanley-sch20c2k.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/normal/may-khoan-van-vit-dung-pin-12v-bosch-gsr-120-li-gen-ii-06019g80l1-g.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/normal/may-khoan-van-vit-dung-pin-12v-sencan-d511210-sl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/shoppingCart/bosch-gsb-120-li-1-pin-1-org-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/shoppingCart/dau-khoan-co-khoa-13mm-bosch-2608571079-g.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/shoppingCart/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/shoppingCart/may-khoan-pin-tolsen-79036-1.-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/sliders/01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/sliders/02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/sliders/03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/bootstrap-hover-dropdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/bootstrap-select.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/bootstrap-slider.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/echo.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery-1.11.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.easing-1.3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.rateit.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/lightbox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/my-js/backtop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/my-js/blogspot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/my-js/footermenu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/my-js/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/my-js/register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/owl.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/battery_drill.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/card.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/hammer_drill.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/history.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/mini_drill.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/movers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/oder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/order_details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/producers/bosh.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/producers/classic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/producers/dewalt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/producers/feg.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/producers/gomes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/producers/makita.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/producers/sasuke.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/producers/sencan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/producers/tolsen.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/z_battery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/z_charger.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/z_countersink.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReadMe.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2ZDT45fB3bCQkmovHGYHaARQ0Kp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "tai",
+    "last_opened_file_path": "D:/WorkSpace/WebPrograming/Project/Drill_Sell/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace\WebPrograming\Project\Drill_Sell\src\main\resources" />
+      <recent name="D:\WorkSpace\WebPrograming\Project\Drill_Sell\src\main\java\vn\edu\hcmuaf" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.872" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.872" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Drill_Sell:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Drill_Sell_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="d1861ff2-3d97-41a5-8e83-69d0ac4007c3" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51311" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Drill_Sell:war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="" />
+      <created>1701955458612</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701955458612</updated>
+      <workItem from="1701955459436" duration="1514000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
