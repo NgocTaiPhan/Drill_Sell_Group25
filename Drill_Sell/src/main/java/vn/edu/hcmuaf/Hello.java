@@ -9,7 +9,7 @@ import java.io.IOException;
 public class Hello extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.getWriter().println("<p>Hello</p>");
+        response.getWriter().println("  <a href=\"./home.jsp\">Chuyển đến trang chủ</a>");
     }
 
     @Override
