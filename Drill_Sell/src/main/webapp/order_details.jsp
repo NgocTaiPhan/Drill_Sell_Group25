@@ -40,7 +40,7 @@
                 <input placeholder="phương thức thanh toán">
 
             </div>
-            <div class="oder">
+            <!-- <div class="oder">
                 <tr>
                     <td class="li-product-thumbnail"><a href="#"> Máy khoan động lực Bosch GSB 16 RE -
                         06012281K1</a></td>
@@ -59,7 +59,7 @@
                     </td>
 
                 </tr>
-            </div>
+            </div> -->
             <div class="code-orders">
                 <input class="orderDate" placeholder="Ngày đặt hàng">
                 <input class="code" placeholder="Mã đơn hàng">
