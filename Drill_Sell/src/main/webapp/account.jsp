@@ -286,6 +286,7 @@
                     <ul class="list">
                         <li class="first"><a href="#">Hồ sơ</a></li>
                         <li class="first"><a href="history.jsp">Lịch sử đặt hàng</a></li>
+                        <li class="first"><a href="password.jsp">Đổi mật khẩu</a></li>
                     </ul>
 
                 </div>
@@ -362,7 +363,7 @@
                             </td>
 
                             <td>
-                                <select id="year" name="year">
+                                <select id="month" name="month">
                                     <option value="select1"> Tháng 1</option>
                                     <option value="select2">Tháng 2</option>
                                     <option value="select3">Tháng 3</option>
@@ -380,20 +381,36 @@
 
 
                             <td>
-                                <select id="month" name="month">
-                                    <option value="select1">2003</option>
-                                    <option value="select2">2004</option>
-                                    <option value="select3">1990</option>
-                                    <option value="select4">1991</option>
-                                    <option value="select5">1992</option>
-                                    <option value="select6">1993</option>
-                                    <option value="select7">1994</option>
-                                    <option value="select8">1995</option>
-                                    <option value="select9">1996</option>
-                                    <option value="select10">1997</option>
+                                <select id="year" name="year">
+<%--                                    <option value="select1">2003</option>--%>
+<%--                                    <option value="select2">2004</option>--%>
+<%--                                    <option value="select3">1990</option>--%>
+<%--                                    <option value="select4">1991</option>--%>
+<%--                                    <option value="select5">1992</option>--%>
+<%--                                    <option value="select6">1993</option>--%>
+<%--                                    <option value="select7">1994</option>--%>
+<%--                                    <option value="select8">1995</option>--%>
+<%--                                    <option value="select9">1996</option>--%>
+<%--                                    <option value="select10">1997</option>--%>
 
                                 </select>
                             </td>
+
+                            <script>
+                                // Get the current year
+                                var currentYear = new Date().getFullYear();
+
+                                // Get the select element
+                                var yearSelect = document.getElementById("year");
+
+                                // Add options to the select element from 1940 to the current year
+                                for (var year = 1940; year <= currentYear; year++) {
+                                    var option = document.createElement("option");
+                                    option.value = year;
+                                    option.text = year;
+                                    yearSelect.add(option);
+                                }
+                            </script>
 
                         </tr>
                         </thead>
