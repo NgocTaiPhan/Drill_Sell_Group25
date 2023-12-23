@@ -293,6 +293,10 @@
 
                 </div>
             </div><!-- /.sidebar -->
+
+
+
+
             <div class='col-md-9'>
                 <div class="detail-block">
                     <div class="row  wow fadeInUp">
@@ -476,9 +480,9 @@
                                         </div>
 
                                         <div class="col-sm-7">
-                                            <a href="oder.html" class="btn btn-danger" style="margin-bottom: 10px"><i
+                                            <a href="oder.jsp" class="btn btn-danger" style="margin-bottom: 10px"><i
                                                     class="fa fa-check inner-right-vs"></i> Mua ngay</a>
-                                            <a href="card.html" class="btn btn-primary"><i
+                                            <a href="card.jsp" class="btn btn-primary"><i
                                                     class="fa fa-shopping-cart inner-right-vs"></i> Thêm vào giỏ
                                                 hàng</a>
 

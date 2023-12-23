@@ -283,22 +283,22 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                <td class="sub"><input type="checkbox"></td>
-                                <td class="li-product-thumbnail"><a href="#"><img
-                                        src="assets/images/shoppingCart/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"></a>
-                                </td>
-                                <td class="li-product-name"><a href="#">Máy khoan động lực Bosch GSB 16 RE -
-                                    06012281K1</a></td>
-                                <td class="li-product-price"><span class="amount">468.00 VND</span></td>
-                                <td class="quantity">
-                                    <div class="cart-plus-minus">
-                                        <input class="cart-plus-minus-box" value="1" >
-                                    </div>
-                                </td>
-                                <td class="product-subtotal"><span class="amount">468.00 VND</span></td>
-                            </tr>
+<%--                            <tr>--%>
+<%--                                <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>--%>
+<%--                                <td class="sub"><input type="checkbox"></td>--%>
+<%--                                <td class="li-product-thumbnail"><a href="#"><img--%>
+<%--                                        src="assets/images/shoppingCart/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"></a>--%>
+<%--                                </td>--%>
+<%--                                <td class="li-product-name"><a href="#">Máy khoan động lực Bosch GSB 16 RE ---%>
+<%--                                    06012281K1</a></td>--%>
+<%--                                <td class="li-product-price"><span class="amount">468.00 VND</span></td>--%>
+<%--                                <td class="quantity">--%>
+<%--                                    <div class="cart-plus-minus">--%>
+<%--                                        <input class="cart-plus-minus-box" value="1" >--%>
+<%--                                    </div>--%>
+<%--                                </td>--%>
+<%--                                <td class="product-subtotal"><span class="amount">468.00 VND</span></td>--%>
+<%--                            </tr>--%>
                             <tr>
                                 <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
                                 <td class="sub"><input type="checkbox"></td>
@@ -309,10 +309,22 @@
                                 <td class="li-product-price"><span class="amount">500.000 VND</span></td>
                                 <td class="quantity">
                                     <div class="cart-plus-minus">
-                                        <input class="cart-plus-minus-box" value="1"  >
+                                        <input class="cart-plus-minus-box" value="1" type="number" oninput="validateQuantity(this)" >
                                     </div>
                                 </td>
 
+                                <script>
+                                    function validateQuantity(input) {
+                                        // Chuyển giá trị thành số nguyên
+                                        var quantity = parseInt(input.value, 10);
+
+                                        // Kiểm tra nếu giá trị là NaN hoặc nhỏ hơn 1
+                                        if (isNaN(quantity) || quantity < 1) {
+                                            // Đặt giá trị về 1
+                                            input.value = 1;
+                                        }
+                                    }
+                                </script>
 
 
                                 <td class="product-subtotal"><span class="amount">500.000 VND</span></td>
