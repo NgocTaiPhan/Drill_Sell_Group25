@@ -64,10 +64,10 @@
                 <div class="cnt-account">
                     <ul class="list-unstyled">
 
-                        <li><a href="account.html"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                        <li><a href="card.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="oder.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                        <li><a href="login.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
+                        <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
+                        <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
 
@@ -87,7 +87,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
                     <link rel="stylesheet" href="assets/css/my-css/logo-page.css">
-                    <div class="logo-page"><a href="home.html"> <img
+                    <div class="logo-page"><a href="home.jsp"> <img
                             src="assets/images/logo.png" alt="logo"
                     > </a></div>
 
@@ -110,13 +110,13 @@
 
                                 <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
                                        placeholder="Tìm kiếm...">
-                                <a class="search-button" href="detail.html"></a>
+                                <a class="search-button" href="detail.jsp"></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="detail.html">Máy khoan động lực Bosch GSB 16 RE -
+                                    <li><a href="detail.jsp">Máy khoan động lực Bosch GSB 16 RE -
                                         06012281K1</a></li>
-                                    <li><a href="detail.html">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
-                                    <li><a href="detail.html">Máy khoan pin Makute CD027</a></li>
+                                    <li><a href="detail.jsp">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
+                                    <li><a href="detail.jsp">Máy khoan pin Makute CD027</a></li>
                                 </ul>
                             </div>
                         </form>
@@ -129,7 +129,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 
-                    <div class="dropdown dropdown-cart"><a href="detail.html" class="dropdown-toggle lnk-cart"
+                    <div class="dropdown dropdown-cart"><a href="detail.jsp" class="dropdown-toggle lnk-cart"
                                                            data-toggle="dropdown">
                         <div class="items-cart-inner">
                             <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
@@ -142,16 +142,16 @@
                                 <div class="cart-item product-summary">
                                     <div class="row">
                                         <div class="col-xs-4">
-                                            <div class="image"><a href="detail.html"><img
+                                            <div class="image"><a href="detail.jsp"><img
                                                     src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
                                                     alt="Ảnh sản phẩm"></a></div>
                                         </div>
                                         <div class="col-xs-7">
-                                            <h3 class="name"><a href="detail.html">Máy khoan động lực Bosch GSB 16 RE -
+                                            <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB 16 RE -
                                                 06012281K1</a></h3>
                                             <div class="price">1.599.000đ</div>
                                         </div>
-                                        <div class="col-xs-1 action"><a href="detail.html"><i
+                                        <div class="col-xs-1 action"><a href="detail.jsp"><i
                                                 class="fa fa-trash"></i></a></div>
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@
                                     <div class="pull-right"><span class="text">Tổng tiền :</span><span class='price'>1.599.000đ</span>
                                     </div>
                                     <div class="clearfix"></div>
-                                    <a href="oder.html" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
+                                    <a href="oder.jsp" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
                                         toán</a>
                                 </div>
                                 <!-- /.cart-total-->
@@ -281,7 +281,7 @@
                                                 <!-- /.col -->
                                                 <div class="col col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.html">Máy khoan vặn vít dùng
+                                                        <h3 class="name"><a href="detail.jsp">Máy khoan vặn vít dùng
                                                             pin 12V
                                                             Bosch GSR 120-LI GEN II</a></h3>
                                                         <div class="rating rateit-small"></div>
@@ -304,7 +304,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.html"> <img
+                                                        <div class="image"><a href="detail.jsp"> <img
                                                                 src="assets/images/products/normal/may-khoan-van-vit-dung-pin-12v-sencan-d511210-sl.jpg"
                                                                 alt="Ảnh sản phẩm"> </a>
                                                         </div>
@@ -316,7 +316,7 @@
                                                 <!-- /.col -->
                                                 <div class="col col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.html">Máy khoan vặn vít dùng
+                                                        <h3 class="name"><a href="detail.jsp">Máy khoan vặn vít dùng
                                                             pin 12V
                                                             Sencan D511210</a></h3>
                                                         <div class="rating rateit-small"></div>
@@ -339,7 +339,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.html"> <img
+                                                        <div class="image"><a href="detail.jsp"> <img
                                                                 src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
                                                                 alt="Ảnh sản phẩm"> </a>
                                                         </div>
@@ -351,7 +351,7 @@
                                                 <!-- /.col -->
                                                 <div class="col col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.html">Máy khoan động lực Bosch
+                                                        <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch
                                                             GSB 16 RE
                                                             -
                                                             06012281K1</a></h3>
@@ -378,7 +378,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.html"> <img
+                                                        <div class="image"><a href="detail.jsp"> <img
                                                                 src="assets/images/products/best-seller/pin-bosch-12v-2-0ah-g.jpg"
                                                                 alt="images">
                                                             <div class="zoom-overlay"></div>
@@ -391,7 +391,7 @@
                                                 <!-- /.col -->
                                                 <div class="col col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.html">
+                                                        <h3 class="name"><a href="detail.jsp">
                                                             Pin Bosch 12V 2.0Ah 1600A00F6X (1607A350C5)</a></h3>
                                                         <div class="rating rateit-small"></div>
                                                         <div class="product-price"><span
@@ -413,7 +413,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.html"> <img
+                                                        <div class="image"><a href="detail.jsp"> <img
                                                                 src="assets/images/products/normal/may-khoan-dong-luc-bosch-gsb-13-re.jpg"
                                                                 alt="Ảnh sản phẩm">
                                                             <div class="zoom-overlay"></div>
@@ -426,7 +426,7 @@
                                                 <!-- /.col -->
                                                 <div class="col col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.html">Máy khoan động lực Bosch
+                                                        <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch
                                                             GSB 16 RE
                                                             -
                                                             06012281K1</a></h3>
@@ -450,7 +450,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.html"> <img
+                                                        <div class="image"><a href="detail.jsp"> <img
                                                                 src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
                                                                 alt="image">
                                                         </a></div>
@@ -462,7 +462,7 @@
                                                 <!-- /.col -->
                                                 <div class="col col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.html">Máy khoan động lực Bosch
+                                                        <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch
                                                             GSB 16 RE
                                                             -
                                                             06012281K1</a></h3>
@@ -604,7 +604,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.html"> <img
+                                                        <div class="image"><a href="detail.jsp"> <img
                                                                 src="assets/images/products/best-seller/may-khoan-dong-luc-bosch-gsb-550.jpg"
                                                                 alt="Ảnh sản phẩm"> </a>
                                                         </div>
@@ -616,7 +616,7 @@
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.html">
+                                                        <h3 class="name"><a href="detail.jsp">
                                                             Máy khoan động lực Bosch GSB 550 - 06011A15K0</a></h3>
                                                         <div class="rating rateit-small"></div>
                                                         <div class="product-price"><span
@@ -638,7 +638,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.html"> <img
+                                                        <div class="image"><a href="detail.jsp"> <img
                                                                 src="assets/images/products/best-seller/may-khoan-dong-luc-bosch-gsb-16-re-g1.jpg"
                                                                 alt="Ảnh sản phẩm"> </a>
                                                         </div>
@@ -650,7 +650,7 @@
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.html">Máy khoan động lực Bosch
+                                                        <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch
                                                             GSB 16 RE
                                                             - 06012281K1</a></h3>
                                                         <div class="rating rateit-small"></div>
@@ -677,7 +677,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.html"> <img
+                                                        <div class="image"><a href="detail.jsp"> <img
                                                                 src="assets/images/products/best-seller/may-khoan-van-vit-dung-pin-12v-bosch-gsr-120-li-gen-ii-06019g80l1-g.jpg"
                                                                 alt="Ảnh sản phẩm"> </a>
                                                         </div>
@@ -689,7 +689,7 @@
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.html">Máy khoan vặn vít dùng
+                                                        <h3 class="name"><a href="detail.jsp">Máy khoan vặn vít dùng
                                                             pin 12V
                                                             Bosch GSR 120-LI GEN II</a></h3>
                                                         <div class="rating rateit-small"></div>
@@ -712,7 +712,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.html"> <img
+                                                        <div class="image"><a href="detail.jsp"> <img
                                                                 src="assets/images/products/best-seller/bo-may-bat-vit-dung-pin-makita-clx228s-g.jpg"
                                                                 alt="Ảnh sản phẩm"> </a>
                                                         </div>
@@ -724,7 +724,7 @@
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.html">Bộ máy bắt vít dùng pin
+                                                        <h3 class="name"><a href="detail.jsp">Bộ máy bắt vít dùng pin
                                                             Makita
                                                             CLX228S (HP333D+TD110D)</a></h3>
                                                         <div class="rating rateit-small"></div>
@@ -751,7 +751,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.html"> <img
+                                                        <div class="image"><a href="detail.jsp"> <img
                                                                 src="assets/images/products/best-seller/pin-bosch-12v-2-0ah-g.jpg"
                                                                 alt="Ảnh sản phẩm"> </a>
                                                         </div>
@@ -763,7 +763,7 @@
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.html">
+                                                        <h3 class="name"><a href="detail.jsp">
                                                             Pin Bosch 12V 2.0Ah 1600A00F6X (1607A350C5)</a></h3>
                                                         <div class="rating rateit-small"></div>
                                                         <div class="product-price"><span
@@ -785,7 +785,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.html"> <img
+                                                        <div class="image"><a href="detail.jsp"> <img
                                                                 src="assets/images/products/best-seller/may-khoan-be-tong-classic-cla-5425-g.jpg"
                                                                 alt="Ảnh sản phẩm"> </a>
                                                         </div>
@@ -797,7 +797,7 @@
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.html">Máy khoan bê tông Classic
+                                                        <h3 class="name"><a href="detail.jsp">Máy khoan bê tông Classic
                                                             CLA
                                                             5425</a></h3>
                                                         <div class="rating rateit-small"></div>
@@ -824,7 +824,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.html"> <img
+                                                        <div class="image"><a href="detail.jsp"> <img
                                                                 src="assets/images/products/best-seller/bo-mui-khoan-kim-loai-13-chi-tiet-15-65-bosch-2608577349-1.jpg"
                                                                 alt="Ảnh sản phẩm"> </a>
                                                         </div>
@@ -836,7 +836,7 @@
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.html">Bộ mũi khoan Bosch HSS
+                                                        <h3 class="name"><a href="detail.jsp">Bộ mũi khoan Bosch HSS
                                                             PointTeQ
                                                             2608577349 (13 mũi 1.5-6.5)</a></h3>
                                                         <div class="rating rateit-small"></div>
@@ -859,7 +859,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.html"> <img
+                                                        <div class="image"><a href="detail.jsp"> <img
                                                                 src="assets/images/products/best-seller/sac-pin-bosch-gal-12v-40-10-8v-12v-g.jpg"
                                                                 alt="Ảnh sản phẩm"> </a>
                                                         </div>
@@ -871,7 +871,7 @@
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.html">Sạc pin Bosch GAL 12V-40
+                                                        <h3 class="name"><a href="detail.jsp">Sạc pin Bosch GAL 12V-40
                                                             10.8V/12V
                                                             1600A01B8X</a></h3>
                                                         <div class="rating rateit-small"></div>
@@ -932,7 +932,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 src="assets/images/products/normal/may-khoan-van-vit-dung-pin-12v-sencan-d511210-sl.jpg"
                                                 alt="Ảnh sản phẩm"></a>
                                         </div>
@@ -942,7 +942,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">Máy khoan vặn vít dùng pin 12V Sencan
+                                        <h3 class="name"><a href="detail.jsp">Máy khoan vặn vít dùng pin 12V Sencan
                                             D511210</a>
                                         </h3>
                                         <div class="rating rateit-small"></div>
@@ -967,7 +967,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 src="assets/images/products/normal/may-khoan-van-vit-dung-pin-12v-bosch-gsr-120-li-gen-ii-06019g80l1-g.jpg"
                                                 alt="Ảnh sản phẩm"></a>
                                         </div>
@@ -977,7 +977,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">Máy khoan vặn vít dùng pin 12V Bosch GSR
+                                        <h3 class="name"><a href="detail.jsp">Máy khoan vặn vít dùng pin 12V Bosch GSR
                                             120-LI GEN
                                             II (06019G80K5, 1 pin, 1 sạc)</a></h3>
                                         <div class="rating rateit-small"></div>
@@ -1002,7 +1002,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 src="assets/images/products/normal/may-khoan-dong-luc-bosch-gsb-13-re.jpg"
                                                 alt="Ảnh sản phẩm"></a></div>
                                         <!-- /.image -->
@@ -1011,7 +1011,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">Máy khoan động lực Bosch GSB 13 RE</a>
+                                        <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB 13 RE</a>
                                         </h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
@@ -1035,7 +1035,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 src="assets/images/products/normal/may-khoan-dong-luc-makita-m8101b-g.jpg"
                                                 alt="Ảnh sản phẩm"></a>
                                         </div>
@@ -1045,7 +1045,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">Máy khoan động lực Makita M8101B</a></h3>
+                                        <h3 class="name"><a href="detail.jsp">Máy khoan động lực Makita M8101B</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"><span class="price">1.420.000đ</span> <span
@@ -1068,7 +1068,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 src="assets/images/products/normal/may-khoan-pin-makute-cd027-g1.jpg"
                                                 alt="Ảnh sản phẩm"></a>
                                         </div>
@@ -1078,7 +1078,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">
+                                        <h3 class="name"><a href="detail.jsp">
                                             Máy khoan pin Makute CD027</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
@@ -1102,7 +1102,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 src="assets/images/products/normal/may-khoan-van-vit-dong-luc-dung-pin-stanley-sch20c2k.jpg"
                                                 alt="Ảnh sản phẩm"></a>
                                         </div>
@@ -1111,7 +1111,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">Máy khoan vặn vít động lực dùng pin
+                                        <h3 class="name"><a href="detail.jsp">Máy khoan vặn vít động lực dùng pin
                                             Stanley
                                             SCH20C2K</a></h3>
                                         <div class="rating rateit-small"></div>
@@ -1137,7 +1137,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 src="assets/images/products/normal/may-khoan-rut-loi-gomes-gcd-120-g.png"
                                                 alt="Ảnh sản phẩm"></a>
                                         </div>
@@ -1147,7 +1147,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">Máy khoan rút lõi Gomes GCD-120</a></h3>
+                                        <h3 class="name"><a href="detail.jsp">Máy khoan rút lõi Gomes GCD-120</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"><span class="price"> 1.520.000đ </span> <span
@@ -1170,7 +1170,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 src="assets/images/products/normal/may-khoan-dong-luc-bosch-gsb-13-re-hop.jpg"
                                                 alt="Ảnh sản phẩm"></a>
                                         </div>
@@ -1180,7 +1180,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">Máy khoan động lực Bosch GSB 13 RE (gồm
+                                        <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB 13 RE (gồm
                                             bộ set 100
                                             món)</a></h3>
                                         <div class="rating rateit-small"></div>
@@ -1205,7 +1205,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 src="assets/images/products/normal/may-khoan-be-tong-gomes-gb-2603sre.jpg"
                                                 alt="Ảnh sản phẩm"></a></div>
                                         <!-- /.image -->
@@ -1214,7 +1214,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">Máy khoan bê tông Gomes GB-2603</a></h3>
+                                        <h3 class="name"><a href="detail.jsp">Máy khoan bê tông Gomes GB-2603</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"><span class="price"> 1.170.000đ </span> <span
@@ -1237,7 +1237,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 src="assets/images/products/normal/may-khoan-be-tong-26mm-feg-eg-2601-sre.jpg"
                                                 alt="Ảnh sản phẩm"></a>
                                         </div>
@@ -1247,7 +1247,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">Máy khoan bê tông 26mm FEG EG-2601
+                                        <h3 class="name"><a href="detail.jsp">Máy khoan bê tông 26mm FEG EG-2601
                                             SRE</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
@@ -1271,7 +1271,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 src="assets/images/products/normal/may-khoan-bua-makita-m0801b.jpg"
                                                 alt="Ảnh sản phẩm"></a>
                                         </div>
@@ -1281,7 +1281,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">
+                                        <h3 class="name"><a href="detail.jsp">
                                             Máy khoan búa Makita M0801B</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
@@ -1305,7 +1305,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 src="assets/images/products/normal/may-khoan-bosch-gbm-320.jpg"
                                                 alt="Ảnh sản phẩm"></a>
                                         </div>
@@ -1314,7 +1314,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">
+                                        <h3 class="name"><a href="detail.jsp">
                                             Máy khoan Bosch GBM 320</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
@@ -1348,7 +1348,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 style="width: 189px; height: 189px"
                                                 src="assets/images/products/accessory/sac-nhanh-bosch-gal-18v-20-14-4v-18v-g.jpg"
                                                 alt="Ảnh sản phẩm"></a>
@@ -1359,7 +1359,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">Sạc Bosch GAL 18V-20 (14.4V - 18V)</a>
+                                        <h3 class="name"><a href="detail.jsp">Sạc Bosch GAL 18V-20 (14.4V - 18V)</a>
                                         </h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
@@ -1383,7 +1383,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 style="width: 189px; height: 189px"
                                                 src="assets/images/products/accessory/pin-makita-18v.jpg"
                                                 alt="Ảnh sản phẩm"></a>
@@ -1394,7 +1394,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">Pin Makita 18V</a></h3>
+                                        <h3 class="name"><a href="detail.jsp">Pin Makita 18V</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"><span class="price"> 1.250.000đ </span> <span
@@ -1417,7 +1417,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 style="width: 189px; height: 189px"
                                                 src="assets/images/products/accessory/mui-duc-nhon-makita-d-08682.jpg"
                                                 alt="Ảnh sản phẩm"></a>
@@ -1428,7 +1428,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">
+                                        <h3 class="name"><a href="detail.jsp">
                                             Mũi đục nhọn Makita D-08682 17mm</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
@@ -1450,7 +1450,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 style="width: 189px; height: 189px"
                                                 src="assets/images/products/accessory/plus-1-hammer-drill-bits-2868938-ocs-ac-1.jpg"
                                                 alt="Ảnh sản phẩm"></a>
@@ -1461,7 +1461,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">Mũi khoan Bosch SDS+ plus 1</a></h3>
+                                        <h3 class="name"><a href="detail.jsp">Mũi khoan Bosch SDS+ plus 1</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"><span class="price"> 100.000đ</span> <span
@@ -1482,7 +1482,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 style="width: 189px; height: 189px"
                                                 src="assets/images/products/accessory/de-sac-nhanh-makita-12v-max-dc10sb.jpg"
                                                 alt="Ảnh sản phẩm"></a>
@@ -1493,7 +1493,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">Đế sạc nhanh Makita 12V Max DC10SB</a>
+                                        <h3 class="name"><a href="detail.jsp">Đế sạc nhanh Makita 12V Max DC10SB</a>
                                         </h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
@@ -1515,7 +1515,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.html"><img
+                                        <div class="image"><a href="detail.jsp"><img
                                                 style="width: 189px; height: 189px"
                                                 src="assets/images/products/accessory/dau-khoan-co-khoa-13mm-bosch-2608571079-g.jpg"
                                                 alt="Ảnh sản phẩm"></a>
@@ -1529,7 +1529,7 @@
 
                                     </style>
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.html">
+                                        <h3 class="name"><a href="detail.jsp">
                                             Đầu khoan có khóa 13mm Bosch 2608571079</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
@@ -1599,7 +1599,7 @@
                             <li class="media">
                                 <div class="pull-left"> <span class="icon fa-stack fa-lg"> <i
                                         class="fa fa-envelope fa-stack-1x fa-inverse"></i> </span></div>
-                                <div class="media-body"><span><a href="detail.html">group25@st.hcmuaf.edu.vn</a></span>
+                                <div class="media-body"><span><a href="detail.jsp">group25@st.hcmuaf.edu.vn</a></span>
                                 </div>
                             </li>
                         </ul>
@@ -1616,9 +1616,9 @@
 
                     <div class="module-body">
                         <ul class='list-unstyled'>
-                            <li class="first"><a href="detail.html" title="Tài khoản của tôi">Tài khoản của tôi</a></li>
-                            <li><a href="detail.html" title="Lịch sử đặt hàng">Lịch sử đặt hàng</a></li>
-                            <li class="last"><a href="detail.html" title="Giúp đỡ">Giúp đỡ</a></li>
+                            <li class="first"><a href="detail.jsp" title="Tài khoản của tôi">Tài khoản của tôi</a></li>
+                            <li><a href="detail.jsp" title="Lịch sử đặt hàng">Lịch sử đặt hàng</a></li>
+                            <li class="last"><a href="detail.jsp" title="Giúp đỡ">Giúp đỡ</a></li>
                         </ul>
                     </div>
                     <!-- /.module-body -->
@@ -1636,9 +1636,9 @@
 
                     <div class="module-body">
                         <ul class='list-unstyled'>
-                            <li class="first"><a href="detail.html" title="About us">Giỏ hàng</a></li>
-                            <li><a href="detail.html" title="Blog">Tin tức</a></li>
-                            <li class=" last"><a href="contact.html" title="Suppliers">Về chúng tôi</a></li>
+                            <li class="first"><a href="detail.jsp" title="About us">Giỏ hàng</a></li>
+                            <li><a href="detail.jsp" title="Blog">Tin tức</a></li>
+                            <li class=" last"><a href="contact.jsp" title="Suppliers">Về chúng tôi</a></li>
                         </ul>
                     </div>
                     <!-- /.module-body -->
@@ -1651,15 +1651,15 @@
         <div class="container">
             <div class="col-xs-12 col-sm-6 no-padding social">
                 <ul class="link">
-                    <li class="fb pull-left"><a target="_blank" rel="nofollow" href="detail.html" title="Facebook"></a>
+                    <li class="fb pull-left"><a target="_blank" rel="nofollow" href="detail.jsp" title="Facebook"></a>
                     </li>
-                    <li class="tw pull-left"><a target="_blank" rel="nofollow" href="detail.html" title="Twitter"></a>
+                    <li class="tw pull-left"><a target="_blank" rel="nofollow" href="detail.jsp" title="Twitter"></a>
                     </li>
-                    <li class="googleplus pull-left"><a target="_blank" rel="nofollow" href="detail.html"
+                    <li class="googleplus pull-left"><a target="_blank" rel="nofollow" href="detail.jsp"
                                                         title="GooglePlus"></a>
                     </li>
 
-                    <li class="youtube pull-left"><a target="_blank" rel="nofollow" href="detail.html"
+                    <li class="youtube pull-left"><a target="_blank" rel="nofollow" href="detail.jsp"
                                                      title="Youtube"></a></li>
                 </ul>
             </div>

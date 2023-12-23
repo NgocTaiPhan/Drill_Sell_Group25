@@ -55,10 +55,10 @@
                 <div class="cnt-account">
                     <ul class="list-unstyled">
 
-                        <li><a href="account.html"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                        <li><a href="card.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="oder.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                        <li><a href="login.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
+                        <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
+                        <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
 
@@ -78,7 +78,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
                     <link rel="stylesheet" href="assets/css/my-css/logo-page.css">
-                    <div class="logo-page"><a href="home.html"> <img
+                    <div class="logo-page"><a href="home.jsp"> <img
                             src="assets/images/logo.png" alt="logo"
                     > </a></div>
 
@@ -101,13 +101,13 @@
 
                                 <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
                                        placeholder="Tìm kiếm...">
-                                <a class="search-button" href="detail.html"></a>
+                                <a class="search-button" href="detail.jsp"></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="detail.html">Máy khoan động lực Bosch GSB 16 RE -
+                                    <li><a href="detail.jsp">Máy khoan động lực Bosch GSB 16 RE -
                                         06012281K1</a></li>
-                                    <li><a href="detail.html">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
-                                    <li><a href="detail.html">Máy khoan pin Makute CD027</a></li>
+                                    <li><a href="detail.jsp">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
+                                    <li><a href="detail.jsp">Máy khoan pin Makute CD027</a></li>
                                 </ul>
                             </div>
                         </form>
@@ -120,7 +120,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 
-                    <div class="dropdown dropdown-cart"><a href="detail.html" class="dropdown-toggle lnk-cart"
+                    <div class="dropdown dropdown-cart"><a href="detail.jsp" class="dropdown-toggle lnk-cart"
                                                            data-toggle="dropdown">
                         <div class="items-cart-inner">
                             <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
@@ -133,16 +133,16 @@
                                 <div class="cart-item product-summary">
                                     <div class="row">
                                         <div class="col-xs-4">
-                                            <div class="image"><a href="detail.html"><img
+                                            <div class="image"><a href="detail.jsp"><img
                                                     src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
                                                     alt="Ảnh sản phẩm"></a></div>
                                         </div>
                                         <div class="col-xs-7">
-                                            <h3 class="name"><a href="detail.html">Máy khoan động lực Bosch GSB 16 RE -
+                                            <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB 16 RE -
                                                 06012281K1</a></h3>
                                             <div class="price">1.599.000đ</div>
                                         </div>
-                                        <div class="col-xs-1 action"><a href="detail.html"><i
+                                        <div class="col-xs-1 action"><a href="detail.jsp"><i
                                                 class="fa fa-trash"></i></a></div>
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@
                                     <div class="pull-right"><span class="text">Tổng tiền :</span><span class='price'>1.599.000đ</span>
                                     </div>
                                     <div class="clearfix"></div>
-                                    <a href="oder.html" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
+                                    <a href="oder.jsp" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
                                         toán</a>
                                 </div>
                                 <!-- /.cart-total-->
@@ -192,29 +192,29 @@
                     >
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
-                                <li class="active  yamm-fw"><a href="home.html">Trang chủ</a></li>
-                                <li class="active  yamm-fw"><a href="product.html">Sản phẩm</a></li>
+                                <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
+                                <li class="active  yamm-fw"><a href="product.jsp">Sản phẩm</a></li>
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
-                                        <li><a href="battery_drill.html"></i>Máy khoan pin</a>
+                                        <li><a href="battery_drill.jsp"></i>Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="movers.html"></i>Máy khoan động lực</a>
+                                        <li><a href="movers.jsp"></i>Máy khoan động lực</a>
 
                                         </li>
-                                        <li><a href="hammer_drill.html"></i>Máy khoan bê tông, Máy khoan búa</a>
+                                        <li><a href="hammer_drill.jsp"></i>Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
-                                        <li><a href="Hand_drill.html"></i>Máy khoan cầm tay gia đình</a>
+                                        <li><a href="Hand_drill.jsp"></i>Máy khoan cầm tay gia đình</a>
 
                                         </li>
-                                        <li><a href="mini_drill.html"></i>Máy khoan mini</a>
+                                        <li><a href="mini_drill.jsp"></i>Máy khoan mini</a>
 
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="active  yamm-fw"><a href="contact.html">Liên hệ</a></li>
+                                <li class="active  yamm-fw"><a href="contact.jsp">Liên hệ</a></li>
 
 
                             </ul>
@@ -241,7 +241,7 @@
     <div class="container">
         <div class="breadcrumb-content">
             <ul>
-                <li><a href="home.html">Trang chủ</a></li>
+                <li><a href="home.jsp">Trang chủ</a></li>
                 <li class="active">Tài khoản</li>
             </ul>
             <style>
@@ -285,7 +285,7 @@
 
                     <ul class="list">
                         <li class="first"><a href="#">Hồ sơ</a></li>
-                        <li class="first"><a href="history.html">Lịch sử đặt hàng</a></li>
+                        <li class="first"><a href="history.jsp">Lịch sử đặt hàng</a></li>
                     </ul>
 
                 </div>
