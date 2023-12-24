@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2a3fc51-47df-4d5a-9967-714b95133871" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/admin/insert-products.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/admin/insert-products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/bosh.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/bosh.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/classic.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/classic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/dewalt.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/dewalt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/feg.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/feg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/gomes.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/gomes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/makita.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/makita.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/sasuke.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/sasuke.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/sencan.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/sencan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/tolsen.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/producers/tolsen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/Drill_Sell/src/main/webapp/product.html" afterDir="false" />
-    </list>
+    <list default="true" id="c2a3fc51-47df-4d5a-9967-714b95133871" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,9 +36,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "hoa",
+    "git-widget-placeholder": "Kien",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Study/BTLTW/BTTHSO5",
+    "last_opened_file_path": "D:/EX_WEB/Project_web",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -110,6 +95,7 @@
       <workItem from="1700140821176" duration="13553000" />
       <workItem from="1700315896758" duration="94000" />
       <workItem from="1700318233524" duration="298000" />
+      <workItem from="1703405461621" duration="34000" />
     </task>
     <servers />
   </component>
