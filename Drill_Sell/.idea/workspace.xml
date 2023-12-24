@@ -10,13 +10,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="recommit">
+    <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/bean/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/my-js/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +26,7 @@
         <option value="Servlet" />
         <option value="Filter" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -58,21 +56,24 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Tomcat Server.Tomcat 8.5.87.executor": "Run",
     "Tomcat Server.Tomcat 8.5.872.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Kien",
-    "ignore.virus.scanning.warn.message": "true",
+    "git-widget-placeholder": "tai",
     "last_opened_file_path": "D:/Study/DoAnWeb/Drill_Sell_Group25-main/Drill_Sell/Drill_Sell_Group25/Drill_Sell",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "copyright",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="vn.edu.hcmuaf.bean" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\WorkSpace\WebPrograming\Project\Drill_Sell\src\main\webapp\assets\for-intro-page" />
       <recent name="D:\WorkSpace\WebPrograming\Project\Drill_Sell\src\main\webapp\assets\for-intro-page\images" />
@@ -80,34 +81,8 @@
       <recent name="D:\WorkSpace\WebPrograming\Project\Drill_Sell\src\main\java\vn\edu\hcmuaf" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.821">
-    <configuration name="Db" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.db.Db" />
-      <module name="Drill_Sell" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="vn.edu.hcmuaf.db.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DbController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.db.DbController" />
-      <module name="Drill_Sell" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="vn.edu.hcmuaf.db.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat 9.0.821" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Drill_Sell:war">
@@ -117,7 +92,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="ccda7352-a0ed-4b10-a33e-0d15f8d88ec3" />
+        <option name="BASE_DIRECTORY_NAME" value="43e90f79-918b-40cd-bb39-a837d364feb9" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -275,17 +250,6 @@
         </option>
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.Db" />
-      <item itemvalue="Application.DbController" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.821" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.DbController" />
-        <item itemvalue="Application.Db" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -312,25 +276,11 @@
       <workItem from="1702964130867" duration="21000" />
       <workItem from="1702295698702" duration="4704000" />
       <workItem from="1703223523524" duration="5253000" />
-      <workItem from="1703406086783" duration="4997000" />
+      <workItem from="1703404918322" duration="1033000" />
     </task>
-    <task id="LOCAL-00001" summary="recommit">
-      <option name="closed" value="true" />
-      <created>1703409357904</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1703409357905</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Delete ReadMe.txt" />
-    <MESSAGE value="recommit" />
-    <option name="LAST_COMMIT_MESSAGE" value="recommit" />
   </component>
 </project>
