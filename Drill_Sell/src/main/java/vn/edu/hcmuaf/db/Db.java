@@ -2,7 +2,6 @@ package vn.edu.hcmuaf.db;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -24,13 +23,13 @@ public class Db {
     public static String port = prop.getProperty("db.port");
     public static String username = prop.getProperty("db.username");
     public static String password = prop.getProperty("db.pass");
-    public static String name = prop.getProperty("db.name");
+    public static String dbName = prop.getProperty("db.dbName");
 
     public static void main(String[] args) {
         System.out.println(host);
         System.out.println(port);
         System.out.println(username);
         System.out.println(password);
-        System.out.println(name);
+        System.out.println(dbName);
     }
 }

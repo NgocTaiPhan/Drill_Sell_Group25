@@ -49,7 +49,6 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-
             <div class="wow fadeInUp col-md-6 col-sm-5 col-xs-10 col-xs-offset-1 col-sm-offset-0" data-wow-delay="0.2s">
                 <img src="./assets/images/banners/home-banner1.jpg" class="img-responsive" alt="Home">
             </div>
@@ -58,14 +57,16 @@
                 <div class="home-thumb">
                     <h1 class="wow fadeInUp" data-wow-delay="0.6s">Chào mừng</h1>
                     <p class="wow fadeInUp" data-wow-delay="0.8s"></p>
-                    <a href="./home.jsp" class="wow fadeInUp section-btn btn btn-success smoothScroll" data-wow-delay="1s">Mua sắm ngay</a>
+
+                    <!-- Move the form here -->
+                    <form action="load-products" method="GET">
+                        <input class="btn btn-danger" type="submit" value="Mua sắm ngay">
+                    </form>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
-
 
 
 

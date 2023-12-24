@@ -260,7 +260,7 @@
                     <!--                        <a href="#" class="facebook-sign-in"><i class="fa fa-facebook"></i> Sign In with Facebook</a>-->
                     <!--                        <a href="#" class="twitter-sign-in"><i class="fa fa-twitter"></i> Sign In with Twitter</a>-->
                     <!--                    </div>-->
-                    <form class=" outer-top-xs" id="login-form" role="form" method="get">
+                    <form class=" outer-top-xs" id="login-form" role="form" method="GET" action="login">
                         <div class="form-group">
                             <label class="info-title" for="username-login">Tên đăng nhập <span>*</span>
 
