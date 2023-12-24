@@ -289,9 +289,26 @@
                 <td class="li-product-price"><span class="amount">468.00 VND</span></td>
                 <td class="quantity">
                     <div class="cart-plus-minus">
-                        <input class="cart-plus-minus-box" value="1" type="number">
+                        <input class="cart-plus-minus-box" value="1" type="number" oninput="validateQuantity(this)">
                     </div>
                 </td>
+
+                <td class="product-subtotal"><span class="amount">468.000 VND</span></td>
+            </tr>
+
+            <script>
+                function validateQuantity(input) {
+                    // Chuyển giá trị thành số nguyên
+                    var quantity = parseInt(input.value, 10);
+
+                    // Kiểm tra nếu giá trị là NaN hoặc nhỏ hơn 1
+                    if (isNaN(quantity) || quantity < 1) {
+                        // Đặt giá trị về 1
+                        input.value = 1;
+                    }
+                }
+            </script>
+
                 <td class="product-subtotal"><span class="amount">468.000 VND</span></td>
             </tr>
         </table>
