@@ -1,10 +1,7 @@
 ﻿<%@ page import="vn.edu.hcmuaf.bean.Products" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
 
-    final int typeCategory = 2;
-%>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -213,24 +210,24 @@
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
-                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="GET"></i>Máy khoan pin</a>
+                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="./movers.jsp"></i>Máy khoan động lực</a>
+                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
-                                        <li><a href="./hammer_drill.jsp"></i>Máy khoan bê tông, Máy khoan búa</a>
+                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy khoan cầm tay </a>
 
                                         </li>
-                                        <li><a href="./Hand_drill.jsp"></i>Máy khoan cầm tay gia đình</a>
+                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy khoan mini</a>
 
                                         </li>
-                                        <li><a href="./mini_drill.jsp"></i>Máy khoan mini</a>
+                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
 
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="active  yamm-fw"><a href="./contact.jsphred">Liên hệ</a></li>
+                                <li class="active  yamm-fw"><a href="./contact.jsp">Liên hệ</a></li>
 
 
                             </ul>
@@ -964,7 +961,7 @@
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"><span class="price"><%=p.getUnitPrice()*1000%>đ</span>
-                                            </div>
+                                        </div>
                                         <!-- /.product-price -->
 
                                     </div>
@@ -1014,7 +1011,7 @@
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"><span class="price"><%=p.getUnitPrice()*1000%>đ</span>
-                                            </div>
+                                        </div>
                                         <!-- /.product-price -->
 
                                     </div>
