@@ -11,7 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/bean/User.java" afterDir="false" />
@@ -69,6 +69,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.DbController.executor": "Run",
@@ -93,8 +94,9 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "copyright",
     "vue.rearranger.settings.migration": "true"
+
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="vn.edu.hcmuaf.bean" />
@@ -106,6 +108,7 @@
       <recent name="D:\WorkSpace\WebPrograming\Project\Drill_Sell\src\main\java\vn\edu\hcmuaf" />
     </key>
   </component>
+
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.87">
     <configuration name="DbController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.db.DbController" />
@@ -172,6 +175,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -375,11 +379,13 @@
       <workItem from="1702964130867" duration="21000" />
       <workItem from="1702295698702" duration="4704000" />
       <workItem from="1703223523524" duration="5253000" />
+
       <workItem from="1703404918322" duration="1033000" />
       <workItem from="1703412115239" duration="9375000" />
       <workItem from="1703430310198" duration="325000" />
       <workItem from="1703432514402" duration="2111000" />
       <workItem from="1703434654969" duration="5258000" />
+
     </task>
     <servers />
   </component>
