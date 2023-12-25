@@ -3,34 +3,60 @@ package vn.edu.hcmuaf;
 import vn.edu.hcmuaf.bean.User;
 import vn.edu.hcmuaf.serice.UserService;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet("/login")
 public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request,response);
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("UTF-8");
+        doPost(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       String email = request.getParameter("email") == null?"" : request.getParameter("email");
-       String pass = request.getParameter("pass") == null?"" : request.getParameter("pass");;
+        String username = request.getParameter("username-login");
+        String password = request.getParameter("pass-login");
 
+        User user = UserService.getInstance().checkLogin(username, password);
 
-        User u = UserService.getInstance().checkLogin(email, pass);
-        if(u!=null){
-          HttpSession session = request.getSession();
-          session.setAttribute("auth", u);
-          response.sendRedirect("./index.jsp");
-
-        }else{
-            response.getWriter().println("login fail");
+        if (user != null) {
+            HttpSession session = request.getSession();
+            session.setAttribute("auth", user);
+            PrintWriter out = response.getWriter();
+            out.println("Swal.fire({" +
+                    "title: 'Bạn đang đăng nhập với quyền quản trị'," +
+                    "text: 'Chào mừng'," +
+                    "icon: 'success'," +
+                    "confirmButtonText: 'OK'," +
+                    "}).then((result) => {" +
+                    "if (result.isConfirmed) {" +
+                    "window.location.href = './admin.jsp';" +
+                    "}" +
+                    "});");
+            response.sendRedirect(request.getContextPath() + "/home.jsp");
+        } else {
+            // Set an attribute to indicate login failure
+            request.setAttribute("loginFailed", true);
+            PrintWriter out = response.getWriter();
+            out.println("Swal.fire({" +
+                    "title: 'Đăng nhập thất bại'," +
+                    "text: 'Vui lòng kiểm tra lại tên đăng nhập và mật khẩu'," +
+                    "icon: 'error'," +
+                    "confirmButtonText: 'OK'," +
+                    "});");
+            // Forward the request back to the login page
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp");
+            dispatcher.forward(request, response);
         }
-
-
     }
 }

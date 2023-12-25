@@ -260,14 +260,14 @@
                     <!--                        <a href="#" class="facebook-sign-in"><i class="fa fa-facebook"></i> Sign In with Facebook</a>-->
                     <!--                        <a href="#" class="twitter-sign-in"><i class="fa fa-twitter"></i> Sign In with Twitter</a>-->
                     <!--                    </div>-->
-                    <form class=" outer-top-xs" id="login-form" role="form">
+                    <form class=" outer-top-xs" id="login-form" role="form" method="GET" action="login">
                         <div class="form-group">
-                            <label class="info-title" for="email-login">Địa chỉ email <span>*</span>
+                            <label class="info-title" for="username-login">Tên đăng nhập <span>*</span>
 
                             </label>
                             <div class="error-email-login"></div>
 
-                            <input class="form-control unicase-form-control text-input" id="email-login" type="text">
+                            <input class="form-control unicase-form-control text-input" id="username-login" type="text" name="username-login">
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="password-login">Mật khẩu <span>*</span>
@@ -275,7 +275,7 @@
                             </label>
 
                             <input class="form-control unicase-form-control text-input" id="password-login"
-                                   type="password">
+                                   type="password" name="pass-login">
                         </div>
                         <div class="radio outer-xs">
                             <label>
