@@ -10,7 +10,7 @@ public class Products {
     private String image, productName;
     private double unitPrice;
 
-    private int producerId;
+    private int producerId, categoryId;
 
 
     public Products() {
@@ -21,6 +21,31 @@ public class Products {
         this.image = image;
         this.productName = productName;
         this.unitPrice = unitPrice;
+    }
+
+    public Products(int productId, String image, String productName, double unitPrice, int producerId, int categoryId) {
+        this.productId = productId;
+        this.image = image;
+        this.productName = productName;
+        this.unitPrice = unitPrice;
+        this.producerId = producerId;
+        this.categoryId = categoryId;
+    }
+
+    public int getProducerId() {
+        return producerId;
+    }
+
+    public void setProducerId(int producerId) {
+        this.producerId = producerId;
+    }
+
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public int getProductId() {
@@ -58,16 +83,18 @@ public class Products {
     @Override
     public String toString() {
         return "Products{" +
-                "id=" + productId +
+                "productId=" + productId +
                 ", image='" + image + '\'' +
                 ", productName='" + productName + '\'' +
-                ", price=" + unitPrice +
-                '}' + "\n";
+                ", unitPrice=" + unitPrice +
+                ", producerId=" + producerId +
+                ", categoryId=" + categoryId
+                + "}\n";
     }
 
     public static void main(String[] args) {
-        List<Products> products =  DbController.me().get().withHandle(handle -> {
-            return handle.createQuery("SELECT  * FROM products JOIN producers ON products.producerId = producers.id WHERE producers.id = 02;").mapToBean(Products.class).collect(Collectors.toList());
+        List<Products> products = DbController.me().get().withHandle(handle -> {
+            return handle.createQuery("SELECT  * FROM products Where categoryId = 2 ;").mapToBean(Products.class).collect(Collectors.toList());
         });
 
 
