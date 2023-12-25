@@ -11,10 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/LoadProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/Hello.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/bean/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/bean/Products.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/BattteryDrillController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/ProductListController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/serice/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/serice/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/serice/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/serice/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,32 +65,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.DbController.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Producers.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ProducersService.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Producres.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ProductListTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ProductService.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Products.executor&quot;: &quot;Run&quot;,
-    &quot;Application.User.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 8.5.87.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.Tomcat 8.5.872.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;tai&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Study/DoAnWeb/Drill_Sell_Group25-main/Drill_Sell/Drill_Sell_Group25/Drill_Sell&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DbController.executor": "Run",
+    "Application.Producers.executor": "Run",
+    "Application.ProducersService.executor": "Run",
+    "Application.Producres.executor": "Run",
+    "Application.ProductListTest.executor": "Run",
+    "Application.ProductService.executor": "Run",
+    "Application.Products.executor": "Run",
+    "Application.User.executor": "Run",
+    "Application.UserService.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Tomcat Server.Tomcat 8.5.87.executor": "Run",
+    "Tomcat Server.Tomcat 8.5.872.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "tai",
+    "last_opened_file_path": "D:/Study/DoAnWeb/Drill_Sell_Group25-main/Drill_Sell/Drill_Sell_Group25/Drill_Sell",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "copyright",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="vn.edu.hcmuaf.bean" />
@@ -99,7 +103,7 @@
       <recent name="D:\WorkSpace\WebPrograming\Project\Drill_Sell\src\main\java\vn\edu\hcmuaf" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.87">
+  <component name="RunManager" selected="Application.UserService">
     <configuration name="DbController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.db.DbController" />
       <module name="Drill_Sell" />
@@ -126,19 +130,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.test.ProductListTest" />
-      <module name="Drill_Sell" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="vn.edu.hcmuaf.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProductService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.serice.ProductService" />
       <module name="Drill_Sell" />
@@ -158,6 +149,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="vn.edu.hcmuaf.bean.Products" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.serice.UserService" />
+      <module name="Drill_Sell" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vn.edu.hcmuaf.serice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -335,11 +339,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProductService" />
+        <item itemvalue="Application.UserService" />
         <item itemvalue="Application.Products" />
+        <item itemvalue="Application.ProductService" />
         <item itemvalue="Application.DbController" />
         <item itemvalue="Application.ProducersService" />
-        <item itemvalue="Application.ProductListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -373,7 +377,7 @@
       <workItem from="1703430310198" duration="325000" />
       <workItem from="1703432514402" duration="2111000" />
       <workItem from="1703434654969" duration="5668000" />
-      <workItem from="1703475223271" duration="8333000" />
+      <workItem from="1703475223271" duration="14790000" />
     </task>
     <task id="LOCAL-00001" summary="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
       <option name="closed" value="true" />
