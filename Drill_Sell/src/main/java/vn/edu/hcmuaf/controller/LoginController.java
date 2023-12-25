@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf;
+package vn.edu.hcmuaf.controller;
 
 import vn.edu.hcmuaf.bean.User;
 import vn.edu.hcmuaf.serice.UserService;
@@ -55,8 +55,7 @@ public class LoginController extends HttpServlet {
                     "confirmButtonText: 'OK'," +
                     "});");
             // Forward the request back to the login page
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp");
-            dispatcher.forward(request, response);
+         request.getRequestDispatcher("/login.jsp").forward(request, response);
         }
     }
 }
