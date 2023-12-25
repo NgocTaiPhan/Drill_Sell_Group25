@@ -213,7 +213,7 @@
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
-                                        <li><a href="./battery_drill.jsp"></i>Máy khoan pin</a>
+                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="GET"></i>Máy khoan pin</a>
 
                                         </li>
                                         <li><a href="./movers.jsp"></i>Máy khoan động lực</a>
@@ -937,7 +937,9 @@
 
                         <!-- /.item -->
 
-                        <% List<Products> products = (List<Products>) request.getAttribute("data");
+                        <% List<List<Products>> loadProduct = (List<List<Products>>) request.getAttribute("loadProductInHome");
+
+                            List<Products> products = loadProduct.get(0);
                             for (Products p : products) {
 
                         %>
@@ -961,9 +963,8 @@
                                         </h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
-                                        <div class="product-price"><span class="price"><%=p.getUnitPrice()%></span>
-                                            <span
-                                                    class="price-before-discount">1.900.000đ </span></div>
+                                        <div class="product-price"><span class="price"><%=p.getUnitPrice()*1000%>đ</span>
+                                            </div>
                                         <!-- /.product-price -->
 
                                     </div>
@@ -989,7 +990,9 @@
                     </div>
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
                         <%
-                            for (Products p : products) {
+
+                            List<Products> products1 = loadProduct.get(1);
+                            for (Products p : products1) {
 
                         %>
                         <div class="item item-carousel">
@@ -1010,9 +1013,8 @@
                                         </h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
-                                        <div class="product-price"><span class="price"><%=p.getUnitPrice()%></span>
-                                            <span
-                                                    class="price-before-discount">1.900.000đ </span></div>
+                                        <div class="product-price"><span class="price"><%=p.getUnitPrice()*1000%>đ</span>
+                                            </div>
                                         <!-- /.product-price -->
 
                                     </div>
