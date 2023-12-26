@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "LoadProductController", value = {"/battery_drill", "/load-products"})
+@WebServlet(name = "LoadProductController", value = {"/load-products"})
 public class LoadProductController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
