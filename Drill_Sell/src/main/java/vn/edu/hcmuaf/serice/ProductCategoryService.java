@@ -8,7 +8,7 @@ import java.util.List;
 public class ProductCategoryService {
    public static List<Products> finProductHandDrill(){
         return DbController.me().get().withHandle(handle -> {
-            return handle.createQuery("SELECT products.image, products.productName, products.unitPrice FROM product_categorys JOIN products on product_categorys.id = products.categoryId WHERE product_categorys.id=4")
+            return handle.createQuery("SELECT products.image, products.productName, products.unitPrice FROM product_categorys JOIN products on product_categorys.id = products.categoryId WHERE product_categorys.id=4 ORDER BY RAND() LIMIT 12;")
                     .mapToBean(Products.class)
                     .list();
         });
@@ -25,7 +25,7 @@ public class ProductCategoryService {
 
     public static List<Products> finProductZBattery(){
         return DbController.me().get().withHandle(handle -> {
-            return handle.createQuery("SELECT products.image, products.productName, products.unitPrice FROM product_categorys JOIN products on product_categorys.id = products.categoryId WHERE product_categorys.id=6")
+            return handle.createQuery("SELECT products.image, products.productName, products.unitPrice FROM product_categorys JOIN products on product_categorys.id = products.categoryId WHERE product_categorys.id=6 ORDER BY RAND() LIMIT 12;")
                     .mapToBean(Products.class)
                     .list();
         });
@@ -33,7 +33,7 @@ public class ProductCategoryService {
 
     public static List<Products> finProductZCharger(){
         return DbController.me().get().withHandle(handle -> {
-            return handle.createQuery("SELECT products.image, products.productName, products.unitPrice FROM product_categorys JOIN products on product_categorys.id = products.categoryId WHERE product_categorys.id=7")
+            return handle.createQuery("SELECT products.image, products.productName, products.unitPrice FROM product_categorys JOIN products on product_categorys.id = products.categoryId WHERE product_categorys.id=7 ORDER BY RAND() LIMIT 12;")
                     .mapToBean(Products.class)
                     .list();
         });
@@ -41,7 +41,7 @@ public class ProductCategoryService {
 
     public static List<Products> finProductZCountersink(){
         return DbController.me().get().withHandle(handle -> {
-            return handle.createQuery("SELECT products.image, products.productName, products.unitPrice FROM product_categorys JOIN products on product_categorys.id = products.categoryId WHERE product_categorys.id=8")
+            return handle.createQuery("SELECT products.image, products.productName, products.unitPrice FROM product_categorys JOIN products on product_categorys.id = products.categoryId WHERE product_categorys.id=8 ORDER BY RAND() LIMIT 6;")
                     .mapToBean(Products.class)
                     .list();
         });
@@ -57,7 +57,7 @@ public class ProductCategoryService {
 
     public static List<Products> finProductMiniDrill(){
         return DbController.me().get().withHandle(handle -> {
-            return handle.createQuery("SELECT products.image, products.productName, products.unitPrice FROM product_categorys JOIN products on product_categorys.id = products.categoryId WHERE product_categorys.id=5")
+            return handle.createQuery("SELECT products.image, products.productName, products.unitPrice FROM product_categorys JOIN products on product_categorys.id = products.categoryId WHERE product_categorys.id=5 ORDER BY RAND() LIMIT 12;")
                     .mapToBean(Products.class)
                     .list();
         });
@@ -66,7 +66,7 @@ public class ProductCategoryService {
 
     public static List<Products> finProductMovers(){
         return DbController.me().get().withHandle(handle -> {
-            return handle.createQuery("SELECT products.image, products.productName, products.unitPrice FROM product_categorys JOIN products on product_categorys.id = products.categoryId WHERE product_categorys.id=3")
+            return handle.createQuery("SELECT products.image, products.productName, products.unitPrice FROM product_categorys JOIN products on product_categorys.id = products.categoryId WHERE product_categorys.id=3 ORDER BY RAND() LIMIT 12;")
                     .mapToBean(Products.class)
                     .list();
         });
