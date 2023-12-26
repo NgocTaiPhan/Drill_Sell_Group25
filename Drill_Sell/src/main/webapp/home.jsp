@@ -210,19 +210,24 @@
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
-                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
+                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>
+                                            Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
+                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>
+                                            Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy khoan cầm tay </a>
+                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy
+                                            khoan cầm tay </a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy khoan mini</a>
+                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy
+                                            khoan mini</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
+                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy
+                                            khoan động lực</a>
 
                                         </li>
                                     </ul>
@@ -960,7 +965,8 @@
                                         </h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
-                                        <div class="product-price"><span class="price"><%=p.getUnitPrice()*1000%>đ</span>
+                                        <div class="product-price"><span
+                                                class="price"><%=p.getUnitPrice() * 1000%>đ</span>
                                         </div>
                                         <!-- /.product-price -->
 
@@ -1010,7 +1016,8 @@
                                         </h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
-                                        <div class="product-price"><span class="price"><%=p.getUnitPrice()*1000%>đ</span>
+                                        <div class="product-price"><span
+                                                class="price"><%=p.getUnitPrice() * 1000%>đ</span>
                                         </div>
                                         <!-- /.product-price -->
 
@@ -1057,10 +1064,10 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.jsp"><img
-                                                style="width: 189px; height: 189px"
-                                                src="assets/images/products/accessory/sac-nhanh-bosch-gal-18v-20-14-4v-18v-g.jpg"
-                                                alt="Ảnh sản phẩm"></a>
+                                        <div class="image"><a href="detail.jsp"><img width="189px" height="189px"
+
+                                                                                     src="<%=%>"
+                                                                                     alt="Ảnh sản phẩm"></a>
                                         </div>
                                         <!-- /.image -->
 
@@ -1068,7 +1075,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.jsp">Sạc Bosch GAL 18V-20 (14.4V - 18V)</a>
+                                        <h3 class="name"><a href="detail.jsp"><%=%>></a>
                                         </h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
@@ -1086,177 +1093,7 @@
                             </div>
                             <!-- /.products -->
                         </div>
-                        <!-- /.item -->
 
-                        <div class="item item-carousel">
-                            <div class="products">
-                                <div class="product">
-                                    <div class="product-image">
-                                        <div class="image"><a href="detail.jsp"><img
-                                                style="width: 189px; height: 189px"
-                                                src="assets/images/products/accessory/pin-makita-18v.jpg"
-                                                alt="Ảnh sản phẩm"></a>
-                                        </div>
-                                        <!-- /.image -->
-
-                                    </div>
-                                    <!-- /.product-image -->
-
-                                    <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.jsp">Pin Makita 18V</a></h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="description"></div>
-                                        <div class="product-price"><span class="price"> 1.250.000đ </span> <span
-                                                class="price-before-discount">1.550.000đ</span></div>
-                                        <!-- /.product-price -->
-
-                                    </div>
-                                    <!-- /.product-info -->
-
-                                    <!-- /.cart -->
-                                </div>
-                                <!-- /.product -->
-
-                            </div>
-                            <!-- /.products -->
-                        </div>
-                        <!-- /.item -->
-
-                        <div class="item item-carousel">
-                            <div class="products">
-                                <div class="product">
-                                    <div class="product-image">
-                                        <div class="image"><a href="detail.jsp"><img
-                                                style="width: 189px; height: 189px"
-                                                src="assets/images/products/accessory/mui-duc-nhon-makita-d-08682.jpg"
-                                                alt="Ảnh sản phẩm"></a>
-                                        </div>
-                                        <!-- /.image -->
-
-                                    </div>
-                                    <!-- /.product-image -->
-
-                                    <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.jsp">
-                                            Mũi đục nhọn Makita D-08682 17mm</a></h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="description"></div>
-                                        <div class="product-price"><span class="price"> 71.000đ </span> <span
-                                                class="price-before-discount">99.000đ</span></div>
-                                        <!-- /.product-price -->
-
-                                    </div>
-
-                                </div>
-                                <!-- /.product -->
-
-                            </div>
-                            <!-- /.products -->
-                        </div>
-                        <!-- /.item -->
-
-                        <div class="item item-carousel">
-                            <div class="products">
-                                <div class="product">
-                                    <div class="product-image">
-                                        <div class="image"><a href="detail.jsp"><img
-                                                style="width: 189px; height: 189px"
-                                                src="assets/images/products/accessory/plus-1-hammer-drill-bits-2868938-ocs-ac-1.jpg"
-                                                alt="Ảnh sản phẩm"></a>
-                                        </div>
-                                        <!-- /.image -->
-
-                                    </div>
-                                    <!-- /.product-image -->
-
-                                    <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.jsp">Mũi khoan Bosch SDS+ plus 1</a></h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="description"></div>
-                                        <div class="product-price"><span class="price"> 100.000đ</span> <span
-                                                class="price-before-discount">120.000đ</span></div>
-                                        <!-- /.product-price -->
-
-                                    </div>
-
-                                </div>
-                                <!-- /.product -->
-
-                            </div>
-                            <!-- /.products -->
-                        </div>
-                        <!-- /.item -->
-
-                        <div class="item item-carousel">
-                            <div class="products">
-                                <div class="product">
-                                    <div class="product-image">
-                                        <div class="image"><a href="detail.jsp"><img
-                                                style="width: 189px; height: 189px"
-                                                src="assets/images/products/accessory/de-sac-nhanh-makita-12v-max-dc10sb.jpg"
-                                                alt="Ảnh sản phẩm"></a>
-                                        </div>
-                                        <!-- /.image -->
-
-                                    </div>
-                                    <!-- /.product-image -->
-
-                                    <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.jsp">Đế sạc nhanh Makita 12V Max DC10SB</a>
-                                        </h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="description"></div>
-                                        <div class="product-price"><span class="price"> 1.190.000đ </span> <span
-                                                class="price-before-discount">1.350.000đ</span></div>
-                                        <!-- /.product-price -->
-
-                                    </div>
-
-                                </div>
-                                <!-- /.product -->
-
-                            </div>
-                            <!-- /.products -->
-                        </div>
-                        <!-- /.item -->
-
-                        <div class="item item-carousel">
-                            <div class="products">
-                                <div class="product">
-                                    <div class="product-image">
-                                        <div class="image"><a href="detail.jsp"><img
-                                                style="width: 189px; height: 189px"
-                                                src="assets/images/products/accessory/dau-khoan-co-khoa-13mm-bosch-2608571079-g.jpg"
-                                                alt="Ảnh sản phẩm"></a>
-                                        </div>
-                                        <!-- /.image -->
-
-                                    </div>
-                                    <!-- /.product-image -->
-                                    <style>
-
-
-                                    </style>
-                                    <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.jsp">
-                                            Đầu khoan có khóa 13mm Bosch 2608571079</a></h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="description"></div>
-                                        <div class="product-price"><span class="price"> 112.000đ </span> <span
-                                                class="price-before-discount">135.000đ</span></div>
-                                        <!-- /.product-price -->
-
-                                    </div>
-                                    <!-- /.product-info -->
-
-                                    <!-- /.cart -->
-                                </div>
-                                <!-- /.product -->
-
-                            </div>
-                            <!-- /.products -->
-                        </div>
-                        <!-- /.item -->
                     </div>
                     <!-- /.home-owl-carousel -->
                 </section>
