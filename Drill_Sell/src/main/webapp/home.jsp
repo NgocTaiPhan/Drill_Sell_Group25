@@ -1049,46 +1049,46 @@
                 <!-- ============================================== FEATURED PRODUCTS : END ============================================== -->
 
 
-                <section class="section featured-product wow fadeInUp">
-                    <h3 class="section-title">Phụ kiện</h3>
-                    <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">
-                        <div class="item item-carousel">
-                            <div class="products">
-                                <div class="product">
-                                    <div class="product-image">
-                                        <div class="image"><a href="detail.jsp"><img width="189px" height="189px"
+<%--                <section class="section featured-product wow fadeInUp">--%>
+<%--                    <h3 class="section-title">Phụ kiện</h3>--%>
+<%--                    <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">--%>
+<%--                        <div class="item item-carousel">--%>
+<%--                            <div class="products">--%>
+<%--                                <div class="product">--%>
+<%--                                    <div class="product-image">--%>
+<%--                                        <div class="image"><a href="detail.jsp"><img width="189px" height="189px"--%>
 
-                                                                                     src="<%=%>"
-                                                                                     alt="Ảnh sản phẩm"></a>
-                                        </div>
-                                        <!-- /.image -->
+<%--                                                                                     src=""--%>
+<%--                                                                                     alt="Ảnh sản phẩm"></a>--%>
+<%--                                        </div>--%>
+<%--                                        <!-- /.image -->--%>
 
-                                    </div>
-                                    <!-- /.product-image -->
+<%--                                    </div>--%>
+<%--                                    <!-- /.product-image -->--%>
 
-                                    <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.jsp"><%=%>></a>
-                                        </h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="description"></div>
-                                        <div class="product-price"><span class="price"> 1.599.000đ </span> <span
-                                                class="price-before-discount">1.799.000đ</span></div>
-                                        <!-- /.product-price -->
+<%--                                    <div class="product-info text-left">--%>
+<%--                                        <h3 class="name"><a href="detail.jsp"></a>--%>
+<%--                                        </h3>--%>
+<%--                                        <div class="rating rateit-small"></div>--%>
+<%--                                        <div class="description"></div>--%>
+<%--                                        <div class="product-price"><span class="price"> 1.599.000đ </span> <span--%>
+<%--                                                class="price-before-discount">1.799.000đ</span></div>--%>
+<%--                                        <!-- /.product-price -->--%>
 
-                                    </div>
-                                    <!-- /.product-info -->
+<%--                                    </div>--%>
+<%--                                    <!-- /.product-info -->--%>
 
-                                    <!-- /.cart -->
-                                </div>
-                                <!-- /.product -->
+<%--                                    <!-- /.cart -->--%>
+<%--                                </div>--%>
+<%--                                <!-- /.product -->--%>
 
-                            </div>
-                            <!-- /.products -->
-                        </div>
+<%--                            </div>--%>
+<%--                            <!-- /.products -->--%>
+<%--                        </div>--%>
 
-                    </div>
-                    <!-- /.home-owl-carousel -->
-                </section>
+<%--                    </div>--%>
+<%--                    <!-- /.home-owl-carousel -->--%>
+<%--                </section>--%>
 
                 <!-- /.section -->
                 <!-- ============================================== FEATURED PRODUCTS : END ============================================== -->
