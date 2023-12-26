@@ -21,7 +21,7 @@ public class UserService {
 
     public User checkLogin(String username, String password) {
         List<User> users = DbController.me().get().withHandle(handle -> {
-            return handle.createQuery("select * from users where username = ?")
+            return handle.createQuery("select users.username from users where username = ?")
                     .bind(0, username)
                     .mapToBean(User.class).collect(Collectors.toList());
         });
@@ -29,5 +29,7 @@ public class UserService {
         User u = users.get(0);
         return (password.equals(u.getPassword())) ? u : null;
     }
+
+
 }
 
