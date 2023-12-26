@@ -12,6 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/bean/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/serice/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/serice/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +99,7 @@
       <recent name="D:\WorkSpace\WebPrograming\Project\Drill_Sell\src\main\java\vn\edu\hcmuaf" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.87">
+  <component name="RunManager" selected="Application.User">
     <configuration name="DbController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.db.DbController" />
       <module name="Drill_Sell" />
@@ -144,6 +145,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="vn.edu.hcmuaf.bean.Products" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="User" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.bean.User" />
+      <module name="Drill_Sell" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vn.edu.hcmuaf.bean.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -321,6 +335,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.User" />
         <item itemvalue="Application.Products" />
         <item itemvalue="Application.ProductService" />
         <item itemvalue="Application.DbController" />
@@ -360,7 +375,9 @@
       <workItem from="1703434654969" duration="5668000" />
       <workItem from="1703475223271" duration="14790000" />
       <workItem from="1703495194605" duration="10000" />
-      <workItem from="1703523676274" duration="501000" />
+      <workItem from="1703523676274" duration="1425000" />
+      <workItem from="1703604413995" duration="16000" />
+      <workItem from="1703604441934" duration="44000" />
     </task>
     <task id="LOCAL-00001" summary="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
       <option name="closed" value="true" />
