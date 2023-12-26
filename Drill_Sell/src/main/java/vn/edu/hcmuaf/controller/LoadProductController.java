@@ -27,21 +27,18 @@ public class LoadProductController extends HttpServlet {
         String contextPath = request.getContextPath();
         switch (request.getServletPath()) {
             case "/battery_drill":
-                List<Products> productsList2 = ProductService.getAll();
-                List<Products> productsList3 = ProductService.getAll();
-                List<List<Products>> loadAllProducts1 = new ArrayList<>();
-                loadAllProducts1.add(productsList2);
-                loadAllProducts1.add(productsList3);
-                request.setAttribute("loadProductInHome", loadAllProducts1);
+
+                List<List<Products>> loadAllProductsInBatteryDrill = new ArrayList<>();
+                loadAllProductsInBatteryDrill.add(ProductService.getAll());
+                loadAllProductsInBatteryDrill.add(ProductService.getAll());
+                request.setAttribute("loadProductInBatteryDrill", loadAllProductsInBatteryDrill);
                 request.getRequestDispatcher("battery_drill.jsp").forward(request, response);
                 break;
             case "/load-products":
-                List<Products> productsList = ProductService.getAll();
-                List<Products> productsList1 = ProductService.getAll();
-                List<List<Products>> loadAllProducts = new ArrayList<>();
-                loadAllProducts.add(productsList);
-                loadAllProducts.add(productsList1);
-                request.setAttribute("loadProductInHome", loadAllProducts);
+                List<List<Products>> allHomeProds = new ArrayList<>(); //Load tất cả sản phẩm ở home
+                allHomeProds.add(ProductService.getAll());
+                allHomeProds.add(ProductService.getAll());
+                request.setAttribute("loadProdsInHome", allHomeProds);
                 request.getRequestDispatcher("home.jsp").forward(request, response);
                 break;
             default:
