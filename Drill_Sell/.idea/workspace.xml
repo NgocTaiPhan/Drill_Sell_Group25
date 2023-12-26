@@ -10,18 +10,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< refs/remotes/origin/hoa
-    <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ" />
-=======
     <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/LoadProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/LoadProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/serice/ProductCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/serice/ProductCategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Hand_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Hand_drill.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/battery_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/battery_drill.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/hammer_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/hammer_drill.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/mini_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mini_drill.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/movers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/z_battery.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/z_battery.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/z_charger.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/z_charger.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/z_countersink.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/z_countersink.jsp" afterDir="false" />
     </list>
->>>>>>> local
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,8 +34,8 @@
       <list>
         <option value="Filter" />
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="Servlet" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -84,7 +86,8 @@
     "Tomcat Server.Tomcat 8.5.87.executor": "Run",
     "Tomcat Server.Tomcat 8.5.872.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "hoa",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/Study/BCDAW/Drill_Sell_Group25/Drill_Sell/src/main/java/vn/edu/hcmuaf/controller",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -107,7 +110,7 @@
       <recent name="D:\WorkSpace\WebPrograming\Project\Drill_Sell\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.UserService">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.87">
     <configuration name="DbController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.db.DbController" />
       <module name="Drill_Sell" />
@@ -121,8 +124,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProducersService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.serice.ProducersService" />
+    <configuration name="ProductCategoryService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.serice.ProductCategoryService" />
       <module name="Drill_Sell" />
       <extension name="coverage">
         <pattern>
@@ -343,11 +346,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProductCategoryService" />
         <item itemvalue="Application.UserService" />
         <item itemvalue="Application.Products" />
         <item itemvalue="Application.ProductService" />
         <item itemvalue="Application.DbController" />
-        <item itemvalue="Application.ProducersService" />
       </list>
     </recent_temporary>
   </component>
@@ -383,11 +386,9 @@
       <workItem from="1703434654969" duration="5668000" />
       <workItem from="1703475223271" duration="14790000" />
       <workItem from="1703495194605" duration="10000" />
-<<<<<<< refs/remotes/origin/hoa
-=======
       <workItem from="1703523676274" duration="501000" />
       <workItem from="1703528756984" duration="148000" />
->>>>>>> local
+      <workItem from="1703571862892" duration="22102000" />
     </task>
     <task id="LOCAL-00001" summary="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
       <option name="closed" value="true" />

@@ -213,9 +213,7 @@
                                         <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
 
-                                        </li>
                                         <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy khoan cầm tay </a>
 
                                         </li>
@@ -223,6 +221,9 @@
 
                                         </li>
                                         <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
+
+                                        </li>
+                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
                                     </ul>
@@ -977,12 +978,6 @@
                         <!-- /.item -->
 
                         <%}%>
-                        <!-- /.item -->
-
-
-                        <!-- /.item -->
-
-
                         <!-- /.item -->
                     </div>
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
