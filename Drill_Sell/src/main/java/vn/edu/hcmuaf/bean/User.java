@@ -119,9 +119,10 @@ User {
                 '}';
     }
 
+
     public static void main(String[] args) {
         List<User> users =  DbController.me().get().withHandle(handle -> {
-            return handle.createQuery("select * from users").mapToBean(User.class).collect(Collectors.toList());
+            return handle.createQuery("select users.username from users ").mapToBean(User.class).collect(Collectors.toList());
         });
 
 
