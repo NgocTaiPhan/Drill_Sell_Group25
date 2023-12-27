@@ -1,0 +1,320 @@
+
+
+body {
+	color: #242424;
+	font-family: 'Rubik', sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: normal;
+	overflow-x: hidden;
+}
+a {
+	color: #a4a4a4;
+	transition: 0.3s ease-in-out;
+}
+a:hover {
+	color: #fed700;
+}
+.img {
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+}
+.img-full {
+		width: 100%;
+		overflow: hidden;
+		display: block;
+}
+a:focus,
+a:hover {
+	color: #fed700;
+	text-decoration: none;
+}
+a,
+button,
+input {
+	outline: medium none;
+	color: #a5a5a5;
+}
+button:focus {
+	outline: none;
+}
+.Shopping-cart-area{
+	background: white;
+}
+.coupon {
+	margin-left: 30px;
+}
+.breadcrumb-content{
+	height: 10px;!important;
+	margin: 0px;
+	padding: 0px;
+
+}
+.Shopping-cart-area{
+	margin-top: 1px;
+}
+
+.coupon .input-text{
+	width: 350px;
+}
+.breadcrumb-area {
+	padding: 21px 0 22px;
+	background: #f9f9f9;
+
+}
+.table tr{
+	border: 0.5px solid #9b9b9b;
+}
+
+
+
+.li-product-thumbnail img{
+	width: 70px;
+	height: 70px;
+}
+.cart-plus-minus {
+  float: left;
+  margin-right: 15px;
+  position: relative;
+  width: 76px;
+  text-align: left;
+}
+.cart-plus-minus .cart-plus-minus-box {
+	border: 1px solid #e1e1e1;
+	color: #242424;
+	height: 46px;
+	text-align: center;
+	width: 48px;
+	background: #fff;
+}
+.cart-plus-minus .dec.qtybutton, .cart-plus-minus .inc.qtybutton {
+  border-bottom: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;
+  color: #333333;
+  cursor: pointer;
+  height: 23px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  width: 28px;
+}
+.cart-plus-minus .dec.qtybutton:hover, .cart-plus-minus .inc.qtybutton:hover {
+  background: #ddd;
+}
+.cart-plus-minus .dec.qtybutton {
+  bottom: 0;
+  right: 0;
+}
+.cart-plus-minus .inc.qtybutton {
+  border-bottom: none;
+  top: 0;
+  right: 0;
+}
+
+
+/*  6.1 Li's Shop Page
+/*----------------------------------------*/
+.hb-megamenu > li ul > li.active > a {
+	color: #fed700;
+}
+.header-bottom-other-page {
+	margin-bottom: 0;
+}
+/*Li's Breadcrumb*/
+.breadcrumb-area {
+	padding: 21px 0 22px;
+	background: #f9f9f9;
+}
+.breadcrumb-content li {
+	color: #a4a4a4;
+	display: inline-block;
+	font-size: 14px;
+	margin-right: 28px;
+	position: relative;
+}
+.breadcrumb-content li a {
+	color: #242424;
+}
+.breadcrumb-content li a:hover {
+	color: #242424;
+}
+.breadcrumb-content li::before {
+	background-color: #aaaaaa;
+	content: "";
+	height: 2px;
+	position: absolute;
+	right: -22px;
+	top: 10px;
+	transform: rotate(-67deg);
+	transition: all 0.4s ease 0s;
+	width: 12px;
+}
+.breadcrumb-content li:last-child::before {
+	display: none;
+}
+.product-layout-list {
+	border-bottom: 1px solid #e1e1e1;
+	margin: 40px auto 0;
+}
+.product-layout-list.last-child {
+	border-bottom: none;
+}
+.category-block {
+	box-shadow: none;
+	background: transparent;
+	padding: 0 15px;
+	margin-bottom: 30px;
+	background: #f4f4f4;
+	border: 1px solid #e1e1e1;
+}
+.category-widget-top-menu > li > h6 > a {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 500;
+	color: #242424;
+	text-transform: capitalize !important;
+	border-bottom: 1px solid #e1e1e1;
+	padding: 20px 0;
+	margin-bottom: 30px;
+	position: relative;
+	display: block;
+	letter-spacing: -.025em;
+}
+.shop-add-action {
+	opacity: 1;
+	top: 0;
+	background: #f7f7f7;
+	border: 1px solid #e1e1e1;
+	padding: 30px 0 30px 30px;
+}
+.shop-add-action .add-actions-link {
+	margin: 0;
+	padding: 0;
+}
+.shop-add-action .add-actions-link li.add-cart {
+	margin: 0 0 25px;;
+}
+.shop-add-action .add-actions-link li.wishlist,
+.shop-add-action .add-actions-link li:last-child {
+	display: block;
+	width: 100%;
+	background: transparent;
+}
+.shop-add-action .add-actions-link li.wishlist a,
+.shop-add-action .add-actions-link li:last-child a.quick-view {
+	text-align: left;
+	background: transparent;
+	font-size: 14px;
+}
+.product-list-view .shop-add-action ul li a i {
+	padding-right: 10px;
+}
+
+/* 	6.6 Li's Shopping Cart
+/*----------------------------------------*/
+.li-product-quantity input {
+	border: none;
+	color: #222555;
+	font-size: 14px;
+	font-weight: normal;
+	border: 1px solid #ededed;
+	height: 40px;
+	width: 55px;
+}
+.li-product-quantity>input {
+	width: 80px;
+	border-radius: 3px;
+}
+.li-product-quantity>input:focus {
+	background: #eceff8;
+}
+.table-content table td.product-subtotal {
+	font-size: 16px;
+	font-weight: 700;
+	font-family: 'Montserrat', sans-serif;
+	color: #414141;
+}
+.table-content table td .cart-plus-minus {
+	float: none;
+	margin: 0 auto;
+}
+.coupon-all {
+	margin-top: 30px;
+}
+.coupon {
+	float: left;
+}
+.coupon input {
+	background-color: transparent;
+	border: 1px solid #ddd;
+	color: #333;
+	font-size: 13px;
+	border-radius: 0;
+	height: 42px;
+	width: 120px;
+}
+.coupon-all input.button {
+	background-color: #333;
+	border: 0 none;
+	border-radius: 2px;
+	color: #fff;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 700;
+	cursor: pointer;
+	height: 42px;
+	letter-spacing: 1px;
+	line-height: 42px;
+	padding: 0 25px;
+	text-transform: uppercase;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+	width: inherit;
+}
+.coupon-all input.button:hover {
+	background: #fed700;
+}
+.coupon2 {
+	float: right;
+}
+.cart-page-total {
+	padding-top: 30px;
+}
+.cart-page-total>h2 {
+	font-size: 25px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	text-transform: capitalize;
+}
+.cart-page-total>ul {
+	border: 1px solid #ddd;
+}
+.cart-page-total>ul>li {
+	list-style: none;
+	font-size: 15px;
+	color: #252525;
+	padding: 10px 30px;
+	border-bottom: 1px solid #ebebeb;
+	font-weight: 700;
+	font-family: 'Montserrat', sans-serif;
+}
+.cart-page-total ul>li>span {
+	float: right;
+}
+.cart-page-total li:last-child {
+	border-bottom: 0;
+}
+.cart-page-total>a {
+	background-color: #2a6496;
+
+	color: #fff;
+	display: inline-block;
+	margin-top: 30px;
+	padding: 10px 20px;
+	text-transform: capitalize;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
