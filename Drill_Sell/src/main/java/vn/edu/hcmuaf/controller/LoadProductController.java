@@ -38,6 +38,7 @@ public class LoadProductController extends HttpServlet {
                 List<List<Products>> allHomeProds = new ArrayList<>(); //Load tất cả sản phẩm ở home
                 allHomeProds.add(ProductService.getAll());
                 allHomeProds.add(ProductService.getAll());
+                allHomeProds.add(ProductService.getAccessoryInHome());
                 request.setAttribute("loadProdsInHome", allHomeProds);
                 request.getRequestDispatcher("home.jsp").forward(request, response);
                 break;

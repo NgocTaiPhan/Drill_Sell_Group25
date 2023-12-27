@@ -3,6 +3,7 @@
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="Drill_Sell:war" />
+      <artifact name="Drill_Sell:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,9 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/LoadProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/LoadProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/serice/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/serice/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +26,9 @@
       <list>
         <option value="Filter" />
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="Servlet" />
+        <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -101,7 +103,7 @@
       <recent name="D:\WorkSpace\WebPrograming\Project\Drill_Sell\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DbController">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.87">
     <configuration name="DbController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.db.DbController" />
       <module name="Drill_Sell" />
@@ -331,9 +333,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProductService" />
         <item itemvalue="Application.DbController" />
         <item itemvalue="Application.Products" />
-        <item itemvalue="Application.ProductService" />
         <item itemvalue="Application.ProducersService" />
       </list>
     </recent_temporary>
@@ -373,7 +375,8 @@
       <workItem from="1703523676274" duration="501000" />
       <workItem from="1703528756984" duration="148000" />
       <workItem from="1703609451117" duration="12000" />
-      <workItem from="1703609632945" duration="2472000" />
+      <workItem from="1703609632945" duration="2942000" />
+      <workItem from="1703649773322" duration="5739000" />
     </task>
     <task id="LOCAL-00001" summary="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
       <option name="closed" value="true" />
