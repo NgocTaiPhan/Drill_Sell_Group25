@@ -1,5 +1,7 @@
 ﻿<%@ page import="vn.edu.hcmuaf.bean.Products" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="java.util.Locale" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html lang="vi">
@@ -882,7 +884,7 @@
                                                             1600A01B8X</a></h3>
                                                         <div class="rating rateit-small"></div>
                                                         <div class="product-price"><span
-                                                                class="price"> 657.000đ </span>
+                                                                class="price"> 657.000 </span>
                                                         </div>
                                                         <!-- /.product-price -->
 
@@ -937,10 +939,13 @@
 
                         <!-- /.item -->
 
-                        <% List<List<Products>> loadProduct = (List<List<Products>>) request.getAttribute("loadProductInHome");
+                        <% List<List<Products>> loadProduct = (List<List<Products>>) request.getAttribute("loadProdsInHome");
 
                             List<Products> products = loadProduct.get(0);
                             for (Products p : products) {
+                                NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                                String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);
+                                request.setAttribute("formattedUnitPrice", formattedPrice);
 
                         %>
                         <!-- /.item -->
@@ -964,7 +969,7 @@
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"><span
-                                                class="price"><%=p.getUnitPrice() * 1000%>đ</span>
+                                                class="price"><%=request.getAttribute("formattedUnitPrice")%></span>
                                         </div>
                                         <!-- /.product-price -->
 
@@ -988,6 +993,9 @@
 
                             List<Products> products1 = loadProduct.get(1);
                             for (Products p : products1) {
+                                NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                                String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);
+                                request.setAttribute("formattedUnitPrice", formattedPrice);
 
                         %>
                         <div class="item item-carousel">
@@ -1009,7 +1017,7 @@
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"><span
-                                                class="price"><%=p.getUnitPrice() * 1000%>đ</span>
+                                                class="price"><%=request.getAttribute("formattedUnitPrice")%></span>
                                         </div>
                                         <!-- /.product-price -->
 
@@ -1052,13 +1060,22 @@
                 <section class="section featured-product wow fadeInUp">
                     <h3 class="section-title">Phụ kiện</h3>
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">
+                        <%
+
+                            for (Products p : loadProduct.get(2)) {
+
+                                NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                                String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);
+                                request.setAttribute("formattedUnitPrice", formattedPrice);
+
+                        %>
                         <div class="item item-carousel">
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
                                         <div class="image"><a href="detail.jsp"><img width="189px" height="189px"
 
-                                                                                     src="<%=%>"
+                                                                                     src="<%=p.getImage()%>"
                                                                                      alt="Ảnh sản phẩm"></a>
                                         </div>
                                         <!-- /.image -->
@@ -1067,12 +1084,11 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.jsp"><%=%>></a>
+                                        <h3 class="name"><a href="detail.jsp"><%=p.getProductName()%></a>
                                         </h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
-                                        <div class="product-price"><span class="price"> 1.599.000đ </span> <span
-                                                class="price-before-discount">1.799.000đ</span></div>
+                                        <div class="product-price"><span class="price"> <%=request.getAttribute("formattedUnitPrice")%> </span></div>
                                         <!-- /.product-price -->
 
                                     </div>
@@ -1085,6 +1101,7 @@
                             </div>
                             <!-- /.products -->
                         </div>
+                        <%}%>
 
                     </div>
                     <!-- /.home-owl-carousel -->
