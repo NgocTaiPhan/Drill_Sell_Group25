@@ -18,33 +18,25 @@ public class LoadProductController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("UTF-8");
-        doPost(request,response);
+        doPost(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String contextPath = request.getContextPath();
-        switch (request.getServletPath()) {
-            case "/battery_drill":
-
-                List<List<Products>> loadAllProductsInBatteryDrill = new ArrayList<>();
-                loadAllProductsInBatteryDrill.add(ProductService.getAll());
-                loadAllProductsInBatteryDrill.add(ProductService.getAll());
-                request.setAttribute("loadProductInBatteryDrill", loadAllProductsInBatteryDrill);
-                request.getRequestDispatcher("battery_drill.jsp").forward(request, response);
-                break;
-            case "/load-products":
-                List<List<Products>> allHomeProds = new ArrayList<>(); //Load tất cả sản phẩm ở home
-                allHomeProds.add(ProductService.getAll());
-                allHomeProds.add(ProductService.getAll());
-                allHomeProds.add(ProductService.getAccessoryInHome());
-                request.setAttribute("loadProdsInHome", allHomeProds);
-                request.getRequestDispatcher("home.jsp").forward(request, response);
-                break;
-            default:
-                break;
-        }
+//        String contextPath = request.getContextPath();
+//        switch (request.getServletPath()) {
+//            case "/load-products":
+        List<List<Products>> allHomeProds = new ArrayList<>(); //Load tất cả sản phẩm ở home
+        allHomeProds.add(ProductService.getAll());
+        allHomeProds.add(ProductService.getAll());
+        allHomeProds.add(ProductService.getAccessoryInHome());//Load phụ kiện ở phần home
+        request.setAttribute("loadProdsInHome", allHomeProds);
+        request.getRequestDispatcher("home.jsp").forward(request, response);
+//                break;
+//            default:
+//                break;
+//        }
 
     }
 }
