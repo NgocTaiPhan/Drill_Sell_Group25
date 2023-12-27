@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    background: #ededed;
+}
+.generality{
+    width: 600px;
+    height: 630px;
+    margin: auto;
+    border-radius: 10px;
+    background: white;
+    margin-top: 30px;
+}
+.container{
+    margin-left: 20px;
+}
+.container .fa-solid , .container .title{
+    display: inline-block;
+
+}
+.container h3{
+    padding-left: 190px;
+    padding-top: 30px;
+}
+
+.status{
+    height: 80px;
+
+}
+.status p{
+    padding-top: 6px;
+}
+.information .time{
+    font-size: 14px;
+    height: 25px;
+    border: none;
+    outline: none;
+}
+.information .s{
+    font-size: 14px;
+    width: 300px;
+    height: 25px;
+    border: none;
+    outline: none;
+}
+
+.address .name, .phone{
+    width: 300px;
+    height: 25px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+.address .addres-custumor{
+    width: 500px;
+    height: 25px;
+    border: none;
+    outline: none;
+}
+.pay h4, input{
+    display: inline-block;
+}
+.pay input{
+    margin-left: 200px;
+}
+.oder a{
+  color: #2a6496;
+    font-size: 19px;
+    text-decoration: none;
+}
+.oder .cart-plus-minus-box{
+    width: 10px;
+    border: none;
+}
+
+.oder .li-product-price, .cart-plus-minus{
+    display: inline-block;
+    margin-left: 20px;
+}
+.main h4, input{
+    display: inline-block;
+
+}
+.main input{
+    margin-left: 400px;
+    width: 60px;
+}
+
+.code-orders .orderDate{
+    float: left;
+}
+.code-orders .code{
+  margin-left: 205px;
+}
+.btn{
+    margin-top: 40px;
+    width: 50px;
+    height: 20px;
+    margin-left: 270px;
+
+}
+.btn a{
+    text-decoration: none;
+
+}

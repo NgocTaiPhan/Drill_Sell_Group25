@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+.list-unstyled a{
+    font-size: 13px;
+}
+.nav-bg-class .nav-outer{
+    margin-top: 0;
+}
+.address{
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+    background: white; !important;
+}
+.address .receive{
+    padding-top: 10px;
+    border: 0.5px solid #c3c3c3;
+    background: white;
+    height: 100px;
+}
+table.table {
+    border: none;
+    border-collapse: collapse;
+}
+
+/* Add this style to remove borders from table rows */
+table.table tr {
+    border: none;
+}
+
+/* Add this style to remove borders from table cells */
+table.table th, table.table td {
+    border: none;
+}
+.address .receive p{
+    font-size: 23px;
+    font-weight: bold;
+    color: #2a6496;
+    margin-left: 30px;
+}
+#informations{
+    margin-left: 30px;
+    width: 250px;
+    height: 30px;
+    border: #c3c3c3;
+}
+#address{
+    margin-left: 15px;
+    width: 690px;
+    height: 30px;
+    border: #c3c3c3;
+
+}
+.information button{
+    margin-left: 15px;
+    background: #157ed2;
+    border: none;
+    color: white;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s; /* Thêm hiệu ứng chuyển đổi cho đổ bóng */
+}
+.information button:hover{
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Thiết lập đổ bóng khi nút được hover */
+}
+
+.product{
+    border: 0.5px solid #c3c3c3;
+    background: white;
+    height: 250px;
+}
+.product .li-product-thumbnail img{
+    width: 50px;
+    height: 50px;
+}
+
+
+.product th{
+    color: #2a6496;
+}
+
+.transport p, .v{
+    display: inline;
+}
+.statistical label{
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2a6496;
+}
+.statistical p{
+    font-weight: bold;
+    color: #2a6496;
+}
+.statistical{
+    border: 0.5px solid #c3c3c3;
+    background: white;
+}
+.statistical .transport input{
+    width: 110px;
+    border: none;
+}
+
+.total-money input{
+    border: none;
+
+}
+.total-money p, input{
+    display: inline-block;
+}
+.statistical .total-money, .transport{
+    display: inline-block;
+
+}
+.statistical .total-money{
+    margin-left:500px
+}
+.pay{
+    border: 0.5px solid #c3c3c3;
+    background: white;
+    height: 250px;
+}
+.pay .method{
+    border-bottom: 0.5px solid #c3c3c3;
+    height:30px;
+    margin-top: 7px;
+    color: #2a6496;
+}
+.pay .method label{
+
+    margin-left:10px;
+}
+#section{
+    float: right;
+    margin-right: 40px;
+    color: black;
+}
+.pay .container table{
+    float: right;
+    margin-top: 20px;
+}
+.pay .order{
+    margin-top: 20px;
+    float: right;
+}
+.container label{
+    color: #2a6496;
+}
+.container table input{
+    border: none;
+    width: 150px;
+}
+.pay .order{
+    margin-left: 15px;
+    background: #157ed2;
+    border: none;
+    color: white;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+   margin-right: 30px;
+    transition: box-shadow 0.3s; /* Thêm hiệu ứng chuyển đổi cho đổ bóng */
+}
+.pay .order:hover{
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Thiết lập đổ bóng khi nút được hover */
+}
+
+
+
+
