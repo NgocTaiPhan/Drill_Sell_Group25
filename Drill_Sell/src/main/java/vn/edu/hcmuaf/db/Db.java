@@ -33,3 +33,17 @@ public class Db {
         System.out.println(dbName);
     }
 }
+////tạo lại đường dẫn đúng để mở file
+//try {
+//        // Sử dụng ClassLoader để tìm file trong resources
+//        InputStream input = Db.class.getClassLoader().getResourceAsStream("db.properties");
+//
+//        if (input != null) {
+//        prop.load(input);
+//        } else {
+//        System.out.println("File db.properties not found!");
+//        }
+//        } catch (IOException e) {
+//        throw new RuntimeException(e);
+//        }
+//        }
