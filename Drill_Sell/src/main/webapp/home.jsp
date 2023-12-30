@@ -221,16 +221,14 @@
                                         <li><a href="battery_drill.jsp"></i>Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="movers.jsp"></i>Máy khoan động lực</a>
-
-                                        </li>
-                                        <li><a href="hammer_drill.jsp"></i>Máy khoan bê tông, Máy khoan búa</a>
-
                                         </li>
                                         <li><a href="Hand_drill.jsp"></i>Máy khoan cầm tay gia đình</a>
 
                                         </li>
                                         <li><a href="mini_drill.jsp"></i>Máy khoan mini</a>
+
+                                        </li>
+                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
                                     </ul>
@@ -802,12 +800,6 @@
                         <!-- /.item -->
 
                         <%}%>
-                        <!-- /.item -->
-
-
-                        <!-- /.item -->
-
-
                         <!-- /.item -->
                     </div>
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
