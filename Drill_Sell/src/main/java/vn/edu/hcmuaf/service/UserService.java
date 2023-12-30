@@ -1,11 +1,9 @@
-package vn.edu.hcmuaf.serice;
+package vn.edu.hcmuaf.service;
 
 import vn.edu.hcmuaf.bean.User;
 import vn.edu.hcmuaf.db.DbController;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 public class UserService {

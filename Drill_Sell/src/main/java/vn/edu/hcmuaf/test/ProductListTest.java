@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.test;
 
 import vn.edu.hcmuaf.bean.Products;
-import vn.edu.hcmuaf.serice.ProductService;
+import vn.edu.hcmuaf.service.ProductService;
 
 import java.util.List;
 
