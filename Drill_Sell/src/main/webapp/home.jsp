@@ -221,7 +221,6 @@
                                         <li><a href="battery_drill.jsp"></i>Máy khoan pin</a>
 
                                         </li>
-                                        </li>
                                         <li><a href="Hand_drill.jsp"></i>Máy khoan cầm tay gia đình</a>
 
                                         </li>

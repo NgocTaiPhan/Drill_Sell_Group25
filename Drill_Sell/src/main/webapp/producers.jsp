@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-HttpSession sesion = (HttpSession) request.getSession();
+    HttpSession sesion = (HttpSession) request.getSession();
 
 
 
@@ -659,7 +659,7 @@ HttpSession sesion = (HttpSession) request.getSession();
 
 
 
-                                    for (Products p : products){
+                                        for (Products p : products){
 
                                     %>
 
@@ -681,7 +681,7 @@ HttpSession sesion = (HttpSession) request.getSession();
                                                     <div class="rating rateit-small"></div>
                                                     <div class="description"></div>
                                                     <div class="product-price"><span class="price"> <%=p.getUnitPrice()%> </span>
-                                                        </div>
+                                                    </div>
                                                     <!-- /.product-price -->
 
                                                 </div>
