@@ -53,8 +53,8 @@
     
                             <li><a href="./account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
                             <li><a href="./card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                            <li><a href="./che"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                            <li><a href="login.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
+                            <li><a href=""><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                            <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                         </ul>
                     </div>
 

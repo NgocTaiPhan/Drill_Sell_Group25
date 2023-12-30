@@ -2,36 +2,42 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.text.NumberFormat" %>
 <%@ page import="java.util.Locale" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="vn.edu.hcmuaf.service.ProductService" %>
+<%@ page import="vn.edu.hcmuaf.controller.HomeController" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<%
+
+
+    HomeController homeCtroller = new HomeController();
+    List<List<Products>> showProducts = homeCtroller.getAllProducts();
+
+
+%>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="assets/images/logo.png" rel="icon" type="image/png">
+    <title>Trang chủ</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-    <link rel="icon" href="assets/images/logo.png" type="image/png">
-    <title>Bán máy khoan</title>
-
-
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!-- Customizable CSS ================================================================================-->
-
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/blue.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/owl.transitions.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/rateit.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+    <!--    Css tự viết-->
+    <link rel="stylesheet" href="assets/css/my-css/logo-page.css">
+    <!--Css tự viết-->
+    <!-- Customizable CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/blue.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="assets/css/rateit.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-select.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/my-css/footermenu.css">
-
     <script src="assets/js/jquery-1.11.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
@@ -40,22 +46,20 @@
     <script src="assets/js/jquery.easing-1.3.min.js"></script>
     <script src="assets/js/bootstrap-slider.min.js"></script>
     <script src="assets/js/jquery.rateit.min.js"></script>
-    <script type="text/javascript" src="assets/js/lightbox.min.js"></script>
+    <script src="assets/js/lightbox.min.js" type="text/javascript"></script>
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/my-js/footermenu.js"></script>
 
+    <!-- Icons/Glyphs -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
 
-    <!-- Icons/Glyphs ==============================================================================================-->
-    <link rel="stylesheet" href="assets/css/font-awesome.css">
-
-    <!-- Fonts =========================================================================================================-->
+    <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800'
           rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
 </head>
 
 <body class="cnt-home">
@@ -114,15 +118,19 @@
                             <div class="control-group dropdown">
 
                                 <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
+
                                        placeholder="Tìm kiếm...">
-                                <a class="search-button" href="detail.jsp"></a>
+
+
+                                <a style="height: 44.5px;" class="search-button" href="#"></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="detail.jsp">Máy khoan động lực Bosch GSB 16 RE -
+                                    <li><a href="#">Máy khoan động lực Bosch GSB 16 RE -
                                         06012281K1</a></li>
-                                    <li><a href="detail.jsp">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
-                                    <li><a href="detail.jsp">Máy khoan pin Makute CD027</a></li>
+                                    <li><a href="#">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
+                                    <li><a href="#">Máy khoan pin Makute CD027</a></li>
                                 </ul>
+
                             </div>
                         </form>
                     </div>
@@ -134,7 +142,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 
-                    <div class="dropdown dropdown-cart"><a href="detail.jsp" class="dropdown-toggle lnk-cart"
+                    <div class="dropdown dropdown-cart"><a href="#" class="dropdown-toggle lnk-cart"
                                                            data-toggle="dropdown">
                         <div class="items-cart-inner">
                             <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
@@ -147,17 +155,16 @@
                                 <div class="cart-item product-summary">
                                     <div class="row">
                                         <div class="col-xs-4">
-                                            <div class="image"><a href="detail.jsp"><img
+                                            <div class="image"><a href="#"><img
                                                     src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
                                                     alt="Ảnh sản phẩm"></a></div>
                                         </div>
                                         <div class="col-xs-7">
-                                            <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB 16 RE -
+                                            <h3 class="name"><a href="">Máy khoan động lực Bosch GSB 16 RE -
                                                 06012281K1</a></h3>
                                             <div class="price">1.599.000đ</div>
                                         </div>
-                                        <div class="col-xs-1 action"><a href="detail.jsp"><i
-                                                class="fa fa-trash"></i></a></div>
+                                        <div class="col-xs-1 action"><a href="#"><i class="fa fa-trash"></i></a></div>
                                     </div>
                                 </div>
                                 <!-- /.cart-item -->
@@ -191,12 +198,11 @@
     <!-- /.main-header -->
 
     <!-- ============================================== NAVBAR ============================================== -->
-    <div class="header-nav animate-dropdown ">
-
+    <div class="header-nav animate-dropdown">
         <div class="container">
             <div class="yamm navbar navbar-default" role="navigation">
                 <!--                <div class="navbar-header">-->
-                <!--                    <button data-target="detail.htmlmc-horizontal-menu-collapse" data-toggle="collapse"-->
+                <!--                    <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse"-->
                 <!--                            class="navbar-toggle collapsed"-->
                 <!--                            type="button">-->
                 <!--                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span-->
@@ -207,34 +213,29 @@
                     >
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
-                                <li class="active  yamm-fw"><a href="./home.jsp">Trang chủ</a></li>
-                                <li class="active  yamm-fw"><a href="./product.jsp">Sản phẩm</a></li>
+                                <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
+                                <li class="active  yamm-fw"><a href="product.jsp">Sản phẩm</a></li>
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
-                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>
-                                            Máy khoan pin</a>
+                                        <li><a href="battery_drill.jsp"></i>Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>
-                                            Máy khoan bê tông, Máy khoan búa</a>
+                                        <li><a href="movers.jsp"></i>Máy khoan động lực</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy
-                                            khoan cầm tay </a>
+                                        <li><a href="hammer_drill.jsp"></i>Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy
-                                            khoan mini</a>
+                                        <li><a href="Hand_drill.jsp"></i>Máy khoan cầm tay gia đình</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy
-                                            khoan động lực</a>
+                                        <li><a href="mini_drill.jsp"></i>Máy khoan mini</a>
 
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="active  yamm-fw"><a href="./contact.jsp">Liên hệ</a></li>
+                                <li class="active  yamm-fw"><a href="contact.jsp">Liên hệ</a></li>
 
 
                             </ul>
@@ -502,18 +503,41 @@
                     <h3 class="section-title">Nhà sản xuất</h3>
                     <div class="sidebar-widget-body outer-top-xs">
                         <div class="tag-list">
-                            <a class="item" title="Bosh" href="./producers/bosh.jsp">Bosh</a>
-                            <a class="item " title="Makita" href="./producers/makita.jsp">Makita</a>
-                            <a class="item" title="DeWalt" href="./producers/dewalt.jsp">DeWalt</a>
-                            <a class="item" title="Sencan" href="./producers/sencan.jsp">Sencan</a>
-                            <a class="item" title="Tolsen" href="./producers/tolsen.jsp">Tolsen</a>
-                            <a class="item" title="Classic" href="./producers/classic.jsp">Classic</a>
-                            <a class="item" title="Sasuke" href="./producers/sasuke.jsp">Sasuke</a>
-                            <a class="item" title="FEG" href="./producers/feg.jsp">FEG</a>
-                            <a class="item" title="Gomes" href="./producers/gomes.jsp">Gomes</a></div>
-                        <!-- /.tag-list -->
+                            <!-- JSP Code -->
+                            <form id="producerForm" action="producers" method="get">
+                                <input type="hidden" id="producerInput" name="producer" value="" />
+                                <input type="hidden" id="prInput" name="pr" value="" />
+                            </form>
+                            <a class="item" href="#" onclick="submitForm(1, 'Bosh')">Bosh</a>
+                            <a class="item" href="#" onclick="submitForm(2, 'Makute')">Makute</a>
+                            <a class="item" href="#" onclick="submitForm(3, 'DeWalt')">DeWalt</a>
+                            <a class="item" href="#" onclick="submitForm(4, 'Milwaukee')">Milwaukee</a>
+                            <a class="item" href="#" onclick="submitForm(5, 'Tolsen')">Tolsen</a>
+                            <a class="item" href="#" onclick="submitForm(6, 'Classic')">Classic</a>
+                            <a class="item" href="#" onclick="submitForm(7, 'Sasuke')">Sasuke</a>
+                            <a class="item" href="#" onclick="submitForm(8, 'Huynhdai')">Huynhdai</a>
+                            <a class="item" href="#" onclick="submitForm(9, 'Oshima')">Oshima</a>
+                            <a class="item" href="#" onclick="submitForm(10, 'Gomes')">Gomes</a>
+
+                            <script>
+                                // Function to set producer value and pr value, and submit the form
+                                function submitForm(prValue, producerName) {
+                                    // Set the pr value in the hidden input field
+                                    document.getElementById('prInput').value = prValue;
+
+                                    // Set the producer value in the hidden input field
+                                    document.getElementById('producerInput').value = producerName;
+                                    console.log(producerName);
+
+                                    // Submit the form
+                                    document.getElementById('producerForm').submit();
+                                }
+                            </script>
+
+                            <!-- /.tag-list -->
+                        </div>
+                        <!-- /.sidebar-widget-body -->
                     </div>
-                    <!-- /.sidebar-widget-body -->
                 </div>
                 <!-- /.sidebar-widget -->
                 <!-- ============================================== PRODUCT TAGS : END ============================================== -->
@@ -607,6 +631,13 @@
                     <h3 class="section-title point ">Bán chạy</h3>
                     <div class="sidebar-widget-body outer-top-xs">
                         <div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs">
+                            <%
+
+                                List<Products> bestSellerProducts = showProducts.get(0);
+                                for (Products p : bestSellerProducts) {
+                                    String formattedPrice = homeCtroller.getFormattedUnitPrice(p);
+
+                            %>
                             <div class="item">
                                 <div class="products best-product">
                                     <div class="product">
@@ -614,9 +645,11 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.jsp"> <img
-                                                                src="assets/images/products/best-seller/may-khoan-dong-luc-bosch-gsb-550.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
+                                                        <div class="image"><a href="detail.jsp"> <img width="95px"
+                                                                                                      height="95px"
+                                                                                                      src="<%=p.getImage()%>"
+                                                                                                      alt="Ảnh sản phẩm">
+                                                        </a>
                                                         </div>
                                                         <!-- /.image -->
 
@@ -626,11 +659,11 @@
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">
-                                                            Máy khoan động lực Bosch GSB 550 - 06011A15K0</a></h3>
+                                                        <h3 class="name"><a href="detail.jsp"><%=p.getProductName()%>
+                                                        </a></h3>
                                                         <div class="rating rateit-small"></div>
                                                         <div class="product-price"><span
-                                                                class="price"> 1.599.000đ </span>
+                                                                class="price"> <%=formattedPrice%> </span>
                                                         </div>
                                                         <!-- /.product-price -->
 
@@ -648,9 +681,11 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.jsp"> <img
-                                                                src="assets/images/products/best-seller/may-khoan-dong-luc-bosch-gsb-16-re-g1.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
+                                                        <div class="image"><a href="detail.jsp"> <img width="95px"
+                                                                                                      height="95px"
+                                                                                                      src="<%=p.getImage()%>"
+                                                                                                      alt="Ảnh sản phẩm">
+                                                        </a>
                                                         </div>
                                                         <!-- /.image -->
 
@@ -660,12 +695,11 @@
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch
-                                                            GSB 16 RE
-                                                            - 06012281K1</a></h3>
+                                                        <h3 class="name"><a href="detail.jsp"><%=p.getProductName()%>
+                                                        </a></h3>
                                                         <div class="rating rateit-small"></div>
                                                         <div class="product-price"><span
-                                                                class="price"> 1.599.000đ </span>
+                                                                class="price"> <%=formattedPrice%> </span>
                                                         </div>
                                                         <!-- /.product-price -->
 
@@ -680,227 +714,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="products best-product">
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="detail.jsp"> <img
-                                                                src="assets/images/products/best-seller/may-khoan-van-vit-dung-pin-12v-bosch-gsr-120-li-gen-ii-06019g80l1-g.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
-                                                        </div>
-                                                        <!-- /.image -->
+                            <%}%>
 
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col2 col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Máy khoan vặn vít dùng
-                                                            pin 12V
-                                                            Bosch GSR 120-LI GEN II</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.825.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
 
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="detail.jsp"> <img
-                                                                src="assets/images/products/best-seller/bo-may-bat-vit-dung-pin-makita-clx228s-g.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
-                                                        </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col2 col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Bộ máy bắt vít dùng pin
-                                                            Makita
-                                                            CLX228S (HP333D+TD110D)</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 3.350.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="products best-product">
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="detail.jsp"> <img
-                                                                src="assets/images/products/best-seller/pin-bosch-12v-2-0ah-g.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
-                                                        </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col2 col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">
-                                                            Pin Bosch 12V 2.0Ah 1600A00F6X (1607A350C5)</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 697.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="detail.jsp"> <img
-                                                                src="assets/images/products/best-seller/may-khoan-be-tong-classic-cla-5425-g.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
-                                                        </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col2 col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Máy khoan bê tông Classic
-                                                            CLA
-                                                            5425</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.300.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="products best-product">
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="detail.jsp"> <img
-                                                                src="assets/images/products/best-seller/bo-mui-khoan-kim-loai-13-chi-tiet-15-65-bosch-2608577349-1.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
-                                                        </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col2 col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Bộ mũi khoan Bosch HSS
-                                                            PointTeQ
-                                                            2608577349 (13 mũi 1.5-6.5)</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 150.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="detail.jsp"> <img
-                                                                src="assets/images/products/best-seller/sac-pin-bosch-gal-12v-40-10-8v-12v-g.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
-                                                        </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col2 col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Sạc pin Bosch GAL 12V-40
-                                                            10.8V/12V
-                                                            1600A01B8X</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 657.000 </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <!-- /.sidebar-widget-body -->
@@ -941,13 +757,11 @@
 
                         <!-- /.item -->
 
-                        <% List<List<Products>> loadProduct = (List<List<Products>>) request.getAttribute("loadProdsInHome");
+                        <%
 
-                            List<Products> products = loadProduct.get(0);
+                            List<Products> products = showProducts.get(0);
                             for (Products p : products) {
-                                NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
-                                String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);
-                                request.setAttribute("formattedUnitPrice", formattedPrice);
+                                String formattedPrice = homeCtroller.getFormattedUnitPrice(p);
 
                         %>
                         <!-- /.item -->
@@ -971,7 +785,7 @@
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"><span
-                                                class="price"><%=request.getAttribute("formattedUnitPrice")%></span>
+                                                class="price"><%=formattedPrice%></span>
                                         </div>
                                         <!-- /.product-price -->
 
@@ -999,11 +813,9 @@
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
                         <%
 
-                            List<Products> products1 = loadProduct.get(1);
+                            List<Products> products1 = showProducts.get(1);
                             for (Products p : products1) {
-                                NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
-                                String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);
-                                request.setAttribute("formattedUnitPrice", formattedPrice);
+                                String formattedPrice = homeCtroller.getFormattedUnitPrice(p);
 
                         %>
                         <div class="item item-carousel">
@@ -1025,7 +837,7 @@
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"><span
-                                                class="price"><%=request.getAttribute("formattedUnitPrice")%></span>
+                                                class="price"><%=formattedPrice%></span>
                                         </div>
                                         <!-- /.product-price -->
 
@@ -1070,12 +882,9 @@
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">
                         <%
 
-                            for (Products p : loadProduct.get(2)) {
-
-                                NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
-                                String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);
-                                request.setAttribute("formattedUnitPrice", formattedPrice);
-
+                            List<Products> accessory = showProducts.get(2);
+                            for (Products a : accessory) {
+                                String formattedPrice = homeCtroller.getFormattedUnitPrice(a);
                         %>
                         <div class="item item-carousel">
                             <div class="products">
@@ -1083,7 +892,7 @@
                                     <div class="product-image">
                                         <div class="image"><a href="detail.jsp"><img width="189px" height="189px"
 
-                                                                                     src="<%=p.getImage()%>"
+                                                                                     src="<%=a.getImage()%>"
                                                                                      alt="Ảnh sản phẩm"></a>
                                         </div>
                                         <!-- /.image -->
@@ -1092,11 +901,14 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.jsp"><%=p.getProductName()%></a>
+                                        <h3 class="name"><a href="detail.jsp"><%=a.getProductName()%>
+                                        </a>
                                         </h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
-                                        <div class="product-price"><span class="price"> <%=request.getAttribute("formattedUnitPrice")%> </span></div>
+                                        <div class="product-price"><span
+                                                class="price"> <%=formattedPrice%> </span>
+                                        </div>
                                         <!-- /.product-price -->
 
                                     </div>
@@ -1129,7 +941,7 @@
     </div>
     <!-- /.container -->
 </div>
-<!-- /detail.htmltop-banner-and-menu -->
+<!-- /detail.jsptop-banner-and-menu -->
 
 <!-- ============================================================= FOOTER ============================================================= -->
 <footer id="footer" class="footer color-bg">
