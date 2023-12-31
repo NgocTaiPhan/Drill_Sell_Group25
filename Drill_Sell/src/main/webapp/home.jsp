@@ -218,20 +218,23 @@
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
-                                        <li><a href="battery_drill.jsp"></i>Máy khoan pin</a>
+                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
 
                                         </li>
 
-                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>
-                                            Máy khoan bê tông, Máy khoan búa</a>
-
-                                        </li>
                                         <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy
                                             khoan cầm tay </a>
 
                                         </li>
                                         <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy
                                           khoan mini</a>
+                                        </li>
+                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
+                                        </li>
+
+                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>
+                                            Máy khoan bê tông, Máy khoan búa</a>
+
                                         </li>
                                     </ul>
                                 </li>
