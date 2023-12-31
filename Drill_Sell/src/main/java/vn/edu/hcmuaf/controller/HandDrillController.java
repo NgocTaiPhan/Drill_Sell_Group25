@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.controller;
 
 import vn.edu.hcmuaf.bean.Products;
-import vn.edu.hcmuaf.serice.ProductCategoryService;
+import vn.edu.hcmuaf.service.ProductCategoryService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

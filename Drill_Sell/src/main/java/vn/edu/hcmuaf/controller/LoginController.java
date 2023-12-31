@@ -1,9 +1,8 @@
 package vn.edu.hcmuaf.controller;
 
 import vn.edu.hcmuaf.bean.User;
-import vn.edu.hcmuaf.serice.UserService;
+import vn.edu.hcmuaf.service.UserService;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

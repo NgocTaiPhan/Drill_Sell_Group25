@@ -32,15 +32,7 @@
 </head>
 
 
-
-
-
-
-
-
 <!-- Navigation Section -->
-
-
 
 
 <!-- Home Section -->
@@ -57,19 +49,14 @@
                 <div class="home-thumb">
                     <h1 class="wow fadeInUp" data-wow-delay="0.6s">Chào mừng</h1>
                     <p class="wow fadeInUp" data-wow-delay="0.8s"></p>
+                    <a class="btn btn-danger" href="<%= request.getContextPath() %>/home.jsp">Mua sắm ngay</a>
 
-                    <!-- Move the form here -->
-                    <form action="load-products" method="GET">
-                        <input class="btn btn-danger" type="submit" value="Mua sắm ngay">
-                    </form>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-
-
 
 
 <!-- SCRIPTS -->

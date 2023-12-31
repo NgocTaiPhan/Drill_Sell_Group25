@@ -1,4 +1,14 @@
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.bean.Products" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%
+    HttpSession sesion = (HttpSession) request.getSession();
+
+
+
+
+%>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -645,12 +655,20 @@
                         <div class="tab-pane active " id="grid-container">
                             <div class="category-product">
                                 <div class="row">
+                                    <%List< Products> products = (List<Products>) sesion.getAttribute("product-list-by-producer");
+
+
+
+                                        for (Products p : products){
+
+                                    %>
+
                                     <div class="col-sm-6 col-md-4 wow fadeInUp">
                                         <div class="products">
                                             <div class="product">
                                                 <div class="product-image">
                                                     <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-van-vit-dung-pin-12v-sencan-d511210-sl.jpg"
+                                                            src="<%=p.getImage()%>"
                                                             alt="Ảnh sản phẩm"></a></div>
                                                     <!-- /.image -->
 
@@ -658,13 +676,12 @@
                                                 <!-- /.product-image -->
 
                                                 <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan vặn vít dùng pin
-                                                        12V Sencan D511210</a>
+                                                    <h3 class="name"><a href="detail.jsp"><%=p.getProductName()%></a>
                                                     </h3>
                                                     <div class="rating rateit-small"></div>
                                                     <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.120.000đ </span>
-                                                        <span class="price-before-discount">1.250.000đ</span></div>
+                                                    <div class="product-price"><span class="price"> <%=p.getUnitPrice()%> </span>
+                                                    </div>
                                                     <!-- /.product-price -->
 
                                                 </div>
@@ -677,390 +694,7 @@
                                         </div>
                                         <!-- /.products -->
                                     </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB
-                                                        16 RE - 06012281K1</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.599.000đ  </span>
-                                                        <span class="price-before-discount">1.950.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-be-tong-26mm-feg-eg-2601-sre.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan bê tông 26mm FEG
-                                                        EG-2601 SRE</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.210.000đ  </span>
-                                                        <span class="price-before-discount">1.300.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-pin-makute-cd027-g1.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan pin Makute
-                                                        CD027</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.370.000đ  </span>
-                                                        <span class="price-before-discount">1.500.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-be-tong-gomes-gb-2603sre.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan bê tông Gomes
-                                                        GB-2603</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.170.000đ  </span>
-                                                        <span class="price-before-discount">1.390.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-rut-loi-gomes-gcd-120-g.png"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan rút lõi Gomes
-                                                        GCD-120</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.520.000đ  </span>
-                                                        <span class="price-before-discount">1.820.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB
-                                                        16 RE - 06012281K1</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.599.000đ  </span>
-                                                        <span class="price-before-discount">1.950.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-dong-luc-makita-m8101b-g.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan động lực Makita
-                                                        M8101B</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.420.000đ  </span>
-                                                        <span class="price-before-discount">1.800.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-van-vit-dong-luc-dung-pin-stanley-sch20c2k.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan vặn vít động lực
-                                                        dùng pin Stanley SCH20C2K</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 2.580.000đ  </span>
-                                                        <span class="price-before-discount">2.850.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/best-seller/bo-may-bat-vit-dung-pin-makita-clx228s-g.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">
-                                                        Bộ máy bắt vít dùng pin Makita CLX228S </a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 3.590.000đ  </span>
-                                                        <span class="price-before-discount">4.990.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/best-seller/may-khoan-dong-luc-bosch-gsb-550.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB
-                                                        550 - 06011A15K0</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.050.000đ  </span>
-                                                        <span class="price-before-discount">1.500.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-dong-luc-bosch-gsb-13-re-hop.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB
-                                                        13 RE</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.890.000đ  </span>
-                                                        <span class="price-before-discount">2.200.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
+                                    <%}%>
                                 </div>
                                 <!-- /.row -->
                             </div>
@@ -1850,38 +1484,38 @@
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <div class="social-button">
     <div class="social-button-content">
-      <a href="tel:0353933224" class="call-icon" rel="nofollow">
-        <i class="fa fa-whatsapp" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Hotline: 035 393 3224</span>
-      </a>
-      <a href="sms:0353933224" class="sms">
-        <i class="fa fa-weixin" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>SMS: 035 393 3224</span>
-      </a>
-      <a href="https://www.facebook.com/Ngocthang.net/" class="mes">
-        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Nhắn tin Facebook</span>
-      </a>
-      <a href="http://zalo.me/0353933224" class="zalo">
-        <i class="fa fa-commenting-o" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Zalo: 035.393.3224</span>
-      </a>
+        <a href="tel:0353933224" class="call-icon" rel="nofollow">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Hotline: 035 393 3224</span>
+        </a>
+        <a href="sms:0353933224" class="sms">
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>SMS: 035 393 3224</span>
+        </a>
+        <a href="https://www.facebook.com/Ngocthang.net/" class="mes">
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Nhắn tin Facebook</span>
+        </a>
+        <a href="http://zalo.me/0353933224" class="zalo">
+            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Zalo: 035.393.3224</span>
+        </a>
     </div>
     <a href="#" class="user-support">
-      <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
-      <div class="animated alo-circle"></div>
-      <div class="animated alo-circle-fill"></div>
+        <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+        <div class="animated alo-circle"></div>
+        <div class="animated alo-circle-fill"></div>
     </a>
-  </div>
-  
+</div>
+
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <!-- ============================================================= Backtop ============================================================= -->
 <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class=" icon fa    fa-arrow-up"></i></button>

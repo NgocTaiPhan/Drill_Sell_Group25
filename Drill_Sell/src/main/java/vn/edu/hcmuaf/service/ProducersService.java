@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.serice;
+package vn.edu.hcmuaf.service;
 
 import vn.edu.hcmuaf.bean.Products;
 import vn.edu.hcmuaf.db.DbController;
@@ -10,7 +10,11 @@ public class ProducersService {
     public static List<Products> findProductWidthProducersID(int producersId) {
 
         return DbController.me().get().withHandle(handle -> {
-            return handle.createQuery("SELECT products.productName,  FROM products JOIN producers ON products.producerId = producers.id WHERE producers.id =?")
+            return handle.createQuery("SELECT products.*, producers.nameProducer \n" +
+                            "FROM products\n" +
+                            "JOIN producers\n" +
+                            "ON products.producerId = producers.id\n" +
+                            "WHERE producerId = ?;\n")
                     .bind(0, producersId)
                     .mapToBean(Products.class)
                     .list();
