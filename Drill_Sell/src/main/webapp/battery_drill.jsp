@@ -530,20 +530,44 @@
 
                 <!-- ============================================== PRODUCT TAGS ============================================== -->
                 <div class="sidebar-widget product-tag wow fadeInUp">
-                    <h3 class="section-title">Thương hiệu nổi bật</h3>
+                    <h3 class="section-title">Nhà sản xuất</h3>
                     <div class="sidebar-widget-body outer-top-xs">
-                        <div class="tag-list"><a class="item" title="Bosh" href="#">Bosh</a>
-                            <a class="item active" title="Makita" href="#">Makita</a>
-                            <a class="item" title="DeWalt" href="#">DeWalt</a>
-                            <a class="item" title="Milwaukee" href="#">Milwaukee</a>
-                            <a class="item" title="Tolsen" href="#">Tolsen</a>
-                            <a class="item" title="Classic" href="#">Classic</a>
-                            <a class="item" title="Sasuke" href="#">Sasuke</a>
-                            <a class="item" title="Huyndai" href="#">Huyndai</a>
-                            <a class="item" title="Oshima" href="#">Oshima</a></div>
-                        <!-- /.tag-list -->
+                        <div class="tag-list">
+                            <!-- JSP Code -->
+                            <form id="producerForm" action="producers" method="get">
+                                <input type="hidden" id="producerInput" name="producer" value="" />
+                                <input type="hidden" id="prInput" name="pr" value="" />
+                            </form>
+                            <a class="item" href="#" onclick="submitForm(1, 'Bosh')">Bosh</a>
+                            <a class="item" href="#" onclick="submitForm(2, 'Makute')">Makute</a>
+                            <a class="item" href="#" onclick="submitForm(3, 'DeWalt')">DeWalt</a>
+                            <a class="item" href="#" onclick="submitForm(4, 'Milwaukee')">Milwaukee</a>
+                            <a class="item" href="#" onclick="submitForm(5, 'Tolsen')">Tolsen</a>
+                            <a class="item" href="#" onclick="submitForm(6, 'Classic')">Classic</a>
+                            <a class="item" href="#" onclick="submitForm(7, 'Sasuke')">Sasuke</a>
+                            <a class="item" href="#" onclick="submitForm(8, 'Huynhdai')">Huynhdai</a>
+                            <a class="item" href="#" onclick="submitForm(9, 'Oshima')">Oshima</a>
+                            <a class="item" href="#" onclick="submitForm(10, 'Gomes')">Gomes</a>
+
+                            <script>
+                                // Function to set producer value and pr value, and submit the form
+                                function submitForm(prValue, producerName) {
+                                    // Set the pr value in the hidden input field
+                                    document.getElementById('prInput').value = prValue;
+
+                                    // Set the producer value in the hidden input field
+                                    document.getElementById('producerInput').value = producerName;
+                                    console.log(producerName);
+
+                                    // Submit the form
+                                    document.getElementById('producerForm').submit();
+                                }
+                            </script>
+
+                            <!-- /.tag-list -->
+                        </div>
+                        <!-- /.sidebar-widget-body -->
                     </div>
-                    <!-- /.sidebar-widget-body -->
                 </div>
                 <!-- /.sidebar-widget -->
                 <!-- ============================================== PRODUCT TAGS : END ============================================== -->
