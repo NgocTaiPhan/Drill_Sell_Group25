@@ -52,6 +52,10 @@
 <header class="header-style-1 ">
 
     <!-- ============================================== TOP MENU ============================================== -->
+
+    <%
+        List<List<Products>> allProduct = (List<List<Products>>) request.getAttribute("loadProductInBatteryDrill");
+    %>
     <div class="top-bar animate-dropdown">
         <div class="container">
             <div class="header-top-inner">
@@ -308,14 +312,22 @@
 
                             <div class="item">
                                 <div class="products special-product">
+                                    <%
+
+                                        List<Products> products4 = allProduct.get(3);
+                                        for (Products p : products4) {
+                                            NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                                            String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);
+                                            request.setAttribute("formattedUnitPrice", formattedPrice);
+                                    %>
                                     <div class="product">
                                         <div class="product-micro">
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/caterogy/battery/combo-maykhoandonglucvamayvanvitdungpin12v-makita.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
+                                                        <div class="image"><a href="detail.jsp"> <img
+                                                                src="<%=p.getImage()%>"
+                                                                alt="Ảnh sản phẩm"></a>
                                                         </div>
                                                         <!-- /.image -->
 
@@ -325,45 +337,11 @@
                                                 <!-- /.col -->
                                                 <div class="col col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="#">Combo Máy khoan động lực và máy vặn
-                                                            vít dùng Pin 12V Makita</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 4.599.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/shoppingCart/may-khoan-pin-tolsen-79036-1.-1.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
-                                                        </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan pin Tolsen 79036 12V</a>
+                                                        <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>
                                                         </h3>
                                                         <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 999.000đ </span>
+                                                        <div class="product-price">
+                                                            <span class="price"><%= request.getAttribute("formattedUnitPrice") %></span>
                                                         </div>
                                                         <!-- /.product-price -->
 
@@ -376,151 +354,12 @@
                                         <!-- /.product-micro -->
 
                                     </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/shoppingCart/bosch-gsb-120-li-1-pin-1-org-1.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
-                                                        </div>
-                                                        <!-- /.image -->
+                                    <%}%>
 
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan động lực pin Bosch GSB
-                                                            120-LI 12V</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.399.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
 
-                                    </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="products special-product">
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/caterogy/battery/bo-san-pham-may-khoan-van-vit-makita-clx224s-300.jpg"
-                                                                alt="images">
-                                                            <div class="zoom-overlay"></div>
-                                                        </a></div>
-                                                        <!-- /.image -->
 
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">
-                                                            Bộ sản phẩm máy khoan vặn vít MAKITA</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 5.599.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/caterogy/battery/bo-may-bat-vit-dung-pin-makita-clx228s-300.jpg"
-                                                                alt="Ảnh sản phẩm">
-                                                            <div class="zoom-overlay"></div>
-                                                        </a></div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Bộ máy bắn vít máy khoan động lực
-                                                            dùng pin MAKITA</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.599.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/caterogy/battery/may-khoan-dong-luc-dung-pin-18v-bosch-gsb-185-li-06019k31k1.jpg"
-                                                                alt="image">
-                                                        </a></div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan động lực PIN 18V Bosch
-                                                            GSB 185LI
-                                                            -
-                                                            06012281K1</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.599.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <!-- /.sidebar-widget-body -->
@@ -597,8 +436,7 @@
                     <h3 class="section-title">Sản phẩm</h3>
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">
 
-                            <%  List<List<Products>> allProduct = (List<List<Products>>) request.getAttribute("loadProductInBatteryDrill");
-
+                            <%
                                 List<Products> products = allProduct.get(0);
                                 for (Products p : products) {
                                     NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
