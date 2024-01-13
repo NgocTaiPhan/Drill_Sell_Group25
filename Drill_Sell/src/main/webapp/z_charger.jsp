@@ -48,7 +48,8 @@
 </head>
 <body>
     <header class="header-style-1 ">
-
+        <%
+            List<List<Products>> allProducts = (List<List<Products>>) request.getAttribute("loadProductInZCharger");%>
         <!-- ============================================== TOP MENU ============================================== -->
         <div class="top-bar animate-dropdown">
             <div class="container">
@@ -290,14 +291,22 @@
 
                             <div class="item">
                                 <div class="products special-product">
+                                    <%
+
+                                        List<Products> products4 = allProducts.get(3);
+                                        for (Products p : products4) {
+                                            NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                                            String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);
+                                            request.setAttribute("formattedUnitPrice", formattedPrice);
+                                    %>
                                     <div class="product">
                                         <div class="product-micro">
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/caterogy/mini/bo-may-mai-khi-nen-cao-cap-1__3__863e286c1ca74196bef02d8b0cb47961_large.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
+                                                        <div class="image"><a href="detail.jsp"> <img
+                                                                src="<%=p.getImage()%>"
+                                                                alt="Ảnh sản phẩm"></a>
                                                         </div>
                                                         <!-- /.image -->
 
@@ -307,10 +316,11 @@
                                                 <!-- /.col -->
                                                 <div class="col col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="#">Combo Máy mài khí nén cao cấp</a></h3>
+                                                        <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>
+                                                        </h3>
                                                         <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 4.599.000đ </span>
+                                                        <div class="product-price">
+                                                            <span class="price"><%= request.getAttribute("formattedUnitPrice") %></span>
                                                         </div>
                                                         <!-- /.product-price -->
 
@@ -323,183 +333,12 @@
                                         <!-- /.product-micro -->
 
                                     </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/caterogy/mini/may-khac-mai-mini-pin-sac-hilda-7_0a9288792af046ed9a9e509a0d60a25e_large.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
-                                                        </div>
-                                                        <!-- /.image -->
+                                    <%}%>
 
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khắc mài pin makita</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 999.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
 
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/caterogy/mini/may-khoan-dau-maxpro-10mm-mped320vuf.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
-                                                        </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan đầu maxpro</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.399.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="products special-product">
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/caterogy/mini/may-khoan-davitec-dv2450-10mm-300.jpg"
-                                                                alt="images">
-                                                            <div class="zoom-overlay"></div>
-                                                        </a></div>
-                                                        <!-- /.image -->
 
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">
-                                                            Máy khoan davitec dv245-</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 599.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/products/normal/may-khoan-dong-luc-bosch-gsb-13-re.jpg"
-                                                                alt="Ảnh sản phẩm">
-                                                            <div class="zoom-overlay"></div>
-                                                        </a></div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan động lực Bosch GSB 16 RE
-                                                            -
-                                                            06012281K1</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.599.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                                alt="image">
-                                                        </a></div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan động lực Bosch GSB 16 RE
-                                                            -
-                                                            06012281K1</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.599.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <!-- /.sidebar-widget-body -->
@@ -564,8 +403,7 @@
                 <section class="section featured-product wow fadeInUp">
                     <h3 class="section-title">Phụ kiện sản phẩm</h3>
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">
-                        <%
-                            List<List<Products>> allProducts = (List<List<Products>>) request.getAttribute("loadProductInZCharger");
+                      <%
                             List<Products> products = allProducts.get(0);
                             for(Products p: products){
                                 NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));

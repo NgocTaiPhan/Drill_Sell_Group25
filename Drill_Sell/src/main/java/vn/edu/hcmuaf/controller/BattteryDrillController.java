@@ -23,7 +23,7 @@ public class BattteryDrillController extends HttpServlet {
         allProduct.add(categoryService.finProductBatterDrill());
         allProduct.add(categoryService.finProductBatterDrill());
         allProduct.add(categoryService.finProductBatterDrill());
-        allProduct.add(productSell.productSell());
+        allProduct.add(productSell.productSellBatterDrill());
         request.setAttribute("loadProductInBatteryDrill", allProduct);
 
         request.setCharacterEncoding("utf-8");
