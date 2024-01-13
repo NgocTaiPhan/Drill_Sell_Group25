@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.controller;
 
 import vn.edu.hcmuaf.bean.Products;
 import vn.edu.hcmuaf.service.ProductCategoryService;
+import vn.edu.hcmuaf.service.ProductSell;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,18 +15,18 @@ import java.util.List;
 
 @WebServlet(name = "HandDrillController", value = "/hand_drill")
 public class HandDrillController extends HttpServlet {
+    ProductCategoryService categoryService = new ProductCategoryService();
+    ProductSell productSell = new ProductSell();
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Products> productsList = ProductCategoryService.finProductHandDrill();
-        List<Products> productsList1 = ProductCategoryService.finProductHandDrill();
-        List<Products> productsList2 = ProductCategoryService.finProductHandDrill();
         List<List<Products>> allProduct = new ArrayList<>();
-        allProduct.add(productsList);
-        allProduct.add(productsList1);
-        allProduct.add(productsList2);
+        allProduct.add(categoryService.finProductHandDrill());
+        allProduct.add(categoryService.finProductHandDrill());
+        allProduct.add(categoryService.finProductHandDrill());
+        allProduct.add(productSell.productSellHandDrill());
         request.setAttribute("loadProductInHandDrill", allProduct);
 
         request.setCharacterEncoding("utf-8");

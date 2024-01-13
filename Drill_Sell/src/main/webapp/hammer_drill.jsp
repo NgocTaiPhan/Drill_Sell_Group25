@@ -3,6 +3,8 @@
 <%@ page import="java.text.NumberFormat" %>
 <%@ page import="java.util.Locale" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -51,6 +53,8 @@
 <header class="header-style-1 ">
 
     <!-- ============================================== TOP MENU ============================================== -->
+    <% List<List<Products>> allProduct = (List<List<Products>>) request.getAttribute("loadProductInHammerDrill");
+    %>
     <div class="top-bar animate-dropdown">
         <div class="container">
             <div class="header-top-inner">
@@ -199,20 +203,25 @@
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
-                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
+                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>
+                                            Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
+                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy
+                                            khoan động lực</a>
 
                                         </li>
 
-                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy khoan cầm tay gia đình</a>
+                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy
+                                            khoan cầm tay gia đình</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy khoan mini</a>
+                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy
+                                            khoan mini</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
+                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>
+                                            Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
                                     </ul>
@@ -261,30 +270,39 @@
                     <div class="head"><i class="icon fa fa-align-justify fa-fw"></i> Máy khoan</div>
                     <nav class="yamm megamenu-horizontal">
                         <ul class="nav">
-                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
+                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/battery_drill"
+                                                        methods="post"></i>Máy khoan pin</a>
 
                             </li>
-                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
+                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/movers"
+                                                        methods="post"></i>Máy khoan động lực</a>
 
                             </li>
 
-                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy khoan cầm tay gia đình</a>
+                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/hand_drill"
+                                                        methods="post"></i>Máy khoan cầm tay gia đình</a>
 
                             </li>
-                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy khoan mini</a>
+                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/mini_drill"
+                                                        methods="post"></i>Máy khoan mini</a>
 
                             </li>
-                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
+                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/hammer_drill"
+                                                        methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
 
                             </li>
 
                             <li class="">
-                                <a href="accessory.jsp" class="dropdown-med" data-toggle="dropdown">Phụ kiện máy khoan <b
-                                        class="caret"></b></a>
+                                <a href="accessory.jsp" class="dropdown-med" data-toggle="dropdown">Phụ kiện máy khoan
+                                    <b
+                                            class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<%= request.getContextPath() %>/z_battery" methods="post"></i>Pin máy khoan</a></li>
-                                    <li><a href="<%= request.getContextPath() %>/z_charger" methods="post"></i>Sạc pin máy khoan</a></li>
-                                    <li><a href="<%= request.getContextPath() %>/z_countersink" methods="post"></i>Mũi khoan</a>
+                                    <li><a href="<%= request.getContextPath() %>/z_battery" methods="post"></i>Pin máy
+                                        khoan</a></li>
+                                    <li><a href="<%= request.getContextPath() %>/z_charger" methods="post"></i>Sạc pin
+                                        máy khoan</a></li>
+                                    <li><a href="<%= request.getContextPath() %>/z_countersink" methods="post"></i>Mũi
+                                        khoan</a>
                                     </li>
                                 </ul>
                             </li>
@@ -308,14 +326,22 @@
 
                             <div class="item">
                                 <div class="products special-product">
+                                    <%
+
+                                        List<Products> products4 = allProduct.get(3);
+                                        for (Products p : products4) {
+                                            NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                                            String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);
+                                            request.setAttribute("formattedUnitPrice", formattedPrice);
+                                    %>
                                     <div class="product">
                                         <div class="product-micro">
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/caterogy/hammer/may-khoan-be-tong-26mm-feg-eg-2601-sre-300.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
+                                                        <div class="image"><a href="detail.jsp"> <img
+                                                                src="<%=p.getImage()%>"
+                                                                alt="Ảnh sản phẩm"></a>
                                                         </div>
                                                         <!-- /.image -->
 
@@ -325,10 +351,11 @@
                                                 <!-- /.col -->
                                                 <div class="col col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy koan bê tông 26mm feg eg 2601</a></h3>
+                                                        <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>
+                                                        </h3>
                                                         <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 4.599.000đ </span>
+                                                        <div class="product-price">
+                                                            <span class="price"><%= request.getAttribute("formattedUnitPrice") %></span>
                                                         </div>
                                                         <!-- /.product-price -->
 
@@ -341,179 +368,9 @@
                                         <!-- /.product-micro -->
 
                                     </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/caterogy/hammer/may-khoan-be-tong-classic-cla-5425-300.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
-                                                        </div>
-                                                        <!-- /.image -->
+                                    <%}%>
 
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan bê tông classic cla5425</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 999.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
 
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/caterogy/hammer/may-khoan-be-tong-gomes-gb-2603sre-1.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
-                                                        </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan bê tông gomes</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.399.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="products special-product">
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/caterogy/hammer/may-khoan-be-tong-htcom-ht-8228-300.jpg"
-                                                                alt="images">
-                                                            <div class="zoom-overlay"></div>
-                                                        </a></div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">
-                                                            Máy khoan bê tông htcomn ht8288</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 599.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/caterogy/hammer/may-khoan-be-tong-ken-2826bs-400.jpg"
-                                                                alt="Ảnh sản phẩm">
-                                                            <div class="zoom-overlay"></div>
-                                                        </a></div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan bê tông KEN 826bs</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.599.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/caterogy/hammer/may-khoan-be-tong-makita-hr166dsae1-300.jpg"
-                                                                alt="image">
-                                                        </a></div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan bê tông MAKITA
-                                                            -
-                                                            HR116D</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.599.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -530,8 +387,8 @@
                         <div class="tag-list">
                             <!-- JSP Code -->
                             <form id="producerForm" action="producers" method="get">
-                                <input type="hidden" id="producerInput" name="producer" value="" />
-                                <input type="hidden" id="prInput" name="pr" value="" />
+                                <input type="hidden" id="producerInput" name="producer" value=""/>
+                                <input type="hidden" id="prInput" name="pr" value=""/>
                             </form>
                             <a class="item" href="#" onclick="submitForm(1, 'Bosh')">Bosh</a>
                             <a class="item" href="#" onclick="submitForm(2, 'Makute')">Makute</a>
@@ -587,20 +444,17 @@
                 </div>
 
 
-
-
-
                 <section class="section featured-product wow fadeInUp">
                     <h3 class="section-title">Sản phẩm</h3>
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">
 
-                        <%  List<List<Products>> allProduct = (List<List<Products>>) request.getAttribute("loadProductInHammerDrill");
 
+                        <%
                             List<Products> products = allProduct.get(0);
                             for (Products p : products) {
 
                                 NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
-                                String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);
+                                String formattedPrice = currencyFormat.format(p.getUnitPrice() * 1000);
                                 request.setAttribute("formattedUnitPrice", formattedPrice);
                         %>
                         <div class="products">
@@ -616,7 +470,8 @@
                                 <!-- /.product-image -->
 
                                 <div class="product-info text-left">
-                                    <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>
+                                    <h3 class="name"><a href="detail.jsp"><%=p.getProductName() %>
+                                    </a>
                                     </h3>
                                     <div class="rating rateit-small"></div>
                                     <div class="description"></div>
@@ -642,7 +497,7 @@
                             List<Products> products1 = allProduct.get(1);
                             for (Products p : products1) {
                                 NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
-                                String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);
+                                String formattedPrice = currencyFormat.format(p.getUnitPrice() * 1000);
                                 request.setAttribute("formattedUnitPrice", formattedPrice);
                         %>
                         <div class="products">
@@ -658,7 +513,8 @@
                                 <!-- /.product-image -->
 
                                 <div class="product-info text-left">
-                                    <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>
+                                    <h3 class="name"><a href="detail.jsp"><%=p.getProductName() %>
+                                    </a>
                                     </h3>
                                     <div class="rating rateit-small"></div>
                                     <div class="description"></div>
@@ -687,7 +543,7 @@
                             List<Products> products2 = allProduct.get(2);
                             for (Products p : products2) {
                                 NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
-                                String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);
+                                String formattedPrice = currencyFormat.format(p.getUnitPrice() * 1000);
                                 request.setAttribute("formattedUnitPrice", formattedPrice);
                         %>
                         <div class="products">
@@ -703,7 +559,8 @@
                                 <!-- /.product-image -->
 
                                 <div class="product-info text-left">
-                                    <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>
+                                    <h3 class="name"><a href="detail.jsp"><%=p.getProductName() %>
+                                    </a>
                                     </h3>
                                     <div class="rating rateit-small"></div>
                                     <div class="description"></div>
