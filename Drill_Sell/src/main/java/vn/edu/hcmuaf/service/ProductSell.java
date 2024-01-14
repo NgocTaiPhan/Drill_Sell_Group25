@@ -92,7 +92,6 @@ public class ProductSell {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -107,7 +106,7 @@ public class ProductSell {
                             "JOIN " +
                             "    products ON product_details.productId = products.productId " +
                             "WHERE \n" +
-                            "    products.categoryId = 4 " +
+                            "    products.categoryId = 2 " +
                             "HAVING discountedPrice IS NOT NULL " +
                             "ORDER BY RAND() LIMIT 3")
                     .map((rs, ctx) -> {
@@ -328,7 +327,8 @@ public class ProductSell {
         });
     }
     public static void main(String[] args) {
-        System.out.println(productSellBatterDrill());
+        System.out.println(productSellHandDrill());
+
     }
 
 }

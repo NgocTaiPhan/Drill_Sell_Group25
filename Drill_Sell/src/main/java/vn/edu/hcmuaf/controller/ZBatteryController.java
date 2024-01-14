@@ -26,7 +26,7 @@ public class ZBatteryController extends HttpServlet {
         allProduct.add(categoryService.finProductZBatterDrill());
         allProduct.add(categoryService.finProductZBatterDrill());
         allProduct.add(categoryService.finProductZBatterDrill());
-        allProduct.add(productSell.productSellBatterDrill());
+        allProduct.add(productSell.productSellZBatterDrill());
         request.setAttribute("loadProductInZBattery", allProduct);
 
         request.setCharacterEncoding("utf-8");

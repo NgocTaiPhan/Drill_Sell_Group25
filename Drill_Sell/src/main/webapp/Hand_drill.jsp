@@ -50,9 +50,9 @@
 
 
     <header class="header-style-1 ">
-
-        <!-- ============================================== TOP MENU ============================================== -->
         <%  List<List<Products>> allProduct = (List<List<Products>>) request.getAttribute("loadProductInHandDrill");%>
+        <!-- ============================================== TOP MENU ============================================== -->
+
         <div class="top-bar animate-dropdown">
             <div class="container">
                 <div class="header-top-inner">

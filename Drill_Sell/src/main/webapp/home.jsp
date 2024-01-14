@@ -114,25 +114,13 @@
                     <!-- /.contact-row -->
                     <!-- ============================================================= SEARCH AREA ============================================================= -->
                     <div class="search-area">
-                        <form>
+                        <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
-
-                                <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
-
-                                       placeholder="Tìm kiếm...">
-
-
-                                <a style="height: 44.5px;" class="search-button" href="#"></a>
-
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Máy khoan động lực Bosch GSB 16 RE -
-                                        06012281K1</a></li>
-                                    <li><a href="#">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
-                                    <li><a href="#">Máy khoan pin Makute CD027</a></li>
-                                </ul>
-
+                                <input class="search-field dropdown-toggle" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
+                                <a style="height: 44.5px;" class="search-button" href="#" onclick="this.parentNode.submit()"></a>
                             </div>
                         </form>
+
                     </div>
                     <!-- /.search-area -->
                     <!-- ============================================================= SEARCH AREA : END ============================================================= -->
@@ -1105,7 +1093,7 @@
 <link rel="stylesheet" href="assets/css/my-css/backtop.css">
 <script src="assets/js/my-js/backtop.js"></script>
 
-<script></script>
+
 
 
 </body>
