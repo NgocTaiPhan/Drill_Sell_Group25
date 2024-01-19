@@ -3,6 +3,7 @@ package vn.edu.hcmuaf.controller;
 
 import vn.edu.hcmuaf.bean.Products;
 import vn.edu.hcmuaf.service.ProductCategoryService;
+import vn.edu.hcmuaf.service.ProductSell;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,16 +16,14 @@ import java.util.List;
 
 @WebServlet(name = "BattteryDrillController", value = "/battery_drill")
 public class BattteryDrillController extends HttpServlet {
-
+    ProductCategoryService categoryService = new ProductCategoryService();
+    ProductSell productSell = new ProductSell();
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        List<Products> productsList = ProductCategoryService.finProductBatteryDrill();
-        List<Products> productsList1 = ProductCategoryService.finProductBatteryDrill();
-        List<Products> productsList2 = ProductCategoryService.finProductBatteryDrill();
         List<List<Products>> allProduct = new ArrayList<>();
-        allProduct.add(productsList);
-        allProduct.add(productsList1);
-        allProduct.add(productsList2);
+        allProduct.add(categoryService.finProductBatterDrill());
+        allProduct.add(categoryService.finProductBatterDrill());
+        allProduct.add(categoryService.finProductBatterDrill());
+        allProduct.add(productSell.productSellBatterDrill());
         request.setAttribute("loadProductInBatteryDrill", allProduct);
 
         request.setCharacterEncoding("utf-8");
