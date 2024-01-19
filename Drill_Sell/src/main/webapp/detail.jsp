@@ -1,4 +1,13 @@
+<%@ page import="vn.edu.hcmuaf.bean.Products" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+
+
+    HttpSession session1 = (HttpSession) request.getSession();
+    Products p = (Products) session1.getAttribute("product-detail");
+
+
+%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -89,10 +98,10 @@
                 <div class="cnt-account">
                     <ul class="list-unstyled">
 
-                        <li><a href="account.html"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                        <li><a href="card.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="oder.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                        <li><a href="login.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
+                        <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
+                        <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
 
@@ -112,7 +121,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
                     <link rel="stylesheet" href="assets/css/my-css/logo-page.css">
-                    <div class="logo-page"><a href="home.html"> <img
+                    <div class="logo-page"><a href="home.jsp"> <img
                             src="assets/images/logo.png" alt="logo"
                     > </a></div>
 
@@ -186,7 +195,7 @@
                                     <div class="pull-right"><span class="text">Tổng tiền :</span><span class='price'>1.599.000đ</span>
                                     </div>
                                     <div class="clearfix"></div>
-                                    <a href="oder.html" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
+                                    <a href="oder.jsp" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
                                         toán</a>
                                 </div>
                                 <!-- /.cart-total-->
@@ -225,29 +234,29 @@
                     >
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
-                                <li class="active  yamm-fw"><a href="home.html">Trang chủ</a></li>
-                                <li class="active  yamm-fw"><a href="product.html">Sản phẩm</a></li>
+                                <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
+                                <li class="active  yamm-fw"><a href="product.jsp">Sản phẩm</a></li>
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
-                                        <li><a href="battery_drill.html"></i>Máy khoan pin</a>
+                                        <li><a href="battery_drill.jsp"></i>Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="movers.html"></i>Máy khoan động lực</a>
+                                        <li><a href="movers.jsp"></i>Máy khoan động lực</a>
 
                                         </li>
-                                        <li><a href="hammer_drill.html"></i>Máy khoan bê tông, Máy khoan búa</a>
+                                        <li><a href="hammer_drill.jsp"></i>Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
-                                        <li><a href="Hand_drill.html"></i>Máy khoan cầm tay gia đình</a>
+                                        <li><a href="Hand_drill.jsp"></i>Máy khoan cầm tay gia đình</a>
 
                                         </li>
-                                        <li><a href="mini_drill.html"></i>Máy khoan mini</a>
+                                        <li><a href="mini_drill.jsp"></i>Máy khoan mini</a>
 
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="active  yamm-fw"><a href="contact.html">Liên hệ</a></li>
+                                <li class="active  yamm-fw"><a href="contact.jsp">Liên hệ</a></li>
 
 
                             </ul>
@@ -295,8 +304,6 @@
             </div><!-- /.sidebar -->
 
 
-
-
             <div class='col-md-9'>
                 <div class="detail-block">
                     <div class="row  wow fadeInUp">
@@ -307,7 +314,7 @@
                                 <div id="owl-single-product">
                                     <div class="single-product-gallery-item" id="slide1">
                                         <a data-lightbox="image-1" data-title="Gallery"
-                                           href="detail.html">
+                                           href="detail.jsp">
                                             <img class="img-responsive" alt="Mô tả sản phẩm"
                                                  src="assets/images/products/normal/may-khoan-dong-luc-bosch-gsb-13-re.jpg"
                                             >
@@ -316,7 +323,7 @@
 
                                     <div class="single-product-gallery-item" id="slide2">
                                         <a data-lightbox="image-1" data-title="Gallery"
-                                           href="detail.html">
+                                           href="detail.jsp">
                                             <img class="img-responsive" alt="Mô tả sản phẩm"
                                                  src="assets/images/details/may-khoan-dong-luc-bosch-gsb-16-re-kt.jpg"
                                             >
@@ -325,7 +332,7 @@
 
                                     <div class="single-product-gallery-item" id="slide3">
                                         <a data-lightbox="image-1" data-title="Gallery"
-                                           href="detail.html">
+                                           href="detail.jsp">
                                             <img class="img-responsive" alt="Mô tả sản phẩm"
                                                  src="assets/images/details/may-khoan-dong-luc-bosch-gsb-16-re-t4.jpg"
                                             >
@@ -333,7 +340,7 @@
                                     </div>
                                     <div class="single-product-gallery-item" id="slide4">
                                         <a data-lightbox="image-1" data-title="Gallery"
-                                           href="detail.html">
+                                           href="detail.jsp">
                                             <img class="img-responsive" alt="Mô tả sản phẩm"
                                                  src="assets/images/details/may-khoan-dong-luc-bosch-gsb-16-re-t5.jpg">
                                         </a>
@@ -391,7 +398,7 @@
                         </div><!-- /.gallery-holder -->
                         <div class='col-sm-6 col-md-7 product-info-block'>
                             <div class="product-info">
-                                <h1 class="name">Máy khoan động lực Bosch GSB 16 RE - 06012281K1</h1>
+                                <h1 class="name"><%=p.getProductName()%></h1>
 
                                 <div class="rating-reviews m-t-20">
                                     <div class="row">
@@ -604,21 +611,25 @@
                                     </div>
                                 </div><!-- /.tab-pane -->
                                 <style>
-                                    .rating .s{
+                                    .rating .s {
                                         font-size: 17px;
                                     }
-                                    .name-custumor i{
+
+                                    .name-custumor i {
                                         font-size: 12px;
                                     }
-                                    .name-custumor input{
+
+                                    .name-custumor input {
                                         border: none;
                                         font-size: 12px;
                                     }
-                                    .messger .mess{
+
+                                    .messger .mess {
                                         width: 500px;
                                         height: 50px;
                                         font-size: 12px;
                                     }
+
                                     .rating {
                                         display: inline-block;
                                     }
@@ -672,38 +683,38 @@
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <div class="social-button">
     <div class="social-button-content">
-      <a href="tel:0353933224" class="call-icon" rel="nofollow">
-        <i class="fa fa-whatsapp" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Hotline: 035 393 3224</span>
-      </a>
-      <a href="sms:0353933224" class="sms">
-        <i class="fa fa-weixin" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>SMS: 035 393 3224</span>
-      </a>
-      <a href="https://www.facebook.com/Ngocthang.net/" class="mes">
-        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Nhắn tin Facebook</span>
-      </a>
-      <a href="http://zalo.me/0353933224" class="zalo">
-        <i class="fa fa-commenting-o" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Zalo: 035.393.3224</span>
-      </a>
+        <a href="tel:0353933224" class="call-icon" rel="nofollow">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Hotline: 035 393 3224</span>
+        </a>
+        <a href="sms:0353933224" class="sms">
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>SMS: 035 393 3224</span>
+        </a>
+        <a href="https://www.facebook.com/Ngocthang.net/" class="mes">
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Nhắn tin Facebook</span>
+        </a>
+        <a href="http://zalo.me/0353933224" class="zalo">
+            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Zalo: 035.393.3224</span>
+        </a>
     </div>
     <a href="#" class="user-support">
-      <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
-      <div class="animated alo-circle"></div>
-      <div class="animated alo-circle-fill"></div>
+        <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+        <div class="animated alo-circle"></div>
+        <div class="animated alo-circle-fill"></div>
     </a>
-  </div>
-  
+</div>
+
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <!-- ============================================================= Backtop ============================================================= -->
 <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class=" icon fa    fa-arrow-up"></i></button>
