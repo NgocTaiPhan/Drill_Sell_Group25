@@ -12,7 +12,7 @@
 
     HomeController homeCtroller = new HomeController();
     List<List<Products>> showProducts = homeCtroller.getAllProducts();
-
+//List<Products> = p
 
 %>
 <html lang="vi">
@@ -116,8 +116,10 @@
                     <div class="search-area">
                         <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
-                                <input class="search-field dropdown-toggle" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
-                                <a style="height: 44.5px;" class="search-button" href="#" onclick="this.parentNode.submit()"></a>
+                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
+                                <a style="height: 44.5px;" class="search-button" href="#" onclick="searchProduct(event)"></a>
+
+
                             </div>
                         </form>
 
@@ -126,7 +128,15 @@
                     <!-- ============================================================= SEARCH AREA : END ============================================================= -->
                 </div>
                 <!-- /.top-search-holder -->
+            <script>
+                function searchProduct(event) {
+                    event.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
+                    var keyword = document.getElementById("searchInput").value;
 
+                    // Chuyển hướng đến trang seachProduct.jsp với tham số tìm kiếm
+                    window.location.href = "seachProduct?name=" + encodeURIComponent(keyword);
+                }
+            </script>
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 
@@ -202,7 +212,7 @@
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
-                                <li class="active  yamm-fw"><a href="product.jsp">Sản phẩm</a></li>
+                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product" methods="post"></i>Sản phẩm</a></li>
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">

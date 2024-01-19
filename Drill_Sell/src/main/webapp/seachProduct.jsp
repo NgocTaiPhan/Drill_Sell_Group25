@@ -54,7 +54,7 @@
     <!-- ============================================== TOP MENU ============================================== -->
 
     <%
-        List<List<Products>> allProduct = (List<List<Products>>) request.getAttribute("loadProduct");
+        List<Products> searchResults = (List<Products>) request.getAttribute("loadProduct");
     %>
     <div class="top-bar animate-dropdown">
         <div class="container">
@@ -103,25 +103,29 @@
                     <!-- /.contact-row -->
                     <!-- ============================================================= SEARCH AREA ============================================================= -->
                     <div class="search-area">
-                        <form>
+                        <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
+                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
+                                <a style="height: 44.5px;" class="search-button" href="#" onclick="searchProduct(event)"></a>
 
-                                <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
-                                       placeholder="Tìm kiếm...">
-                                <a class="search-button" href="detail.html"></a>
 
-                                <ul class="dropdown-menu">
-                                    <li><a href="detail.jsp">Máy khoan động lực Bosch GSB 16 RE -
-                                        06012281K1</a></li>
-                                    <li><a href="detail.jsp">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
-                                    <li><a href="detail.jsp">Máy khoan pin Makute CD027</a></li>
-                                </ul>
                             </div>
                         </form>
+
                     </div>
                     <!-- /.search-area -->
                     <!-- ============================================================= SEARCH AREA : END ============================================================= -->
                 </div>
+                <!-- /.top-search-holder -->
+                <script>
+                    function searchProduct(event) {
+                        event.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
+                        var keyword = document.getElementById("searchInput").value;
+
+                        // Chuyển hướng đến trang seachProduct.jsp với tham số tìm kiếm
+                        window.location.href = "seachProduct?name=" + encodeURIComponent(keyword);
+                    }
+                </script>
                 <!-- /.top-search-holder -->
 
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
@@ -199,30 +203,25 @@
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
-                                <li class="active  yamm-fw"><a href="product.jsp">Sản phẩm</a></li>
+                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product" methods="post"></i>Sản phẩm</a></li>
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
 
-                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>
-                                            Máy khoan pin</a>
+                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy
-                                            khoan động lực</a>
+                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
 
                                         </li>
 
-                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy
-                                            khoan cầm tay gia đình</a>
+                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy khoan cầm tay gia đình</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy
-                                            khoan mini</a>
+                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy khoan mini</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>
-                                            Máy khoan bê tông, Máy khoan búa</a>
+                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
                                     </ul>
@@ -255,7 +254,7 @@
         <div class="breadcrumb-inner">
             <ul class="list-inline list-unstyled">
                 <li><a href="home.jsp">Trang chủ / Máy Khoan</a></li>
-                <li class='active'>Máy Khoan Pin</li>
+                <li class='active'>Sản phẩm</li>
             </ul>
         </div><!-- /.breadcrumb-inner -->
     </div><!-- /.container -->
@@ -450,17 +449,12 @@
                     <h3 class="section-title">Sản phẩm</h3>
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">
                         <%
-                            List<Products> searchResults = null;
                             int productsPerRow = 4;
-
-                            if (allProduct != null && !allProduct.isEmpty()) {
-                                searchResults = allProduct.get(0);
-
+                            if (searchResults != null && !searchResults.isEmpty()) {
                                 for (int i = 0; i < searchResults.size(); i++) {
                                     Products p = searchResults.get(i);
                                     NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
                                     String formattedPrice = currencyFormat.format(p.getUnitPrice() * 1000);
-                                    request.setAttribute("formattedUnitPrice", formattedPrice);
                         %>
                         <div class="product">
                             <div class="product-image">
@@ -474,7 +468,7 @@
                                 <div class="rating rateit-small"></div>
                                 <div class="description"></div>
                                 <div class="product-price">
-                                    <span class="price"><%=request.getAttribute("formattedUnitPrice")%></span>
+                                    <span  class="price"> <%=formattedPrice%></span>
                                 </div>
                                 <!-- /.product-price -->
                             </div>

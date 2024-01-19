@@ -13,15 +13,7 @@ public class SearchService {
         }
     }
 
-//    public static List<Products> searchProductByName(String input) {
-//        // Sử dụng try-with-resources để đảm bảo đóng tài nguyên tự động
-//        try (var handle = DbController.me().get().open()) {
-//            return handle.createQuery("SELECT image, productName, unitPrice FROM products WHERE MATCH(productName) AGAINST (:input IN NATURAL LANGUAGE MODE)")
-//                    .bind("input", "%" + input.toLowerCase() + "%") // Sử dụng bind với tên tham số để tránh SQL Injection
-//                    .mapToBean(Products.class)
-//                    .list();
-//        }
-//    }
+
 
 
     public static void printSearchResults(String input) {

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Locale;
 
 import vn.edu.hcmuaf.bean.Products;
+import vn.edu.hcmuaf.service.ProductSell;
 import vn.edu.hcmuaf.service.ProductService;
 import vn.edu.hcmuaf.service.SearchService;
 
@@ -14,8 +15,10 @@ public class HomeController {
     private ProductService productService;
 
 
+
     public HomeController() {
         productService = new ProductService();
+
 
 
     }

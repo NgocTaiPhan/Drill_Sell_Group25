@@ -13,12 +13,30 @@
     <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/ZBatteryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/ZBatteryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/SeachProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/SeachProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/ProductSell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/ProductSell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/SearchService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Hand_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Hand_drill.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/accessory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/accessory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/account.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/battery_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/battery_drill.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/card.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/card.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/contact.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/hammer_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/hammer_drill.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/history.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/mini_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mini_drill.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/movers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/oder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/oder.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/producers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/producers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/seachProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/seachProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/z_battery.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/z_battery.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/z_charger.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/z_charger.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/z_countersink.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/z_countersink.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +48,8 @@
       <list>
         <option value="Filter" />
         <option value="Servlet" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -90,6 +108,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -106,7 +127,7 @@
       <recent name="D:\WorkSpace\WebPrograming\Project\Drill_Sell\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.87">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.80">
     <configuration name="ProducersService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.ProducersService" />
       <module name="Drill_Sell" />
@@ -172,7 +193,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.80" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.80" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Drill_Sell:war">
@@ -346,12 +367,12 @@
       <item itemvalue="Application.vn.edu.hcmuaf.service.ProductCategoryService" />
       <item itemvalue="Application.ProducersService" />
       <item itemvalue="Application.ProductCategoryService" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.87" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.80" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SearchService" />
         <item itemvalue="Application.ProductSell" />
+        <item itemvalue="Application.SearchService" />
         <item itemvalue="Application.vn.edu.hcmuaf.service.ProductCategoryService" />
         <item itemvalue="Application.ProducersService" />
         <item itemvalue="Application.ProductCategoryService" />
@@ -397,7 +418,12 @@
       <workItem from="1703999363139" duration="1120000" />
       <workItem from="1704209265680" duration="543000" />
       <workItem from="1705132365547" duration="19417000" />
-      <workItem from="1705216855096" duration="19194000" />
+      <workItem from="1705216855096" duration="19694000" />
+      <workItem from="1705419611810" duration="1168000" />
+      <workItem from="1705421007218" duration="3002000" />
+      <workItem from="1705583792120" duration="1815000" />
+      <workItem from="1705673875828" duration="7259000" />
+      <workItem from="1705682172194" duration="45000" />
     </task>
     <task id="LOCAL-00001" summary="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
       <option name="closed" value="true" />
@@ -422,7 +448,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/SearchService.java</url>
-          <line>33</line>
+          <line>25</line>
           <properties class="vn.edu.hcmuaf.service.SearchService" method="main">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
