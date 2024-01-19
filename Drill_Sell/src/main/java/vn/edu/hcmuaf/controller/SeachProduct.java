@@ -8,8 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 @WebServlet(name = "SeachProduct", value = "/seachProduct")
 public class SeachProduct extends HttpServlet {
@@ -25,17 +27,17 @@ public class SeachProduct extends HttpServlet {
         // Simulate product search (replace this with your actual search logic)
         List<Products> products = SearchService.searchProductByName(keyword);
         // Chuyển danh sách sản phẩm thành JSON
-        List<List<Products>> allProduct = new ArrayList<>();
-        allProduct.add(products);
-        request.setAttribute("loadProduct", allProduct);
+
+        request.setAttribute("loadProduct", products);
 
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("UTF-8");
-        request.getRequestDispatcher("seachProduct.jsp").forward(request,response);
-    }
+
+        request.getRequestDispatcher("seachProduct.jsp").forward(request, response);
 
     }
 
+    }
 
 
 
