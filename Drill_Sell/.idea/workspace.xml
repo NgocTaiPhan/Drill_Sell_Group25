@@ -11,8 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/bean/ProductDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/bean/ProductDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/ProductCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/ProductCategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/insert-products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/insert-products.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +32,10 @@
       <list>
         <option value="Filter" />
         <option value="Jsp File" />
-        <option value="Servlet" />
         <option value="Class" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Servlet" />
       </list>
     </option>
   </component>
@@ -71,6 +81,8 @@
     &quot;Application.Products.executor&quot;: &quot;Run&quot;,
     &quot;Application.User.executor&quot;: &quot;Run&quot;,
     &quot;Application.UserService.executor&quot;: &quot;Run&quot;,
+    &quot;Application.vn.edu.hcmuaf.service.ProductCategoryService.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Tomcat Server.Tomcat 8.5.87.executor&quot;: &quot;Run&quot;,
@@ -84,7 +96,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -127,19 +139,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.serice.ProductService" />
-      <module name="Drill_Sell" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="vn.edu.hcmuaf.serice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Products" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.bean.Products" />
       <module name="Drill_Sell" />
@@ -159,6 +158,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="vn.edu.hcmuaf.serice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="vn.edu.hcmuaf.service.ProductCategoryService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.ProductCategoryService" />
+      <module name="Drill_Sell" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vn.edu.hcmuaf.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -337,18 +349,18 @@
     <list>
       <item itemvalue="Application.ProducersService" />
       <item itemvalue="Application.ProductCategoryService" />
-      <item itemvalue="Application.ProductService" />
       <item itemvalue="Application.Products" />
       <item itemvalue="Application.UserService" />
+      <item itemvalue="Application.vn.edu.hcmuaf.service.ProductCategoryService" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.87" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.vn.edu.hcmuaf.service.ProductCategoryService" />
         <item itemvalue="Application.ProducersService" />
         <item itemvalue="Application.ProductCategoryService" />
         <item itemvalue="Application.UserService" />
         <item itemvalue="Application.Products" />
-        <item itemvalue="Application.ProductService" />
       </list>
     </recent_temporary>
   </component>
@@ -389,7 +401,19 @@
       <workItem from="1703571862892" duration="22102000" />
       <workItem from="1703999252410" duration="10000" />
       <workItem from="1703999363139" duration="1120000" />
-      <workItem from="1704209265680" duration="543000" />
+      <workItem from="1704209265680" duration="1551000" />
+      <workItem from="1704246852482" duration="2648000" />
+      <workItem from="1704345058036" duration="28000" />
+      <workItem from="1704345849204" duration="383000" />
+      <workItem from="1704347037909" duration="44000" />
+      <workItem from="1704376339760" duration="1592000" />
+      <workItem from="1704381312096" duration="1522000" />
+      <workItem from="1704385956061" duration="4706000" />
+      <workItem from="1704772278458" duration="134000" />
+      <workItem from="1704772435331" duration="589000" />
+      <workItem from="1705043145614" duration="1000" />
+      <workItem from="1705079006476" duration="11000" />
+      <workItem from="1705640499982" duration="372000" />
     </task>
     <task id="LOCAL-00001" summary="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
       <option name="closed" value="true" />
