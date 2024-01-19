@@ -216,7 +216,8 @@
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
-                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
+                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>
+                                            Máy khoan pin</a>
 
                                         </li>
 
@@ -225,9 +226,10 @@
 
                                         </li>
                                         <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy
-                                          khoan mini</a>
+                                            khoan mini</a>
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
+                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy
+                                            khoan động lực</a>
                                         </li>
 
                                         <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>
@@ -506,8 +508,8 @@
                         <div class="tag-list">
                             <!-- JSP Code -->
                             <form id="producerForm" action="producers" method="get">
-                                <input type="hidden" id="producerInput" name="producer" value="" />
-                                <input type="hidden" id="prInput" name="pr" value="" />
+                                <input type="hidden" id="producerInput" name="producer" value=""/>
+                                <input type="hidden" id="prInput" name="pr" value=""/>
                             </form>
                             <a class="item" href="#" onclick="submitForm(1, 'Bosh')">Bosh</a>
                             <a class="item" href="#" onclick="submitForm(2, 'Makute')">Makute</a>
@@ -521,12 +523,9 @@
                             <a class="item" href="#" onclick="submitForm(10, 'Gomes')">Gomes</a>
 
                             <script>
-                                // Function to set producer value and pr value, and submit the form
                                 function submitForm(prValue, producerName) {
-                                    // Set the pr value in the hidden input field
                                     document.getElementById('prInput').value = prValue;
 
-                                    // Set the producer value in the hidden input field
                                     document.getElementById('producerInput').value = producerName;
                                     console.log(producerName);
 
@@ -632,11 +631,14 @@
                     <h3 class="section-title point ">Bán chạy</h3>
                     <div class="sidebar-widget-body outer-top-xs">
                         <div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs">
+
+
                             <%
 
                                 List<Products> bestSellerProducts = showProducts.get(0);
                                 for (Products p : bestSellerProducts) {
                                     String formattedPrice = homeCtroller.getFormattedUnitPrice(p);
+
 
                             %>
                             <div class="item">
