@@ -1,3 +1,9 @@
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.bean.ProductDetails" %>
+<%@ page import="java.util.Optional" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="java.util.Locale" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -162,34 +168,13 @@
                                                            data-toggle="dropdown">
                         <div class="items-cart-inner">
                             <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
-                            <div class="basket-item-count"><span class="count">1</span></div>
+                            <div id="cartItemCount" class="basket-item-count"><span class="count">0</span></div>
 
                         </div>
                     </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <div class="cart-item product-summary">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            <div class="image"><a href="#"><img
-                                                    src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                    alt="Ảnh sản phẩm"></a></div>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <h3 class="name"><a href="">Máy khoan động lực Bosch GSB 16 RE -
-                                                06012281K1</a></h3>
-                                            <div class="price">1.599.000đ</div>
-                                        </div>
-                                        <div class="col-xs-1 action"><a href="#"><i class="fa fa-trash"></i></a></div>
-                                    </div>
-                                </div>
-                                <!-- /.cart-item -->
-                                <div class="clearfix"></div>
-                                <hr>
                                 <div class="clearfix cart-total">
-                                    <div class="pull-right"><span class="text">Tổng tiền :</span><span class='price'>1.599.000đ</span>
-                                    </div>
-                                    <div class="clearfix"></div>
                                     <a href="oder.html" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
                                         toán</a>
                                 </div>
@@ -203,6 +188,11 @@
 
                     <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
                 </div>
+
+
+
+
+
                 <!-- /.top-cart-row -->
             </div>
             <!-- /.row -->
@@ -302,10 +292,18 @@
 
 
 
-
+            <%
+                List<Optional<ProductDetails>> allDetails = (List<Optional<ProductDetails>>) request.getAttribute("loadProductDetail");
+                if (allDetails != null && !allDetails.isEmpty()) {
+                    Optional<ProductDetails> productDetails = allDetails.get(0);
+                    if (productDetails.isPresent()) {
+            %>
             <div class='col-md-9'>
+
                 <div class="detail-block">
                     <div class="row  wow fadeInUp">
+
+
 
                         <div class="col-xs-12 col-sm-6 col-md-5 gallery-holder">
                             <div class="product-item-holder size-big single-product-gallery small-gallery">
@@ -313,91 +311,20 @@
                                 <div id="owl-single-product">
                                     <div class="single-product-gallery-item" id="slide1">
                                         <a data-lightbox="image-1" data-title="Gallery"
-                                           href="detail.html">
+                                           href="#">
                                             <img class="img-responsive" alt="Mô tả sản phẩm"
-                                                 src="assets/images/products/normal/may-khoan-dong-luc-bosch-gsb-13-re.jpg"
+                                                 src="<%= productDetails.get().getImage()%>"
                                             >
                                         </a>
                                     </div><!-- /.single-product-gallery-item -->
-
-                                    <div class="single-product-gallery-item" id="slide2">
-                                        <a data-lightbox="image-1" data-title="Gallery"
-                                           href="detail.html">
-                                            <img class="img-responsive" alt="Mô tả sản phẩm"
-                                                 src="assets/images/details/may-khoan-dong-luc-bosch-gsb-16-re-kt.jpg"
-                                            >
-                                        </a>
-                                    </div><!-- /.single-product-gallery-item -->
-
-                                    <div class="single-product-gallery-item" id="slide3">
-                                        <a data-lightbox="image-1" data-title="Gallery"
-                                           href="detail.html">
-                                            <img class="img-responsive" alt="Mô tả sản phẩm"
-                                                 src="assets/images/details/may-khoan-dong-luc-bosch-gsb-16-re-t4.jpg"
-                                            >
-                                        </a>
-                                    </div>
-                                    <div class="single-product-gallery-item" id="slide4">
-                                        <a data-lightbox="image-1" data-title="Gallery"
-                                           href="detail.html">
-                                            <img class="img-responsive" alt="Mô tả sản phẩm"
-                                                 src="assets/images/details/may-khoan-dong-luc-bosch-gsb-16-re-t5.jpg">
-                                        </a>
-                                    </div>
-
 
                                 </div><!-- /.single-product-slider -->
-
-
-                                <div class="single-product-gallery-thumbs gallery-thumbs">
-
-                                    <div id="owl-single-product-thumbnails">
-                                        <div class="item">
-                                            <a class="horizontal-thumb active" data-target="#owl-single-product"
-                                               data-slide="1" href="#slide1">
-                                                <img class="img-responsive" width="85" alt="Mô tả sản phẩm"
-                                                     src="assets/images/products/normal/may-khoan-dong-luc-bosch-gsb-13-re.jpg"
-                                                >
-                                            </a>
-                                        </div>
-
-                                        <div class="item">
-                                            <a class="horizontal-thumb" data-target="#owl-single-product"
-                                               data-slide="2" href="#slide2">
-                                                <img class="img-responsive" width="85" alt="Mô tả sản phẩm"
-                                                     src="assets/images/details/may-khoan-dong-luc-bosch-gsb-16-re-kt.jpg"
-                                                >
-                                            </a>
-                                        </div>
-                                        <div class="item">
-
-                                            <a class="horizontal-thumb" data-target="#owl-single-product"
-                                               data-slide="3" href="#slide3">
-                                                <img class="img-responsive" width="85" alt="Mô tả sản phẩm"
-                                                     src="assets/images/details/may-khoan-dong-luc-bosch-gsb-16-re-t4.jpg"
-                                                >
-                                            </a>
-                                        </div>
-                                        <div class="item">
-
-                                            <a class="horizontal-thumb" data-target="#owl-single-product"
-                                               data-slide="4" href="#slide4">
-                                                <img class="img-responsive" width="85" alt="Mô tả sản phẩm"
-                                                     src="assets/images/details/may-khoan-dong-luc-bosch-gsb-16-re-t5.jpg"
-                                                >
-                                            </a>
-
-                                        </div><!-- /#owl-single-product-thumbnails -->
-                                    </div><!-- /#owl-single-product-thumbnails -->
-
-
-                                </div><!-- /.gallery-thumbs -->
 
                             </div><!-- /.single-product-gallery -->
                         </div><!-- /.gallery-holder -->
                         <div class='col-sm-6 col-md-7 product-info-block'>
                             <div class="product-info">
-                                <h1 class="name">Máy khoan động lực Bosch GSB 16 RE - 06012281K1</h1>
+                                <h1 class="name"><%= productDetails.get().getProductName() %></h1>
 
                                 <div class="rating-reviews m-t-20">
                                     <div class="row">
@@ -421,7 +348,7 @@
                                         </div>
                                         <div class="col-sm-9">
                                             <div class="stock-box">
-                                                <span class="value">    Còn</span>
+                                                <span class="value"> <%= productDetails.get().getStatuss()%>  Còn</span>
                                             </div>
                                         </div>
                                     </div><!-- /.row -->
@@ -434,33 +361,20 @@
                                 <div class="price-container info-container m-t-20">
                                     <div class="row">
 
-
+                                        <%
+                                            NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                                            String formattedPrice = currencyFormat.format(productDetails.get().getUnitPrice() * 1000);
+                                            request.setAttribute("formattedUnitPrice", formattedPrice);
+                                        %>
                                         <div class="col-sm-6">
                                             <div class="price-box">
-                                                <span class="price">1.599.000đ</span>
-                                                <span class="price-strike">1.950.000đ</span>
+                                                <span class="price"><%= request.getAttribute("formattedUnitPrice") %></span>
                                             </div>
                                         </div>
 
-                                        <!--                                        <div class="col-sm-6">-->
-                                        <!--                                            <div class="favorite-button m-t-10">-->
-                                        <!--                                                <a class="btn btn-primary" data-toggle="tooltip"-->
-                                        <!--                                                   data-placement="right" title="Wishlist" href="#">-->
-                                        <!--                                                    <i class="fa fa-heart"></i>-->
-                                        <!--                                                </a>-->
-                                        <!--                                                <a class="btn btn-primary" data-toggle="tooltip"-->
-                                        <!--                                                   data-placement="right" title="Add to Compare" href="#">-->
-                                        <!--                                                    <i class="fa fa-signal"></i>-->
-                                        <!--                                                </a>-->
-                                        <!--                                                <a class="btn btn-primary" data-toggle="tooltip"-->
-                                        <!--                                                   data-placement="right" title="E-mail" href="#">-->
-                                        <!--                                                    <i class="fa fa-envelope"></i>-->
-                                        <!--                                                </a>-->
-                                        <!--                                            </div>-->
-                                        <!--                                        </div>-->
-
                                     </div><!-- /.row -->
                                 </div><!-- /.price-container -->
+
 
                                 <div class="quantity-container info-container">
                                     <div class="row">
@@ -469,30 +383,81 @@
                                             <span class="label">Số lượng :</span>
                                         </div>
 
-                                        <div class="col-sm-2">
-                                            <div class="cart-quantity">
-                                                <div class="quant-input">
-                                                    <div class="arrows">
-                                                        <div class="arrow plus gradient"><span class="ir"><i
-                                                                class="icon fa fa-sort-asc"></i></span>
-                                                        </div>
-                                                        <div class="arrow minus gradient"><span class="ir"><i
-                                                                class="icon fa fa-sort-desc"></i></span>
-                                                        </div>
-                                                    </div>
-                                                    <input type="text" value="1">
-                                                </div>
+                                        <div class="quantity">
+                                            <div class="cart-plus-minus">
+                                                <input id="quantityInput" class="cart-plus-minus-box" value="1" type="number" oninput="validateQuantity(this)">
+
                                             </div>
                                         </div>
+                                        <style>
+                                            /* Style cho #quantityInput trong .cart-plus-minus */
+                                            .cart-plus-minus #quantityInput {
+                                                margin-left: 35px;
+                                            }
+
+                                        </style>
+
+                                        <script>
+                                            function validateQuantity(input) {
+                                                // Chuyển giá trị thành số nguyên
+                                                var quantity = parseInt(input.value, 10);
+
+                                                // Kiểm tra nếu giá trị là NaN hoặc nhỏ hơn 1
+                                                if (isNaN(quantity) || quantity < 1) {
+                                                    // Đặt giá trị về 1
+                                                    input.value = 1;
+                                                }
+                                            }
+
+                                            $(document).ready(function () {
+                                                // Lấy giá trị hiện tại từ Local Storage (nếu có)
+                                                var itemCount = 0;
+                                                $("#cartItemCount .count").text(itemCount);
+
+                                                // Xử lý sự kiện khi nhấn nút "Thêm vào giỏ hàng"
+                                                $("#addToCartBtn").on("click", function (e) {
+                                                    e.preventDefault(); // Ngăn chặn hành vi mặc định của nút
+
+                                                    // Lấy giá trị từ ô nhập số
+                                                    var quantity = $("#quantityInput").val();
+
+                                                    // Thêm giá trị mới vào số lượng hiện tại trong giỏ hàng
+                                                    itemCount = parseInt(itemCount) + parseInt(quantity);
+
+                                                    // Cập nhật số lượng trong giỏ hàng
+                                                    $("#cartItemCount .count").text(itemCount);
+
+                                                    // Lưu giá trị vào Local Storage
+                                                    localStorage.setItem('cartItemCount', itemCount);
+                                                });
+
+                                                // Xử lý sự kiện khi nhấn nút tăng số lượng
+                                                $("#increaseQuantity").on("click", function () {
+                                                    var currentQuantity = parseInt($("#quantityInput").val());
+                                                    // Tăng giá trị hiện tại
+                                                    $("#quantityInput").val(currentQuantity + 1);
+                                                });
+
+                                                // Xử lý sự kiện khi nhấn nút giảm số lượng
+                                                $("#decreaseQuantity").on("click", function () {
+                                                    var currentQuantity = parseInt($("#quantityInput").val());
+                                                    // Giảm giá trị hiện tại, nhưng không để giá trị âm
+                                                    $("#quantityInput").val(Math.max(1, currentQuantity - 1));
+                                                });
+                                            });
+                                        </script>
+
 
                                         <div class="col-sm-7">
-                                            <a href="oder.jsp" class="btn btn-danger" style="margin-bottom: 10px"><i
-                                                    class="fa fa-check inner-right-vs"></i> Mua ngay</a>
-                                            <a href="card.jsp" class="btn btn-primary"><i
-                                                    class="fa fa-shopping-cart inner-right-vs"></i> Thêm vào giỏ
-                                                hàng</a>
+                                            <a href="oder.jsp" class="btn btn-danger" style="margin-bottom: 10px"><i class="fa fa-check inner-right-vs"></i> Mua ngay</a>
+
+
+                                            <a href="<%= request.getContextPath() %>/AddToCartServlet" data-method="post" id="addToCartBtn" class="btn btn-primary">
+                                                <i class="fa fa-shopping-cart inner-right-vs"></i> Thêm vào giỏ hàng
+                                            </a>
 
                                         </div>
+
 
 
                                     </div><!-- /.row -->
@@ -501,8 +466,11 @@
 
                             </div><!-- /.product-info -->
                         </div><!-- /.col-sm-7 -->
+
                     </div><!-- /.row -->
                 </div>
+
+
 
                 <div class="product-tabs inner-bottom-xs  wow fadeInUp">
                     <div class="row">
@@ -519,71 +487,12 @@
 
                                 <div id="description" class="tab-pane in active">
                                     <div class="product-tab">
-                                        <p class="text">
-
-                                            Công suất hoạt động 750W, đáp ứng nhu cầu khoan trên gỗ, tường, kim loại,
-                                            bắt vít, vặn vít.
-
-
-                                            Khoan mạnh mẽ với tốc độ không tải 3.250 vòng/phút.
-
-                                            Tốc độ đập lên tới 48.000 lần/phút.
-
-                                            Đường kính đầu cặp điều chỉnh linh hoạt từ 1,5 - 13mm, phù hợp với nhiều mũi
-                                            khoan khác nhau.
-
-                                            Thiết kế nút vặn xoay điều chỉnh tốc độ tích hợp ở cò bóp.
-
-                                            Nặng chỉ 1,8kg, có lớp vỏ cách điện 2 lớp an toàn.
-
-                                            Có tay cầm phụ, nút giữ tốc độ, đảo chiều khoan, chọn chế độ...
-                                        </p>
+                                        <p class="text"><%= productDetails.get().getDescrible()%> </p>
                                     </div>
                                 </div><!-- /.tab-pane -->
                                 <div id="specifications" class="tab-pane in ">
-                                    <table>
-                                        <tr>
-                                            <th>Thông số</th>
-                                            <th>Giá trị</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Model</td>
-                                            <td>MK-1000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Công suất (W)</td>
-                                            <td>800</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tốc độ không tải (RPM)</td>
-                                            <td>1200</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Kích thước (mm)</td>
-                                            <td>200x150x300</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Trọng lượng (kg)</td>
-                                            <td>2.5</td>
-                                        </tr>
-                                    </table>
-                                    <style>
-                                        table {
-                                            border-collapse: collapse;
-                                            width: 50%;
-                                            margin: 20px auto;
-                                        }
+                                <%= productDetails.get().getSpecifications()%>
 
-                                        th, td {
-                                            border: 1px solid #ddd;
-                                            padding: 8px;
-                                            text-align: left;
-                                        }
-
-                                        th {
-                                            background-color: #f2f2f2;
-                                        }
-                                    </style>
                                 </div><!-- /.tab-pane -->
 
                                 <!-- /.tab-pane -->
@@ -667,9 +576,9 @@
                         </div><!-- /.col -->
                     </div><!-- /.row -->
                 </div><!-- /.product-tabs -->
-
-
             </div><!-- /.col -->
+            <%}%>
+            <%}%>
         </div><!-- /.row -->
 
     </div><!-- /.container -->
@@ -709,7 +618,7 @@
       <div class="animated alo-circle-fill"></div>
     </a>
   </div>
-  
+
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <!-- ============================================================= Backtop ============================================================= -->
 <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class=" icon fa    fa-arrow-up"></i></button>

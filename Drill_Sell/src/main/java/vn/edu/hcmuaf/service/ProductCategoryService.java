@@ -8,12 +8,14 @@ import java.util.List;
 
 public class ProductCategoryService {
 
+
     public static List<Products> finProductBatterDrill() {
+
         return DbController.me().get().withHandle(handle -> {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -37,7 +39,7 @@ public class ProductCategoryService {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -46,12 +48,13 @@ public class ProductCategoryService {
         });
     }
 
+
     public static List<Products> finProductHammerDrill() {
         return DbController.me().get().withHandle(handle -> {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -75,7 +78,7 @@ public class ProductCategoryService {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -84,12 +87,14 @@ public class ProductCategoryService {
         });
     }
 
+
     public static List<Products> finProductZBatterDrill() {
+
         return DbController.me().get().withHandle(handle -> {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -113,7 +118,7 @@ public class ProductCategoryService {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -122,12 +127,14 @@ public class ProductCategoryService {
         });
     }
 
+
     public static List<Products> finProductZChargerDrill() {
+
         return DbController.me().get().withHandle(handle -> {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -151,7 +158,7 @@ public class ProductCategoryService {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -160,12 +167,14 @@ public class ProductCategoryService {
         });
     }
 
+
     public static List<Products> finProductZCounttersink() {
+
         return DbController.me().get().withHandle(handle -> {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -189,7 +198,7 @@ public class ProductCategoryService {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -200,6 +209,7 @@ public class ProductCategoryService {
 
 
     public static List<Products> finProductHandDrill() {
+
         return DbController.me().get().withHandle(handle -> {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
@@ -228,7 +238,7 @@ public class ProductCategoryService {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -242,7 +252,7 @@ public class ProductCategoryService {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -266,7 +276,7 @@ public class ProductCategoryService {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -275,12 +285,14 @@ public class ProductCategoryService {
         });
     }
 
+
     public static List<Products> finProductMover() {
+
         return DbController.me().get().withHandle(handle -> {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -304,7 +316,7 @@ public class ProductCategoryService {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -313,14 +325,32 @@ public class ProductCategoryService {
         });
     }
 
+    public static List<Products> getProductWithCategory(int categoryId) {
+        return DbController.me().get().withHandle(handle -> {
+            return handle.createQuery("SELECT products.productId,products.image, products.productName, products.unitPrice, products.categoryId FROM product_categorys JOIN products on product_categorys.id = products.categoryId WHERE product_categorys.id= :categoryId")
+                    .bind("categoryId", categoryId)
+                    .mapToBean(Products.class)
+                    .list();
 
+        });
+    }
 
 
     public static void main(String[] args) {
-        System.out.println(ProductCategoryService.finProductBatterDrill());
+
+
+//        System.out.println(ProductService.getProductsByCategory(2));
+
+//        System.out.println(ProductCategoryService.finProductHandDrill());
+//        System.out.println("----------------------");
+        System.out.print(ProductCategoryService.finProductBatterDrill());
         System.out.println("----------------------");
-        System.out.print(ProductCategoryService.finProductHammerDrill());
-        System.out.println("----------------------");
+
+//        System.out.println(ProductCategoryService.finProductBatterDrill());
+//        System.out.println("----------------------");
+//        System.out.print(ProductCategoryService.finProductHammerDrill());
+//        System.out.println("----------------------");
+
 //        System.out.println(ProductCategoryService.finProductMiniDrill());
 //        System.out.println("----------------------");
 //        System.out.println(ProductCategoryService.finProductHammerDrill());

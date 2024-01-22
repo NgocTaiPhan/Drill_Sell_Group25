@@ -13,7 +13,7 @@ public class ProductSell {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -38,7 +38,7 @@ public class ProductSell {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -53,7 +53,7 @@ public class ProductSell {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -79,7 +79,7 @@ public class ProductSell {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -94,6 +94,7 @@ public class ProductSell {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -119,7 +120,7 @@ public class ProductSell {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -133,6 +134,7 @@ public class ProductSell {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -158,7 +160,7 @@ public class ProductSell {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -173,7 +175,7 @@ public class ProductSell {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -199,7 +201,7 @@ public class ProductSell {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -213,7 +215,7 @@ public class ProductSell {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -239,7 +241,7 @@ public class ProductSell {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -253,7 +255,7 @@ public class ProductSell {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -279,7 +281,7 @@ public class ProductSell {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -293,7 +295,7 @@ public class ProductSell {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -319,7 +321,7 @@ public class ProductSell {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -333,7 +335,7 @@ public class ProductSell {
             return handle.createQuery("SELECT " +
                             "    products.image, " +
                             "    products.productName, " +
-//                            " products.productId, "+
+                            " products.productId, "+
                             "    CASE " +
                             "        WHEN TIMESTAMPDIFF(MONTH, product_details.dateAdd, NOW()) BETWEEN 6 AND 12 " +
                             "        THEN ROUND(products.unitPrice * 0.9, 2) " +
@@ -359,7 +361,7 @@ public class ProductSell {
                         Products product = new Products();
                         product.setImage(rs.getString("image"));
                         product.setProductName(rs.getString("productName"));
-//                        product.setProductId(rs.getInt("productId"));
+                        product.setProductId(rs.getInt("productId"));
                         product.setUnitPrice(((BigDecimal) discountedPrice).doubleValue());
 
                         return product;
@@ -373,4 +375,3 @@ public class ProductSell {
     }
 
 }
-
