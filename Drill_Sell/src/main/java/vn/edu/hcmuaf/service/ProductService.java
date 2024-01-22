@@ -41,7 +41,9 @@ public class ProductService {
     public static List<Products> findProductWidthCategoryID(int categoryID) {
 
         return DbController.me().get().withHandle(handle -> {
+
             return handle.createQuery("SELECT products.productId, productId, image, productName, unitPrice, categoryId " +
+
                             "FROM products\n" +
                             "JOIN producers\n" +
                             "ON products.producerId = producers.id\n" +

@@ -495,12 +495,9 @@
                             <a class="item" href="#" onclick="submitForm(10, 'Gomes')">Gomes</a>
 
                             <script>
-                                // Function to set producer value and pr value, and submit the form
                                 function submitForm(prValue, producerName) {
-                                    // Set the pr value in the hidden input field
                                     document.getElementById('prInput').value = prValue;
 
-                                    // Set the producer value in the hidden input field
                                     document.getElementById('producerInput').value = producerName;
                                     console.log(producerName);
 
@@ -606,11 +603,14 @@
                     <h3 class="section-title point ">Bán chạy</h3>
                     <div class="sidebar-widget-body outer-top-xs">
                         <div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs">
+
+
                             <%
 
                                 List<Products> bestSellerProducts = showProducts.get(0);
                                 for (Products p : bestSellerProducts) {
                                     String formattedPrice = homeCtroller.getFormattedUnitPrice(p);
+
 
                             %>
                             <div class="item">

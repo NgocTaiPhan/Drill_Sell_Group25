@@ -339,6 +339,7 @@ public class ProductCategoryService {
     public static void main(String[] args) {
 
 
+
 //        System.out.println(ProductService.getProductsByCategory(2));
 
 //        System.out.println(ProductCategoryService.finProductHandDrill());
@@ -350,6 +351,7 @@ public class ProductCategoryService {
 //        System.out.println("----------------------");
 //        System.out.print(ProductCategoryService.finProductHammerDrill());
 //        System.out.println("----------------------");
+
 
 //        System.out.println(ProductCategoryService.finProductMiniDrill());
 //        System.out.println("----------------------");

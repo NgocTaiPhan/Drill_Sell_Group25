@@ -47,7 +47,7 @@ public class AddToCartServlets extends HttpServlet {
             // Lưu giỏ hàng vào session
             session.setAttribute("cart", cartItems);
 
-           
+
         }
     }
 }
