@@ -70,7 +70,7 @@
                     <ul class="list-unstyled">
 
                         <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                        <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
                         <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
@@ -289,30 +289,15 @@
                             </tr>
                             </thead>
                             <tbody>
-<%--                            <tr>--%>
-<%--                                <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>--%>
-<%--                                <td class="sub"><input type="checkbox"></td>--%>
-<%--                                <td class="li-product-thumbnail"><a href="#"><img--%>
-<%--                                        src="assets/images/shoppingCart/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"></a>--%>
-<%--                                </td>--%>
-<%--                                <td class="li-product-name"><a href="#">Máy khoan động lực Bosch GSB 16 RE ---%>
-<%--                                    06012281K1</a></td>--%>
-<%--                                <td class="li-product-price"><span class="amount">468.00 VND</span></td>--%>
-<%--                                <td class="quantity">--%>
-<%--                                    <div class="cart-plus-minus">--%>
-<%--                                        <input class="cart-plus-minus-box" value="1" >--%>
-<%--                                    </div>--%>
-<%--                                </td>--%>
-<%--                                <td class="product-subtotal"><span class="amount">468.00 VND</span></td>--%>
-<%--                            </tr>--%>
+
                             <tr>
                                 <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
                                 <td class="sub"><input type="checkbox"></td>
                                 <td class="li-product-thumbnail"><a href="#"><img
                                         src="assets/images/shoppingCart/dau-khoan-co-khoa-13mm-bosch-2608571079-g.jpg"
                                         alt="Li's Product Image"></a></td>
-                                <td class="li-product-name"><a href="#">Mũi khoan động lực Bosch GSB </a></td>
-                                <td class="li-product-price"><span class="amount">500.000 VND</span></td>
+                                <td class="li-product-name"><a href="#"> </a></td>
+                                <td class="li-product-price"><span class="amount"></span></td>
                                 <td class="quantity">
                                     <div class="cart-plus-minus">
                                         <input class="cart-plus-minus-box" value="1" type="number" oninput="validateQuantity(this)" >
@@ -333,30 +318,12 @@
                                 </script>
 
 
-                                <td class="product-subtotal"><span class="amount">500.000 VND</span></td>
+                                <td class="product-subtotal"><span class="amount">5</span></td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
-<!--                    <div class="row">-->
-<!--                        <div class="col-12">-->
-<!--                            <div class="coupon-all">-->
-<!--                                <div class="coupon">-->
-<!--                                    <input id="coupon_code" class="input-text" name="coupon_code" value=""-->
-<!--                                           placeholder="Nhập mã" type="text">-->
-<!--                                    <input class="button" name="apply_coupon" value="Áp mã" type="submit">-->
-<!--                                </div>-->
-<!--                                <div class="coupon2">-->
 
-<!--                                    <input class="button" name="update_cart" value="Cập nhật giỏ hàng" type="submit">-->
-
-<!--                                    <input class="btn btn-primary" name="update_cart" value="Cập nhật giỏ hàng"-->
-<!--                                           type="submit">-->
-
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
                     <div class="rows">
                         <div class="col-md-5 ml-auto">
                             <div class="cart-page-total">

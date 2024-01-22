@@ -22,7 +22,7 @@ public class ProductController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<List<Products>> allProduct = new ArrayList<>();
-       allProduct.add(productService.getAll());
+        allProduct.add(productService.getAll());
         allProduct.add(productService.getAll());
         allProduct.add(productService.getAll());
         allProduct.add(productSell.sellProduct());

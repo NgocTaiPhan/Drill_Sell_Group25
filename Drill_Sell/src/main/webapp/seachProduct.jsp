@@ -63,7 +63,7 @@
                     <ul class="list-unstyled">
 
                         <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                        <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
                         <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
@@ -313,72 +313,7 @@
                     <!-- /.megamenu-horizontal -->
                 </div>
                 <!-- /.side-menu -->
-                <!-- ================================== TOP NAVIGATION : END ================================== -->
 
-
-                <!-- ============================================== SPECIAL DEALS ============================================== -->
-
-                <%--                <div class="sidebar-widget outer-bottom-small wow fadeInUp">--%>
-                <%--                    <h3 class="section-title">Ưu đãi dành cho máy khoang pin</h3>--%>
-                <%--                    <div class="sidebar-widget-body outer-top-xs">--%>
-                <%--                        <div class="owl-carousel sidebar-carousel special-offer custom-carousel owl-theme outer-top-xs">--%>
-
-                <%--                            <div class="item">--%>
-                <%--                                <div class="products special-product">--%>
-                <%--                                 <%       List<Products> products4 = allProduct.get(3);--%>
-                <%--                                        for (Products p : products4) {--%>
-                <%--                                            NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));--%>
-                <%--                                            String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);--%>
-                <%--                                            request.setAttribute("formattedUnitPrice", formattedPrice);--%>
-                <%--                                    %>--%>
-                <%--                                    <div class="product">--%>
-                <%--                                        <div class="product-micro">--%>
-                <%--                                            <div class="row product-micro-row">--%>
-                <%--                                                <div class="col col-xs-5">--%>
-                <%--                                                    <div class="product-image">--%>
-                <%--                                                        <div class="image"><a href="detail.jsp"> <img--%>
-                <%--                                                                src="<%=p.getImage()%>"--%>
-                <%--                                                                alt="Ảnh sản phẩm"></a>--%>
-                <%--                                                        </div>--%>
-                <%--                                                        <!-- /.image -->--%>
-
-                <%--                                                    </div>--%>
-                <%--                                                    <!-- /.product-image -->--%>
-                <%--                                                </div>--%>
-                <%--                                                <!-- /.col -->--%>
-                <%--                                                <div class="col col-xs-7">--%>
-                <%--                                                    <div class="product-info">--%>
-                <%--                                                        <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>--%>
-                <%--                                                        </h3>--%>
-                <%--                                                        <div class="rating rateit-small"></div>--%>
-                <%--                                                        <div class="product-price">--%>
-                <%--                                                            <span class="price"><%= request.getAttribute("formattedUnitPrice") %></span>--%>
-                <%--                                                        </div>--%>
-                <%--                                                        <!-- /.product-price -->--%>
-
-                <%--                                                    </div>--%>
-                <%--                                                </div>--%>
-                <%--                                                <!-- /.col -->--%>
-                <%--                                            </div>--%>
-                <%--                                            <!-- /.product-micro-row -->--%>
-                <%--                                        </div>--%>
-                <%--                                        <!-- /.product-micro -->--%>
-
-                <%--                                    </div>--%>
-                <%--                                    <%}%>--%>
-
-
-                <%--                                </div>--%>
-                <%--                            </div>--%>
-
-                <%--                        </div>--%>
-                <%--                    </div>--%>
-                <%--                    <!-- /.sidebar-widget-body -->--%>
-                <%--                </div>--%>
-                <!-- /.sidebar-widget -->
-                <!-- ============================================== SPECIAL DEALS : END ============================================== -->
-
-                <!-- ============================================== PRODUCT TAGS ============================================== -->
                 <div class="sidebar-widget product-tag wow fadeInUp">
                     <h3 class="section-title">Nhà sản xuất</h3>
                     <div class="sidebar-widget-body outer-top-xs">
@@ -458,13 +393,13 @@
                         %>
                         <div class="product">
                             <div class="product-image">
-                                <div class="image"><a href="detail.jsp"><img height="189px" width="189px" src="<%=p.getImage()%>" alt="Ảnh sản phẩm"></a></div>
+                                <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img height="189px" width="189px" src="<%=p.getImage()%>" alt="Ảnh sản phẩm"></a></div>
                                 <!-- /.image -->
                             </div>
                             <!-- /.product-image -->
 
                             <div class="product-info text-left">
-                                <h3 class="name"><a href="detail.jsp"><%=p.getProductName()%></a></h3>
+                                <h3 class="name"><a href="detail?productId=<%=p.getProductId()%>"><%=p.getProductName()%></a></h3>
                                 <div class="rating rateit-small"></div>
                                 <div class="description"></div>
                                 <div class="product-price">
@@ -489,16 +424,14 @@
                     </div>
                 </section>
 
-                <!-- ============================================== CONTENT : END ============================================== -->
             </div>
 
 
         </div>
-        <!-- /.container -->
+     
     </div>
-    <!-- /#top-banner-and-menu -->
 
-    <!-- ============================================================= FOOTER ============================================================= -->
+
     <footer id="footer" class="footer color-bg">
         <div class="footer-bottom">
             <div class="container">

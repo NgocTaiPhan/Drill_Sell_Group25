@@ -11,20 +11,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
+
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/bean/ProductDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/bean/ProductDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/bean/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/bean/Products.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/ProductCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/ProductCategoryService.java" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
 
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/SeachProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/SeachProduct.java" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/ProductSell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/ProductSell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/SearchService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Hand_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Hand_drill.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/accessory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/accessory.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/account.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/battery_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/battery_drill.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/card.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/card.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/contact.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/card.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cart.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/hammer_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/hammer_drill.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/history.jsp" afterDir="false" />
@@ -37,7 +45,6 @@
 
 
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/mini_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mini_drill.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/movers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movers.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/oder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/oder.jsp" afterDir="false" />
@@ -128,9 +135,13 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
 
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+
 
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -148,8 +159,8 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.80">
-    <configuration name="ProducersService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.ProducersService" />
+    <configuration name="DetailService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.DetailService" />
       <module name="Drill_Sell" />
       <extension name="coverage">
         <pattern>
@@ -162,11 +173,11 @@
       </method>
     </configuration>
     <configuration name="ProductCategoryService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.serice.ProductCategoryService" />
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.ProductCategoryService" />
       <module name="Drill_Sell" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="vn.edu.hcmuaf.serice.*" />
+          <option name="PATTERN" value="vn.edu.hcmuaf.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -187,8 +198,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
+    <configuration name="ProductService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.ProductService" />
+
     <configuration name="UserService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.serice.UserService" />
+
       <module name="Drill_Sell" />
       <extension name="coverage">
         <pattern>
@@ -200,8 +216,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="vn.edu.hcmuaf.service.ProductCategoryService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.ProductCategoryService" />
+    <configuration name="SearchService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.SearchService" />
       <module name="Drill_Sell" />
       <extension name="coverage">
         <pattern>
@@ -382,29 +398,31 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ProducersService" />
+
       <item itemvalue="Application.ProductCategoryService" />
+      <item itemvalue="Application.ProductService" />
+      <item itemvalue="Application.DetailService" />
+      <item itemvalue="Application.SearchService" />
+      <item itemvalue="Application.ProductSell" />
+
+ 
+
 
       <item itemvalue="Tomcat Server.Tomcat 9.0.80" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProductSell" />
         <item itemvalue="Application.SearchService" />
 
-      <item itemvalue="Application.Products" />
-      <item itemvalue="Application.UserService" />
-      <item itemvalue="Application.vn.edu.hcmuaf.service.ProductCategoryService" />
+        <item itemvalue="Application.DetailService" />
+        <item itemvalue="Application.ProductService" />
+        <item itemvalue="Application.ProductSell" />
+
+
       <item itemvalue="Tomcat Server.Tomcat 8.5.87" />
     </list>
-    <recent_temporary>
-      <list>
 
-        <item itemvalue="Application.vn.edu.hcmuaf.service.ProductCategoryService" />
-        <item itemvalue="Application.ProducersService" />
-        <item itemvalue="Application.ProductCategoryService" />
-        <item itemvalue="Application.UserService" />
-        <item itemvalue="Application.Products" />
+
       </list>
     </recent_temporary>
   </component>
@@ -453,6 +471,15 @@
       <workItem from="1705421007218" duration="3002000" />
       <workItem from="1705583792120" duration="1815000" />
       <workItem from="1705673875828" duration="7259000" />
+
+      <workItem from="1705682172194" duration="7508000" />
+      <workItem from="1705738506588" duration="9263000" />
+      <workItem from="1705756968800" duration="5809000" />
+      <workItem from="1705762794836" duration="3554000" />
+      <workItem from="1705827444774" duration="10006000" />
+      <workItem from="1705838901677" duration="7232000" />
+      <workItem from="1705930971652" duration="5002000" />
+
       <workItem from="1705682172194" duration="45000" />
 
       <workItem from="1704209265680" duration="1551000" />
