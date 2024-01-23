@@ -5,6 +5,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="vn.edu.hcmuaf.service.ProductService" %>
 <%@ page import="vn.edu.hcmuaf.controller.HomeController" %>
+<%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
@@ -211,6 +212,19 @@
                                     </ul>
                                 </li>
                                 <li class="active  yamm-fw"><a href="contact.jsp">Liên hệ</a></li>
+
+<!-- đây là phần quản lý nếu như là admin nó s hiện lên menu "quản lý SP " , còn neêusk   phải là là ng thuuwongf ko hiện lên trang-->
+                                <%
+                                    HttpSession session = request.getSession();
+                                    if (session.getAttribute("kh") != null) {
+                                        User user = (User) session.getAttribute("kh");
+                                        if (user.getboxsell() != 0 && user.getUsername() != null) {
+                                %>
+                                <li class="active  yamm-fw"><a href="manager">quản lí sp</a></li>
+                                <%
+                                        }
+                                    }
+                                %>
 
 
                             </ul>
