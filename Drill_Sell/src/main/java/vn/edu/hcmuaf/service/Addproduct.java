@@ -9,6 +9,7 @@ public class Addproduct {
             handle.createUpdate("INSERT INTO products (image, productName, unitPrice, producerId, categoryId) VALUES (?, ?, ?, ?, ?)")
                     .bind(0, product.getImage())
                     .bind(1, product.getProductName())
+
                     .bind(2, product.getUnitPrice())
                     .bind(3, producerId)
                     .bind(4, product.getCategoryId())

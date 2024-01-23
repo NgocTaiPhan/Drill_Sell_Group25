@@ -7,6 +7,8 @@ public class Product {
 
     private int producerId, categoryId;
 
+    private int boxsell;
+
     public Product() {
     }
 
@@ -74,6 +76,14 @@ public class Product {
         this.unitPrice = unitPrice;
     }
 
+    public int getboxsell() {
+        return boxsell;
+    }
+
+    public void setboxsell(int boxsell) {
+        this.boxsell = boxsell;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -83,6 +93,7 @@ public class Product {
                 ", unitPrice=" + unitPrice +
                 ", producerId=" + producerId +
                 ", categoryId=" + categoryId +
+
                 '}';
     }
 }

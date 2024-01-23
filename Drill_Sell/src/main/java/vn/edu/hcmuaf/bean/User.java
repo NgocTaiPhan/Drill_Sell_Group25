@@ -7,8 +7,10 @@ import java.util.stream.Collectors;
 
 public class
 User {
-    private int id;
+    private int id,
+         boxsell;
     private String fullname,
+
             address,
             phone,
             email,
@@ -17,10 +19,12 @@ User {
             sex,
             yearOfBirth;
 
+
+
     public User() {
     }
 
-    public User(int id, String fullname, String address, String phone, String email, String username, String password, String sex, String yearOfBirth) {
+    public User(int id, String fullname, String address, String phone, String email, String username, String password, String sex, String yearOfBirth, int boxsell) {
         this.id = id;
         this.fullname = fullname;
         this.address = address;
@@ -30,6 +34,7 @@ User {
         this.password = password;
         this.sex = sex;
         this.yearOfBirth = yearOfBirth;
+        this.boxsell = boxsell;
     }
 
     public int getId() {
@@ -102,6 +107,14 @@ User {
 
     public void setYearOfBirth(String yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
+    }
+
+    public int getboxsell() {
+        return boxsell;
+    }
+
+    public void setboxsell(int boxsell) {
+        this.boxsell = boxsell;
     }
 
     @Override
