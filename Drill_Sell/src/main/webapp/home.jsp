@@ -242,6 +242,8 @@
                                 <li class="active  yamm-fw"><a href="contact.jsp">Liên hệ</a></li>
 
 
+                                <li class="active  yamm-fw"><a href="manager">quản lí sp</a></li>
+
                             </ul>
                             <!-- /.navbar-nav -->
                             <div class="clearfix"></div>

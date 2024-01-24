@@ -1,6 +1,5 @@
 <%@ page import="org.jboss.weld.context.http.Http" %>
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
-<%@ page import="vn.edu.hcmuaf.controller.register.RegisterController" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
@@ -109,7 +108,7 @@
                 </div>
                 <!-- Sign-in -->
 <%
-    RegisterFormValue registerValue = (RegisterFormValue) request.getAttribute("registerValue");
+//    RegisterFormValue registerValue = (RegisterFormValue) request.getAttribute("registerValue");
 
 
 
@@ -123,7 +122,7 @@
                         <div class="form-group">
                             <label class="info-title" for="full-name-register">Họ và tên <span>*</span></label>
                             <input class="form-control unicase-form-control text-input" id="full-name-register"
-                                   type="text" value="<%=registerValue.getFullName()%>">
+                                   type="text" value="">
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="birth-date-register">Ngày, tháng, năm sinh
