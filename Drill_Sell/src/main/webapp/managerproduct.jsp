@@ -70,7 +70,7 @@
                     <ul class="list-unstyled">
 
                         <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                        <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
                         <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
@@ -110,25 +110,29 @@
                     <!-- /.contact-row -->
                     <!-- ============================================================= SEARCH AREA ============================================================= -->
                     <div class="search-area">
-                        <form>
+                        <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
+                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
+                                <a style="height: 44.5px;" class="search-button" href="#" onclick="searchProduct(event)"></a>
 
-                                <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
-                                       placeholder="Tìm kiếm...">
-                                <a class="search-button" href="detail.jsp"></a>
 
-                                <ul class="dropdown-menu">
-                                    <li><a href="detail.jsp">Máy khoan động lực Bosch GSB 16 RE -
-                                        06012281K1</a></li>
-                                    <li><a href="detail.jsp">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
-                                    <li><a href="detail.jsp">Máy khoan pin Makute CD027</a></li>
-                                </ul>
                             </div>
                         </form>
+
                     </div>
                     <!-- /.search-area -->
                     <!-- ============================================================= SEARCH AREA : END ============================================================= -->
                 </div>
+                <!-- /.top-search-holder -->
+                <script>
+                    function searchProduct(event) {
+                        event.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
+                        var keyword = document.getElementById("searchInput").value;
+
+                        // Chuyển hướng đến trang seachProduct.jsp với tham số tìm kiếm
+                        window.location.href = "seachProduct?name=" + encodeURIComponent(keyword);
+                    }
+                </script>
                 <!-- /.top-search-holder -->
 
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
@@ -207,23 +211,25 @@
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
-                                <li class="active  yamm-fw"><a href="product.jsp">Sản phẩm</a></li>
+                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product" methods="post"></i>Sản phẩm</a></li>
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
-                                        <li><a href="battery_drill.jsp"></i>Máy khoan pin</a>
+
+                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="movers.jsp"></i>Máy khoan động lực</a>
+                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
 
                                         </li>
-                                        <li><a href="hammer_drill.jsp"></i>Máy khoan bê tông, Máy khoan búa</a>
+
+                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy khoan cầm tay gia đình</a>
 
                                         </li>
-                                        <li><a href="Hand_drill.jsp"></i>Máy khoan cầm tay gia đình</a>
+                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy khoan mini</a>
 
                                         </li>
-                                        <li><a href="mini_drill.jsp"></i>Máy khoan mini</a>
+                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
                                     </ul>
@@ -268,7 +274,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <form action="#">
+                <form action="manager">
                     <div class="table-content table-responsive">
                         <table class="table">
                             <thead>
@@ -283,85 +289,39 @@
                             </tr>
                             </thead>
                             <tbody>
-<%--                            <tr>--%>
-<%--                                <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>--%>
-<%--                                <td class="sub"><input type="checkbox"></td>--%>
-<%--                                <td class="li-product-thumbnail"><a href="#"><img--%>
-<%--                                        src="assets/images/shoppingCart/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"></a>--%>
-<%--                                </td>--%>
-<%--                                <td class="li-product-name"><a href="#">Máy khoan động lực Bosch GSB 16 RE ---%>
-<%--                                    06012281K1</a></td>--%>
-<%--                                <td class="li-product-price"><span class="amount">468.00 VND</span></td>--%>
-<%--                                <td class="quantity">--%>
-<%--                                    <div class="cart-plus-minus">--%>
-<%--                                        <input class="cart-plus-minus-box" value="1" >--%>
-<%--                                    </div>--%>
-<%--                                </td>--%>
-<%--                                <td class="product-subtotal"><span class="amount">468.00 VND</span></td>--%>
-<%--                            </tr>--%>
-                            <tr>
-                                <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                <td class="sub"><input type="checkbox"></td>
-                                <td class="li-product-thumbnail"><a href="#"><img
-                                        src="assets/images/shoppingCart/dau-khoan-co-khoa-13mm-bosch-2608571079-g.jpg"
-                                        alt="Li's Product Image"></a></td>
-                                <td class="li-product-name"><a href="#">Mũi khoan động lực Bosch GSB </a></td>
-                                <td class="li-product-price"><span class="amount">500.000 VND</span></td>
-                                <td class="quantity">
-                                    <div class="cart-plus-minus">
-                                        <input class="cart-plus-minus-box" value="1" type="number" oninput="validateQuantity(this)" >
-                                    </div>
-                                </td>
-
-                                <script>
-                                    function validateQuantity(input) {
-                                        // Chuyển giá trị thành số nguyên
-                                        var quantity = parseInt(input.value, 10);
-
-                                        // Kiểm tra nếu giá trị là NaN hoặc nhỏ hơn 1
-                                        if (isNaN(quantity) || quantity < 1) {
-                                            // Đặt giá trị về 1
-                                            input.value = 1;
-                                        }
-                                    }
-                                </script>
-
-
-                                <td class="product-subtotal"><span class="amount">500.000 VND</span></td>
-                            </tr>
+                            <c:forEach var="item" items="${listSP}">
+                                <tr>
+                                    <td class="li-product-remove">
+                                        <a href="delete?did=${item.getMaLoai()}">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </td>
+                                    <td class="sub">
+                                        <input type="checkbox">
+                                    </td>
+                                    <td class="li-product-thumbnail">
+                                        <a href="#">
+                                            <img src="img/cart/${item.getImg()}.jpg" alt="Li's Product Image">
+                                        </a>
+                                    </td>
+                                    <td class="li-product-name">
+                                        <a href="#">${item.getTenLoai()}</a>
+                                    </td>
+                                    <td class="li-product-price">
+                                        <span class="amount">$${item.getGiaBan()}</span>
+                                    </td>
+                                    <td class="quantity">
+                                        <div class="cart-plus-minus">
+                                            <input class="cart-plus-minus-box" value="1" type="number" oninput="validateQuantity(this)">
+                                        </div>
+                                    </td>
+                                    <td class="product-subtotal">
+                                        <span class="amount">$${item.getGiaBan()}</span>
+                                    </td>
+                                </tr>
+                            </c:forEach>
                             </tbody>
                         </table>
-                    </div>
-<!--                    <div class="row">-->
-<!--                        <div class="col-12">-->
-<!--                            <div class="coupon-all">-->
-<!--                                <div class="coupon">-->
-<!--                                    <input id="coupon_code" class="input-text" name="coupon_code" value=""-->
-<!--                                           placeholder="Nhập mã" type="text">-->
-<!--                                    <input class="button" name="apply_coupon" value="Áp mã" type="submit">-->
-<!--                                </div>-->
-<!--                                <div class="coupon2">-->
-
-<!--                                    <input class="button" name="update_cart" value="Cập nhật giỏ hàng" type="submit">-->
-
-<!--                                    <input class="btn btn-primary" name="update_cart" value="Cập nhật giỏ hàng"-->
-<!--                                           type="submit">-->
-
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-                    <div class="rows">
-                        <div class="col-md-5 ml-auto">
-                            <div class="cart-page-total">
-<!--                                <h2>Thanh toán</h2>-->
-<!--                                <ul>-->
-<!--                                    <li>Đơn giá <span>968.000 VND</span></li>-->
-<!--                                    <li>Tổng tiền <span>968.000 VND</span></li>-->
-<!--                                </ul>-->
-                                <a class="checkOut" href="oder.jsp">Thanh toán</a>
-                            </div>
-                        </div>
                     </div>
                 </form>
             </div>
@@ -371,38 +331,38 @@
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <div class="social-button">
     <div class="social-button-content">
-      <a href="tel:0353933224" class="call-icon" rel="nofollow">
-        <i class="fa fa-whatsapp" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Hotline: 035 393 3224</span>
-      </a>
-      <a href="sms:0353933224" class="sms">
-        <i class="fa fa-weixin" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>SMS: 035 393 3224</span>
-      </a>
-      <a href="https://www.facebook.com/Ngocthang.net/" class="mes">
-        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Nhắn tin Facebook</span>
-      </a>
-      <a href="http://zalo.me/0353933224" class="zalo">
-        <i class="fa fa-commenting-o" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Zalo: 035.393.3224</span>
-      </a>
+        <a href="tel:0353933224" class="call-icon" rel="nofollow">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Hotline: 035 393 3224</span>
+        </a>
+        <a href="sms:0353933224" class="sms">
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>SMS: 035 393 3224</span>
+        </a>
+        <a href="https://www.facebook.com/Ngocthang.net/" class="mes">
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Nhắn tin Facebook</span>
+        </a>
+        <a href="http://zalo.me/0353933224" class="zalo">
+            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Zalo: 035.393.3224</span>
+        </a>
     </div>
     <a href="#" class="user-support">
-      <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
-      <div class="animated alo-circle"></div>
-      <div class="animated alo-circle-fill"></div>
+        <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+        <div class="animated alo-circle"></div>
+        <div class="animated alo-circle-fill"></div>
     </a>
-  </div>
-  
+</div>
+
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <!-- ============================================================= Backtop ============================================================= -->
 <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class=" icon fa    fa-arrow-up"></i></button>

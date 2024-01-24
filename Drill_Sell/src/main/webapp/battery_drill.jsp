@@ -55,7 +55,9 @@
 
     <%
         List<List<Products>> allProduct = (List<List<Products>>) request.getAttribute("loadProductInBatteryDrill");
+
     %>
+
     <div class="top-bar animate-dropdown">
         <div class="container">
             <div class="header-top-inner">
@@ -63,7 +65,7 @@
                     <ul class="list-unstyled">
 
                         <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                        <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
                         <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
@@ -103,25 +105,29 @@
                     <!-- /.contact-row -->
                     <!-- ============================================================= SEARCH AREA ============================================================= -->
                     <div class="search-area">
-                        <form>
+                        <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
+                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
+                                <a style="height: 44.5px;" class="search-button" href="#" onclick="searchProduct(event)"></a>
 
-                                <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
-                                       placeholder="Tìm kiếm...">
-                                <a class="search-button" href="detail.html"></a>
 
-                                <ul class="dropdown-menu">
-                                    <li><a href="detail.jsp">Máy khoan động lực Bosch GSB 16 RE -
-                                        06012281K1</a></li>
-                                    <li><a href="detail.jsp">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
-                                    <li><a href="detail.jsp">Máy khoan pin Makute CD027</a></li>
-                                </ul>
                             </div>
                         </form>
+
                     </div>
                     <!-- /.search-area -->
                     <!-- ============================================================= SEARCH AREA : END ============================================================= -->
                 </div>
+                <!-- /.top-search-holder -->
+                <script>
+                    function searchProduct(event) {
+                        event.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
+                        var keyword = document.getElementById("searchInput").value;
+
+                        // Chuyển hướng đến trang seachProduct.jsp với tham số tìm kiếm
+                        window.location.href = "seachProduct?name=" + encodeURIComponent(keyword);
+                    }
+                </script>
                 <!-- /.top-search-holder -->
 
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
@@ -199,7 +205,7 @@
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
-                                <li class="active  yamm-fw"><a href="product.jsp">Sản phẩm</a></li>
+                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product" methods="post"></i>Sản phẩm</a></li>
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
@@ -325,10 +331,9 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.jsp"> <img
-                                                                src="<%=p.getImage()%>"
-                                                                alt="Ảnh sản phẩm"></a>
-                                                        </div>
+                                                        <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img
+                                                                                                                                 src="<%=p.getImage()%>"
+                                                                                                                                 alt="Ảnh sản phẩm"></a></div>
                                                         <!-- /.image -->
 
                                                     </div>
@@ -337,7 +342,7 @@
                                                 <!-- /.col -->
                                                 <div class="col col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>
+                                                        <h3 class="name"><a href="detail?productId=<%=p.getProductId()%>"> <%=p.getProductName() %></a>
                                                         </h3>
                                                         <div class="rating rateit-small"></div>
                                                         <div class="product-price">
@@ -446,7 +451,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.jsp"><img height="189px" width="189px"
+                                        <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img height="189px" width="189px"
                                                                                      src="<%=p.getImage()%>"
                                                                                      alt="Ảnh sản phẩm"></a></div>
                                         <!-- /.image -->
@@ -456,7 +461,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>
+                                        <h3 class="name"><a href="detail?productId=<%=p.getProductId()%>"> <%=p.getProductName() %></a>
                                         </h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
@@ -488,7 +493,7 @@
                         <div class="products">
                             <div class="product">
                                 <div class="product-image">
-                                    <div class="image"><a href="detail.jsp"><img height="189px" width="189px"
+                                    <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img height="189px" width="189px"
                                                                                  src="<%=p.getImage()%>"
                                                                                  alt="Ảnh sản phẩm"></a></div>
                                     <!-- /.image -->
@@ -498,7 +503,7 @@
                                 <!-- /.product-image -->
 
                                 <div class="product-info text-left">
-                                    <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>
+                                    <h3 class="name"><a href="detail?productId=<%=p.getProductId()%>"> <%=p.getProductName() %></a>
                                     </h3>
                                     <div class="rating rateit-small"></div>
                                     <div class="description"></div>
@@ -523,51 +528,42 @@
 
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
                         <%
-
                             List<Products> products2 = allProduct.get(2);
                             for (Products p : products2) {
                                 NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
-                                String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);
+                                String formattedPrice = currencyFormat.format(p.getUnitPrice() * 1000);
                                 request.setAttribute("formattedUnitPrice2", formattedPrice);
                         %>
                         <div class="products">
                             <div class="product">
                                 <div class="product-image">
-                                    <div class="image"><a href="detail.jsp"><img height="189px" width="189px"
-                                                                                 src="<%=p.getImage()%>"
-                                                                                 alt="Ảnh sản phẩm"></a></div>
+                                    <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img height="189px" width="189px"
+                                                                                                             src="<%=p.getImage()%>"
+                                                                                                             alt="Ảnh sản phẩm"></a></div>
                                     <!-- /.image -->
-
-
                                 </div>
                                 <!-- /.product-image -->
 
                                 <div class="product-info text-left">
-                                    <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>
-                                    </h3>
+                                    <h3 class="name"><a href="detail?productId=<%=p.getProductId()%>"> <%=p.getProductName() %></a></h3>
                                     <div class="rating rateit-small"></div>
                                     <div class="description"></div>
                                     <div class="product-price">
                                         <span class="price"><%= request.getAttribute("formattedUnitPrice2") %></span>
                                     </div>
                                     <!-- /.product-price -->
-
                                 </div>
                                 <!-- /.product-info -->
 
                                 <!-- /.cart -->
                             </div>
                             <!-- /.product -->
-
                         </div>
                         <%}%>
-
-
                         <!-- /.products -->
                     </div>
 
-                </section>
-                <!-- ============================================== CONTENT : END ============================================== -->
+                    <!-- ============================================== CONTENT : END ============================================== -->
             </div>
 
         </div>

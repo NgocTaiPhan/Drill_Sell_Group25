@@ -1,3 +1,7 @@
+<%@ page import="vn.edu.hcmuaf.bean.Products" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="java.util.Locale" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="vi">
 <head>
@@ -48,6 +52,9 @@
 </head>
 
 <body class="cnt-home">
+
+<% List<List<Products>> allProduct = (List<List<Products>>) request.getAttribute("loadProduct");
+%>
 <!-- ============================================== HEADER ============================================== -->
 <header class="header-style-1 ">
 
@@ -59,7 +66,7 @@
                     <ul class="list-unstyled">
 
                         <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                        <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
                         <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
@@ -99,25 +106,31 @@
                     <!-- /.contact-row -->
                     <!-- ============================================================= SEARCH AREA ============================================================= -->
                     <div class="search-area">
-                        <form>
+                        <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
+                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown"
+                                       name="name" placeholder="Tìm kiếm...">
+                                <a style="height: 44.5px;" class="search-button" href="#"
+                                   onclick="searchProduct(event)"></a>
 
-                                <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
-                                       placeholder="Tìm kiếm...">
-                                <a class="search-button" href="#"></a>
 
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Máy khoan động lực Bosch GSB 16 RE -
-                                        06012281K1</a></li>
-                                    <li><a href="#">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
-                                    <li><a href="#">Máy khoan pin Makute CD027</a></li>
-                                </ul>
                             </div>
                         </form>
+
                     </div>
                     <!-- /.search-area -->
                     <!-- ============================================================= SEARCH AREA : END ============================================================= -->
                 </div>
+                <!-- /.top-search-holder -->
+                <script>
+                    function searchProduct(event) {
+                        event.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
+                        var keyword = document.getElementById("searchInput").value;
+
+                        // Chuyển hướng đến trang seachProduct.jsp với tham số tìm kiếm
+                        window.location.href = "seachProduct?name=" + encodeURIComponent(keyword);
+                    }
+                </script>
                 <!-- /.top-search-holder -->
 
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
@@ -195,23 +208,31 @@
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
-                                <li class="active  yamm-fw"><a href="product.jsp">Sản phẩm</a></li>
+                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product"
+                                                               methods="post"></i>Sản phẩm</a></li>
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
-                                        <li><a href="battery_drill.jsp"></i>Máy khoan pin</a>
+
+                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>
+                                            Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="movers.jsp"></i>Máy khoan động lực</a>
+                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy
+                                            khoan động lực</a>
 
                                         </li>
-                                        <li><a href="hammer_drill.jsp"></i>Máy khoan bê tông, Máy khoan búa</a>
+
+                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy
+                                            khoan cầm tay gia đình</a>
 
                                         </li>
-                                        <li><a href="Hand_drill.jsp"></i>Máy khoan cầm tay gia đình</a>
+                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy
+                                            khoan mini</a>
 
                                         </li>
-                                        <li><a href="mini_drill.jsp"></i>Máy khoan mini</a>
+                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>
+                                            Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
                                     </ul>
@@ -262,31 +283,39 @@
                     <div class="head"><i class="icon fa fa-align-justify fa-fw"></i> Máy khoan</div>
                     <nav class="yamm megamenu-horizontal">
                         <ul class="nav">
-                            <li class="nav-bg-class"><a href="battery_drill.jsp"></i>Máy khoan pin</a>
+                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/battery_drill"
+                                                        methods="post"></i>Máy khoan pin</a>
 
                             </li>
-                            <li class="nav-bg-class"><a href="movers.jsp"></i>Máy khoan động lực</a>
-
-                            </li>
-                            <li class="nav-bg-class"><a href="hammer_drill.jsp"></i>Máy khoan bê tông, Máy khoan búa</a>
-
-                            </li>
-                            <li class="nav-bg-class"><a href="Hand_drill.jsp"></i>Máy khoan cầm tay gia đình</a>
-
-                            </li>
-                            <li class="nav-bg-class"><a href="mini_drill.jsp"></i>Máy khoan mini</a>
+                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/movers"
+                                                        methods="post"></i>Máy khoan động lực</a>
 
                             </li>
 
+                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/hand_drill"
+                                                        methods="post"></i>Máy khoan cầm tay gia đình</a>
+
+                            </li>
+                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/mini_drill"
+                                                        methods="post"></i>Máy khoan mini</a>
+
+                            </li>
+                            <li class="nav-bg-class"><a href="<%= request.getContextPath() %>/hammer_drill"
+                                                        methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
+
+                            </li>
 
                             <li class="">
-                                <a href="#" class="dropdown-med" data-toggle="dropdown">Phụ kiện máy khoan <b
-                                        class="caret"></b></a>
+                                <a href="accessory.jsp" class="dropdown-med" data-toggle="dropdown">Phụ kiện máy khoan
+                                    <b
+                                            class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Pin máy khoan</a></li>
-                                    <li><a href="#">Sạc pin máy khoan</a></li>
-                                    <li><a href="#">Mũi khoan</a>
-                                    </li>
+                                    <li><a href="<%= request.getContextPath() %>/z_battery" methods="post"></i> Pin máy
+                                        khoan</a></li>
+                                    <li><a href="<%= request.getContextPath() %>/z_charger" methods="post"></i> Sạc pin
+                                        máy khoan</a></li>
+                                    <li><a href="<%= request.getContextPath() %>/z_countersink" methods="post"></i>Mũi
+                                        khoan</a></li>
                                 </ul>
                             </li>
 
@@ -303,20 +332,28 @@
                 <!-- ============================================== SPECIAL DEALS ============================================== -->
 
                 <div class="sidebar-widget outer-bottom-small wow fadeInUp">
-                    <h3 class="section-title">Ưu đãi</h3>
+                    <h3 class="section-title">Ưu đãi sản phẩm</h3>
                     <div class="sidebar-widget-body outer-top-xs">
                         <div class="owl-carousel sidebar-carousel special-offer custom-carousel owl-theme outer-top-xs">
 
                             <div class="item">
                                 <div class="products special-product">
+                                    <%
+
+                                        List<Products> products4 = allProduct.get(3);
+                                        for (Products p : products4) {
+                                            NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                                            String formattedPrice = currencyFormat.format(p.getUnitPrice() * 1000);
+                                            request.setAttribute("formattedUnitPrice", formattedPrice);
+                                    %>
                                     <div class="product">
                                         <div class="product-micro">
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/products/best-seller/may-khoan-van-vit-dung-pin-12v-bosch-gsr-120-li-gen-ii-06019g80l1-g.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
+                                                        <div class="image"><a href="detail?productId=<%=p.getProductId()%>"> <img
+                                                                src="<%=p.getImage()%>"
+                                                                alt="Ảnh sản phẩm"></a>
                                                         </div>
                                                         <!-- /.image -->
 
@@ -326,11 +363,12 @@
                                                 <!-- /.col -->
                                                 <div class="col col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan vặn vít dùng pin 12V
-                                                            Bosch GSR 120-LI GEN II</a></h3>
+                                                        <h3 class="name"><a href="detail?productId=<%=p.getProductId()%>"><%=p.getProductName() %>
+                                                        </a>
+                                                        </h3>
                                                         <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.599.000đ </span>
+                                                        <div class="product-price">
+                                                            <span class="price"><%= request.getAttribute("formattedUnitPrice") %></span>
                                                         </div>
                                                         <!-- /.product-price -->
 
@@ -343,186 +381,12 @@
                                         <!-- /.product-micro -->
 
                                     </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/products/normal/may-khoan-van-vit-dung-pin-12v-sencan-d511210-sl.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
-                                                        </div>
-                                                        <!-- /.image -->
+                                    <%}%>
 
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan vặn vít dùng pin 12V
-                                                            Sencan D511210</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 999.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
 
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                                alt="Ảnh sản phẩm"> </a>
-                                                        </div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan động lực Bosch GSB 16 RE
-                                                            -
-                                                            06012281K1</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.399.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="products special-product">
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/products/best-seller/pin-bosch-12v-2-0ah-g.jpg"
-                                                                alt="images">
-                                                            <div class="zoom-overlay"></div>
-                                                        </a></div>
-                                                        <!-- /.image -->
 
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">
-                                                            Pin Bosch 12V 2.0Ah 1600A00F6X (1607A350C5)</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 599.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/products/normal/may-khoan-dong-luc-bosch-gsb-13-re.jpg"
-                                                                alt="Ảnh sản phẩm">
-                                                            <div class="zoom-overlay"></div>
-                                                        </a></div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan động lực Bosch GSB 16 RE
-                                                            -
-                                                            06012281K1</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.599.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                    <div class="product">
-                                        <div class="product-micro">
-                                            <div class="row product-micro-row">
-                                                <div class="col col-xs-5">
-                                                    <div class="product-image">
-                                                        <div class="image"><a href="#"> <img
-                                                                src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                                alt="image">
-                                                        </a></div>
-                                                        <!-- /.image -->
-
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-xs-7">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="#">Máy khoan động lực Bosch GSB 16 RE
-                                                            -
-                                                            06012281K1</a></h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.599.000đ </span>
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-micro-row -->
-                                        </div>
-                                        <!-- /.product-micro -->
-
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <!-- /.sidebar-widget-body -->
@@ -537,8 +401,8 @@
                         <div class="tag-list">
                             <!-- JSP Code -->
                             <form id="producerForm" action="producers" method="get">
-                                <input type="hidden" id="producerInput" name="producer" value="" />
-                                <input type="hidden" id="prInput" name="pr" value="" />
+                                <input type="hidden" id="producerInput" name="producer" value=""/>
+                                <input type="hidden" id="prInput" name="pr" value=""/>
                             </form>
                             <a class="item" href="#" onclick="submitForm(1, 'Bosh')">Bosh</a>
                             <a class="item" href="#" onclick="submitForm(2, 'Makute')">Makute</a>
@@ -572,1184 +436,157 @@
                     </div>
                 </div>
                 <!-- /.sidebar-widget -->
-                <!-- ============================================== PRODUCT TAGS : END ============================================== -->
                 <div class="home-banner"><img src="assets/images/banners/LHS-banner.jpg" alt="Image"></div>
                 <div class="home-banner"><img src="assets/images/banners/banner-canva.png" alt="Image"
                                               style="width: 270px"></div>
             </div>
-            <!-- /.sidemenu-holder -->
-            <!-- ============================================== SIDEBAR : END ============================================== -->
+            <Style>
+                .product-info h5 a {
+                    color: dimgray;
+                }
+            </Style>
 
-
-            <!-- ============================================== CONTENT ============================================== -->
             <div class='col-md-9'>
-                <!-- ========================================== SECTION – HERO ========================================= -->
-
-                <div id="category" class="category-carousel hidden-xs">
-                    <div class="item">
-                        <div class="image"><img src="assets/images/banners/cat-banner-1.jpg" alt="Ảnh sản phẩm"
-                                                class="img-responsive"></div>
-                        <div class="container-fluid">
-                            <div class="caption vertical-top text-left">
-                                <h1 class="big-text"> Sốc</h1>
-                                <div class="excerpt hidden-sm hidden-md"> Giảm đến 49%</div>
-                                <div class="excerpt-normal hidden-sm hidden-md"> Dành cho những sản phẩm BOSCH
-                                </div>
-                            </div>
-                            <!-- /.caption -->
-                        </div>
-                        <!-- /.container-fluid -->
-                    </div>
-                </div>
-
-
-                <div class="clearfix filters-container m-t-10">
-                    <div class="row">
-                        <div class="col col-sm-6 col-md-2">
-                            <div class="filter-tabs">
-                                <ul id="filter-tabs" class="nav nav-tabs nav-tab-box nav-tab-fa-icon">
-                                    <li class="active"><a data-toggle="tab" href="#grid-container"><i
-                                            class="icon fa fa-th-large"></i>Lưới</a></li>
-                                    <li><a data-toggle="tab" href="#list-container"><i class="icon fa fa-th-list"></i>Danh
-                                        sách</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- /.filter-tabs -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col col-sm-12 col-md-6">
-                            <!-- /.col -->
-                            <div class="col col-sm-3 col-md-6 no-padding">
-                                <div class="lbl-cnt"><span class="lbl">Xem trang</span>
-                                    <div class="fld inline">
-                                        <div class="dropdown dropdown-small dropdown-med dropdown-white inline">
-                                            <button data-toggle="dropdown" type="button" class="btn dropdown-toggle"> 1
-                                                <span class="caret"></span></button>
-                                            <ul role="menu" class="dropdown-menu">
-                                                <li role="presentation"><a href="#">1</a></li>
-                                                <li role="presentation"><a href="#">2</a></li>
-                                                <li role="presentation"><a href="#">3</a></li>
-                                                <li role="presentation"><a href="#">4</a></li>
-                                                <li role="presentation"><a href="#">5</a></li>
-                                                <li role="presentation"><a href="#">6</a></li>
-                                                <li role="presentation"><a href="#">7</a></li>
-                                                <li role="presentation"><a href="#">8</a></li>
-                                                <li role="presentation"><a href="#">9</a></li>
-                                                <li role="presentation"><a href="#">10</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- /.fld -->
-                                </div>
-                                <!-- /.lbl-cnt -->
-                            </div>
-                            <!-- /.col -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col col-sm-6 col-md-4 text-right">
-                            <div class="pagination-container">
-                                <ul class="list-inline list-unstyled">
-                                    <li class="prev"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li class="active"><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li class="next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                                </ul>
-                                <!-- /.list-inline -->
-                            </div>
-                            <!-- /.pagination-container --> </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
                 <div class="search-result-container ">
-                    <div id="myTabContent" class="tab-content category-list">
-                        <div class="tab-pane active " id="grid-container">
-                            <div class="category-product">
-                                <div class="row">
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-van-vit-dung-pin-12v-sencan-d511210-sl.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
+                    <section class="section featured-product wow fadeInUp">
+                        <h3 class="section-title">Sản phẩm</h3>
+                        <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">
+                            <%
+                                List<Products> products = allProduct.get(0);
+                                for (Products p : products) {
+                                    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                                    String formattedPrice = currencyFormat.format(p.getUnitPrice() * 1000);
+                                    request.setAttribute("formattedUnitPrice", formattedPrice);
+                            %>
+                            <div class="products">
+                                <div class="product">
+                                    <div class="product-image">
+                                        <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img
+                                                height="189px" width="189px"
+                                                src="<%=p.getImage()%>"
+                                                alt="Ảnh sản phẩm"></a></div>
 
-                                                </div>
-                                                <!-- /.product-image -->
 
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan vặn vít dùng pin
-                                                        12V Sencan D511210</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.120.000đ </span>
-                                                        <span class="price-before-discount">1.250.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
                                     </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
 
 
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB
-                                                        16 RE - 06012281K1</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.599.000đ  </span>
-                                                        <span class="price-before-discount">1.950.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
+                                    <div class="product-info text-left">
+                                        <h5><a href="detail?productId=<%=p.getProductId()%>"><%=p.getProductName()%>
+                                        </a>
+                                        </h5>
+                                        <div class="rating rateit-small"></div>
+                                        <div class="description"></div>
+                                        <div class="product-price">
+                                            <span class="price"><%= request.getAttribute("formattedUnitPrice") %></span>
                                         </div>
-                                        <!-- /.products -->
+
+
                                     </div>
-                                    <!-- /.item -->
 
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-be-tong-26mm-feg-eg-2601-sre.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
 
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan bê tông 26mm FEG
-                                                        EG-2601 SRE</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.210.000đ  </span>
-                                                        <span class="price-before-discount">1.300.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-pin-makute-cd027-g1.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan pin Makute
-                                                        CD027</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.370.000đ  </span>
-                                                        <span class="price-before-discount">1.500.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-be-tong-gomes-gb-2603sre.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan bê tông Gomes
-                                                        GB-2603</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.170.000đ  </span>
-                                                        <span class="price-before-discount">1.390.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-rut-loi-gomes-gcd-120-g.png"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan rút lõi Gomes
-                                                        GCD-120</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.520.000đ  </span>
-                                                        <span class="price-before-discount">1.820.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB
-                                                        16 RE - 06012281K1</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.599.000đ  </span>
-                                                        <span class="price-before-discount">1.950.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-dong-luc-makita-m8101b-g.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan động lực Makita
-                                                        M8101B</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.420.000đ  </span>
-                                                        <span class="price-before-discount">1.800.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-van-vit-dong-luc-dung-pin-stanley-sch20c2k.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan vặn vít động lực
-                                                        dùng pin Stanley SCH20C2K</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 2.580.000đ  </span>
-                                                        <span class="price-before-discount">2.850.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/best-seller/bo-may-bat-vit-dung-pin-makita-clx228s-g.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">
-                                                        Bộ máy bắt vít dùng pin Makita CLX228S </a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 3.590.000đ  </span>
-                                                        <span class="price-before-discount">4.990.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/best-seller/may-khoan-dong-luc-bosch-gsb-550.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB
-                                                        550 - 06011A15K0</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.050.000đ  </span>
-                                                        <span class="price-before-discount">1.500.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail.jsp"><img
-                                                            src="assets/images/products/normal/may-khoan-dong-luc-bosch-gsb-13-re-hop.jpg"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB
-                                                        13 RE</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span class="price"> 1.890.000đ  </span>
-                                                        <span class="price-before-discount">2.200.000đ</span></div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
                                 </div>
-                                <!-- /.row -->
-                            </div>
-                            <!-- /.category-product -->
 
+
+                            </div>
+                            <%}%>
                         </div>
-                        <!-- /.tab-pane -->
+                        <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
+                            <%
 
-                        <div class="tab-pane " id="list-container">
-                            <div class="category-product">
-                                <div class="category-product-inner wow fadeInUp">
-                                    <div class="products">
-                                        <div class="product-list product">
-                                            <div class="row product-list-row">
-                                                <div class="col col-sm-4 col-lg-4">
-                                                    <div class="product-image">
-                                                        <div class="image"><img
-                                                                src="assets/images/products/normal/may-khoan-van-vit-dung-pin-12v-sencan-d511210-sl.jpg"
-                                                                alt="Ảnh sản phẩm"></div>
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-sm-8 col-lg-8">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Máy khoan vặn vít dùng
-                                                            pin 12V Sencan D511210</a>
-                                                        </h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.120.000đ  </span>
-                                                            <span class="price-before-discount">1.250.000đ</span></div>
-                                                        <!-- /.product-price -->
+                                List<Products> products1 = allProduct.get(1);
+                                for (Products p : products1) {
+                                    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                                    String formattedPrice = currencyFormat.format(p.getUnitPrice() * 1000);
+                                    request.setAttribute("formattedUnitPrice1", formattedPrice);
+                            %>
+                            <div class="products">
+                                <div class="product">
+                                    <div class="product-image">
+                                        <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img
+                                                height="189px" width="189px"
+                                                src="<%=p.getImage()%>"
+                                                alt="Ảnh sản phẩm"></a></div>
 
-                                                        <div class="cart clearfix animate-effect">
-                                                            <div class="action">
-                                                                <ul class="list-unstyled">
-                                                                    <li class="add-cart-button btn-group">
-                                                                        <button class="btn btn-primary icon"
-                                                                                data-toggle="dropdown" type="button"><i
-                                                                                class="fa fa-shopping-cart"></i>
-                                                                        </button>
-                                                                        <button class="btn btn-primary cart-btn"
-                                                                                type="button">Thêm vào giỏ hàng
-                                                                        </button>
-                                                                    </li>
 
-                                                                </ul>
-                                                            </div>
-                                                            <!-- /.action -->
-                                                        </div>
-                                                        <!-- /.cart -->
-
-                                                    </div>
-                                                    <!-- /.product-info -->
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-list-row -->
-
-                                        </div>
-                                        <!-- /.product-list -->
                                     </div>
-                                    <!-- /.products -->
-                                </div>
-                                <!-- /.category-product-inner -->
 
-                                <div class="category-product-inner wow fadeInUp">
-                                    <div class="products">
-                                        <div class="product-list product">
-                                            <div class="row product-list-row">
-                                                <div class="col col-sm-4 col-lg-4">
-                                                    <div class="product-image">
-                                                        <div class="image"><img
-                                                                src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                                alt="Ảnh sản phẩm"></div>
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-sm-8 col-lg-8">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch
-                                                            GSB 16 RE - 06012281K1</a>
-                                                        </h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.599.000đ  </span>
-                                                            <span class="price-before-discount">1.950.000đ</span></div>
-                                                        <!-- /.product-price -->
 
-                                                        <div class="cart clearfix animate-effect">
-                                                            <div class="action">
-                                                                <ul class="list-unstyled">
-                                                                    <li class="add-cart-button btn-group">
-                                                                        <button class="btn btn-primary icon"
-                                                                                data-toggle="dropdown" type="button"><i
-                                                                                class="fa fa-shopping-cart"></i>
-                                                                        </button>
-                                                                        <button class="btn btn-primary cart-btn"
-                                                                                type="button">Thêm vào giỏ hàng
-                                                                        </button>
-                                                                    </li>
-
-                                                                </ul>
-                                                            </div>
-                                                            <!-- /.action -->
-                                                        </div>
-                                                        <!-- /.cart -->
-
-                                                    </div>
-                                                    <!-- /.product-info -->
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-list-row -->
-
+                                    <div class="product-info text-left">
+                                        <h3 class="name"><a
+                                                href="detail?productId=<%=p.getProductId()%>"><%=p.getProductName() %>
+                                        </a>
+                                        </h3>
+                                        <div class="rating rateit-small"></div>
+                                        <div class="description"></div>
+                                        <div class="product-price">
+                                            <span class="price"><%= request.getAttribute("formattedUnitPrice1") %></span>
                                         </div>
-                                        <!-- /.product-list -->
+
+
                                     </div>
-                                    <!-- /.products -->
+
+
                                 </div>
-                                <!-- /.category-product-inner -->
 
-                                <div class="category-product-inner wow fadeInUp">
-                                    <div class="products">
-                                        <div class="product-list product">
-                                            <div class="row product-list-row">
-                                                <div class="col col-sm-4 col-lg-4">
-                                                    <div class="product-image">
-                                                        <div class="image"><img
-                                                                src="assets/images/products/normal/may-khoan-be-tong-26mm-feg-eg-2601-sre.jpg"
-                                                                alt="Ảnh sản phẩm"></div>
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-sm-8 col-lg-8">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Máy khoan bê tông 26mm
-                                                            FEG EG-2601 SRE</a>
-                                                        </h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.210.000đ  </span>
-                                                            <span class="price-before-discount">1.300.000đ</span></div>
-                                                        <!-- /.product-price -->
-
-                                                        <div class="cart clearfix animate-effect">
-                                                            <div class="action">
-                                                                <ul class="list-unstyled">
-                                                                    <li class="add-cart-button btn-group">
-                                                                        <button class="btn btn-primary icon"
-                                                                                data-toggle="dropdown" type="button"><i
-                                                                                class="fa fa-shopping-cart"></i>
-                                                                        </button>
-                                                                        <button class="btn btn-primary cart-btn"
-                                                                                type="button">Thêm vào giỏ hàng
-                                                                        </button>
-                                                                    </li>
-
-                                                                </ul>
-                                                            </div>
-                                                            <!-- /.action -->
-                                                        </div>
-                                                        <!-- /.cart -->
-
-                                                    </div>
-                                                    <!-- /.product-info -->
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-list-row -->
-
-                                        </div>
-                                        <!-- /.product-list -->
-                                    </div>
-                                    <!-- /.products -->
-                                </div>
-                                <!-- /.category-product-inner -->
-
-                                <div class="category-product-inner wow fadeInUp">
-                                    <div class="products">
-                                        <div class="product-list product">
-                                            <div class="row product-list-row">
-                                                <div class="col col-sm-4 col-lg-4">
-                                                    <div class="product-image">
-                                                        <div class="image"><img
-                                                                src="assets/images/products/normal/may-khoan-pin-makute-cd027-g1.jpg"
-                                                                alt="Ảnh sản phẩm"></div>
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-sm-8 col-lg-8">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Máy khoan pin Makute
-                                                            CD027</a>
-                                                        </h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.370.000đ  </span>
-                                                            <span class="price-before-discount">1.500.000đ</span></div>
-                                                        <!-- /.product-price -->
-
-                                                        <div class="cart clearfix animate-effect">
-                                                            <div class="action">
-                                                                <ul class="list-unstyled">
-                                                                    <li class="add-cart-button btn-group">
-                                                                        <button class="btn btn-primary icon"
-                                                                                data-toggle="dropdown" type="button"><i
-                                                                                class="fa fa-shopping-cart"></i>
-                                                                        </button>
-                                                                        <button class="btn btn-primary cart-btn"
-                                                                                type="button">Thêm vào giỏ hàng
-                                                                        </button>
-                                                                    </li>
-
-                                                                </ul>
-                                                            </div>
-                                                            <!-- /.action -->
-                                                        </div>
-                                                        <!-- /.cart -->
-
-                                                    </div>
-                                                    <!-- /.product-info -->
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-list-row -->
-
-                                        </div>
-                                        <!-- /.product-list -->
-                                    </div>
-                                    <!-- /.products -->
-                                </div>
-                                <!-- /.category-product-inner -->
-
-                                <div class="category-product-inner wow fadeInUp">
-                                    <div class="products">
-                                        <div class="product-list product">
-                                            <div class="row product-list-row">
-                                                <div class="col col-sm-4 col-lg-4">
-                                                    <div class="product-image">
-                                                        <div class="image"><img src="assets/images/products/p7.jpg"
-                                                                                alt="Ảnh sản phẩm"></div>
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-sm-8 col-lg-8">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Máy khoan bê tông Gomes
-                                                            GB-2603
-                                                        </a>
-                                                        </h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.170.000đ  </span>
-                                                            <span class="price-before-discount">1.390.000đ</span></div>
-                                                        <!-- /.product-price -->
-
-                                                        <div class="cart clearfix animate-effect">
-                                                            <div class="action">
-                                                                <ul class="list-unstyled">
-                                                                    <li class="add-cart-button btn-group">
-                                                                        <button class="btn btn-primary icon"
-                                                                                data-toggle="dropdown" type="button"><i
-                                                                                class="fa fa-shopping-cart"></i>
-                                                                        </button>
-                                                                        <button class="btn btn-primary cart-btn"
-                                                                                type="button">Thêm vào giỏ hàng
-                                                                        </button>
-                                                                    </li>
-
-                                                                </ul>
-                                                            </div>
-                                                            <!-- /.action -->
-                                                        </div>
-                                                        <!-- /.cart -->
-
-                                                    </div>
-                                                    <!-- /.product-info -->
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-list-row -->
-
-                                        </div>
-                                        <!-- /.product-list -->
-                                    </div>
-                                    <!-- /.products -->
-                                </div>
-                                <!-- /.category-product-inner -->
-
-                                <div class="category-product-inner wow fadeInUp">
-                                    <div class="products">
-                                        <div class="product-list product">
-                                            <div class="row product-list-row">
-                                                <div class="col col-sm-4 col-lg-4">
-                                                    <div class="product-image">
-                                                        <div class="image"><img
-                                                                src="assets/images/products/normal/may-khoan-rut-loi-gomes-gcd-120-g.png"
-                                                                alt="Ảnh sản phẩm"></div>
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-sm-8 col-lg-8">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Máy khoan rút lõi Gomes
-                                                            GCD-120
-                                                        </a>
-                                                        </h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.520.000đ  </span>
-                                                            <span class="price-before-discount">1.820.000đ</span></div>
-                                                        <!-- /.product-price -->
-
-                                                        <div class="cart clearfix animate-effect">
-                                                            <div class="action">
-                                                                <ul class="list-unstyled">
-                                                                    <li class="add-cart-button btn-group">
-                                                                        <button class="btn btn-primary icon"
-                                                                                data-toggle="dropdown" type="button"><i
-                                                                                class="fa fa-shopping-cart"></i>
-                                                                        </button>
-                                                                        <button class="btn btn-primary cart-btn"
-                                                                                type="button">Thêm vào giỏ hàng
-                                                                        </button>
-                                                                    </li>
-
-                                                                </ul>
-                                                            </div>
-                                                            <!-- /.action -->
-                                                        </div>
-                                                        <!-- /.cart -->
-
-                                                    </div>
-                                                    <!-- /.product-info -->
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-list-row -->
-
-                                        </div>
-                                        <!-- /.product-list -->
-                                    </div>
-                                    <!-- /.products -->
-                                </div>
-                                <!-- /.category-product-inner -->
-
-                                <div class="category-product-inner wow fadeInUp">
-                                    <div class="products">
-                                        <div class="product-list product">
-                                            <div class="row product-list-row">
-                                                <div class="col col-sm-4 col-lg-4">
-                                                    <div class="product-image">
-                                                        <div class="image"><img
-                                                                src="assets/images/products/normal/may-khoan-dong-luc-makita-m8101b-g.jpg"
-                                                                alt="Ảnh sản phẩm"></div>
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-sm-8 col-lg-8">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Máy khoan động lực Makita
-                                                            M8101B</a>
-                                                        </h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.420.000đ  </span>
-                                                            <span class="price-before-discount">1.800.000đ</span></div>
-                                                        <!-- /.product-price -->
-
-                                                        <div class="cart clearfix animate-effect">
-                                                            <div class="action">
-                                                                <ul class="list-unstyled">
-                                                                    <li class="add-cart-button btn-group">
-                                                                        <button class="btn btn-primary icon"
-                                                                                data-toggle="dropdown" type="button"><i
-                                                                                class="fa fa-shopping-cart"></i>
-                                                                        </button>
-                                                                        <button class="btn btn-primary cart-btn"
-                                                                                type="button">Thêm vào giỏ hàng
-                                                                        </button>
-                                                                    </li>
-
-                                                                </ul>
-                                                            </div>
-                                                            <!-- /.action -->
-                                                        </div>
-                                                        <!-- /.cart -->
-
-                                                    </div>
-                                                    <!-- /.product-info -->
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-list-row -->
-
-                                        </div>
-                                        <!-- /.product-list -->
-                                    </div>
-                                    <!-- /.products -->
-                                </div>
-                                <!-- /.category-product-inner -->
-
-                                <div class="category-product-inner wow fadeInUp">
-                                    <div class="products">
-                                        <div class="product-list product">
-                                            <div class="row product-list-row">
-                                                <div class="col col-sm-4 col-lg-4">
-                                                    <div class="product-image">
-                                                        <div class="image"><img
-                                                                src="assets/images/products/normal/may-khoan-van-vit-dong-luc-dung-pin-stanley-sch20c2k.jpg"
-                                                                alt="Ảnh sản phẩm"></div>
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-sm-8 col-lg-8">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Máy khoan vặn vít động
-                                                            lực dùng pin Stanley SCH20C2K</a>
-                                                        </h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 2.580.000đ   </span>
-                                                            <span class="price-before-discount">2.850.000đ</span></div>
-                                                        <!-- /.product-price -->
-
-                                                        <div class="cart clearfix animate-effect">
-                                                            <div class="action">
-                                                                <ul class="list-unstyled">
-                                                                    <li class="add-cart-button btn-group">
-                                                                        <button class="btn btn-primary icon"
-                                                                                data-toggle="dropdown" type="button"><i
-                                                                                class="fa fa-shopping-cart"></i>
-                                                                        </button>
-                                                                        <button class="btn btn-primary cart-btn"
-                                                                                type="button">Thêm vào giỏ hàng
-                                                                        </button>
-                                                                    </li>
-
-                                                                </ul>
-                                                            </div>
-                                                            <!-- /.action -->
-                                                        </div>
-                                                        <!-- /.cart -->
-
-                                                    </div>
-                                                    <!-- /.product-info -->
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-list-row -->
-
-                                        </div>
-                                        <!-- /.product-list -->
-                                    </div>
-                                    <!-- /.products -->
-                                </div>
-                                <!-- /.category-product-inner -->
-
-                                <div class="category-product-inner wow fadeInUp">
-                                    <div class="products">
-                                        <div class="product-list product">
-                                            <div class="row product-list-row">
-                                                <div class="col col-sm-4 col-lg-4">
-                                                    <div class="product-image">
-                                                        <div class="image"><img
-                                                                src="assets/images/products/best-seller/bo-may-bat-vit-dung-pin-makita-clx228s-g.jpg"
-                                                                alt="Ảnh sản phẩm"></div>
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-sm-8 col-lg-8">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Bộ máy bắt vít dùng pin
-                                                            Makita CLX228S</a>
-                                                        </h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 3.590.000đ   </span>
-                                                            <span class="price-before-discount">4.990.000đ</span></div>
-                                                        <!-- /.product-price -->
-
-                                                        <div class="cart clearfix animate-effect">
-                                                            <div class="action">
-                                                                <ul class="list-unstyled">
-                                                                    <li class="add-cart-button btn-group">
-                                                                        <button class="btn btn-primary icon"
-                                                                                data-toggle="dropdown" type="button"><i
-                                                                                class="fa fa-shopping-cart"></i>
-                                                                        </button>
-                                                                        <button class="btn btn-primary cart-btn"
-                                                                                type="button">Thêm vào giỏ hàng
-                                                                        </button>
-                                                                    </li>
-
-                                                                </ul>
-                                                            </div>
-                                                            <!-- /.action -->
-                                                        </div>
-                                                        <!-- /.cart -->
-
-                                                    </div>
-                                                    <!-- /.product-info -->
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-list-row -->
-
-                                        </div>
-                                        <!-- /.product-list -->
-                                    </div>
-                                    <!-- /.products -->
-                                </div>
-                                <!-- /.category-product-inner -->
-
-                                <div class="category-product-inner wow fadeInUp">
-                                    <div class="products">
-                                        <div class="product-list product">
-                                            <div class="row product-list-row">
-                                                <div class="col col-sm-4 col-lg-4">
-                                                    <div class="product-image">
-                                                        <div class="image"><img
-                                                                src="assets/images/products/best-seller/may-khoan-dong-luc-bosch-gsb-550.jpg"
-                                                                alt="Ảnh sản phẩm"></div>
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-sm-8 col-lg-8">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch
-                                                            GSB 550 - 06011A15K0</a>
-                                                        </h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.050.000đ  </span>
-                                                            <span class="price-before-discount">1.500.000đ</span></div>
-                                                        <!-- /.product-price -->
-
-                                                        <div class="cart clearfix animate-effect">
-                                                            <div class="action">
-                                                                <ul class="list-unstyled">
-                                                                    <li class="add-cart-button btn-group">
-                                                                        <button class="btn btn-primary icon"
-                                                                                data-toggle="dropdown" type="button"><i
-                                                                                class="fa fa-shopping-cart"></i>
-                                                                        </button>
-                                                                        <button class="btn btn-primary cart-btn"
-                                                                                type="button">Thêm vào giỏ hàng
-                                                                        </button>
-                                                                    </li>
-
-                                                                </ul>
-                                                            </div>
-                                                            <!-- /.action -->
-                                                        </div>
-                                                        <!-- /.cart -->
-
-                                                    </div>
-                                                    <!-- /.product-info -->
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-list-row -->
-
-                                        </div>
-                                        <!-- /.product-list -->
-                                    </div>
-                                    <!-- /.products -->
-                                </div>
-                                <!-- /.category-product-inner -->
-
-                                <div class="category-product-inner wow fadeInUp">
-                                    <div class="products">
-                                        <div class="product-list product">
-                                            <div class="row product-list-row">
-                                                <div class="col col-sm-4 col-lg-4">
-                                                    <div class="product-image">
-                                                        <div class="image"><img
-                                                                src="assets/images/products/normal/may-khoan-dong-luc-bosch-gsb-13-re-hop.jpg"
-                                                                alt="Ảnh sản phẩm"></div>
-                                                    </div>
-                                                    <!-- /.product-image -->
-                                                </div>
-                                                <!-- /.col -->
-                                                <div class="col col-sm-8 col-lg-8">
-                                                    <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch
-                                                            GSB 13 RE
-                                                        </a>
-                                                        </h3>
-                                                        <div class="rating rateit-small"></div>
-                                                        <div class="product-price"><span
-                                                                class="price"> 1.890.000đ   </span>
-                                                            <span class="price-before-discount">2.200.000đ</span></div>
-                                                        <!-- /.product-price -->
-
-                                                        <div class="cart clearfix animate-effect">
-                                                            <div class="action">
-                                                                <ul class="list-unstyled">
-                                                                    <li class="add-cart-button btn-group">
-                                                                        <button class="btn btn-primary icon"
-                                                                                data-toggle="dropdown" type="button"><i
-                                                                                class="fa fa-shopping-cart"></i>
-                                                                        </button>
-                                                                        <button class="btn btn-primary cart-btn"
-                                                                                type="button">Thêm vào giỏ hàng
-                                                                        </button>
-                                                                    </li>
-
-                                                                </ul>
-                                                            </div>
-                                                            <!-- /.action -->
-                                                        </div>
-                                                        <!-- /.cart -->
-
-                                                    </div>
-                                                    <!-- /.product-info -->
-                                                </div>
-                                                <!-- /.col -->
-                                            </div>
-                                            <!-- /.product-list-row -->
-
-                                        </div>
-                                        <!-- /.product-list -->
-                                    </div>
-                                    <!-- /.products -->
-                                </div>
-                                <!-- /.category-product-inner -->
-
-
-                                <!-- /.category-product-inner -->
 
                             </div>
-                            <!-- /.category-product -->
+                            <%}%>
+
+
+                            <!-- /.products -->
                         </div>
-                        <!-- /.tab-pane #list-container -->
-                    </div>
-                    <!-- /.tab-content -->
-                    <div class="clearfix filters-container">
-                        <div class="text-right">
-                            <div class="pagination-container">
-                                <ul class="list-inline list-unstyled">
-                                    <li class="prev"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li class="active"><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li class="next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                                </ul>
-                                <!-- /.list-inline -->
-                            </div>
-                            <!-- /.pagination-container --> </div>
-                        <!-- /.text-right -->
 
-                    </div>
+                        <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
+                            <%
+
+                                List<Products> products2 = allProduct.get(2);
+                                for (Products p : products2) {
+                                    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                                    String formattedPrice = currencyFormat.format(p.getUnitPrice() * 1000);
+                                    request.setAttribute("formattedUnitPrice2", formattedPrice);
+                            %>
+                            <div class="products">
+                                <div class="product">
+                                    <div class="product-image">
+                                        <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img
+                                                height="189px" width="189px"
+                                                src="<%=p.getImage()%>"
+                                                alt="Ảnh sản phẩm"></a></div>
+                                        <!-- /.image -->
+
+
+                                    </div>
+                                    <!-- /.product-image -->
+
+                                    <div class="product-info text-left">
+                                        <h3 class="name"><a
+                                                href="detail?productId=<%=p.getProductId()%>"><%=p.getProductName() %>
+                                        </a>
+                                        </h3>
+                                        <div class="rating rateit-small"></div>
+                                        <div class="description"></div>
+                                        <div class="product-price">
+                                            <span class="price"><%= request.getAttribute("formattedUnitPrice2") %></span>
+                                        </div>
+                                        <!-- /.product-price -->
+
+                                    </div>
+                                    <!-- /.product-info -->
+
+                                    <!-- /.cart -->
+                                </div>
+                                <!-- /.product -->
+
+                            </div>
+                            <%}%>
+
+
+                            <!-- /.products -->
+                        </div>
+
+                    </section>
+
+
                     <!-- /.filters-container -->
 
                 </div>
@@ -1874,38 +711,38 @@
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <div class="social-button">
     <div class="social-button-content">
-      <a href="tel:0353933224" class="call-icon" rel="nofollow">
-        <i class="fa fa-whatsapp" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Hotline: 035 393 3224</span>
-      </a>
-      <a href="sms:0353933224" class="sms">
-        <i class="fa fa-weixin" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>SMS: 035 393 3224</span>
-      </a>
-      <a href="https://www.facebook.com/Ngocthang.net/" class="mes">
-        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Nhắn tin Facebook</span>
-      </a>
-      <a href="http://zalo.me/0353933224" class="zalo">
-        <i class="fa fa-commenting-o" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Zalo: 035.393.3224</span>
-      </a>
+        <a href="tel:0353933224" class="call-icon" rel="nofollow">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Hotline: 035 393 3224</span>
+        </a>
+        <a href="sms:0353933224" class="sms">
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>SMS: 035 393 3224</span>
+        </a>
+        <a href="https://www.facebook.com/Ngocthang.net/" class="mes">
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Nhắn tin Facebook</span>
+        </a>
+        <a href="http://zalo.me/0353933224" class="zalo">
+            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Zalo: 035.393.3224</span>
+        </a>
     </div>
     <a href="#" class="user-support">
-      <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
-      <div class="animated alo-circle"></div>
-      <div class="animated alo-circle-fill"></div>
+        <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+        <div class="animated alo-circle"></div>
+        <div class="animated alo-circle-fill"></div>
     </a>
-  </div>
-  
+</div>
+
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <!-- ============================================================= Backtop ============================================================= -->
 <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class=" icon fa    fa-arrow-up"></i></button>

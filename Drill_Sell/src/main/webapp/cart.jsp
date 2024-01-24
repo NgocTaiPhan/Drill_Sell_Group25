@@ -1,15 +1,30 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="assets/images/logo.png" type="image/png">
-    <title>Quản trị</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-    <!-- Customizable CSS ================================================================================-->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+
+    <!-- Customizable CSS -->
+    <link rel="stylesheet" href="assets\css\main.css">
+    <!-- Icons/Glyphs -->
+    <link rel="stylesheet" href="assets\css\font-awesome.css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets\css\StyleCard.css">
 
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/blue.css">
@@ -35,17 +50,16 @@
     <script src="assets/js/my-js/footermenu.js"></script>
 
 
-    <!-- Icons/Glyphs ==============================================================================================-->
-    <link rel="stylesheet" href="assets/css/font-awesome.css">
-
-    <!-- Fonts =========================================================================================================-->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800'
-          rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Modernizr js -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body>
 
+<body>
+<!-- ============================================== HEADER ============================================== -->
 <header class="header-style-1 ">
 
     <!-- ============================================== TOP MENU ============================================== -->
@@ -55,10 +69,10 @@
                 <div class="cnt-account">
                     <ul class="list-unstyled">
 
-                        <li><a href="account.html"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                        <li><a href="card.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="oder.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                        <li><a href="login.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
+                        <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
+                        <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
 
@@ -78,7 +92,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
                     <link rel="stylesheet" href="assets/css/my-css/logo-page.css">
-                    <div class="logo-page"><a href="home.html"> <img
+                    <div class="logo-page"><a href="home.jsp"> <img
                             src="assets/images/logo.png" alt="logo"
                     > </a></div>
 
@@ -124,7 +138,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 
-                    <div class="dropdown dropdown-cart"><a href="#" class="dropdown-toggle lnk-cart"
+                    <div class="dropdown dropdown-cart"><a href="detail.jsp" class="dropdown-toggle lnk-cart"
                                                            data-toggle="dropdown">
                         <div class="items-cart-inner">
                             <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
@@ -137,16 +151,17 @@
                                 <div class="cart-item product-summary">
                                     <div class="row">
                                         <div class="col-xs-4">
-                                            <div class="image"><a href="#"><img
+                                            <div class="image"><a href="detail.jsp"><img
                                                     src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
                                                     alt="Ảnh sản phẩm"></a></div>
                                         </div>
                                         <div class="col-xs-7">
-                                            <h3 class="name"><a href="">Máy khoan động lực Bosch GSB 16 RE -
+                                            <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB 16 RE -
                                                 06012281K1</a></h3>
                                             <div class="price">1.599.000đ</div>
                                         </div>
-                                        <div class="col-xs-1 action"><a href="#"><i class="fa fa-trash"></i></a></div>
+                                        <div class="col-xs-1 action"><a href="detail.jsp"><i
+                                                class="fa fa-trash"></i></a></div>
                                     </div>
                                 </div>
                                 <!-- /.cart-item -->
@@ -156,7 +171,7 @@
                                     <div class="pull-right"><span class="text">Tổng tiền :</span><span class='price'>1.599.000đ</span>
                                     </div>
                                     <div class="clearfix"></div>
-                                    <a href="oder.html" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
+                                    <a href="oder.jsp" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
                                         toán</a>
                                 </div>
                                 <!-- /.cart-total-->
@@ -184,7 +199,7 @@
         <div class="container">
             <div class="yamm navbar navbar-default" role="navigation">
                 <!--                <div class="navbar-header">-->
-                <!--                    <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse"-->
+                <!--                    <button data-target="detail.htmlmc-horizontal-menu-collapse" data-toggle="collapse"-->
                 <!--                            class="navbar-toggle collapsed"-->
                 <!--                            type="button">-->
                 <!--                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span-->
@@ -242,174 +257,90 @@
     <!-- ============================================== NAVBAR : END ============================================== -->
 
 </header>
-<div class="body-content outer-top-xs" id="top-banner-and-menu" style="font-size: medium">
+
+<div class="breadcrumb-area">
     <div class="container">
-        <div class="row">
-            <div class="product-tabs inner-bottom-xs  wow fadeInUp">
-                <div class="row">
-                    <div class="col-sm-3" style="white-space: nowrap">
-                        <ul id="product-tabs" class="nav nav-tabs nav-tab-cell">
-                            <li class="active"><a data-toggle="tab" href="#users-management">Quản lý người dùng</a></li>
-                            <li><a data-toggle="tab" href="#products-management">Quản lý sản phẩm</a>
-                            </li>
-                            <li><a data-toggle="tab" href="#statistics">Doanh thu</a></li>
-                        </ul><!-- /.nav-tabs #product-tabs -->
-                    </div>
-                    <div class="col-sm-9">
-
-                        <div class="tab-content">
-
-                            <div id="users-management" class="tab-pane in active">
-                                <div class="product-tab">
-                                    <div class="container">
-
-
-                                        <table class="table table-bordered ">
-                                            <thead style="text-align: center">
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Tên người dùng</th>
-                                                <th>Email</th>
-                                                <th>Hành động</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>John</td>
-                                                <td>example@gmail.com</td>
-                                                <td>
-                                                    <button class="btn btn-danger">Xóa</button>
-                                                    <button class="btn btn-primary">Sửa</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Mary</td>
-                                                <td>example@gmail.com</td>
-                                                <td>
-                                                    <button class="btn btn-danger">Xóa</button>
-                                                    <button class="btn btn-primary">Sửa</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>July</td>
-                                                <td>example@gmail.com</td>
-                                                <td>
-                                                    <button class="btn btn-danger">Xóa</button>
-                                                    <button class="btn btn-primary">Sửa</button>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-
-                                    </div>
-                                </div>
-                            </div><!-- /.tab-pane -->
-
-                            <div id="products-management" class="tab-pane">
-                                <div class="product-tab container">
-
-                                    <table class="table table-bordered  " style="white-space: nowrap">
-                                        <thead>
-                                        <tr>
-                                            <th>Mã sản phẩm</th>
-                                            <th>Tên sản phẩm</th>
-                                            <th>Ngày nhập</th>
-                                            <th>Số lượng đã bán</th>
-                                            <th>Số lượng còn lại</th>
-                                            <th>Hành động</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Máy khoan động lực Bosch GSB 16 RE
-                                                -06012281K1
-                                            </td>
-                                            <td>01/01/2023</td>
-                                            <td>10</td>
-                                            <td>20</td>
-                                            <td>
-                                                <button class="btn btn-danger">Xóa</button>
-                                                <button class="btn btn-primary">Sửa</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Pin Bosch 12V 2.0Ah 1600A00F6X (1607A350C5)</td>
-                                            <td>01/01/2023</td>
-                                            <td>10</td>
-                                            <td>20</td>
-                                            <td>
-                                                <button class="btn btn-danger">Xóa</button>
-                                                <button class="btn btn-primary">Sửa</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Máy khoan vặn vít dùng pin 12V
-                                                Bosch GSR 120-LI GEN II
-                                            </td>
-                                            <td>01/01/2023</td>
-                                            <td>10</td>
-                                            <td>20</td>
-                                            <td>
-                                                <button class="btn btn-danger">Xóa</button>
-                                                <button class="btn btn-primary">Sửa</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tổng</td>
-                                            <td>3</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>
-                                                <a class="btn btn-danger" href="admin/insert-products.jsp">Thêm sản
-                                                    phẩm</a>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-
-                                </div><!-- /.product-tab -->
-                            </div><!-- /.tab-pane -->
-
-                            <div id="statistics" class="tab-pane">
-                                <div class="product-tag container">
-
-                                    <table class="table table-bordered ">
-                                        <thead>
-                                        <tr>
-                                            <th>Số lượng bán ra</th>
-                                            <th>Tổng doan thu</th>
-
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-
-                                        <tr>
-                                            <td>100</td>
-                                            <td>10.000.000đ</td>
-
-                                        </tr>
-                                        </tbody>
-                                    </table>
-
-                                </div><!-- /.product-tab -->
-                            </div><!-- /.tab-pane -->
-
-                        </div><!-- /.tab-content -->
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div>
-
+        <div class="breadcrumb-content">
+            <ul>
+                <li><a href="home.jsp">Trang chủ</a></li>
+                <li class="active">Giỏ hàng</li>
+            </ul>
         </div>
     </div>
 </div>
+<!-- Li's Breadcrumb Area End Here -->
+<!--Shopping Cart Area Strat-->
+<div class="body-content outer-top-xs" id="top-banner-and-menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="#">
+                    <div class="table-content table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th class="li-product-remove">Xóa</th>
+                                <th class="li-product-sub">Chọn</th>
+                                <th class="li-product-thumbnail">Hình ảnh</th>
+                                <th class="cart-product-name">Thông tin</th>
+                                <th class="li-product-price">Đơn Gía</th>
+                                <th class="li-product-quantity">Số lượng</th>
+                                <th class="li-product-subtotal">Thành tiền</th>
+                            </tr>
+                            </thead>
+                            <tbody>
 
+                            <tr>
+                                <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
+                                <td class="sub"><input type="checkbox"></td>
+                                <td class="li-product-thumbnail"><a href="#"><img
+                                        src="assets/images/shoppingCart/dau-khoan-co-khoa-13mm-bosch-2608571079-g.jpg"
+                                        alt="Li's Product Image"></a></td>
+                                <td class="li-product-name"><a href="#"> </a></td>
+                                <td class="li-product-price"><span class="amount"></span></td>
+                                <td class="quantity">
+                                    <div class="cart-plus-minus">
+                                        <input class="cart-plus-minus-box" value="1" type="number" oninput="validateQuantity(this)" >
+                                    </div>
+                                </td>
+
+                                <script>
+                                    function validateQuantity(input) {
+                                        // Chuyển giá trị thành số nguyên
+                                        var quantity = parseInt(input.value, 10);
+
+                                        // Kiểm tra nếu giá trị là NaN hoặc nhỏ hơn 1
+                                        if (isNaN(quantity) || quantity < 1) {
+                                            // Đặt giá trị về 1
+                                            input.value = 1;
+                                        }
+                                    }
+                                </script>
+
+
+                                <td class="product-subtotal"><span class="amount">5</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="rows">
+                        <div class="col-md-5 ml-auto">
+                            <div class="cart-page-total">
+<!--                                <h2>Thanh toán</h2>-->
+<!--                                <ul>-->
+<!--                                    <li>Đơn giá <span>968.000 VND</span></li>-->
+<!--                                    <li>Tổng tiền <span>968.000 VND</span></li>-->
+<!--                                </ul>-->
+                                <a class="checkOut" href="oder.jsp">Thanh toán</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <div class="social-button">
     <div class="social-button-content">
@@ -450,5 +381,6 @@
 <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class=" icon fa    fa-arrow-up"></i></button>
 <link rel="stylesheet" href="assets/css/my-css/backtop.css">
 <script src="assets/js/my-js/backtop.js"></script>
+
 </body>
 </html>

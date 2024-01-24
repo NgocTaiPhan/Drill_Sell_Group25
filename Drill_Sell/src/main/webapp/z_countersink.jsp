@@ -58,7 +58,7 @@
                         <ul class="list-unstyled">
     
                             <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                            <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                            <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
                             <li><a href="oder.jsp.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                             <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                         </ul>
@@ -93,30 +93,34 @@
                         <h1 class="name">MÁY KHOAN</h1>
     
                     </div>
-    
+
                     <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder">
                         <!-- /.contact-row -->
                         <!-- ============================================================= SEARCH AREA ============================================================= -->
                         <div class="search-area">
-                            <form>
+                            <form action="seachProduct" method="get">
                                 <div class="control-group dropdown">
-    
-                                    <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
-                                           placeholder="Tìm kiếm...">
-                                    <a class="search-button" href="#"></a>
-    
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Máy khoan động lực Bosch GSB 16 RE -
-                                            06012281K1</a></li>
-                                        <li><a href="#">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
-                                        <li><a href="#">Máy khoan pin Makute CD027</a></li>
-                                    </ul>
+                                    <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
+                                    <a style="height: 44.5px;" class="search-button" href="#" onclick="searchProduct(event)"></a>
+
+
                                 </div>
                             </form>
+
                         </div>
                         <!-- /.search-area -->
                         <!-- ============================================================= SEARCH AREA : END ============================================================= -->
                     </div>
+                    <!-- /.top-search-holder -->
+                    <script>
+                        function searchProduct(event) {
+                            event.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
+                            var keyword = document.getElementById("searchInput").value;
+
+                            // Chuyển hướng đến trang seachProduct.jsp với tham số tìm kiếm
+                            window.location.href = "seachProduct?name=" + encodeURIComponent(keyword);
+                        }
+                    </script>
                     <!-- /.top-search-holder -->
     
                     <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
@@ -194,22 +198,23 @@
                             <div class="nav-outer">
                                 <ul class="nav navbar-nav">
                                     <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
-                                    <li class="active  yamm-fw"><a href="product.jsp">Sản phẩm</a></li>
+                                    <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product" methods="post"></i>Sản phẩm</a></li>
                                     <li class="dropdown active  ">
                                         <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                         <ul class="dropdown-menu ">
+
                                             <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
-    
+
                                             </li>
                                             <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
-    
+
                                             </li>
 
                                             <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy khoan cầm tay gia đình</a>
-    
+
                                             </li>
                                             <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy khoan mini</a>
-    
+
                                             </li>
                                             <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
 
@@ -217,8 +222,8 @@
                                         </ul>
                                     </li>
                                     <li class="active  yamm-fw"><a href="contact.jsp">Liên hệ</a></li>
-    
-    
+
+
                                 </ul>
                                 <!-- /.navbar-nav -->
                                 <div class="clearfix"></div>
@@ -300,7 +305,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.jsp"> <img
+                                                        <div class="image"><a href="detail?productId=<%=p.getProductId()%>"> <img
                                                                 src="<%=p.getImage()%>"
                                                                 alt="Ảnh sản phẩm"></a>
                                                         </div>
@@ -312,7 +317,7 @@
                                                 <!-- /.col -->
                                                 <div class="col col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>
+                                                        <h3 class="name"><a href="detail?productId=<%=p.getProductId()%>"> <%=p.getProductName() %></a>
                                                         </h3>
                                                         <div class="rating rateit-small"></div>
                                                         <div class="product-price">
@@ -413,14 +418,14 @@
                         <div class="products">
                             <div class="product">
                                 <div class="product-image">
-                                    <div class="image"><a href="detail.jsp"><img height="189px" width="189px"
+                                    <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img height="189px" width="189px"
                                                                                  src="<%= p.getImage()%>"
                                                                                  alt="Ảnh sản phẩm"></a></div>
                                     <!-- /.image -->
                                 </div>
                                 <!-- /.product-image -->
                                 <div class="product-info text-left">
-                                    <h3 class="name"><a href="detail.jsp"> <%=p.getProductName()%></a>
+                                    <h3 class="name"><a href="detail?productId=<%=p.getProductId()%>"> <%=p.getProductName()%></a>
                                     </h3>
                                     <div class="rating rateit-small"></div>
                                     <div class="description"></div>
@@ -450,7 +455,7 @@
                         <div class="products">
                             <div class="product">
                                 <div class="product-image">
-                                    <div class="image"><a href="detail.jsp"><img height="189px" width="189px"
+                                    <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img height="189px" width="189px"
                                                                                  src="<%=p.getImage()%>"
                                                                                  alt="Ảnh sản phẩm"></a></div>
                                     <!-- /.image -->
@@ -460,7 +465,7 @@
                                 <!-- /.product-image -->
 
                                 <div class="product-info text-left">
-                                    <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>
+                                    <h3 class="name"><a href="detail?productId=<%=p.getProductId()%>"> <%=p.getProductName() %></a>
                                     </h3>
                                     <div class="rating rateit-small"></div>
                                     <div class="description"></div>
@@ -495,7 +500,7 @@
                         <div class="products">
                             <div class="product">
                                 <div class="product-image">
-                                    <div class="image"><a href="detail.jsp"><img height="189px" width="189px"
+                                    <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img height="189px" width="189px"
                                                                                  src="<%=p.getImage()%>"
                                                                                  alt="Ảnh sản phẩm"></a></div>
                                     <!-- /.image -->
@@ -505,7 +510,7 @@
                                 <!-- /.product-image -->
 
                                 <div class="product-info text-left">
-                                    <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>
+                                    <h3 class="name"><a href="detail?productId=<%=p.getProductId()%>"> <%=p.getProductName() %></a>
                                     </h3>
                                     <div class="rating rateit-small"></div>
                                     <div class="description"></div>
@@ -539,7 +544,7 @@
                         <div class="products">
                             <div class="product">
                                 <div class="product-image">
-                                    <div class="image"><a href="detail.jsp"><img height="189px" width="189px"
+                                    <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img height="189px" width="189px"
                                                                                  src="<%=p.getImage()%>"
                                                                                  alt="Ảnh sản phẩm"></a></div>
                                     <!-- /.image -->
@@ -549,7 +554,7 @@
                                 <!-- /.product-image -->
 
                                 <div class="product-info text-left">
-                                    <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>
+                                    <h3 class="name"><a href="detail?productId=<%=p.getProductId()%>"> <%=p.getProductName() %></a>
                                     </h3>
                                     <div class="rating rateit-small"></div>
                                     <div class="description"></div>

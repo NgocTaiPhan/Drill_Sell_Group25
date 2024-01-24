@@ -54,7 +54,7 @@
     <!-- ============================================== TOP MENU ============================================== -->
 
     <%
-        List<List<Products>> allProduct = (List<List<Products>>) request.getAttribute("loadProduct");
+        List<Products> searchResults = (List<Products>) request.getAttribute("loadProduct");
     %>
     <div class="top-bar animate-dropdown">
         <div class="container">
@@ -63,7 +63,7 @@
                     <ul class="list-unstyled">
 
                         <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                        <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
                         <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
@@ -103,25 +103,29 @@
                     <!-- /.contact-row -->
                     <!-- ============================================================= SEARCH AREA ============================================================= -->
                     <div class="search-area">
-                        <form>
+                        <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
+                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
+                                <a style="height: 44.5px;" class="search-button" href="#" onclick="searchProduct(event)"></a>
 
-                                <input class="search-field dropdown-toggle" data-toggle="dropdown" id="search"
-                                       placeholder="Tìm kiếm...">
-                                <a class="search-button" href="detail.html"></a>
 
-                                <ul class="dropdown-menu">
-                                    <li><a href="detail.jsp">Máy khoan động lực Bosch GSB 16 RE -
-                                        06012281K1</a></li>
-                                    <li><a href="detail.jsp">Máy khoan bê tông 26mm FEG EG-2601 SRE</a></li>
-                                    <li><a href="detail.jsp">Máy khoan pin Makute CD027</a></li>
-                                </ul>
                             </div>
                         </form>
+
                     </div>
                     <!-- /.search-area -->
                     <!-- ============================================================= SEARCH AREA : END ============================================================= -->
                 </div>
+                <!-- /.top-search-holder -->
+                <script>
+                    function searchProduct(event) {
+                        event.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
+                        var keyword = document.getElementById("searchInput").value;
+
+                        // Chuyển hướng đến trang seachProduct.jsp với tham số tìm kiếm
+                        window.location.href = "seachProduct?name=" + encodeURIComponent(keyword);
+                    }
+                </script>
                 <!-- /.top-search-holder -->
 
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
@@ -199,30 +203,25 @@
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
-                                <li class="active  yamm-fw"><a href="product.jsp">Sản phẩm</a></li>
+                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product" methods="post"></i>Sản phẩm</a></li>
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
 
-                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>
-                                            Máy khoan pin</a>
+                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy
-                                            khoan động lực</a>
+                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
 
                                         </li>
 
-                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy
-                                            khoan cầm tay gia đình</a>
+                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy khoan cầm tay gia đình</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy
-                                            khoan mini</a>
+                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy khoan mini</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>
-                                            Máy khoan bê tông, Máy khoan búa</a>
+                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
                                     </ul>
@@ -255,7 +254,7 @@
         <div class="breadcrumb-inner">
             <ul class="list-inline list-unstyled">
                 <li><a href="home.jsp">Trang chủ / Máy Khoan</a></li>
-                <li class='active'>Máy Khoan Pin</li>
+                <li class='active'>Sản phẩm</li>
             </ul>
         </div><!-- /.breadcrumb-inner -->
     </div><!-- /.container -->
@@ -314,72 +313,7 @@
                     <!-- /.megamenu-horizontal -->
                 </div>
                 <!-- /.side-menu -->
-                <!-- ================================== TOP NAVIGATION : END ================================== -->
 
-
-                <!-- ============================================== SPECIAL DEALS ============================================== -->
-
-                <%--                <div class="sidebar-widget outer-bottom-small wow fadeInUp">--%>
-                <%--                    <h3 class="section-title">Ưu đãi dành cho máy khoang pin</h3>--%>
-                <%--                    <div class="sidebar-widget-body outer-top-xs">--%>
-                <%--                        <div class="owl-carousel sidebar-carousel special-offer custom-carousel owl-theme outer-top-xs">--%>
-
-                <%--                            <div class="item">--%>
-                <%--                                <div class="products special-product">--%>
-                <%--                                 <%       List<Products> products4 = allProduct.get(3);--%>
-                <%--                                        for (Products p : products4) {--%>
-                <%--                                            NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));--%>
-                <%--                                            String formattedPrice = currencyFormat.format(p.getUnitPrice()*1000);--%>
-                <%--                                            request.setAttribute("formattedUnitPrice", formattedPrice);--%>
-                <%--                                    %>--%>
-                <%--                                    <div class="product">--%>
-                <%--                                        <div class="product-micro">--%>
-                <%--                                            <div class="row product-micro-row">--%>
-                <%--                                                <div class="col col-xs-5">--%>
-                <%--                                                    <div class="product-image">--%>
-                <%--                                                        <div class="image"><a href="detail.jsp"> <img--%>
-                <%--                                                                src="<%=p.getImage()%>"--%>
-                <%--                                                                alt="Ảnh sản phẩm"></a>--%>
-                <%--                                                        </div>--%>
-                <%--                                                        <!-- /.image -->--%>
-
-                <%--                                                    </div>--%>
-                <%--                                                    <!-- /.product-image -->--%>
-                <%--                                                </div>--%>
-                <%--                                                <!-- /.col -->--%>
-                <%--                                                <div class="col col-xs-7">--%>
-                <%--                                                    <div class="product-info">--%>
-                <%--                                                        <h3 class="name"><a href="detail.jsp"> <%=p.getProductName() %></a>--%>
-                <%--                                                        </h3>--%>
-                <%--                                                        <div class="rating rateit-small"></div>--%>
-                <%--                                                        <div class="product-price">--%>
-                <%--                                                            <span class="price"><%= request.getAttribute("formattedUnitPrice") %></span>--%>
-                <%--                                                        </div>--%>
-                <%--                                                        <!-- /.product-price -->--%>
-
-                <%--                                                    </div>--%>
-                <%--                                                </div>--%>
-                <%--                                                <!-- /.col -->--%>
-                <%--                                            </div>--%>
-                <%--                                            <!-- /.product-micro-row -->--%>
-                <%--                                        </div>--%>
-                <%--                                        <!-- /.product-micro -->--%>
-
-                <%--                                    </div>--%>
-                <%--                                    <%}%>--%>
-
-
-                <%--                                </div>--%>
-                <%--                            </div>--%>
-
-                <%--                        </div>--%>
-                <%--                    </div>--%>
-                <%--                    <!-- /.sidebar-widget-body -->--%>
-                <%--                </div>--%>
-                <!-- /.sidebar-widget -->
-                <!-- ============================================== SPECIAL DEALS : END ============================================== -->
-
-                <!-- ============================================== PRODUCT TAGS ============================================== -->
                 <div class="sidebar-widget product-tag wow fadeInUp">
                     <h3 class="section-title">Nhà sản xuất</h3>
                     <div class="sidebar-widget-body outer-top-xs">
@@ -450,31 +384,26 @@
                     <h3 class="section-title">Sản phẩm</h3>
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">
                         <%
-                            List<Products> searchResults = null;
                             int productsPerRow = 4;
-
-                            if (allProduct != null && !allProduct.isEmpty()) {
-                                searchResults = allProduct.get(0);
-
+                            if (searchResults != null && !searchResults.isEmpty()) {
                                 for (int i = 0; i < searchResults.size(); i++) {
                                     Products p = searchResults.get(i);
                                     NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
                                     String formattedPrice = currencyFormat.format(p.getUnitPrice() * 1000);
-                                    request.setAttribute("formattedUnitPrice", formattedPrice);
                         %>
                         <div class="product">
                             <div class="product-image">
-                                <div class="image"><a href="detail.jsp"><img height="189px" width="189px" src="<%=p.getImage()%>" alt="Ảnh sản phẩm"></a></div>
+                                <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img height="189px" width="189px" src="<%=p.getImage()%>" alt="Ảnh sản phẩm"></a></div>
                                 <!-- /.image -->
                             </div>
                             <!-- /.product-image -->
 
                             <div class="product-info text-left">
-                                <h3 class="name"><a href="detail.jsp"><%=p.getProductName()%></a></h3>
+                                <h3 class="name"><a href="detail?productId=<%=p.getProductId()%>"><%=p.getProductName()%></a></h3>
                                 <div class="rating rateit-small"></div>
                                 <div class="description"></div>
                                 <div class="product-price">
-                                    <span class="price"><%=request.getAttribute("formattedUnitPrice")%></span>
+                                    <span  class="price"> <%=formattedPrice%></span>
                                 </div>
                                 <!-- /.product-price -->
                             </div>
@@ -495,16 +424,14 @@
                     </div>
                 </section>
 
-                <!-- ============================================== CONTENT : END ============================================== -->
             </div>
 
 
         </div>
-        <!-- /.container -->
+     
     </div>
-    <!-- /#top-banner-and-menu -->
 
-    <!-- ============================================================= FOOTER ============================================================= -->
+
     <footer id="footer" class="footer color-bg">
         <div class="footer-bottom">
             <div class="container">

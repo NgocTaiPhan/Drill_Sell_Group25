@@ -1,4 +1,4 @@
-﻿<%@ page import="vn.edu.hcmuaf.bean.Products" %>
+<%@ page import="vn.edu.hcmuaf.bean.Products" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.text.NumberFormat" %>
 <%@ page import="java.util.Locale" %>
