@@ -15,13 +15,18 @@ User {
             phone,
             email,
             username,
-            password,
+            passwords,
             sex,
             yearOfBirth;
 
 
 
     public User() {
+    }
+
+    public User(String username, String passwords) {
+        this.username = username;
+        this.passwords = passwords;
     }
 
     public User(int id, String fullname, String address, String phone, String email, String username, String password, String sex, String yearOfBirth, int boxsell) {
@@ -31,7 +36,18 @@ User {
         this.phone = phone;
         this.email = email;
         this.username = username;
-        this.password = password;
+        this.passwords = passwords;
+        this.sex = sex;
+        this.yearOfBirth = yearOfBirth;
+    }
+
+    public User(String fullname, String address, String phone, String email, String username, String passwords, String sex, String yearOfBirth) {
+        this.fullname = fullname;
+        this.address = address;
+        this.phone = phone;
+        this.email = email;
+        this.username = username;
+        this.passwords = passwords;
         this.sex = sex;
         this.yearOfBirth = yearOfBirth;
         this.boxsell = boxsell;
@@ -85,12 +101,12 @@ User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPasswords() {
+        return passwords;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPasswords(String passwords) {
+        this.passwords = passwords;
     }
 
     public String getSex() {
@@ -126,7 +142,7 @@ User {
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
                 ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
+                ", password='" + passwords + '\'' +
                 ", sex='" + sex + '\'' +
                 ", yearOfBirth='" + yearOfBirth + '\'' +
                 '}';
@@ -134,7 +150,7 @@ User {
 
 
     public static void main(String[] args) {
-        List<User> users =  DbController.me().get().withHandle(handle -> {
+        List<User> users = DbController.me().get().withHandle(handle -> {
             return handle.createQuery("select users.username from users ").mapToBean(User.class).collect(Collectors.toList());
         });
 
