@@ -1,12 +1,10 @@
 package vn.edu.hcmuaf.controller;
 
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import vn.edu.hcmuaf.bean.User;
-import vn.edu.hcmuaf.service.Productdown;
-import vn.edu.hcmuaf.service.UserService;
+
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
