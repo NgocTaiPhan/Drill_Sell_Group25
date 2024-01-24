@@ -64,7 +64,7 @@
                         <li><a href="account.jsp"><i class="icon fa fa-user"></i><%=u.getFullname()%></a></li>
                         <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
                         <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                        <li><a href="account.jsp"><i class="icon fa fa-arrow-circle-o-right"></i>Đăng xuất</a></li>
+                        <li><a href="<%=request.getContextPath()%>/logout"><i class="icon fa fa-arrow-circle-o-right"></i>Đăng xuất</a></li>
                         <%} else {%>
 
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
