@@ -5,6 +5,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="vn.edu.hcmuaf.service.ProductService" %>
 <%@ page import="vn.edu.hcmuaf.controller.HomeController" %>
+<%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
@@ -12,6 +13,8 @@
 
     HomeController homeCtroller = new HomeController();
     List<List<Products>> showProducts = homeCtroller.getAllProducts();
+
+    User u = (User) session.getAttribute("auth");
 
 
 %>
@@ -72,11 +75,17 @@
             <div class="header-top-inner">
                 <div class="cnt-account">
                     <ul class="list-unstyled">
-
-                        <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
+                        <%if (u != null) { %>
+                        <li><a href="account.jsp"><i class="icon fa fa-user"></i><%=u.getFullname()%>
+                        </a></li>
                         <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
                         <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="<%=request.getContextPath()%>/logout"><i
+                                class="icon fa fa-arrow-circle-o-right"></i>Đăng xuất</a></li>
+                        <%} else {%>
+
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
+                        <%}%>
                     </ul>
                 </div>
 
@@ -116,8 +125,10 @@
                     <div class="search-area">
                         <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
-                                <input class="search-field dropdown-toggle" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
-                                <a style="height: 44.5px;" class="search-button" href="#" onclick="this.parentNode.submit()"></a>
+                                <input class="search-field dropdown-toggle" data-toggle="dropdown" name="name"
+                                       placeholder="Tìm kiếm...">
+                                <a style="height: 44.5px;" class="search-button" href="#"
+                                   onclick="this.parentNode.submit()"></a>
                             </div>
                         </form>
 
@@ -1094,8 +1105,6 @@
 <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class=" icon fa    fa-arrow-up"></i></button>
 <link rel="stylesheet" href="assets/css/my-css/backtop.css">
 <script src="assets/js/my-js/backtop.js"></script>
-
-
 
 
 </body>
