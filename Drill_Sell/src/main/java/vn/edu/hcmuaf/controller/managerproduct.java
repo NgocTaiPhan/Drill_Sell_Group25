@@ -23,7 +23,7 @@ public class  managerproduct extends HttpServlet {
         String username = request.getParameter("username-login");
         String password = request.getParameter("pass-login");
 
-        User user = UserService.getInstance().checkLogin(username, password);
+        User user = UserService.getInstance().getUser(username, password);
 
         if (user != null) {
             int Id = user.getboxsell();
