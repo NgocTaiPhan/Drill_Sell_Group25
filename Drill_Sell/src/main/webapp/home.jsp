@@ -7,6 +7,11 @@
 <%@ page import="vn.edu.hcmuaf.controller.HomeController" %>
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="vn.edu.hcmuaf.bean.User, vn.edu.hcmuaf.bean.Products" %>
+<%@ page import="vn.edu.hcmuaf.controller.HomeController" %>
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%@ page import="java.io.PrintWriter" %>
+
 
 <%
 
@@ -242,7 +247,28 @@
                                 <li class="active  yamm-fw"><a href="contact.jsp">Liên hệ</a></li>
 
 
-                                <li class="active  yamm-fw"><a href="manager">quản lí sp</a></li>
+
+                                <li class="active yamm-fw"><a href="managerproduct.jsp">quản lí sp</a></li>
+
+<%--                                <%--%>
+
+<%--                                    User user = (User) session.getAttribute("kh");--%>
+<%--                                    if (user != null) {--%>
+
+<%--                                                System.out.println("boxsell: " + user.getboxsell());--%>
+<%--                                                System.out.println("username: " + user.getUsername());--%>
+
+<%--                                                if (user.getboxsell() != 0 && user.getUsername() != null) {--%>
+<%--                                %>--%>
+<%--                                <li class="active yamm-fw"><a href="manager">quản lí sp</a></li>--%>
+<%--                                <%--%>
+<%--                                                }--%>
+<%--                                            }--%>
+
+<%--                                %>--%>
+
+
+
 
                             </ul>
                             <!-- /.navbar-nav -->

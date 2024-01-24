@@ -11,7 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="icon" href="assets/images/logo.png" type="image/png">
 
-    <title>Giỏ hàng</title>
+
+    <title>Thêm sp</title>
     <link rel="stylesheet" href="assets\css\bootstrap.min.css">
 
     <!-- Customizable CSS -->
@@ -48,6 +49,8 @@
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/my-js/footermenu.js"></script>
+    <%@ page import="vn.edu.hcmuaf.bean.Product" %>
+    <%@ page import="java.util.List" %>
 
 
     <!-- Main Style CSS -->
@@ -112,8 +115,10 @@
                     <div class="search-area">
                         <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
-                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
-                                <a style="height: 44.5px;" class="search-button" href="#" onclick="searchProduct(event)"></a>
+                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown"
+                                       name="name" placeholder="Tìm kiếm...">
+                                <a style="height: 44.5px;" class="search-button" href="#"
+                                   onclick="searchProduct(event)"></a>
 
 
                             </div>
@@ -211,25 +216,31 @@
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
-                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product" methods="post"></i>Sản phẩm</a></li>
+                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product"
+                                                               methods="post"></i>Sản phẩm</a></li>
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
 
-                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
+                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>
+                                            Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
+                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy
+                                            khoan động lực</a>
 
                                         </li>
 
-                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy khoan cầm tay gia đình</a>
+                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy
+                                            khoan cầm tay gia đình</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy khoan mini</a>
+                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy
+                                            khoan mini</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
+                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>
+                                            Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
                                     </ul>
@@ -269,65 +280,194 @@
     </div>
 </div>
 <!-- Li's Breadcrumb Area End Here -->
-<!--Shopping Cart Area Strat-->
-<div class="body-content outer-top-xs" id="top-banner-and-menu">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <form action="manager">
-                    <div class="table-content table-responsive">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th class="li-product-remove">Xóa</th>
-                                <th class="li-product-sub">Chọn</th>
-                                <th class="li-product-thumbnail">Hình ảnh</th>
-                                <th class="cart-product-name">Thông tin</th>
-                                <th class="li-product-price">Đơn Gía</th>
-                                <th class="li-product-quantity">Số lượng</th>
-                                <th class="li-product-subtotal">Thành tiền</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <c:forEach var="item" items="${listSP}">
-                                <tr>
-                                    <td class="li-product-remove">
-                                        <a href="delete?did=${item.getMaLoai()}">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                    </td>
-                                    <td class="sub">
-                                        <input type="checkbox">
-                                    </td>
-                                    <td class="li-product-thumbnail">
-                                        <a href="#">
-                                            <img src="img/cart/${item.getImg()}.jpg" alt="Li's Product Image">
-                                        </a>
-                                    </td>
-                                    <td class="li-product-name">
-                                        <a href="#">${item.getTenLoai()}</a>
-                                    </td>
-                                    <td class="li-product-price">
-                                        <span class="amount">$${item.getGiaBan()}</span>
-                                    </td>
-                                    <td class="quantity">
-                                        <div class="cart-plus-minus">
-                                            <input class="cart-plus-minus-box" value="1" type="number" oninput="validateQuantity(this)">
-                                        </div>
-                                    </td>
-                                    <td class="product-subtotal">
-                                        <span class="amount">$${item.getGiaBan()}</span>
-                                    </td>
-                                </tr>
-                            </c:forEach>
-                            </tbody>
-                        </table>
+<%--them sp--%>
+<style>
+    .contain_themsp body {
+        background-color: #3498db; /* Màu xanh dương */
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .contain_themsp {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff; /* Màu nền trắng */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .contain_themsp h1 {
+        color: #3498db; /* Màu chữ xanh dương */
+    }
+
+</style>
+<div class="contain_themsp">
+    <div class="container_themsp">
+        <h1>Thêm Sản Phẩm</h1>
+    </div>
+    <div class="breadcrumb__option">
+        <a href="#addEmployeeModal"
+           class="btn btn-success" data-toggle="modal">
+            <span>Thêm Sản Phẩm Mới</span></a>
+    </div>
+
+    <div id="addEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="add" method="post">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Thêm Sản Phẩm</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="modal-body">
+                                <%--                                <div class="form-group">--%>
+                                <%--                                    <label>Mã sản phẩm</label>--%>
+                                <%--                                    <input name="productId" type="text" class="form-control" required>--%>
+                                <%--                                </div>--%>
+                                <div class="form-group">
+                                    <label>Hình ảnh</label>
+                                    <input name="image" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tên sản phẩm</label>
+                                    <input name="productName" type="text" class="form-control" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Giá</label>
+                                    <input name="unitPrice" type="number" step="0.01" class="form-control" required>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Mã nhà sản xuất</label>
+                                <input name="producerId" type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Mã danh mục</label>
+                                <input name="categoryId" type="text" class="form-control" required>
+                            </div>
+
+
+                            <!-- Các trường khác nếu có -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-success" value="Add">
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
 </div>
+<%--end them sp--%>
+
+<% List<Product> productList = (List<Product>) request.getAttribute("listSP"); %>
+<% if (productList != null && !productList.isEmpty()) { %>
+<table>
+    <thead>
+    <tr>
+        <th>Mã sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá</th>
+        <th>Mã nhà sản xuất</th>
+        <th>Mã danh mục</th>
+        <th>Hình ảnh</th>
+        <!-- Thêm các cột khác nếu có -->
+    </tr>
+    </thead>
+    <tbody>
+    <% for (Product product : productList) { %>
+    <tr>
+        <td><%= product.getProductId() %>
+        </td>
+        <td><%= product.getProductName() %>
+        </td>
+        <td><%= product.getUnitPrice() %>
+        </td>
+        <td><%= product.getProducerId() %>
+        </td>
+        <td><%= product.getCategoryId() %>
+        </td>
+        <td><%= product.getImage() %>
+        </td>
+        <!-- Thêm các ô dữ liệu khác nếu có -->
+    </tr>
+    <% } %>
+    </tbody>
+</table>
+<% } else { %>
+<p>Không có sản phẩm nào vừa thêm.</p>
+<% } %>
+
+<!--Shopping Cart Area Strat-->
+<%--<div class="body-content outer-top-xs" id="top-banner-and-menu">--%>
+<%--    <div class="container">--%>
+<%--        <div class="row">--%>
+<%--            <div class="col-12">--%>
+<%--                <form action="#">--%>
+<%--                    <div class="table-content table-responsive">--%>
+<%--                        <table class="table">--%>
+<%--                            <thead>--%>
+<%--                            <tr>--%>
+<%--                                <th class="li-product-remove">Xóa</th>--%>
+<%--                                <th class="li-product-sub">Chọn</th>--%>
+<%--                                <th class="li-product-thumbnail">Hình ảnh</th>--%>
+<%--                                <th class="cart-product-name">Thông tin</th>--%>
+<%--                                <th class="li-product-price">Đơn Gía</th>--%>
+<%--                                <th class="li-product-quantity">Số lượng</th>--%>
+<%--                                <th class="li-product-subtotal">Thành tiền</th>--%>
+<%--                            </tr>--%>
+<%--                            </thead>--%>
+<%--                            <tbody>--%>
+
+<%--                            <tr>--%>
+<%--                                <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>--%>
+<%--                                <td class="sub"><input type="checkbox"></td>--%>
+<%--                                <td class="li-product-thumbnail"><a href="#"><img--%>
+<%--                                        src="assets/images/shoppingCart/dau-khoan-co-khoa-13mm-bosch-2608571079-g.jpg"--%>
+<%--                                        alt="Li's Product Image"></a></td>--%>
+<%--                                <td class="li-product-name"><a href="#"> </a></td>--%>
+<%--                                <td class="li-product-price"><span class="amount"></span></td>--%>
+<%--                                <td class="quantity">--%>
+<%--                                    <div class="cart-plus-minus">--%>
+<%--                                        <input class="cart-plus-minus-box" value="1" type="number" oninput="validateQuantity(this)" >--%>
+<%--                                    </div>--%>
+<%--                                </td>--%>
+
+<%--                                <script>--%>
+<%--                                    function validateQuantity(input) {--%>
+<%--                                        // Chuyển giá trị thành số nguyên--%>
+<%--                                        var quantity = parseInt(input.value, 10);--%>
+
+<%--                                        // Kiểm tra nếu giá trị là NaN hoặc nhỏ hơn 1--%>
+<%--                                        if (isNaN(quantity) || quantity < 1) {--%>
+<%--                                            // Đặt giá trị về 1--%>
+<%--                                            input.value = 1;--%>
+<%--                                        }--%>
+<%--                                    }--%>
+<%--                                </script>--%>
+
+
+<%--                                <td class="product-subtotal"><span class="amount">5</span></td>--%>
+<%--                            </tr>--%>
+<%--                            </tbody>--%>
+<%--                        </table>--%>
+<%--                    </div>--%>
+<%--                </form>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</div>--%>
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <div class="social-button">
     <div class="social-button-content">
@@ -368,6 +508,14 @@
 <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class=" icon fa    fa-arrow-up"></i></button>
 <link rel="stylesheet" href="assets/css/my-css/backtop.css">
 <script src="assets/js/my-js/backtop.js"></script>
+<script>
+    function updateSelectedNumber(selectElement) {
+        var selectedValue = selectElement.value;
+
+        // Hiển thị số tương ứng
+        document.getElementById("selectedNumber").innerHTML = "Số đã chọn: " + selectedValue;
+    }
+</script>
 
 </body>
 </html>
