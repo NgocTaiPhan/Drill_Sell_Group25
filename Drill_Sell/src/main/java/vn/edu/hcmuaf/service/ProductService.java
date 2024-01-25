@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.service;
 
+import vn.edu.hcmuaf.bean.Product;
 import vn.edu.hcmuaf.bean.Products;
 import vn.edu.hcmuaf.db.DbController;
 
@@ -78,9 +79,22 @@ public class ProductService {
         });
     }
 
+    public static List<Products> getNewestProducts() {
+        return DbController.me().get().withHandle(handle -> {
+            return handle.createQuery("SELECT products.productId, products.image, products.productName, products.unitPrice " +
+                            "FROM products " +
+                            "ORDER BY products.dateAdded DESC " +
+                            "LIMIT 5")
+                    .mapToBean(Products.class)
+                    .list();
+        });
+    }
+
+
 
     public static void main(String[] args) {
 //            System.out.println(ProductService.getProductsByCategory(2));
         System.out.println(ProductService.getAccessory());
     }
+
 }

@@ -29,7 +29,8 @@ public class Productdown {
 
     public void insertProduct(Product product, int producerId) {
         DbController.me().get().useTransaction(handle -> {
-            handle.createUpdate("INSERT INTO products (image, productName, unitPrice, producerId, categoryId) VALUES (?, ?, ?, ?, ?)")
+            handle.createUpdate("INSERT INTO products (productId, image, productName, unitPrice, producerId, categoryId) VALUES (?, ?, ?, ?, ?, ?)")
+                    .bind("productId", product.getProductId())
                     .bind("image", product.getImage())
                     .bind("productName", product.getProductName())
                     .bind("unitPrice", product.getUnitPrice())
@@ -38,6 +39,7 @@ public class Productdown {
                     .execute();
         });
     }
+
 
 
 }

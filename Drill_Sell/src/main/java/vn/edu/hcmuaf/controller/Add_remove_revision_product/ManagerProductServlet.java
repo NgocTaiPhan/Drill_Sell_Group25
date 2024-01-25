@@ -1,5 +1,5 @@
 
-package vn.edu.hcmuaf.controller;
+package vn.edu.hcmuaf.controller.Add_remove_revision_product;
 import java.util.List;
 import vn.edu.hcmuaf.bean.Product;
 

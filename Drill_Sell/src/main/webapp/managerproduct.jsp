@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="assets/css/rateit.css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="assets/css/my-css/footermenu.css">
+    <link rel="stylesheet" href="assets/css/my-css/Style_managerproduct.css">
 
     <script src="assets/js/jquery-1.11.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -51,6 +52,10 @@
     <script src="assets/js/my-js/footermenu.js"></script>
     <%@ page import="vn.edu.hcmuaf.bean.Product" %>
     <%@ page import="java.util.List" %>
+    <%@ page import="vn.edu.hcmuaf.service.ProductService" %>
+    <%@ page import="java.util.List" %>
+    <%@ page import="vn.edu.hcmuaf.bean.Products" %>
+    <%@ page import="vn.edu.hcmuaf.service.NewProduct" %>
 
 
     <!-- Main Style CSS -->
@@ -325,10 +330,10 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="modal-body">
-                                <%--                                <div class="form-group">--%>
-                                <%--                                    <label>Mã sản phẩm</label>--%>
-                                <%--                                    <input name="productId" type="text" class="form-control" required>--%>
-                                <%--                                </div>--%>
+                                <div class="form-group">
+                                    <label>Mã sản phẩm</label>
+                                    <input name="productId" type="text" class="form-control" required>
+                                </div>
                                 <div class="form-group">
                                     <label>Hình ảnh</label>
                                     <input name="image" type="text" class="form-control" required>
@@ -346,13 +351,31 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="form-group">
-                                <label>Mã nhà sản xuất</label>
-                                <input name="producerId" type="text" class="form-control" required>
-                            </div>
+                            <label>Chọn nhà sản xuất</label>
+                            <select name="producerId" class="form-control" required>
+                                <option value="1">Bosh</option>
+                                <option value="2">Makute</option>
+                                <option value="3">DeWalt</option>
+                                <option value="4">Milwaukee</option>
+                                <option value="5">Tolsen</option>
+                                <option value="6">Classic</option>
+                                <option value="7">Sasuke</option>
+                                <option value="8">Huynhdai</option>
+                                <option value="9">Oshima</option>
+                                <option value="10">Gomes</option>
+                            </select>
                             <div class="form-group">
                                 <label>Mã danh mục</label>
-                                <input name="categoryId" type="text" class="form-control" required>
+                                <select name="categoryId" class="form-control" required>
+                                    <option value="1">Máy khoan pin</option>
+                                    <option value="2">Máy khoan bê tông, Máy khoan búa</option>
+                                    <option value="3">Máy khoan động lực</option>
+                                    <option value="4">Máy khoan cầm tay gia đình</option>
+                                    <option value="5">máy khoan mini</option>
+                                    <option value="6">Pin máy khoan</option>
+                                    <option value="7">Sạc pin máy khoan</option>
+                                    <option value="8">Mũi khoan</option>
+                                </select>
                             </div>
 
 
@@ -371,103 +394,51 @@
 </div>
 <%--end them sp--%>
 
-<% List<Product> productList = (List<Product>) request.getAttribute("listSP"); %>
-<% if (productList != null && !productList.isEmpty()) { %>
+<% List<Products> latestProducts = new NewProduct().getLatestProducts(5); %>
+<%
+    if (latestProducts != null && !latestProducts.isEmpty()) {
+%>
 <table>
     <thead>
     <tr>
+        <th>Xóa</th>
         <th>Mã sản phẩm</th>
         <th>Tên sản phẩm</th>
         <th>Giá</th>
         <th>Mã nhà sản xuất</th>
         <th>Mã danh mục</th>
         <th>Hình ảnh</th>
-        <!-- Thêm các cột khác nếu có -->
     </tr>
     </thead>
     <tbody>
-    <% for (Product product : productList) { %>
-    <tr>
-        <td><%= product.getProductId() %>
+    <% for (Products products : latestProducts) { %>
+    <tr class="product-row">
+        <td>
+            <form action="remove" method="post">
+                <input type="hidden" name="productId" value="<%= products.getProductId() %>">
+                <button type="submit">Xóa</button>
+            </form>
         </td>
-        <td><%= product.getProductName() %>
+        <td class="product-id"><%= products.getProductId() %></td>
+        <td class="product-name"><%= products.getProductName() %></td>
+        <td class="product-price"><%= products.getUnitPrice() %></td>
+        <td class="producer-id"><%= products.getProducerId() %></td>
+        <td class="category-id"><%= products.getCategoryId() %></td>
+        <td class="product-image">
+            <img src="<%= products.getImage() %>" alt="Product Image" class="product-image" width="100" height="100">
         </td>
-        <td><%= product.getUnitPrice() %>
-        </td>
-        <td><%= product.getProducerId() %>
-        </td>
-        <td><%= product.getCategoryId() %>
-        </td>
-        <td><%= product.getImage() %>
-        </td>
-        <!-- Thêm các ô dữ liệu khác nếu có -->
     </tr>
     <% } %>
     </tbody>
 </table>
-<% } else { %>
-<p>Không có sản phẩm nào vừa thêm.</p>
-<% } %>
+<%
+    } else {
+%>
+<p> Không có sản phẩm nào </p>
+<%
+    }
+%>
 
-<!--Shopping Cart Area Strat-->
-<%--<div class="body-content outer-top-xs" id="top-banner-and-menu">--%>
-<%--    <div class="container">--%>
-<%--        <div class="row">--%>
-<%--            <div class="col-12">--%>
-<%--                <form action="#">--%>
-<%--                    <div class="table-content table-responsive">--%>
-<%--                        <table class="table">--%>
-<%--                            <thead>--%>
-<%--                            <tr>--%>
-<%--                                <th class="li-product-remove">Xóa</th>--%>
-<%--                                <th class="li-product-sub">Chọn</th>--%>
-<%--                                <th class="li-product-thumbnail">Hình ảnh</th>--%>
-<%--                                <th class="cart-product-name">Thông tin</th>--%>
-<%--                                <th class="li-product-price">Đơn Gía</th>--%>
-<%--                                <th class="li-product-quantity">Số lượng</th>--%>
-<%--                                <th class="li-product-subtotal">Thành tiền</th>--%>
-<%--                            </tr>--%>
-<%--                            </thead>--%>
-<%--                            <tbody>--%>
-
-<%--                            <tr>--%>
-<%--                                <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>--%>
-<%--                                <td class="sub"><input type="checkbox"></td>--%>
-<%--                                <td class="li-product-thumbnail"><a href="#"><img--%>
-<%--                                        src="assets/images/shoppingCart/dau-khoan-co-khoa-13mm-bosch-2608571079-g.jpg"--%>
-<%--                                        alt="Li's Product Image"></a></td>--%>
-<%--                                <td class="li-product-name"><a href="#"> </a></td>--%>
-<%--                                <td class="li-product-price"><span class="amount"></span></td>--%>
-<%--                                <td class="quantity">--%>
-<%--                                    <div class="cart-plus-minus">--%>
-<%--                                        <input class="cart-plus-minus-box" value="1" type="number" oninput="validateQuantity(this)" >--%>
-<%--                                    </div>--%>
-<%--                                </td>--%>
-
-<%--                                <script>--%>
-<%--                                    function validateQuantity(input) {--%>
-<%--                                        // Chuyển giá trị thành số nguyên--%>
-<%--                                        var quantity = parseInt(input.value, 10);--%>
-
-<%--                                        // Kiểm tra nếu giá trị là NaN hoặc nhỏ hơn 1--%>
-<%--                                        if (isNaN(quantity) || quantity < 1) {--%>
-<%--                                            // Đặt giá trị về 1--%>
-<%--                                            input.value = 1;--%>
-<%--                                        }--%>
-<%--                                    }--%>
-<%--                                </script>--%>
-
-
-<%--                                <td class="product-subtotal"><span class="amount">5</span></td>--%>
-<%--                            </tr>--%>
-<%--                            </tbody>--%>
-<%--                        </table>--%>
-<%--                    </div>--%>
-<%--                </form>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</div>--%>
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <div class="social-button">
     <div class="social-button-content">
@@ -516,6 +487,7 @@
         document.getElementById("selectedNumber").innerHTML = "Số đã chọn: " + selectedValue;
     }
 </script>
+
 
 </body>
 </html>
