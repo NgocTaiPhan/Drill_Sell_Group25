@@ -1,13 +1,44 @@
 <%@ page import="org.jboss.weld.context.http.Http" %>
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page import="vn.edu.hcmuaf.controller.register.RegisterController" %>
+<%@ page import="java.util.Map" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-
-
     User auth = (User) session.getAttribute("auth");
     Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess");
+//    String birthDate = request.get,
+//            address = "",
+//            phoneNumber = "",
+//            email = "",
+//
+//            username = "",
+//            fullName = "";
+
+
+//    Map<String, String> registerFormValue = null;
+//    registerFormValue.put("fullName", fullName);
+//    registerFormValue.put("birthDate", birthDate);
+//    registerFormValue.put("address", address);
+//    registerFormValue.put("phoneNumber", phoneNumber);
+//    registerFormValue.put("email", email);
+//    registerFormValue.put("username", username);
+//    if (request.getAttribute("registerFormValue") != null) {
+//        registerFormValue = (Map<String, String>) request.getAttribute("registerFormValue");
+//    }
+
+
+  String fullName = request.getAttribute("full-name") != null ? (String) request.getAttribute("full-name") : "";
+  String birthDate = request.getAttribute("birth-date") != null ? (String) request.getAttribute("birth-date") : "";
+  String address = request.getAttribute("address") != null ? (String) request.getAttribute("address") : "";
+  String phoneNumber = request.getAttribute("phone-number") != null ? (String) request.getAttribute("phone-number") : "";
+  String email = request.getAttribute("email") != null ? (String) request.getAttribute("email") : "";
+  String username = request.getAttribute("username") != null ? (String) request.getAttribute("username") : "";
+
+  
+  
+
+
 %>
 
 <!doctype html>
@@ -108,93 +139,110 @@
 
                 </div>
                 <!-- Sign-in -->
-<%
-//    RegisterFormValue registerValue = (RegisterFormValue) request.getAttribute("registerValue");
+                <%
+                    //                    if (!registerFormValue.isEmpty()) {
+//                        birthDate = registerFormValue.get("birthDate");
+//                        address = registerFormValue.get("address");
+//                        phoneNumber = registerFormValue.get("phoneNumber");
+//                        email = registerFormValue.get("email");
+//                        username = registerFormValue.get("username");
+//                        fullName = registerFormValue.get("fullName");
+//                    }
 
 
-
-%>
+                %>
                 <!-- create a new account -->
+
                 <div class="col-md-6 col-sm-6 create-new-account">
                     <h3 class="checkout-subtitle">Tạo tài khoản mới</h3>
                     <p class="text title-tag-line"> Nhập thông tin bên dưới để tạo tài khoản mới</p>
-                    <form class="register-form outer-top-xs" role="form" id="register-form">
+                    <form class="register-form outer-top-xs" role="form" id="register-form" action="register"
+                          method="POST">
                         <h4>Thông tin người dùng</h4>
+
                         <div class="form-group">
                             <label class="info-title" for="full-name-register">Họ và tên <span>*</span></label>
                             <input class="form-control unicase-form-control text-input" id="full-name-register"
-                                   type="text" value="">
+                                   name="full-name-register"
+                                   type="text" value="<%=fullName%>">
                         </div>
+
+
                         <div class="form-group">
                             <label class="info-title" for="birth-date-register">Ngày, tháng, năm sinh
                                 <span>*</span></label>
                             <input class="form-control unicase-form-control text-input" id="birth-date-register"
+                                   name="birth-date-register"
                                    type="date">
                         </div>
-                        <div class="form-group "
-                        >
-
-                            <label class="info-title" for="confirm-password-register">Giới tính
+                        <div class="form-group ">
+                            <label class="info-title" for="gender">Giới tính
                                 <span>*</span></label>
-                            <div class="radio outer-xs" style="display: flex; justify-content: space-around">
+                            <div class="radio outer-xs" id="gender"
+                                 style="display: flex; justify-content: space-around">
                                 <label>
-                                    <input id="sexMale" name="optionsRadios" type="radio" value="">Nữ
+                                    <input id="genderFemale" name="gender" type="radio" value="female" checked>Nữ
                                 </label>
                                 <label>
-                                    <input id="sexFemale" name="optionsRadios" type="radio" value=""> Nam
+                                    <input id="genderMale" name="gender" type="radio" value="male">Nam
                                 </label>
                             </div>
                         </div>
+
                         <div class="form-group">
                             <label class="info-title" for="address-register">Địa chỉ <span>*</span></label>
                             <input class="form-control unicase-form-control text-input" id="address-register"
-                                   type="text">
+                                   name="address-register"
+                                   type="text" value="<%=address%>">
                         </div>
                         <div class="form-group">
-                            <label class="info-title" for="phone-number-register">Số điện thoại <span>*</span></label>
+                            <label class="info-title" for="phone-number-register">Số điện thoại
+                                <span>*</span></label>
                             <input class="form-control unicase-form-control text-input" id="phone-number-register"
-                                   type="tel">
+                                   type="tel" name="phone-number-register" value="<%=phoneNumber%>">
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="email-register">Địa chỉ email <span>*</span></label>
                             <input class="form-control unicase-form-control text-input" id="email-register"
-                                   type="text">
+                                   type="text" name="email-register" value="<%=email%>">
                         </div>
                         <h4>Thông tin tài khoản</h4>
                         <div class="form-group">
 
                             <label class="info-title" for="username-register">Tên đăng nhập <span>*</span></label>
                             <input class="form-control unicase-form-control text-input" id="username-register"
-                                   type="text">
+                                   type="text" name="username-register" value="<%=username%>">
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="password-register">Mật khẩu <span>*</span></label>
                             <input class="form-control unicase-form-control text-input" id="password-register"
-                                   type="password">
+                                   type="password" name="password-register">
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="confirm-password-register">Nhập lại mật khẩu
                                 <span>*</span></label>
-                            <input class="form-control unicase-form-control text-input" id="confirm-password-register"
-                                   type="password">
+                            <input class="form-control unicase-form-control text-input"
+                                   id="confirm-password-register"
+                                   type="password" name="confirm-password-register">
                         </div>
 
                         <div class="form-group" style="white-space: nowrap;  ">
                             <input class=" form-checkbox-input" id="agree-to-terms" style="margin-right: 5px;"
-                                   type="checkbox">
+                                   type="checkbox" name="agree-to-terms">
                             <label class="info-title" for="agree-to-terms">Đồng ý với <a href="rules.jsp">điều
                                 khoản</a> của chúng tôi
                                 <span>*</span></label>
                         </div>
 
 
-                        <button class="btn-upper btn btn-primary checkout-page-button" onclick="submitRegister()">Đăng
+                        <button class="btn-upper btn btn-primary checkout-page-button" type="submit">Đăng
                             kí
                         </button>
                     </form>
 
 
                 </div>
+
             </div>
         </div>
     </div>
@@ -207,10 +255,8 @@
 <script src="assets/js/my-js/login.js">
 
 
-
-
 </script>
-<%--<script src="assets/js/my-js/register.js"></script>--%>
+<script src="assets/js/my-js/register.js"></script>
 <script src="
 https://cdn.jsdelivr.net/npm/sweetalert2@11.10.3/dist/sweetalert2.all.min.js
 "></script>
