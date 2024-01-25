@@ -1,15 +1,13 @@
 package vn.edu.hcmuaf.service;
 
-
 import vn.edu.hcmuaf.bean.Cart;
-import vn.edu.hcmuaf.bean.Products;
+import vn.edu.hcmuaf.bean.CheckOut;
 import vn.edu.hcmuaf.db.DbController;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-public class CartService {
-
+public class CheckOutService {
     public static List<Cart> getProductById(int id) {
         return DbController.me().get().withHandle(handle -> {
             return handle.createQuery("SELECT " +
@@ -56,9 +54,5 @@ public class CartService {
                     })
                     .list();
         });
-    }
-
-    public static void main(String[] args) {
-        System.out.println(getProductById(15));
     }
 }
