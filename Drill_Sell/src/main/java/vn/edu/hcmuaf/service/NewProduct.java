@@ -23,4 +23,18 @@ public class NewProduct {
                     .execute();
         });
     }
+
+    public void updateProduct(Products products) {
+        DbController.me().get().useTransaction(handle -> {
+            handle.createUpdate("INSERT INTO products (productId, image, productName, unitPrice, categoryId, producerId) VALUES (:productId, :image, :productName, :unitPrice, :categoryId, :producerId)")
+                    .bind("productId", products.getProductId())
+                    .bind("image", products.getImage())
+                    .bind("productName", products.getProductName())
+                    .bind("unitPrice", products.getUnitPrice())
+                    .bind("categoryId", products.getCategoryId())
+                    .bind("producerId", products.getProducerId())
+                    .execute();
+
+        });
+    }
 }
