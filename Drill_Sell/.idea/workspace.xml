@@ -10,6 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
       <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/AddToCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
@@ -42,6 +43,11 @@
       <change beforePath="$PROJECT_DIR$/src/main/webapp/z_battery.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/z_battery.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/z_charger.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/z_charger.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/z_countersink.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/z_countersink.jsp" afterDir="false" />
+
+    <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành phần Đăng nhập">
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +58,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Filter" />
+
         <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Servlet" />
         <option value="Jsp File" />
+
+        <option value="Jsp File" />
+        <option value="HTML File" />
+        <option value="Servlet" />
+        <option value="JavaScript File" />
+
         <option value="Class" />
       </list>
     </option>
@@ -63,8 +76,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;OzoriTA&quot;
+  }
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="127a8197-5a50-4036-8866-bd08fef50fe5" />
+        <option name="url" value="https://github.com/OzoriTA/Drill_Sell_Group25.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/webapp/home.jsp" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" root2="FORCE_HIGHLIGHTING" />
@@ -91,6 +118,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.DbController.executor&quot;: &quot;Run&quot;,
@@ -122,8 +150,39 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DbController.executor": "Run",
+    "Application.Producers.executor": "Run",
+    "Application.ProducersService.executor": "Run",
+    "Application.Producres.executor": "Run",
+    "Application.ProductListTest.executor": "Run",
+    "Application.ProductService.executor": "Run",
+    "Application.Products.executor": "Run",
+    "Application.User.executor": "Run",
+    "Application.UserService.executor": "Run",
+    "Application.vn.edu.hcmuaf.service.ProductCategoryService.executor": "Run",
+    "Application.vn.edu.hcmuaf.service.UserService.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Tomcat Server.Tomcat 8.5.87.executor": "Run",
+    "Tomcat Server.Tomcat 8.5.872.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Kien",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Study/BCDAW/Drill_Sell_Group25/Drill_Sell/src/main/java/vn/edu/hcmuaf/controller",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "fileTemplates",
+    "vue.rearranger.settings.migration": "true"
+
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="vn.edu.hcmuaf.bean" />
@@ -136,9 +195,15 @@
       <recent name="D:\WorkSpace\WebPrograming\Project\Drill_Sell\src\main\resources" />
     </key>
   </component>
+
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.871">
     <configuration name="CartService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.CartService" />
+
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.87">
+    <configuration name="ProducersService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.ProducersService" />
+
       <module name="Drill_Sell" />
       <extension name="coverage">
         <pattern>
@@ -150,12 +215,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="CheckOutService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.CheckOutService" />
+
+    <configuration name="ProductCategoryService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.serice.ProductCategoryService" />
+
       <module name="Drill_Sell" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="vn.edu.hcmuaf.service.*" />
+          <option name="PATTERN" value="vn.edu.hcmuaf.serice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,12 +233,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="DetailService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.DetailService" />
       <module name="Drill_Sell" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="vn.edu.hcmuaf.service.*" />
+
+    <configuration name="UserService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.serice.UserService" />
+      <module name="Drill_Sell" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vn.edu.hcmuaf.serice.*" />
+
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -176,15 +255,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="ProductService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.ProductService" />
       <module name="Drill_Sell" />
+
+    <configuration name="vn.edu.hcmuaf.service.ProductCategoryService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.ProductCategoryService" />
+      <module name="Drill_Sell" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vn.edu.hcmuaf.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.SearchService" />
+    <configuration name="vn.edu.hcmuaf.service.UserService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.UserService" />
       <module name="Drill_Sell" />
       <extension name="coverage">
         <pattern>
@@ -196,7 +287,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="Tomcat 8.5.871" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.871" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+
+    <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Drill_Sell:war exploded">
@@ -366,6 +461,7 @@
       </method>
     </configuration>
     <list>
+
       <item itemvalue="Application.CheckOutService" />
       <item itemvalue="Application.CartService" />
       <item itemvalue="Application.ProductService" />
@@ -380,6 +476,22 @@
         <item itemvalue="Application.DetailService" />
         <item itemvalue="Application.ProductService" />
         <item itemvalue="Application.SearchService" />
+
+      <item itemvalue="Application.vn.edu.hcmuaf.service.UserService" />
+      <item itemvalue="Application.ProducersService" />
+      <item itemvalue="Application.ProductCategoryService" />
+      <item itemvalue="Application.UserService" />
+      <item itemvalue="Application.vn.edu.hcmuaf.service.ProductCategoryService" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.87" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.vn.edu.hcmuaf.service.UserService" />
+        <item itemvalue="Application.vn.edu.hcmuaf.service.ProductCategoryService" />
+        <item itemvalue="Application.ProducersService" />
+        <item itemvalue="Application.ProductCategoryService" />
+        <item itemvalue="Application.UserService" />
+
       </list>
     </recent_temporary>
   </component>
@@ -420,6 +532,7 @@
       <workItem from="1703571862892" duration="22102000" />
       <workItem from="1703999252410" duration="10000" />
       <workItem from="1703999363139" duration="1120000" />
+
       <workItem from="1704209265680" duration="543000" />
       <workItem from="1705132365547" duration="19417000" />
       <workItem from="1705216855096" duration="19694000" />
@@ -435,6 +548,7 @@
       <workItem from="1705838901677" duration="7232000" />
       <workItem from="1705930971652" duration="5002000" />
       <workItem from="1705682172194" duration="45000" />
+
       <workItem from="1704209265680" duration="1551000" />
       <workItem from="1704246852482" duration="2648000" />
       <workItem from="1704345058036" duration="28000" />
@@ -447,6 +561,7 @@
       <workItem from="1704772435331" duration="589000" />
       <workItem from="1705043145614" duration="1000" />
       <workItem from="1705079006476" duration="11000" />
+
       <workItem from="1705640499982" duration="372000" />
       <workItem from="1705937968405" duration="411000" />
       <workItem from="1705938391342" duration="10211000" />
@@ -455,6 +570,19 @@
       <workItem from="1706064362969" duration="17688000" />
       <workItem from="1706091111628" duration="27526000" />
       <workItem from="1706155554016" duration="11640000" />
+
+      <workItem from="1705640499982" duration="835000" />
+      <workItem from="1705641455077" duration="6434000" />
+      <workItem from="1705652578135" duration="122000" />
+      <workItem from="1705652895564" duration="3020000" />
+      <workItem from="1705855372826" duration="9421000" />
+      <workItem from="1705897019371" duration="6116000" />
+      <workItem from="1705904824158" duration="7965000" />
+      <workItem from="1705935774660" duration="11482000" />
+      <workItem from="1705984157284" duration="1942000" />
+      <workItem from="1706075327545" duration="3609000" />
+      <workItem from="1706081236221" duration="55000" />
+
     </task>
     <task id="LOCAL-00001" summary="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
       <option name="closed" value="true" />
@@ -464,14 +592,58 @@
       <option name="project" value="LOCAL" />
       <updated>1703448287470</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Push để pull code">
+      <option name="closed" value="true" />
+      <created>1705640958082</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705640958082</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Push để pull code">
+      <option name="closed" value="true" />
+      <created>1705641082009</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705641082009</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Push để pull code">
+      <option name="closed" value="true" />
+      <created>1705641096002</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705641096002</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Hoàn thành phần Đăng nhập">
+      <option name="closed" value="true" />
+      <created>1706075587091</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706075587091</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ" />
+
     <option name="LAST_COMMIT_MESSAGE" value="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ" />
   </component>
   <component name="XDebuggerManager">
@@ -488,5 +660,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+
+    <MESSAGE value="Push để pull code" />
+    <MESSAGE value="Hoàn thành phần Đăng nhập" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hoàn thành phần Đăng nhập" />
+
   </component>
 </project>
