@@ -1,3 +1,7 @@
+<%@ page import="vn.edu.hcmuaf.bean.CheckOut" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="java.util.*" %>
+<%@ page import="vn.edu.hcmuaf.bean.Cart" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="vi">
 <head>
@@ -26,7 +30,7 @@
           rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/css/styleCheckOut.css">
-    <link rel="stylesheet" href="assets\css\StyleCard.css">
+    <link rel="stylesheet" href="assets/css/styleCard.css">
 
     <!-- Favicon -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -138,51 +142,34 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
-
-                    <div class="dropdown dropdown-cart"><a href="detail.jsp" class="dropdown-toggle lnk-cart"
-                                                           data-toggle="dropdown">
-                        <div class="items-cart-inner">
-                            <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
-                            <div class="basket-item-count"><span class="count">1</span></div>
-
-                        </div>
-                    </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="cart-item product-summary">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            <div class="image"><a href="detail.jsp"><img
-                                                    src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                    alt="Ảnh sản phẩm"></a></div>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB 16 RE -
-                                                06012281K1</a></h3>
-                                            <div class="price">1.599.000đ</div>
-                                        </div>
-                                        <div class="col-xs-1 action"><a href="detail.jsp"><i
-                                                class="fa fa-trash"></i></a></div>
-                                    </div>
+                    <div class="dropdown dropdown-cart">
+                        <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
+                            <div class="items-cart-inner">
+                                <!-- Thêm một sự kiện nhấp chuột vào div -->
+                                <div class="basket" id="basketIcon" onclick="redirectToCart()">
+                                    <i class="glyphicon glyphicon-shopping-cart"></i>
                                 </div>
-                                <!-- /.cart-item -->
-                                <div class="clearfix"></div>
-                                <hr>
-                                <div class="clearfix cart-total">
-                                    <div class="pull-right"><span class="text">Tổng tiền :</span><span class='price'>1.599.000đ</span>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <a href="oder.jsp" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
-                                        toán</a>
-                                </div>
-                                <!-- /.cart-total-->
 
-                            </li>
-                        </ul>
-                        <!-- /.dropdown-menu-->
+                                <!-- Bạn có thể đặt mã JavaScript ở phía dưới trang hoặc tách riêng thành một tệp JS -->
+                                <script>
+                                    function redirectToCart() {
+                                        // Thực hiện chuyển hướng đến trang s.jsp khi nhấp vào
+                                        window.location.href = 'cart.jsp';
+                                    }
+                                </script>
+
+
+                                <%--                                <div id="cartItemCount" class="basket-item-count">--%>
+                                <%--                                    <span id="cartItemCountValue" class="count">0</span>--%>
+                                <%--                                </div>--%>
+
+
+
+                            </div>
+                        </a>
+
                     </div>
                     <!-- /.dropdown-cart -->
-
                     <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
                 </div>
                 <!-- /.top-cart-row -->
@@ -289,81 +276,60 @@
                 <th class="li-product-subtotal">Thành tiền</th>
             </tr>
             </thead>
+
+            <tbody>
+
+            <%
+                List<Cart> detailedCartList = (List<Cart>) session.getAttribute("detailedCartList");
+                if (detailedCartList != null && !detailedCartList.isEmpty()) {
+                    for (Cart cart : detailedCartList) {
+                        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                        String formattedPrice = currencyFormat.format(cart.getUnitPrice() * 1000);
+                        String tatolPrice = currencyFormat.format(cart.getTotalPrice() * 1000);
+            %>
             <tr>
-                <td class="li-product-thumbnail"><a href="#"><img src="assets/images/shoppingCart/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"> Máy khoan động lực Bosch GSB 16 RE -
-                    06012281K1</a></td>
-                <td class="li-product-price"><span class="amount">468.00 VND</span></td>
+                <td class="li-product-thumbnail">
+                    <a href="#"><img src="<%= cart.getImage() %>"></a>
+                </td>
+                <td class="li-product-price">
+                    <span class="amount"><%= formattedPrice %></span>
+                </td>
                 <td class="quantity">
                     <div class="cart-plus-minus">
-                        <input class="cart-plus-minus-box" value="1" type="number" oninput="validateQuantity(this)">
+                        <input class="cart-plus-minus-box" value="<%= cart.getQuantity() %>">
                     </div>
                 </td>
-
-                <td class="product-subtotal"><span class="amount">468.000 VND</span></td>
+                <td class="product-subtotal">
+                    <span class="amount"><%= tatolPrice %></span>
+                </td>
             </tr>
+            <% } // Đóng vòng lặp for %>
+            <% } // Đóng if %>
 
-            <script>
-                function validateQuantity(input) {
-                    // Chuyển giá trị thành số nguyên
-                    var quantity = parseInt(input.value, 10);
+            </tbody>
 
-                    // Kiểm tra nếu giá trị là NaN hoặc nhỏ hơn 1
-                    if (isNaN(quantity) || quantity < 1) {
-                        // Đặt giá trị về 1
-                        input.value = 1;
-                    }
-                }
-            </script>
-
-                <td class="product-subtotal"><span class="amount">468.000 VND</span></td>
-            </tr>
         </table>
     </div>
     <div class="statistical">
-        <div class="total-money">
-            <p>Tổng tiền (1 sản phẩm): </p>
-            <input type="text" name="total-money" value="468.000 VND">
-        </div>
-        <div class="transport">
-            <p>Phí vận chuyển: </p>
-            <input class="v" type="text" name="money" value="28.000 VND">
-        </div>
-
             <div class="pay">
                 <div class="method">
-                    <label for="section">Phương Thức thanh toán:</label>
-                    <select id="section" name="section">
-                        <option value="section1">Thanh toán khi nhận hàng</option>
-                        <option value="section2">Thanh toán qua ngân hàng</option>
-                    </select>
-
+                    <label >Tổng tiền:</label>
                 </div>
                 <div class="container">
                     <table>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                        </tr>
                         <tr>
                             <td><label>Tổng tiền hàng: </label></td>
                             <td><input type="text" name="tienHang" value="468.000 VND"> <br></td>
                         </tr>
 
-                        <tr>
-                            <td><label>Phí vận chuyển: </label></td>
-                            <td><input type="text" name="tienHang" value="28.000 VND"> <br></td>
-                        </tr>
-                        <tr>
-                            <td><label>Tổng thanh toán: </label></td>
-                            <td><input type="text" name="tienHang" value=" 496.000 VND"></td>
-
-                        </tr>
                     </table>
 
                 </div>
+
                <a >  <button onclick="f()" class="order">Đặt hàng</button></a>
             </div>
         </div>
+
     </div>
 </div>
 <!-- ============================================================= FOOTER : MENU============================================================= -->

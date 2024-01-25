@@ -25,7 +25,7 @@ public class SeachProduct extends HttpServlet {
             throws ServletException, IOException {
         String keyword = request.getParameter("name");
         // Simulate product search (replace this with your actual search logic)
-        List<Products> products = SearchService.searchProductByName(keyword);
+        List<Products> products = searchService.searchProductByName(keyword);
         // Chuyển danh sách sản phẩm thành JSON
 
         request.setAttribute("loadProduct", products);
