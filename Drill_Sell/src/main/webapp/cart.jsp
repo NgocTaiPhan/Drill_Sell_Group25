@@ -1,3 +1,8 @@
+<%@ page import="vn.edu.hcmuaf.bean.Cart" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.Set" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="java.util.Locale" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="vi">
 <head>
@@ -112,8 +117,10 @@
                     <div class="search-area">
                         <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
-                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
-                                <a style="height: 44.5px;" class="search-button" href="#" onclick="searchProduct(event)"></a>
+                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown"
+                                       name="name" placeholder="Tìm kiếm...">
+                                <a style="height: 44.5px;" class="search-button" href="#"
+                                   onclick="searchProduct(event)"></a>
 
 
                             </div>
@@ -137,51 +144,33 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
-
-                    <div class="dropdown dropdown-cart"><a href="detail.jsp" class="dropdown-toggle lnk-cart"
-                                                           data-toggle="dropdown">
-                        <div class="items-cart-inner">
-                            <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
-                            <div class="basket-item-count"><span class="count">1</span></div>
-
-                        </div>
-                    </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="cart-item product-summary">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            <div class="image"><a href="detail.jsp"><img
-                                                    src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                    alt="Ảnh sản phẩm"></a></div>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB 16 RE -
-                                                06012281K1</a></h3>
-                                            <div class="price">1.599.000đ</div>
-                                        </div>
-                                        <div class="col-xs-1 action"><a href="detail.jsp"><i
-                                                class="fa fa-trash"></i></a></div>
-                                    </div>
+                    <div class="dropdown dropdown-cart">
+                        <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
+                            <div class="items-cart-inner">
+                                <!-- Thêm một sự kiện nhấp chuột vào div -->
+                                <div class="basket" id="basketIcon" onclick="redirectToCart()">
+                                    <i class="glyphicon glyphicon-shopping-cart"></i>
                                 </div>
-                                <!-- /.cart-item -->
-                                <div class="clearfix"></div>
-                                <hr>
-                                <div class="clearfix cart-total">
-                                    <div class="pull-right"><span class="text">Tổng tiền :</span><span class='price'>1.599.000đ</span>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <a href="oder.jsp" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
-                                        toán</a>
-                                </div>
-                                <!-- /.cart-total-->
 
-                            </li>
-                        </ul>
-                        <!-- /.dropdown-menu-->
+                                <!-- Bạn có thể đặt mã JavaScript ở phía dưới trang hoặc tách riêng thành một tệp JS -->
+                                <script>
+                                    function redirectToCart() {
+                                        // Thực hiện chuyển hướng đến trang s.jsp khi nhấp vào
+                                        window.location.href = 'cart.jsp';
+                                    }
+                                </script>
+
+
+                                <%--                                <div id="cartItemCount" class="basket-item-count">--%>
+                                <%--                                    <span id="cartItemCountValue" class="count">0</span>--%>
+                                <%--                                </div>--%>
+
+
+                            </div>
+                        </a>
+
                     </div>
                     <!-- /.dropdown-cart -->
-
                     <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
                 </div>
                 <!-- /.top-cart-row -->
@@ -211,25 +200,31 @@
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
-                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product" methods="post"></i>Sản phẩm</a></li>
+                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product"
+                                                               methods="post"></i>Sản phẩm</a></li>
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
 
-                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
+                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>
+                                            Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
+                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy
+                                            khoan động lực</a>
 
                                         </li>
 
-                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy khoan cầm tay gia đình</a>
+                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy
+                                            khoan cầm tay gia đình</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy khoan mini</a>
+                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy
+                                            khoan mini</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
+                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>
+                                            Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
                                     </ul>
@@ -274,8 +269,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+
                 <form action="#">
+
                     <div class="table-content table-responsive">
+
                         <table class="table">
                             <thead>
                             <tr>
@@ -289,54 +287,151 @@
                             </tr>
                             </thead>
                             <tbody>
-
+                            <%
+                                Map<Integer, Cart> cartMap = (Map<Integer, Cart>) session.getAttribute("cart");
+                                if (cartMap != null && !cartMap.isEmpty()) {
+                                    Set<Map.Entry<Integer, Cart>> entrySet = cartMap.entrySet();
+                                    for (Map.Entry<Integer, Cart> entry : entrySet) {
+                                        Cart cart = entry.getValue();
+                                        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                                        String formattedPrice = currencyFormat.format(cart.getUnitPrice() * 1000);
+                                        String tatolPrice = currencyFormat.format(cart.getTotalPrice() * 1000);
+                                        request.setAttribute("formattedUnitPrice", formattedPrice);
+                                        request.setAttribute("tatolPrice", tatolPrice);
+                            %>
                             <tr>
+
                                 <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                <td class="sub"><input type="checkbox"></td>
-                                <td class="li-product-thumbnail"><a href="#"><img
-                                        src="assets/images/shoppingCart/dau-khoan-co-khoa-13mm-bosch-2608571079-g.jpg"
-                                        alt="Li's Product Image"></a></td>
-                                <td class="li-product-name"><a href="#"> </a></td>
-                                <td class="li-product-price"><span class="amount"></span></td>
-                                <td class="quantity">
-                                    <div class="cart-plus-minus">
-                                        <input class="cart-plus-minus-box" value="1" type="number" oninput="validateQuantity(this)" >
-                                    </div>
+                                <td class="sub">
+                                    <input type="checkbox" id="checkbox_<%= cart.getProductId() %>" onchange="updateSelectedProducts(<%= cart.getProductId() %>)">
+
                                 </td>
 
-                                <script>
-                                    function validateQuantity(input) {
-                                        // Chuyển giá trị thành số nguyên
-                                        var quantity = parseInt(input.value, 10);
+                                <td class="li-product-thumbnail"><a href="#"><img img height="100px" width="100px"
+                                                                                  src="<%= cart.getImage()%>"
+                                                                                  alt="Li's Product Image"></a></td>
+                                <td class="li-product-name"><a
+                                        href="detail?productId=<%=cart.getProductId()%>"><%= cart.getProductName()%>
+                                </a></td>
+                                <td class="li-product-price"><span
+                                        class="amount"><%= request.getAttribute("formattedUnitPrice") %></span></td>
+                                <div id="errorMessage" style="color: red;"></div>
+                                <td class="quantity">
+                                    <button type="button" onclick="decrementQuantity(<%= cart.getProductId() %>)">-</button>
+                                    <div class="cart-plus-minus">
+                                        <input id="quantityInput_<%= cart.getProductId() %>" class="cart-plus-minus-box"
+                                               value="<%= cart.getQuantity()%>"
+                                               onchange="updateCartItem(<%= cart.getProductId() %>)">
+                                    </div>
+                                    <button class="plus-button" type="button" onclick="incrementQuantity(<%= cart.getProductId() %>)">+</button>
+                                </td>
 
-                                        // Kiểm tra nếu giá trị là NaN hoặc nhỏ hơn 1
-                                        if (isNaN(quantity) || quantity < 1) {
-                                            // Đặt giá trị về 1
-                                            input.value = 1;
+                                <style>
+                                    .quantity {
+                                        display: flex;
+                                    }
+
+                                    .quantity button,
+                                    .quantity .cart-plus-minus-box,
+                                    .quantity .plus-button {
+                                        display: inline-block;
+                                        text-align: center;
+                                    }
+                                    .quantity .cart-plus-minus-box{
+                                        margin-left: 10px;
+                                    }
+
+                                </style>
+
+
+
+                                <script>
+                                    function proceedToPayment() {
+
+                                        var selectedProducts = getSelectedProducts();
+                                        window.location.href = 'checkOut?selectedProducts='  + selectedProducts.join(',');
+                                    }
+
+                                    function getSelectedProducts() {
+                                        var selectedProducts = [];
+                                        var checkboxes = document.querySelectorAll('[id^="checkbox_"]:checked');
+                                        checkboxes.forEach(function (checkbox) {
+                                            selectedProducts.push(checkbox.id.split('_')[1]);
+                                        });
+                                        return selectedProducts;
+                                    }
+
+                                    function updateCartItem(productId) {
+                                        var quantityInput = document.getElementById('quantityInput_' + productId);
+                                        var subtotalElement = document.getElementById('subtotal_' + productId);
+
+                                        // Your existing updateCartItem logic
+
+                                        // Recalculate the subtotal based on the updated quantity
+                                        var unitPrice = parseFloat('<%= cart.getUnitPrice() * 1000 %>');
+                                        var quantity = parseInt(quantityInput.value, 10);
+                                        var subtotal = unitPrice * quantity;
+
+                                        // Update the displayed subtotal on the client side with formatted currency
+                                        subtotalElement.innerText = formatCurrency(subtotal);
+                                    }
+
+                                    // Function to format currency with thousand separators
+                                    function formatCurrency(value) {
+                                        // Use toLocaleString to add commas as thousand separators
+                                        return value.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+                                    }
+                                    function decrementQuantity(productId) {
+                                        var inputElement = document.getElementById('quantityInput_' + productId);
+                                        var currentQuantity = parseInt(inputElement.value, 10);
+                                        if (currentQuantity > 1) {
+                                            inputElement.value = currentQuantity - 1;
+                                            updateCartItem(productId);
                                         }
                                     }
+                                    <!-- Add this element where you want to display the error message -->
+
+
+                                    function incrementQuantity(productId) {
+                                        var inputElement = document.getElementById('quantityInput_' + productId);
+                                        var currentQuantity = parseInt(inputElement.value, 10);
+                                        var quantityLimit = <%= cart.getStatuss()%>;
+                                        var errorMessageElement = document.getElementById('errorMessage');
+
+                                        if (currentQuantity < quantityLimit) {
+                                            inputElement.value = currentQuantity + 1;
+                                            updateCartItem(productId);
+                                            errorMessageElement.innerText = ''; // Clear any previous error message
+                                        } else {
+                                            errorMessageElement.innerText = 'Sản phẩm chỉ còn tối đa ' + quantityLimit + ' cái';
+                                        }
+                                    }
+
+
                                 </script>
 
+                                <td class="product-subtotal">
+                                                                        <span id="subtotal_<%= cart.getProductId() %>" class="amount">
+                                                                     <%= request.getAttribute("tatolPrice") %>
+                                                                                </span>
+                                </td>
 
-                                <td class="product-subtotal"><span class="amount">5</span></td>
                             </tr>
+                            <%}%>
+                            <%}%>
+
                             </tbody>
                         </table>
+
                     </div>
 
-                    <div class="rows">
-                        <div class="col-md-5 ml-auto">
-                            <div class="cart-page-total">
-<!--                                <h2>Thanh toán</h2>-->
-<!--                                <ul>-->
-<!--                                    <li>Đơn giá <span>968.000 VND</span></li>-->
-<!--                                    <li>Tổng tiền <span>968.000 VND</span></li>-->
-<!--                                </ul>-->
-                                <a class="checkOut" href="oder.jsp">Thanh toán</a>
-                            </div>
-                        </div>
+                    <div class="cart-page-total">
+                        <a class="checkOut" href="javascript:void(0);"  onclick="proceedToPayment()">Thanh toán</a>
+
                     </div>
+
                 </form>
+
             </div>
         </div>
     </div>
@@ -344,38 +439,38 @@
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <div class="social-button">
     <div class="social-button-content">
-      <a href="tel:0353933224" class="call-icon" rel="nofollow">
-        <i class="fa fa-whatsapp" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Hotline: 035 393 3224</span>
-      </a>
-      <a href="sms:0353933224" class="sms">
-        <i class="fa fa-weixin" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>SMS: 035 393 3224</span>
-      </a>
-      <a href="https://www.facebook.com/Ngocthang.net/" class="mes">
-        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Nhắn tin Facebook</span>
-      </a>
-      <a href="http://zalo.me/0353933224" class="zalo">
-        <i class="fa fa-commenting-o" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Zalo: 035.393.3224</span>
-      </a>
+        <a href="tel:0353933224" class="call-icon" rel="nofollow">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Hotline: 035 393 3224</span>
+        </a>
+        <a href="sms:0353933224" class="sms">
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>SMS: 035 393 3224</span>
+        </a>
+        <a href="https://www.facebook.com/Ngocthang.net/" class="mes">
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Nhắn tin Facebook</span>
+        </a>
+        <a href="http://zalo.me/0353933224" class="zalo">
+            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Zalo: 035.393.3224</span>
+        </a>
     </div>
     <a href="#" class="user-support">
-      <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
-      <div class="animated alo-circle"></div>
-      <div class="animated alo-circle-fill"></div>
+        <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+        <div class="animated alo-circle"></div>
+        <div class="animated alo-circle-fill"></div>
     </a>
-  </div>
-  
+</div>
+
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <!-- ============================================================= Backtop ============================================================= -->
 <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class=" icon fa    fa-arrow-up"></i></button>

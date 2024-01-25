@@ -35,6 +35,14 @@ public class RegisterController extends HttpServlet {
         String agreeToTerms = request.getParameter("agree-to-terms");
 
 
+//        validFullName(request.getParameter("full-name-register"));
+//        validBirthDate(request.getParameter("birth-date-register"));
+//        validPhoneNumber(request.getParameter("phone-number-register"));
+//        validEmail(request.getParameter("email-register"));
+//        validPassword(request.getParameter("password-register"),request.getParameter("confirm-password-register"));
+//        validẠgreeToTerms(request.getParameter("agree-to-terms"));
+
+
 //        Map<String, String> registerFormValue = new HashMap<>();
 
 //// Use map to set attributes

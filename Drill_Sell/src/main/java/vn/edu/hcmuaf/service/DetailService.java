@@ -28,7 +28,7 @@ public class DetailService {
                         ProductDetails productDetails = new ProductDetails();
                         productDetails.setImage(rs.getString("image"));
                         productDetails.setProductName(rs.getString("productName"));
-
+                        productDetails.setProductId(rs.getInt("productId"));
                         productDetails.setStatuss(rs.getInt("statuss"));
                         productDetails.setSpecifications(rs.getString("specifications"));  // Sửa tên cột thành "specifications"
                         productDetails.setUnitPrice(rs.getDouble("discountedPrice"));  // Sử dụng giá đã giảm giá
@@ -50,6 +50,7 @@ public class DetailService {
                 productDetails -> {
                     System.out.println("Product Details for Product ID " + productIdToRetrieve + ":");
                     System.out.println("Image: " + productDetails.getImage());
+                    System.out.println("id: " + productDetails.getProductId());
                     System.out.println("Product Name: " + productDetails.getProductName());
                     System.out.println("Status: " + productDetails.getStatuss());
                     System.out.println("Specifications: " + productDetails.getSpecifications());

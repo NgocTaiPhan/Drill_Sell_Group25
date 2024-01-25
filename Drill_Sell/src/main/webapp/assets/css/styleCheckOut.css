@@ -12,7 +12,7 @@
 }
 .address{
     width: 1200px;
-    height: 600px;
+
     margin: auto;
     background: white; !important;
 }
@@ -73,7 +73,7 @@ table.table th, table.table td {
 .product{
     border: 0.5px solid #c3c3c3;
     background: white;
-    height: 250px;
+
 }
 .product .li-product-thumbnail img{
     width: 50px;

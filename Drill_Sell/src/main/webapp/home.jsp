@@ -7,6 +7,11 @@
 <%@ page import="vn.edu.hcmuaf.controller.HomeController" %>
 <%@ page import="vn.edu.hcmuaf.bean.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="vn.edu.hcmuaf.bean.User, vn.edu.hcmuaf.bean.Products" %>
+<%@ page import="vn.edu.hcmuaf.controller.HomeController" %>
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%@ page import="java.io.PrintWriter" %>
+
 
 <%
 
@@ -141,46 +146,32 @@
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 
-                    <div class="dropdown dropdown-cart"><a href="#" class="dropdown-toggle lnk-cart"
-                                                           data-toggle="dropdown">
-                        <div class="items-cart-inner">
-                            <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
-                            <div class="basket-item-count"><span class="count">1</span></div>
-
-                        </div>
-                    </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="cart-item product-summary">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            <div class="image"><a href="#"><img
-                                                    src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                    alt="Ảnh sản phẩm"></a></div>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <h3 class="name"><a href="">Máy khoan động lực Bosch GSB 16 RE -
-                                                06012281K1</a></h3>
-                                            <div class="price">1.599.000đ</div>
-                                        </div>
-                                        <div class="col-xs-1 action"><a href="#"><i class="fa fa-trash"></i></a></div>
-                                    </div>
+                    <div class="dropdown dropdown-cart">
+                        <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
+                            <div class="items-cart-inner">
+                                <!-- Thêm một sự kiện nhấp chuột vào div -->
+                                <div class="basket" id="basketIcon" onclick="redirectToCart()">
+                                    <i class="glyphicon glyphicon-shopping-cart"></i>
                                 </div>
-                                <!-- /.cart-item -->
-                                <div class="clearfix"></div>
-                                <hr>
-                                <div class="clearfix cart-total">
-                                    <div class="pull-right"><span class="text">Tổng tiền :</span><span class='price'>1.599.000đ</span>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <a href="oder.jsp" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
-                                        toán</a>
-                                </div>
-                                <!-- /.cart-total-->
 
-                            </li>
-                        </ul>
-                        <!-- /.dropdown-menu-->
+                                <!-- Bạn có thể đặt mã JavaScript ở phía dưới trang hoặc tách riêng thành một tệp JS -->
+                                <script>
+                                    function redirectToCart() {
+                                        // Thực hiện chuyển hướng đến trang s.jsp khi nhấp vào
+                                        window.location.href = 'cart.jsp';
+                                    }
+                                </script>
+
+
+                                <%--                                <div id="cartItemCount" class="basket-item-count">--%>
+                                <%--                                    <span id="cartItemCountValue" class="count">0</span>--%>
+                                <%--                                </div>--%>
+
+
+
+                            </div>
+                        </a>
+
                     </div>
                     <!-- /.dropdown-cart -->
 
@@ -240,6 +231,29 @@
                                     </ul>
                                 </li>
                                 <li class="active  yamm-fw"><a href="contact.jsp">Liên hệ</a></li>
+
+
+
+                                <li class="active yamm-fw"><a href="managerproduct.jsp">quản lí sp</a></li>
+
+<%--                                <%--%>
+
+<%--                                    User user = (User) session.getAttribute("kh");--%>
+<%--                                    if (user != null) {--%>
+
+<%--                                                System.out.println("boxsell: " + user.getboxsell());--%>
+<%--                                                System.out.println("username: " + user.getUsername());--%>
+
+<%--                                                if (user.getboxsell() != 0 && user.getUsername() != null) {--%>
+<%--                                %>--%>
+<%--                                <li class="active yamm-fw"><a href="manager">quản lí sp</a></li>--%>
+<%--                                <%--%>
+<%--                                                }--%>
+<%--                                            }--%>
+
+<%--                                %>--%>
+
+
 
 
                             </ul>
@@ -691,10 +705,10 @@
                                                                                                       alt="Ảnh sản phẩm">
                                                         </a>
                                                         </div>
-                                                        <!-- /.image -->
+
 
                                                     </div>
-                                                    <!-- /.product-image -->
+
                                                 </div>
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
@@ -725,9 +739,6 @@
                     </div>
                     <!-- /.sidebar-widget-body -->
                 </div>
-                <!-- /.sidebar-widget -->
-                <!-- ============================================== BEST SELLER : END ============================================== -->
-                <!-- ============================================== WIDE PRODUCTS ============================================== -->
                 <div class="wide-banners wow fadeInUp outer-bottom-xs">
                     <div class="row">
                         <div class="col-md-7 col-sm-7">
@@ -736,16 +747,16 @@
                                                         src="assets/images/banners/home-banner1.jpg" alt="Ảnh sản phẩm">
                                 </div>
                             </div>
-                            <!-- /.wide-banner -->
+
                         </div>
-                        <!-- /.col -->
+
                         <div class="col-md-5 col-sm-5">
                             <div class="wide-banner cnt-strip">
                                 <div class="image"><img class="img-responsive"
                                                         src="assets/images/banners/home-banner2.jpg" alt="Ảnh sản phẩm">
                                 </div>
                             </div>
-                            <!-- /.wide-banner -->
+
                         </div>
                         <!-- /.col -->
                     </div>
@@ -753,13 +764,11 @@
                 </div>
                 <!-- /.wide-banners -->
 
-                <!-- ============================================== WIDE PRODUCTS : END ============================================== -->
-                <!-- ============================================== FEATURED PRODUCTS ============================================== -->
                 <section class="section featured-product wow fadeInUp">
                     <h3 class="section-title">Sản phẩm</h3>
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">
 
-                        <!-- /.item -->
+
 
                         <%
 
@@ -768,7 +777,7 @@
                                 String formattedPrice = homeCtroller.getFormattedUnitPrice(p);
 
                         %>
-                        <!-- /.item -->
+
 
                         <div class="item item-carousel">
                             <div class="products">
@@ -777,10 +786,10 @@
                                         <div class="image"><a href="detail.jsp"><img height="189px" width="189px"
                                                                                      src="<%=p.getImage()%>"
                                                                                      alt="Ảnh sản phẩm"></a></div>
-                                        <!-- /.image -->
+
 
                                     </div>
-                                    <!-- /.product-image -->
+
 
                                     <div class="product-info text-left">
                                         <h3 class="name"><a href="detail.jsp"><%=p.getProductName()%>
@@ -794,25 +803,17 @@
                                         <!-- /.product-price -->
 
                                     </div>
-                                    <!-- /.product-info -->
 
-                                    <!-- /.cart -->
                                 </div>
-                                <!-- /.product -->
+
 
                             </div>
-                            <!-- /.products -->
+
                         </div>
-                        <!-- /.item -->
+
 
                         <%}%>
-                        <!-- /.item -->
 
-
-                        <!-- /.item -->
-
-
-                        <!-- /.item -->
                     </div>
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
                         <%
