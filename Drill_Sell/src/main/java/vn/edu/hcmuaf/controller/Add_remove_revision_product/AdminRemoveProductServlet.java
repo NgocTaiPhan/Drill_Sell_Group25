@@ -1,8 +1,8 @@
-package vn.edu.hcmuaf.controller;
-
+package vn.edu.hcmuaf.controller.Add_remove_revision_product;
 import vn.edu.hcmuaf.bean.Product;
 import vn.edu.hcmuaf.bean.User;
 import vn.edu.hcmuaf.service.Addproduct;
+import vn.edu.hcmuaf.service.NewProduct;
 import vn.edu.hcmuaf.service.Productdown;
 
 import javax.servlet.ServletException;
@@ -13,38 +13,23 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
-
-@WebServlet("/add")
-public class AdminAddProductServlet extends HttpServlet {
+@WebServlet("/remove")
+public class AdminRemoveProductServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
-
-        // Lấy dữ liệu từ form
-        String image = request.getParameter("image");
-        String productName = request.getParameter("productName");
-        double unitPrice = Double.parseDouble(request.getParameter("unitPrice"));
-        int producerId = Integer.parseInt(request.getParameter("producerId"));
-        int categoryId = Integer.parseInt(request.getParameter("categoryId"));
-
-        // Tạo đối tượng Product
-        Product product = new Product();
-        product.setImage(image);
-        product.setProductName(productName);
-        product.setUnitPrice(unitPrice);
-        product.setProducerId(producerId);
-        product.setCategoryId(categoryId);
-
         try {
+            // Lấy thông tin sản phẩm cần xóa từ request
+            int productId = Integer.parseInt(request.getParameter("productId"));
+
+            // Gọi phương thức để xóa sản phẩm
+            new NewProduct().deleteProductById(productId);
+
             // Lấy thông tin user từ session (nếu cần)
             HttpSession session = request.getSession();
             User user = (User) session.getAttribute("auth");
             int sid = user.getboxsell();
 
-            // Thêm sản phẩm vào cơ sở dữ liệu
-            Addproduct.addProductForProducer(product, sid);
-
-            // Gọi phương thức để lấy danh sách sản phẩm cho producer sau khi thêm
+            // Gọi phương thức để lấy danh sách sản phẩm cho producer sau khi xóa
             List<Product> productList = new Productdown().getProductsForProducer(sid);
 
             // Set danh sách sản phẩm vào request để sử dụng trong JSP
