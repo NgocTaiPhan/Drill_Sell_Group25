@@ -1,83 +1,99 @@
-function submitRegister() {
-    var formRegister = document.getElementById("register-form");
+window.onload = function () {
+    var urlParams = new URLSearchParams(window.location.search);
+    var errorParam = urlParams.get("error");
 
-    function showError(title, text) {
+    function handleErrorMessage(errorParam, errorMessage) {
         Swal.fire({
-            title: title,
-            text: text,
-            icon: 'error',
-            confirmButtonText: 'OK',
+            icon: "error",
+            title: "Lỗi",
+            text: errorMessage,
+            confirmButtonText: "Đóng",
+        }).then((result) => {
+            console.log("Redirecting to login.jsp");
+            window.location.href = "login.jsp";
         });
     }
 
-    // Validation logic
-    var fullName = document.getElementById('full-name-register').value.trim();
-    var birthDate = document.getElementById('birth-date-register').value;
-    var phoneNumber = document.getElementById('phone-number-register').value;
-    var email = document.getElementById('email-register').value;
-    var username = document.getElementById('username-register').value;
-    var password = document.getElementById('password-register').value;
-    var confirmPassword = document.getElementById('confirm-password-register').value;
-    var agreeToTerms = document.getElementById('agree-to-terms').checked;
+    switch (errorParam) {
+        case "null-fullname":
+            handleErrorMessage(errorParam, "Hãy điền họ và tên");
+            break;
 
-    // Validate full name
-    if (fullName === "") {
-        showError('Đăng kí thất bại', 'Tên người dùng không được bỏ trống');
-        return;
-    } else if (!/^[^\d]+$/.test(fullName)) {
-        showError('Đăng kí thất bại', 'Tên người dùng không được chứa số');
-        return;
+        case "null-birthday":
+            handleErrorMessage(errorParam, "Hãy nhập ngày sinh");
+            break;
+
+        case "null-gender":
+            handleErrorMessage(errorParam, "Hãy chọn giới tính");
+            break;
+
+        case "null-address":
+            handleErrorMessage(errorParam, "Hãy nhập địa chỉ");
+            break;
+
+        case "null-birthday":
+            handleErrorMessage(errorParam, "Hãy nhập ngày sinh");
+            break;
+
+        case "null-phone":
+            handleErrorMessage(errorParam, "Hãy nhập số điện thoại");
+            break;
+
+        case "null-email":
+            handleErrorMessage(errorParam, "Hãy nhập địa chỉ email");
+            break;
+
+        case "null-username":
+            handleErrorMessage(errorParam, "Hãy nhập tên đăng nhập");
+            break;
+
+        case "null-pass":
+            handleErrorMessage(errorParam, "Hãy nhập mật khẩu");
+            break;
+
+        case "null-cfpass":
+            handleErrorMessage(errorParam, "Hãy nhập lại mật khẩu");
+            break;
+
+        case "null-agree":
+            handleErrorMessage(errorParam, "Hãy đồng ý với điều khoản của chúng tôi.");
+            break;
+
+        case "future-birthday":
+            handleErrorMessage(errorParam, "Ngày sinh không được lớn hơn ngày hiện tại");
+            break;
+
+        case "invalid-phone":
+            handleErrorMessage(errorParam, "Số điện thoại không hợp lệ");
+            break;
+
+        case "invalid-email":
+            handleErrorMessage(errorParam, "Email không hợp lệ");
+            break;
+
+        case "invalid-username":
+            handleErrorMessage(errorParam, "Tên đăng nhập không hợp lệ");
+            break;
+
+        case "pass-not-match":
+            handleErrorMessage(errorParam, "Mật khẩu không khớp");
+            break;
+        case"none":
+            Swal.fire({
+                icon: "success",
+                title: "Đăng kí thành công",
+                text: "Hãy xác nhận email và đăng nhập!",
+                confirmButtonText: "Đóng",
+            }).then((result) => {
+                console.log("Redirecting to login.jsp");
+                window.location.href = "login.jsp";
+            });
+        default:
+
+
+        // break;
     }
 
-    // Validate birth date
-    var birthDateObj = new Date(birthDate);
-    var currentDate = new Date();
-    if (isNaN(birthDateObj.getTime()) || !birthDate || birthDateObj > currentDate) {
-        showError('Đăng kí thất bại', 'Ngày sinh không hợp lệ');
-        return;
-    }
-
-    // Validate phone number
-    if (phoneNumber === "" || !/^0\d{9}$/.test(phoneNumber)) {
-        showError('Đăng kí thất bại', 'Số điện thoại không hợp lệ');
-        return;
-    }
-
-    // Validate email
-    if (!/^\S+@\S+\.\S+$/.test(email)) {
-        showError('Đăng kí thất bại', 'Địa chỉ email không hợp lệ');
-        return;
-    }
-
-    // Validate username
-    if (!/^(?!\d)\S+$/.test(username)) {
-        showError('Đăng kí thất bại', 'Tên đăng nhập không hợp lệ');
-        return;
-    }
-
-    // Validate password
-    if (password !== confirmPassword) {
-        showError('Đăng kí thất bại', 'Mật khẩu không khớp');
-        return;
-    }
-
-    // Validate agreement to terms
-    if (!agreeToTerms) {
-        showError('Đăng kí thất bại', 'Bạn cần phải đồng ý với điều khoản của chúng tôi');
-        return;
-    }
-
-    // If all validations pass, show success message and submit the form
-    Swal.fire({
-        title: 'Đăng kí thành công',
-        text: 'Chào mừng',
-        icon: 'success',
-        confirmButtonText: 'OK',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            formRegister.action = 'register';
-            formRegister.method = 'POST';
-            formRegister.submit();
-        }
-    });
 }
+
+
