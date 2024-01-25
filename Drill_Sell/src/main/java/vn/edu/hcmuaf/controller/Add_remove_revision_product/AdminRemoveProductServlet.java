@@ -27,7 +27,7 @@ public class AdminRemoveProductServlet extends HttpServlet {
             // Lấy thông tin user từ session (nếu cần)
             HttpSession session = request.getSession();
             User user = (User) session.getAttribute("auth");
-            int sid = user.getboxsell();
+            int sid = 0;
 
             // Gọi phương thức để lấy danh sách sản phẩm cho producer sau khi xóa
             List<Product> productList = new Productdown().getProductsForProducer(sid);
