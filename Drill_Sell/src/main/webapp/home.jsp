@@ -130,14 +130,25 @@
                     <div class="search-area">
                         <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
-                                <input class="search-field dropdown-toggle" data-toggle="dropdown" name="name"
-                                       placeholder="Tìm kiếm...">
+                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown"
+                                       name="name" placeholder="Tìm kiếm...">
                                 <a style="height: 44.5px;" class="search-button" href="#"
-                                   onclick="this.parentNode.submit()"></a>
+                                   onclick="searchProduct(event)"></a>
+
+
                             </div>
                         </form>
 
                     </div>
+                    <script>
+                        function searchProduct(event) {
+                            event.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
+                            var keyword = document.getElementById("searchInput").value;
+
+                            // Chuyển hướng đến trang seachProduct.jsp với tham số tìm kiếm
+                            window.location.href = "seachProduct?name=" + encodeURIComponent(keyword);
+                        }
+                    </script>
                     <!-- /.search-area -->
                     <!-- ============================================================= SEARCH AREA : END ============================================================= -->
                 </div>

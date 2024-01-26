@@ -106,7 +106,7 @@
                     <!-- ============================================================= SEARCH AREA ============================================================= -->
                     <div class="search-area">
                         <form action="seachProduct" method="get">
-                            <div class="control-group dropdown">
+                            <div class="control-group dropdown" >
                                 <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown"
                                        name="name" placeholder="Tìm kiếm...">
                                 <a style="height: 44.5px;" class="search-button" href="#"
