@@ -11,6 +11,9 @@
   </component>
   <component name="ChangeListManager">
 
+    <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành gửi mail xác thực Đăng kí" />
+
+
     <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành phần Đăng nhập/Đăng kí(gửi mail thử)">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
@@ -51,6 +54,7 @@
 
 
     </list>
+>>>>>>> abf8a09bb288981aae7f0e219cdd0ad2facbe025
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -674,6 +678,9 @@
       <workItem from="1706243746771" duration="4120000" />
       <workItem from="1706248297375" duration="11136000" />
       <workItem from="1706265390507" duration="1143000" />
+
+      <workItem from="1706267956512" duration="6619000" />
+=======
       <workItem from="1706267956512" duration="6196000" />
 
       <workItem from="1706075327545" duration="3609000" />
@@ -684,6 +691,7 @@
       <workItem from="1706269078188" duration="2642000" />
 
       <workItem from="1706250962218" duration="12507000" />
+
 
     </task>
     <task id="LOCAL-00001" summary="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
@@ -742,7 +750,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706192787683</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="kí">
+      <option name="closed" value="true" />
+      <created>1706274308487</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706274308487</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Hoàn thành gửi mail xác thực Đăng kí">
+      <option name="closed" value="true" />
+      <created>1706274338551</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706274338551</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -765,7 +789,11 @@
     <MESSAGE value="Push để pull code" />
     <MESSAGE value="Hoàn thành phần Đăng nhập" />
     <MESSAGE value="Hoàn thành phần Đăng nhập/Đăng kí(gửi mail thử)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hoàn thành phần Đăng nhập/Đăng kí(gửi mail thử)" />
+    <MESSAGE value="Hoàn thành gửi mail xác thực đăng kí" />
+    <MESSAGE value="Merge pull request #134 from OzoriTA/tai&#10;&#10;Hoàn thành Đăng nhập, Đăng kí (Gửi test mail)" />
+    <MESSAGE value="kí" />
+    <MESSAGE value="Hoàn thành gửi mail xác thực Đăng kí" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hoàn thành gửi mail xác thực Đăng kí" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
