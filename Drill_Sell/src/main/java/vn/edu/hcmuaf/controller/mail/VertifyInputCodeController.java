@@ -9,11 +9,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "ConfirmRegistration", value = "/vertify-code")
-public class VerityInputCodeController extends HttpServlet {
+public class VertifyInputCodeController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -24,13 +23,11 @@ public class VerityInputCodeController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String inputCode = request.getParameter("input-code");
-        HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("confirmation");
+        User user = (User) request.getAttribute("confirmation");
         if (EmailService.getInstance().vertifyCode(user.getVerificationCode(), inputCode)) {
-            user.setVerified(true);
-            UserService.getInstance().addUser(user);
+
+            response.sendRedirect("/user-service/change-pass.jsp");
         }
-        response.sendRedirect("input-code.jsp?notify=vertifed");
 
 
     }

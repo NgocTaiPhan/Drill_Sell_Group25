@@ -22,7 +22,8 @@ public class ProductDao {
 
     public void insertProduct(Products products, int producerId) {
         DbController.me().get().useTransaction(handle -> {
-            handle.createUpdate("INSERT INTO products (image, productName, unitPrice, producerId, categoryId) VALUES (?, ?, ?, ?, ?)")
+            handle.createUpdate("INSERT INTO products (image, productName, unitPrice, producerId, categoryId) VALUES (:image, :productName, :unitPrice, :producerId, :categoryId)")
+//            handle.createUpdate("INSERT INTO products (image, productName, unitPrice, producerId, categoryId) VALUES (?, ?, ?, ?, ?)")
                     .bind("image", products.getImage())
                     .bind("productName", products.getProductName())
                     .bind("unitPrice", products.getUnitPrice())

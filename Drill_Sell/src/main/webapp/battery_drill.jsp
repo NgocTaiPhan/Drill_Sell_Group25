@@ -4,6 +4,10 @@
 <%@ page import="java.util.Locale" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    List<List<Products>> allProduct = (List<List<Products>>) request.getAttribute("loadProductInBatteryDrill");
+
+%>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -53,10 +57,7 @@
 
     <!-- ============================================== TOP MENU ============================================== -->
 
-    <%
-        List<List<Products>> allProduct = (List<List<Products>>) request.getAttribute("loadProductInBatteryDrill");
 
-    %>
 
     <div class="top-bar animate-dropdown">
         <div class="container">

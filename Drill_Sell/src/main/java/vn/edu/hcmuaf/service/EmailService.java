@@ -28,7 +28,43 @@ public class EmailService {
         return instance;
     }
 
-    public boolean sendMail(String to, String subject, String confirmationCode) {
+    public boolean sendMailWelcome(String to, String subject, String confirmationCode) {
+        Session session = Session.getInstance(prop, new Authenticator() {
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(MailProperties.getUsername(), MailProperties.getPassword());
+            }
+        });
+
+        try {
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(MailProperties.getUsername()));
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
+            message.setSubject(subject);
+
+            // Tạo liên kết xác nhận
+            String confirmationMessage = "Đây là mã của bạn để " + subject.toLowerCase() + " :" + confirmationCode;
+            String emailContent = "Hãy nhấn vào liên kết sau để " + subject.toLowerCase() + ": <a href=\"" + LINK + "\">Xác nhận đăng ký</a>";
+
+            String fullEmailContent = confirmationMessage + "<br/><br/>" + emailContent;
+
+            message.setContent(fullEmailContent, "text/html; charset=utf-8");
+
+
+            message.setHeader("X-Mailer", "JavaMail API");
+            message.setHeader("Content-Type", "text/html; charset=utf-8");
+
+            message.getSentDate();
+            // Gửi email
+            Transport.send(message);
+            System.out.println("Done");
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
+
+        return true;
+    }
+    public boolean sendMailOTP(String to, String subject, String confirmationCode) {
         Session session = Session.getInstance(prop, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
