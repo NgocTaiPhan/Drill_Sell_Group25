@@ -3,6 +3,7 @@ import vn.edu.hcmuaf.bean.Product;
 import vn.edu.hcmuaf.bean.Products;
 import vn.edu.hcmuaf.bean.User;
 import vn.edu.hcmuaf.service.ProductDao;
+import vn.edu.hcmuaf.service.ProductService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,29 +19,39 @@ public class EditProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int productId = Integer.parseInt(request.getParameter("productId"));
 
-        try {
-            // Lấy tất cả sản phẩm từ cơ sở dữ liệu
-            List<Products> allProducts = new ProductDao().getAllProducts();
+            List<Products> allProducts = ProductService.showProd();
+        System.out.println(allProducts);
 
             // Lọc ra sản phẩm cần sửa
-            Products productToEdit = allProducts.stream()
-                    .filter(product -> product.getProductId() == productId)
-                    .findFirst()
-                    .orElse(null);
+            Products productToEdit=null;
+            for (Products p : allProducts
+                 ) {
+                if (p.getProductId() == productId) {
+                    productToEdit = p;
+                    System.out.println(productToEdit);
+                }
+            }
 
-            if (productToEdit != null) {
+
+                if (productToEdit != null) {
+                    HttpSession session = request.getSession();
                 // Chuyển hướng sang trang JSP sửa sản phẩm
-                request.setAttribute("productToEdit", productToEdit);
-                request.getRequestDispatcher("/EditProduct.jsp").forward(request, response);
+                    session.setAttribute("productToEdit", productToEdit);
+                response.sendRedirect("EditProduct.jsp");
             } else {
-                // Hiển thị thông báo nếu không tìm thấy sản phẩm
+
                 response.getWriter().println("Không tìm thấy thông tin sản phẩm để sửa.");
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-            request.setAttribute("errorMessage", "Có lỗi xảy ra: " + e.getMessage());
-            request.getRequestDispatcher("/WEB-INF/error.jsp").forward(request, response);
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("UTF-8");
+
         }
+
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req,resp);
+
     }
 }
 
