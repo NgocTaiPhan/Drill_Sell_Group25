@@ -112,7 +112,7 @@ window.onload = function () {
             }).then((result) => {
                 window.location.href = "home.jsp";
             });
-        case"vertifed":
+        case"vertified":
             Swal.fire({
                 icon: "success",
                 title: "Xác thực thành công",

@@ -18,6 +18,7 @@ public class ProducerController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         int producer = Integer.parseInt(request.getParameter("pr"));
+        System.out.println(producer);
         List<Products> prods = ProducersService.findProductWidthProducersID(producer);
 
         HttpSession sesion = request.getSession();

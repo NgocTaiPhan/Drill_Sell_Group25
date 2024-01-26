@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.UUID;
 
-@WebServlet("/register")
+@WebServlet(name = "RegisterController", value = "/register")
 public class RegisterController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -25,6 +25,9 @@ public class RegisterController extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+
 
         // Lấy các thông tin từ form
         String fullName = request.getParameter("full-name-register");
@@ -39,36 +42,8 @@ public class RegisterController extends HttpServlet {
         String gender = request.getParameter("gender");
 
 
-//        validFullName(request.getParameter("full-name-register"));
-//        validBirthDate(request.getParameter("birth-date-register"));
-//        validPhoneNumber(request.getParameter("phone-number-register"));
-//        validEmail(request.getParameter("email-register"));
-//        validPassword(request.getParameter("password-register"),request.getParameter("confirm-password-register"));
-//        validẠgreeToTerms(request.getParameter("agree-to-terms"));
 
 
-//        Map<String, String> registerFormValue = new HashMap<>();
-
-//// Use map to set attributes
-//        registerFormValue.put("fullName", request.getParameter("full-name-register"));
-//        registerFormValue.put("birthDate", request.getParameter("birth-date-register"));
-//        registerFormValue.put("address", request.getParameter("address-register"));
-//        registerFormValue.put("phoneNumber", request.getParameter("phone-number-register"));
-//        registerFormValue.put("email", request.getParameter("email-register"));
-//        registerFormValue.put("username", request.getParameter("username-register"));
-//
-//        request.setAttribute("registerFormValue",registerFormValue);
-
-
-        request.setAttribute("full-name", fullName);
-        request.setAttribute("birth-date", birthDate);
-        request.setAttribute("address", address);
-        request.setAttribute("phone-number", phoneNumber);
-        request.setAttribute("email", email);
-        request.setAttribute("username", username);
-        request.setAttribute("password", password);
-        request.setAttribute("confirm-password", confirmPassword);
-        request.setAttribute("agree-to-terms", agreeToTerms);
         // Kiểm tra các điều kiện lỗi
         // Nếu có lỗi, chuyển hướng với tham số error
         if (fullName == null || fullName.trim().isEmpty()) {
@@ -116,8 +91,8 @@ public class RegisterController extends HttpServlet {
         if (username == null || username.trim().isEmpty()) {
             response.sendRedirect("login.jsp?notify=null-username");
             return;
-        }else{
-            if (!UserService.getInstance().isUsernameDuplicate(username)){
+        } else {
+            if (!UserService.getInstance().isUsernameDuplicate(username)) {
                 response.sendRedirect("login.jsp?notify=duplicate-acc");
 
             }
@@ -140,12 +115,17 @@ public class RegisterController extends HttpServlet {
             response.sendRedirect("login.jsp?notify=null-agree");
             return;
         }
-//        request.setAttribute("email-for-mail", email);
-        String confirmationCode = UUID.randomUUID().toString();
-        EmailService.getInstance().sendMail(email, "Xác thực tài khoản", confirmationCode);
-        HttpSession session = request.getSession();
-        session.setAttribute("confirmation", new User(fullName, address, phoneNumber, email, username, password, gender, birthDate, confirmationCode, false, false));
         response.sendRedirect("login.jsp?notify=register-success");
+//        request.setAttribute("email-for-mail", email);
+        String confirmationCode = UUID.randomUUID().toString().substring(0, 6);
+        HttpSession session = request.getSession();
+        User user = new User(fullName, address, phoneNumber, email, username, password, gender, birthDate, confirmationCode, false, false);
+//        session.setAttribute("confirmation", user);
+        UserService.getInstance().addUser(user);
+        EmailService.getInstance().sendMailWelcome(email, "Xác thực tài khoản", confirmationCode);
+
+
+
 //        response.sendRedirect("user-service/input-code.jsp");
 
     }

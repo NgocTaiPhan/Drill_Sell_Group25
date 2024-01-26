@@ -49,72 +49,75 @@
 <body>
 
 
-    <header class="header-style-1 ">
-        <%  List<List<Products>> allProduct = (List<List<Products>>) request.getAttribute("loadProductInHandDrill");%>
-        <!-- ============================================== TOP MENU ============================================== -->
+<%  List<List<Products>> allProduct = (List<List<Products>>) request.getAttribute("loadProductInHandDrill");%>
+<header class="header-style-1 ">
+    <%User u = (User) session.getAttribute("auth");%>
+    <!-- ============================================== TOP MENU ============================================== -->
+    <div class="top-bar animate-dropdown">
+        <div class="container">
+            <div class="header-top-inner">
+                <div class="cnt-account">
+                    <ul class="list-unstyled">
+                        <%if (u != null) { %>
+                        <li><a href="account.jsp"><i class="icon fa fa-user"></i><%=u.getFullname()%>
+                        </a></li>
+                        <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="order.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="<%=request.getContextPath()%>/logout"><i
+                                class="icon fa fa-arrow-circle-o-right"></i>Đăng xuất</a></li>
+                        <%} else {%>
 
-        <div class="top-bar animate-dropdown">
-            <div class="container">
-                <div class="header-top-inner">
-                    <div class="cnt-account">
-                        <ul class="list-unstyled">
-    
-                            <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                            <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                            <li><a href="order.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                            <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
-                        </ul>
-                    </div>
-    
-    
-                    <!-- /.cnt-cart -->
-                    <div class="clearfix"></div>
+                        <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
+                        <%}%>
+                    </ul>
+                </div>
+
+
+                <!-- /.cnt-cart -->
+                <div class="clearfix"></div>
+            </div>
+            <!-- /.header-top-inner -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.header-top -->
+    <!-- ============================================== TOP MENU : END ============================================== -->
+    <div class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
+                    <!-- ============================================================= LOGO ============================================================= -->
+                    <link rel="stylesheet" href="assets/css/my-css/logo-page.css">
+                    <div class="logo-page"><a href="home.jsp"> <img
+                            src="assets/images/logo.png" alt="logo"
+                    > </a></div>
+
+
+                    <!-- /.logo -->
+                    <!-- ============================================================= LOGO : END ============================================================= -->
+                </div>
+                <!-- /.logo-holder -->
+                <div class="nameLogo">
+                    <h1 class="name">MÁY KHOAN</h1>
 
                 </div>
-                <!-- /.header-top-inner -->
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /.header-top -->
-        <!-- ============================================== TOP MENU : END ============================================== -->
-        <div class="main-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
-                        <!-- ============================================================= LOGO ============================================================= -->
-                        <link rel="stylesheet" href="assets/css/my-css/logo-page.css">
-                        <div class="logo-page"><a href="home.jsp"> <img
-                                src="assets/images/logo.png" alt="logo"
-                        > </a></div>
-    
-    
-                        <!-- /.logo -->
-                        <!-- ============================================================= LOGO : END ============================================================= -->
+
+                <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder">
+                    <!-- /.contact-row -->
+                    <!-- ============================================================= SEARCH AREA ============================================================= -->
+                    <div class="search-area">
+                        <form action="seachProduct" method="get">
+                            <div class="control-group dropdown">
+                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown"
+                                       name="name" placeholder="Tìm kiếm...">
+                                <a style="height: 44.5px;" class="search-button" href="#"
+                                   onclick="searchProduct(event)"></a>
+
+
+                            </div>
+                        </form>
+
                     </div>
-                    <!-- /.logo-holder -->
-                    <div class="nameLogo">
-                        <h1 class="name">MÁY KHOAN</h1>
-    
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder">
-                        <!-- /.contact-row -->
-                        <!-- ============================================================= SEARCH AREA ============================================================= -->
-                        <div class="search-area">
-                            <form action="seachProduct" method="get">
-                                <div class="control-group dropdown">
-                                    <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
-                                    <a style="height: 44.5px;" class="search-button" href="#" onclick="searchProduct(event)"></a>
-
-
-                                </div>
-                            </form>
-
-                        </div>
-                        <!-- /.search-area -->
-                        <!-- ============================================================= SEARCH AREA : END ============================================================= -->
-                    </div>
-                    <!-- /.top-search-holder -->
                     <script>
                         function searchProduct(event) {
                             event.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
@@ -124,113 +127,147 @@
                             window.location.href = "seachProduct?name=" + encodeURIComponent(keyword);
                         }
                     </script>
-                    <!-- /.top-search-holder -->
+                    <!-- /.search-area -->
+                    <!-- ============================================================= SEARCH AREA : END ============================================================= -->
+                </div>
+                <!-- /.top-search-holder -->
 
-                    <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
-                        <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
-                        <div class="dropdown dropdown-cart">
-                            <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
-                                <div class="items-cart-inner">
-                                    <!-- Thêm một sự kiện nhấp chuột vào div -->
-                                    <div class="basket" id="basketIcon" onclick="redirectToCart()">
-                                        <i class="glyphicon glyphicon-shopping-cart"></i>
-                                    </div>
+                <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
+                    <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 
-                                    <!-- Bạn có thể đặt mã JavaScript ở phía dưới trang hoặc tách riêng thành một tệp JS -->
-                                    <script>
-                                        function redirectToCart() {
-                                            // Thực hiện chuyển hướng đến trang s.jsp khi nhấp vào
-                                            window.location.href = 'cart.jsp';
-                                        }
-                                    </script>
-
-
-                                    <%--                                <div id="cartItemCount" class="basket-item-count">--%>
-                                    <%--                                    <span id="cartItemCountValue" class="count">0</span>--%>
-                                    <%--                                </div>--%>
-
-
-
+                    <div class="dropdown dropdown-cart">
+                        <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
+                            <div class="items-cart-inner">
+                                <!-- Thêm một sự kiện nhấp chuột vào div -->
+                                <div class="basket" id="basketIcon" onclick="redirectToCart()">
+                                    <i class="glyphicon glyphicon-shopping-cart"></i>
                                 </div>
-                            </a>
 
-                        </div>
-                        <!-- /.dropdown-cart -->
-                        <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
-                    </div>
-                    <!-- /.top-cart-row -->
-                </div>
-                <!-- /.row -->
-    
-            </div>
-            <!-- /.container -->
-    
-        </div>
-        <!-- /.main-header -->
-    
-        <!-- ============================================== NAVBAR ============================================== -->
-        <div class="header-nav animate-dropdown">
-            <div class="container">
-                <div class="yamm navbar navbar-default" role="navigation">
-                    <!--                <div class="navbar-header">-->
-                    <!--                    <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse"-->
-                    <!--                            class="navbar-toggle collapsed"-->
-                    <!--                            type="button">-->
-                    <!--                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span-->
-                    <!--                            class="icon-bar"></span> <span class="icon-bar"></span></button>-->
-                    <!--                </div>-->
-                    <div class="nav-bg-class">
-                        <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse"
-                        >
-                            <div class="nav-outer">
-                                <ul class="nav navbar-nav">
-                                    <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
-                                    <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product" methods="post"></i>Sản phẩm</a></li>
-                                    <li class="dropdown active  ">
-                                        <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
-                                        <ul class="dropdown-menu ">
-
-                                            <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
-
-                                            </li>
-                                            <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
-
-                                            </li>
-
-                                            <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy khoan cầm tay gia đình</a>
-
-                                            </li>
-                                            <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy khoan mini</a>
-
-                                            </li>
-                                            <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
-
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="active  yamm-fw"><a href="contact.jsp">Liên hệ</a></li>
+                                <!-- Bạn có thể đặt mã JavaScript ở phía dưới trang hoặc tách riêng thành một tệp JS -->
+                                <script>
+                                    function redirectToCart() {
+                                        // Thực hiện chuyển hướng đến trang s.jsp khi nhấp vào
+                                        window.location.href = 'cart.jsp';
+                                    }
+                                </script>
 
 
-                                </ul>
-                                <!-- /.navbar-nav -->
-                                <div class="clearfix"></div>
+                                <%--                                <div id="cartItemCount" class="basket-item-count">--%>
+                                <%--                                    <span id="cartItemCountValue" class="count">0</span>--%>
+                                <%--                                </div>--%>
+
+
                             </div>
-                            <!-- /.nav-outer -->
-                        </div>
-                        <!-- /.navbar-collapse -->
-    
+                        </a>
+
                     </div>
-                    <!-- /.nav-bg-class -->
+                    <!-- /.dropdown-cart -->
+
+                    <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
                 </div>
-                <!-- /.navbar-default -->
+                <!-- /.top-cart-row -->
             </div>
-            <!-- /.container-class -->
-    
+            <!-- /.row -->
+
         </div>
-        <!-- /.header-nav -->
-        <!-- ============================================== NAVBAR : END ============================================== -->
-    
-    </header>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.main-header -->
+
+    <!-- ============================================== NAVBAR ============================================== -->
+    <div class="header-nav animate-dropdown">
+        <div class="container">
+            <div class="yamm navbar navbar-default" role="navigation">
+                <!--                <div class="navbar-header">-->
+                <!--                    <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse"-->
+                <!--                            class="navbar-toggle collapsed"-->
+                <!--                            type="button">-->
+                <!--                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span-->
+                <!--                            class="icon-bar"></span> <span class="icon-bar"></span></button>-->
+                <!--                </div>-->
+                <div class="nav-bg-class">
+                    <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse"
+                    >
+                        <div class="nav-outer">
+                            <ul class="nav navbar-nav">
+                                <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
+                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product"
+                                                               methods="post">Sản phẩm</a></li>
+                                <li class="dropdown active  ">
+                                    <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
+                                    <ul class="dropdown-menu ">
+                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>
+                                            Máy khoan pin</a>
+
+                                        </li>
+
+                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy
+                                            khoan cầm tay </a>
+
+                                        </li>
+                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy
+                                            khoan mini</a>
+                                        </li>
+                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy
+                                            khoan động lực</a>
+                                        </li>
+
+                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>
+                                            Máy khoan bê tông, Máy khoan búa</a>
+
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="active  yamm-fw"><a href="contact.jsp">Liên hệ</a></li>
+
+                                <%
+                                    Boolean role = (Boolean) session.getAttribute("role-acc");
+                                    if (role != null && role) {
+                                %>
+                                <li class="active yamm-fw"><a href="managerproduct.jsp">Quản lí Sản phẩm</a></li>
+                                <%
+                                    }
+                                %>
+
+                                <%--                                <%--%>
+
+                                <%--                                    User user = (User) session.getAttribute("kh");--%>
+                                <%--                                    if (user != null) {--%>
+
+                                <%--                                                System.out.println("boxsell: " + user.getboxsell());--%>
+                                <%--                                                System.out.println("username: " + user.getUsername());--%>
+
+                                <%--                                                if (user.getboxsell() != 0 && user.getUsername() != null) {--%>
+                                <%--                                %>--%>
+                                <%--                                <li class="active yamm-fw"><a href="manager">quản lí sp</a></li>--%>
+                                <%--                                <%--%>
+                                <%--                                                }--%>
+                                <%--                                            }--%>
+
+                                <%--                                %>--%>
+
+
+                            </ul>
+                            <!-- /.navbar-nav -->
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- /.nav-outer -->
+                    </div>
+                    <!-- /.navbar-collapse -->
+
+                </div>
+                <!-- /.nav-bg-class -->
+            </div>
+            <!-- /.navbar-default -->
+        </div>
+        <!-- /.container-class -->
+
+    </div>
+    <!-- /.header-nav -->
+    <!-- ============================================== NAVBAR : END ============================================== -->
+
+</header>
 <div class="breadcrumb">
     <div class="container" style="white-space: nowrap">
         <div class="breadcrumb-inner">
