@@ -57,7 +57,7 @@
     <%@ page import="java.util.List" %>
     <%@ page import="vn.edu.hcmuaf.bean.Products" %>
     <%@ page import="vn.edu.hcmuaf.service.NewProduct" %>
-
+    <%@ page import="java.io.PrintWriter" %>
 
 
     <!-- Main Style CSS -->
@@ -281,7 +281,7 @@
         <div class="breadcrumb-content">
             <ul>
                 <li><a href="home.jsp">Trang chủ</a></li>
-                <li class="active">Giỏ hàng</li>
+                <li class="active">Quản lí sản phẩm</li>
             </ul>
         </div>
     </div>
@@ -431,10 +431,7 @@
             <img src="<%= products.getImage() %>" alt="Product Image" class="product-image" width="100" height="100">
         </td>
         <td>
-            <form action="edit" method="get">
-                <input type="hidden" name="productId" value="<%= products.getProductId() %>">
-                <button type="submit">Sửa</button>
-            </form>
+            <a href="<%=request.getContextPath()%>/edit?productId=<%=products.getProductId()%>">Sửa</a>
         </td>
 
     </tr>
