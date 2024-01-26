@@ -32,7 +32,7 @@ public class CheckOutController extends HttpServlet {
         if (selectedProducts != null && selectedProducts.length > 0) {
             List<Cart> detailedCartList = getSelectedCartItems(cartMap, selectedProducts);
             session.setAttribute("detailedCartList", detailedCartList);
-            
+
 
             request.getRequestDispatcher("order.jsp").forward(request, response);
         } else {
