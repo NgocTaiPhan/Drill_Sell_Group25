@@ -1,5 +1,5 @@
 package vn.edu.hcmuaf.controller.Add_remove_revision_product;
-import vn.edu.hcmuaf.bean.Product;
+
 import vn.edu.hcmuaf.bean.Products;
 import vn.edu.hcmuaf.service.NewProduct;
 
@@ -13,6 +13,13 @@ import java.io.IOException;
 @WebServlet("/update")
 public class UpdateProductServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("UTF-8");
+        updateProduct(request, response);
+    }
+
+
+    private void updateProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int productId = Integer.parseInt(request.getParameter("productId"));
         String image = request.getParameter("image");
         String productName = request.getParameter("productName");
@@ -33,10 +40,3 @@ public class UpdateProductServlet extends HttpServlet {
         }
     }
 }
-
-
-
-
-
-
-
