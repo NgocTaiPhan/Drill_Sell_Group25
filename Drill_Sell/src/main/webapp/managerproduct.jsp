@@ -58,6 +58,9 @@
     <%@ page import="vn.edu.hcmuaf.bean.Products" %>
     <%@ page import="vn.edu.hcmuaf.service.NewProduct" %>
     <%@ page import="java.io.PrintWriter" %>
+    <%@ page import="vn.edu.hcmuaf.service.ProductValue_util" %>
+
+
 
 
     <!-- Main Style CSS -->
@@ -73,138 +76,6 @@
 <header class="header-style-1 ">
 
     <!-- ============================================== TOP MENU ============================================== -->
-    <div class="top-bar animate-dropdown">
-        <div class="container">
-            <div class="header-top-inner">
-                <div class="cnt-account">
-                    <ul class="list-unstyled">
-
-                        <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
-                        <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="order.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                        <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
-                    </ul>
-                </div>
-
-
-                <!-- /.cnt-cart -->
-                <div class="clearfix"></div>
-            </div>
-            <!-- /.header-top-inner -->
-        </div>
-        <!-- /.container -->
-    </div>
-    <!-- /.header-top -->
-    <!-- ============================================== TOP MENU : END ============================================== -->
-    <div class="main-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
-                    <!-- ============================================================= LOGO ============================================================= -->
-                    <link rel="stylesheet" href="assets/css/my-css/logo-page.css">
-                    <div class="logo-page"><a href="home.jsp"> <img
-                            src="assets/images/logo.png" alt="logo"
-                    > </a></div>
-
-
-                    <!-- /.logo -->
-                    <!-- ============================================================= LOGO : END ============================================================= -->
-                </div>
-                <!-- /.logo-holder -->
-                <div class="nameLogo">
-                    <h1 class="name">MÁY KHOAN</h1>
-
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder">
-                    <!-- /.contact-row -->
-                    <!-- ============================================================= SEARCH AREA ============================================================= -->
-                    <div class="search-area">
-                        <form action="seachProduct" method="get">
-                            <div class="control-group dropdown">
-                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown"
-                                       name="name" placeholder="Tìm kiếm...">
-                                <a style="height: 44.5px;" class="search-button" href="#"
-                                   onclick="searchProduct(event)"></a>
-
-
-                            </div>
-                        </form>
-
-                    </div>
-                    <!-- /.search-area -->
-                    <!-- ============================================================= SEARCH AREA : END ============================================================= -->
-                </div>
-                <!-- /.top-search-holder -->
-                <script>
-                    function searchProduct(event) {
-                        event.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
-                        var keyword = document.getElementById("searchInput").value;
-
-                        // Chuyển hướng đến trang seachProduct.jsp với tham số tìm kiếm
-                        window.location.href = "seachProduct?name=" + encodeURIComponent(keyword);
-                    }
-                </script>
-                <!-- /.top-search-holder -->
-
-                <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
-                    <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
-
-                    <div class="dropdown dropdown-cart"><a href="detail.jsp" class="dropdown-toggle lnk-cart"
-                                                           data-toggle="dropdown">
-                        <div class="items-cart-inner">
-                            <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
-                            <div class="basket-item-count"><span class="count">1</span></div>
-
-                        </div>
-                    </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="cart-item product-summary">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            <div class="image"><a href="detail.jsp"><img
-                                                    src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                    alt="Ảnh sản phẩm"></a></div>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <h3 class="name"><a href="detail.jsp">Máy khoan động lực Bosch GSB 16 RE -
-                                                06012281K1</a></h3>
-                                            <div class="price">1.599.000đ</div>
-                                        </div>
-                                        <div class="col-xs-1 action"><a href="detail.jsp"><i
-                                                class="fa fa-trash"></i></a></div>
-                                    </div>
-                                </div>
-                                <!-- /.cart-item -->
-                                <div class="clearfix"></div>
-                                <hr>
-                                <div class="clearfix cart-total">
-                                    <div class="pull-right"><span class="text">Tổng tiền :</span><span class='price'>1.599.000đ</span>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <a href="order.jsp" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
-                                        toán</a>
-                                </div>
-                                <!-- /.cart-total-->
-
-                            </li>
-                        </ul>
-                        <!-- /.dropdown-menu-->
-                    </div>
-                    <!-- /.dropdown-cart -->
-
-                    <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
-                </div>
-                <!-- /.top-cart-row -->
-            </div>
-            <!-- /.row -->
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.main-header -->
 
     <!-- ============================================== NAVBAR ============================================== -->
     <div class="header-nav animate-dropdown">
@@ -353,7 +224,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <label>Chọn nhà sản xuất</label>
+                            <label>Nhà sản xuất</label>
                             <select name="producerId" class="form-control" required>
                                 <option value="1">Bosh</option>
                                 <option value="2">Makute</option>
@@ -367,7 +238,7 @@
                                 <option value="10">Gomes</option>
                             </select>
                             <div class="form-group">
-                                <label>Mã danh mục</label>
+                                <label>Loại</label>
                                 <select name="categoryId" class="form-control" required>
                                     <option value="1">Máy khoan pin</option>
                                     <option value="2">Máy khoan bê tông, Máy khoan búa</option>
@@ -396,7 +267,7 @@
 </div>
 <%--end them sp--%>
 
-<% List<Products> latestProducts = new NewProduct().getLatestProducts(5); %>
+<% List<Products> latestProducts = new NewProduct().getLatestProducts(10); %>
 <%
     if (latestProducts != null && !latestProducts.isEmpty()) {
 %>
@@ -425,8 +296,8 @@
         <td class="product-id"><%= products.getProductId() %></td>
         <td class="product-name"><%= products.getProductName() %></td>
         <td class="product-price"><%= products.getUnitPrice() %></td>
-        <td class="producer-id"><%= products.getProducerId() %></td>
-        <td class="category-id"><%= products.getCategoryId() %></td>
+        <td class="producer-id"><%= ProductValue_util.getProducerName(products.getProducerId()) %></td>
+        <td class="category-id"><%= ProductValue_util.getCategoryName(products.getCategoryId()) %></td>
         <td class="product-image">
             <img src="<%= products.getImage() %>" alt="Product Image" class="product-image" width="100" height="100">
         </td>
@@ -480,6 +351,9 @@
         <div class="animated alo-circle-fill"></div>
     </a>
 </div>
+
+<div style="width: 200px; height: 100px;"></div>
+
 
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <!-- ============================================================= Backtop ============================================================= -->
