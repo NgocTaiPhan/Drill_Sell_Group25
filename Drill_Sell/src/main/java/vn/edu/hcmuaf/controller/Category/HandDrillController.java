@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.controller;
+package vn.edu.hcmuaf.controller.Category;
 
 import vn.edu.hcmuaf.bean.Products;
 import vn.edu.hcmuaf.service.ProductCategoryService;
@@ -13,8 +13,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "HammerDrillController", value = "/hammer_drill")
-public class HammerDrillController extends HttpServlet {
+@WebServlet(name = "HandDrillController", value = "/hand_drill")
+public class HandDrillController extends HttpServlet {
     ProductCategoryService categoryService = new ProductCategoryService();
     ProductSell productSell = new ProductSell();
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -23,15 +23,15 @@ public class HammerDrillController extends HttpServlet {
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<List<Products>> allProduct = new ArrayList<>();
-        allProduct.add(categoryService.finProductHammerDrill());
-        allProduct.add(categoryService.finProductHammerDrill());
-        allProduct.add(categoryService.finProductHammerDrill());
-        allProduct.add(productSell.productSellHammerDrill());
-        request.setAttribute("loadProductInHammerDrill", allProduct);
+        allProduct.add(categoryService.finProductHandDrill());
+        allProduct.add(categoryService.finProductHandDrill());
+        allProduct.add(categoryService.finProductHandDrill());
+        allProduct.add(productSell.productSellHandDrill());
+        request.setAttribute("loadProductInHandDrill", allProduct);
 
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("UTF-8");
-        request.getRequestDispatcher("hammer_drill.jsp").forward(request,response);
+        request.getRequestDispatcher("Hand_drill.jsp").forward(request,response);
     }
 
 }

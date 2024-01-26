@@ -67,7 +67,7 @@
 
                         <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
                         <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="order.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
@@ -357,7 +357,7 @@
                                                         </div>
                                                         <!-- /.product-price -->
                                                         <div class="col-sm-7 hidden-buttons" style="">
-                                                            <a href="oder.jsp" id ="checkOut" class="btn danger" style="font-size: 16px; padding: 5px">
+                                                            <a href="order.jsp" id ="checkOut" class="btn danger" style="font-size: 16px; padding: 5px">
                                                                 <i class="fa fa-check inner-right-vs" style=""></i>Mua
                                                             </a>
 
