@@ -138,7 +138,7 @@
                     <div class="search-area">
                         <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
-                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown"
+                                <input id="searchInput" class="search-field dropdown-toggle" style="height: 44.5px;" data-toggle="dropdown"
                                        name="name" placeholder="Tìm kiếm...">
                                 <a style="height: 44.5px;" class="search-button" href="#"
                                    onclick="searchProduct(event)"></a>
@@ -380,7 +380,7 @@
 
 
                                         <div class="col-sm-7">
-                                            <a href="order.jsp" class="btn btn-danger" style="margin-bottom: 10px"><i
+                                            <a href="cart?productId=<%=productDetails.get().getProductId()%>" class="btn btn-danger" style="margin-bottom: 10px"><i
                                                     class="fa fa-check inner-right-vs"></i> Mua ngay</a>
 
 

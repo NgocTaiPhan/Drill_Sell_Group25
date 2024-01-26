@@ -9,17 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành phần Đăng nhập/Đăng kí(gửi mail thử)">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành phần Đăng nhập/Đăng kí by Phan Ngọc Tài">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/mail/VerityInputCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/mail/VerityInputCodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/register/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/register/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mail.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mail.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/my-js/notify.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/my-js/notify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/user-service/input-code.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user-service/input-code.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/CheckOutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/CheckOutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/account.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/battery_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/battery_drill.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/history.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/order.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,39 +89,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DbController.executor": "Run",
-    "Application.EmailService.executor": "Run",
-    "Application.Mail.executor": "Run",
-    "Application.Producers.executor": "Run",
-    "Application.ProducersService.executor": "Run",
-    "Application.Producres.executor": "Run",
-    "Application.ProductListTest.executor": "Run",
-    "Application.ProductService.executor": "Run",
-    "Application.Products.executor": "Run",
-    "Application.User.executor": "Run",
-    "Application.UserService.executor": "Run",
-    "Application.vn.edu.hcmuaf.service.ProductCategoryService.executor": "Run",
-    "Application.vn.edu.hcmuaf.service.UserService.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Tomcat Server.Tomcat 8.5.87.executor": "Run",
-    "Tomcat Server.Tomcat 8.5.872.executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "hoa",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Study/BCDAW/Drill_Sell_Group25/Drill_Sell/src/main/java/vn/edu/hcmuaf/controller",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "fileTemplates",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DbController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.EmailService.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Mail.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Producers.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProducersService.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Producres.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProductListTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProductService.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Products.executor&quot;: &quot;Run&quot;,
+    &quot;Application.User.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UserService.executor&quot;: &quot;Run&quot;,
+    &quot;Application.vn.edu.hcmuaf.service.ProductCategoryService.executor&quot;: &quot;Run&quot;,
+    &quot;Application.vn.edu.hcmuaf.service.UserService.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 8.5.87.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.Tomcat 8.5.872.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;hoa&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Study/BCDAW/Drill_Sell_Group25/Drill_Sell/src/main/java/vn/edu/hcmuaf/controller&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="vn.edu.hcmuaf.bean" />
@@ -346,6 +346,7 @@
       <workItem from="1706250962218" duration="13109000" />
       <workItem from="1706269078188" duration="2642000" />
       <workItem from="1706250962218" duration="12507000" />
+      <workItem from="1706279947692" duration="8456000" />
     </task>
     <task id="LOCAL-00001" summary="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
       <option name="closed" value="true" />
@@ -403,7 +404,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706192787683</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Hoàn thành phần Đăng nhập/Đăng kí by Phan Ngọc Tài">
+      <option name="closed" value="true" />
+      <created>1706279496321</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706279496321</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +434,8 @@
     <MESSAGE value="Push để pull code" />
     <MESSAGE value="Hoàn thành phần Đăng nhập" />
     <MESSAGE value="Hoàn thành phần Đăng nhập/Đăng kí(gửi mail thử)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hoàn thành phần Đăng nhập/Đăng kí(gửi mail thử)" />
+    <MESSAGE value="Hoàn thành phần Đăng nhập/Đăng kí by Phan Ngọc Tài" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hoàn thành phần Đăng nhập/Đăng kí by Phan Ngọc Tài" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

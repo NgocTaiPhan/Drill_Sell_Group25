@@ -18,6 +18,7 @@ public class CheckOutController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         HttpSession session = request.getSession();
         Map<Integer, Cart> cartMap = (Map<Integer, Cart>) session.getAttribute("cart");
 
@@ -38,6 +39,7 @@ public class CheckOutController extends HttpServlet {
         } else {
             response.sendRedirect("cart.jsp");
         }
+
     }
 
     // Thêm phương thức sau đây vào servlet của bạn
