@@ -10,7 +10,7 @@ import java.util.Properties;
 
 public class EmailService {
 
-    public final String LINK = "http://localhost:8080/Drill_Sell_war/confirm-account/confirm-account.jsp";
+    public final String LINK = "http://localhost:8080/Drill_Sell_war_exploded/user-service/input-code.jsp";
     private Properties prop = new Properties();
     private static EmailService instance;
 
@@ -43,11 +43,13 @@ public class EmailService {
             message.setSubject(subject);
 
             // Tạo liên kết xác nhận
-            message.setText("Đây là mã của bạn để " + subject.toLowerCase() + " :" + confirmationCode);
-            String emailContent = "Hãy nhấn vào liên kết sau để" + subject.toLowerCase() + ": "
-                    + "<a href=\"" + LINK + "\">Xác nhận đăng ký</a>";
+            String confirmationMessage = "Đây là mã của bạn để " + subject.toLowerCase() + " :" + confirmationCode;
+            String emailContent = "Hãy nhấn vào liên kết sau để " + subject.toLowerCase() + ": <a href=\"" + LINK + "\">Xác nhận đăng ký</a>";
 
-            message.setContent(emailContent, "text/html; charset=utf-8");
+            String fullEmailContent = confirmationMessage + "<br/><br/>" + emailContent;
+
+            message.setContent(fullEmailContent, "text/html; charset=utf-8");
+
 
             message.setHeader("X-Mailer", "JavaMail API");
             message.setHeader("Content-Type", "text/html; charset=utf-8");
@@ -67,7 +69,8 @@ public class EmailService {
         return inputCode.equalsIgnoreCase(systemCode);
     }
 
-    public void main(String[] args) throws MessagingException {
+    public static void main(String[] args) throws MessagingException {
+        System.out.println( MailProperties.getUsername());
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "587");
@@ -95,7 +98,7 @@ public class EmailService {
 
         // Thiết lập các thuộc tính của MimeMessage
         message.setFrom(new InternetAddress(username));
-        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("ngoctaiphan.cv@gmail.com"));
+//        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse());
         message.setSubject("Subject");
         message.setText("Body");
 

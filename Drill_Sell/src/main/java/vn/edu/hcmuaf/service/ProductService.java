@@ -47,6 +47,13 @@ public class ProductService {
                     .list();
         });
     }
+    public static List<Products> showProd() {
+        return DbController.me().get().withHandle(handle -> {
+            return handle.createQuery("SELECT * FROM products")
+                    .mapToBean(Products.class)
+                    .list();
+        });
+    }
 
     public static List<Products> getAccessory() {
         return DbController.me().get().withHandle(handle -> {
@@ -112,10 +119,7 @@ public class ProductService {
 
     public static List<Products> getNewestProducts() {
         return DbController.me().get().withHandle(handle -> {
-            return handle.createQuery("SELECT products.productId, products.image, products.productName, products.unitPrice " +
-                            "FROM products " +
-                            "ORDER BY products.dateAdded DESC " +
-                            "LIMIT 5")
+            return handle.createQuery("SELECT * FROM products")
                     .mapToBean(Products.class)
                     .list();
         });
@@ -125,7 +129,8 @@ public class ProductService {
 
     public static void main(String[] args) {
 //            System.out.println(ProductService.getProductsByCategory(2));
-        System.out.println(ProductService.getAccessory());
+//        System.out.println(ProductService.getAccessory());
+        System.out.println(ProductService.showProd());
     }
 
 }

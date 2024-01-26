@@ -31,19 +31,22 @@
                                 <label class="form-label" for="input-code">Nhập mã xác thực</label>
                             </div>
 
-
-                            <a class=" btn btn-outline-light btn-lg px-5" href="<%=request.getContextPath()%>/vertify-code">Xác nhận</a>
+                            <form action="vertify-code" method="post">
+                                <input type="submit" value="Xác nhận">
+                            </form>
+<%--                            <a class=" btn btn-outline-light btn-lg px-5" href="<%=request.getContextPath()%>/vertify-code">Xác nhận</a>--%>
                             <div class=" px-5" ></div>
                             <br>
                             <a class=" btn btn-outline-light btn-lg px-5" href="<%=request.getContextPath()%>/home.jsp">Quay
                                 về trang chủ</a>
-
+                            <script src="../assets/js/my-js/notify.js"></script>
 
                         </div>
 
 
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

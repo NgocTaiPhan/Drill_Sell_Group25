@@ -82,6 +82,9 @@ window.onload = function () {
         case "null-value-login":
             handleErrorMessage(errorParam, "Không được để trống tên tài khoản và mật khẩu");
             break;
+        case "duplicate-acc":
+            handleErrorMessage(errorParam, "Tên đăng nhập đã tồn tại");
+            break;
         case"register-success":
             Swal.fire({
                 icon: "success",
@@ -109,6 +112,16 @@ window.onload = function () {
             }).then((result) => {
                 window.location.href = "home.jsp";
             });
+        case"vertifed":
+            Swal.fire({
+                icon: "success",
+                title: "Xác thực thành công",
+                text: "Chào mừng",
+                confirmButtonText: "Đóng",
+            }).then((result) => {
+                window.location.href = "home.jsp";
+            });
+
         default:
 
 

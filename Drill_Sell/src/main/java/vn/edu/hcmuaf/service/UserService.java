@@ -108,4 +108,18 @@ public class UserService {
     }
 
 
+    public boolean isUsernameDuplicate(String username) {
+        String selectQuery = "SELECT COUNT(*) FROM users WHERE username = ?";
+        Jdbi jdbi = DbController.me().get();
+
+        try (Handle handle = jdbi.open()) {
+            int count = handle.createQuery(selectQuery)
+                    .bind(0, username)
+                    .mapTo(Integer.class)
+                    .one();
+
+            // Nếu count > 0, tức là username đã tồn tại và là trùng lặp
+            return count > 0;
+        }
+    }
 }

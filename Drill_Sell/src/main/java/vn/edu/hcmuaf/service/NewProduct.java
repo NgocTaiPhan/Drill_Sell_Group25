@@ -26,15 +26,24 @@ public class NewProduct {
 
     public void updateProduct(Products products) {
         DbController.me().get().useTransaction(handle -> {
-            handle.createUpdate("INSERT INTO products (productId, image, productName, unitPrice, categoryId, producerId) VALUES (:productId, :image, :productName, :unitPrice, :categoryId, :producerId)")
+            handle.createUpdate("UPDATE products SET image = :image, productName = :productName, unitPrice = :unitPrice, producerId = :producerId, categoryId = :categoryId WHERE productId = :productId")
                     .bind("productId", products.getProductId())
                     .bind("image", products.getImage())
                     .bind("productName", products.getProductName())
                     .bind("unitPrice", products.getUnitPrice())
-                    .bind("categoryId", products.getCategoryId())
                     .bind("producerId", products.getProducerId())
+                    .bind("categoryId", products.getCategoryId())
                     .execute();
-
         });
     }
+    public Products getProductById(int productId) {
+        return DbController.me().get().withHandle(handle ->
+                handle.createQuery("SELECT * FROM products WHERE productId = :productId")
+                        .bind("productId", productId)
+                        .mapToBean(Products.class)
+                        .findOne()
+        ).orElse(null);
+    }
+
+
 }
