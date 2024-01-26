@@ -355,17 +355,7 @@
                                                         <div class="product-price">
                                                             <span class="price"><%= request.getAttribute("formattedUnitPrice") %></span>
                                                         </div>
-                                                        <!-- /.product-price -->
-                                                        <div class="col-sm-7 hidden-buttons" style="">
-                                                            <a href="order.jsp" id ="checkOut" class="btn danger" style="font-size: 16px; padding: 5px">
-                                                                <i class="fa fa-check inner-right-vs" style=""></i>Mua
-                                                            </a>
 
-                                                            <a href="cart?productId=<%=p.getProductId()%>" methods="get" id="addToCartBtn" class="btn btn-primary"
-                                                               style="font-size: 16px; padding: 5px">
-                                                                <i class="fa fa-shopping-cart inner-right-vs"></i>Thêm
-                                                            </a>
-                                                        </div>
                                                     </div>
                                                 </div>
                                                 <!-- /.col -->
