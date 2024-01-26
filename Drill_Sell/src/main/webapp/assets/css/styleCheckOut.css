@@ -85,28 +85,6 @@ table.table th, table.table td {
     color: #2a6496;
 }
 
-.transport p, .v{
-    display: inline;
-}
-.statistical label{
-    padding-left: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #2a6496;
-}
-.statistical p{
-    font-weight: bold;
-    color: #2a6496;
-}
-.statistical{
-    border: 0.5px solid #c3c3c3;
-    background: white;
-}
-.statistical .transport input{
-    width: 110px;
-    border: none;
-}
-
 .total-money input{
     border: none;
 
@@ -114,28 +92,10 @@ table.table th, table.table td {
 .total-money p, input{
     display: inline-block;
 }
-.statistical .total-money, .transport{
-    display: inline-block;
 
-}
-.statistical .total-money{
-    margin-left:500px
-}
-.pay{
-    border: 0.5px solid #c3c3c3;
-    background: white;
-    height: 250px;
-}
-.pay .method{
-    border-bottom: 0.5px solid #c3c3c3;
-    height:30px;
-    margin-top: 7px;
-    color: #2a6496;
-}
-.pay .method label{
 
-    margin-left:10px;
-}
+
+
 #section{
     float: right;
     margin-right: 40px;
@@ -147,15 +107,9 @@ table.table th, table.table td {
 }
 .pay .order{
     margin-top: 20px;
-    float: right;
+    float: left;
 }
-.container label{
-    color: #2a6496;
-}
-.container table input{
-    border: none;
-    width: 150px;
-}
+
 .pay .order{
     margin-left: 15px;
     background: #157ed2;
