@@ -7,7 +7,7 @@
 <%
     HttpSession sesion = (HttpSession) request.getSession();
 
-
+    List<Products> products = (List<Products>) sesion.getAttribute("product-list-by-producer");
 %>
 <html lang="vi">
 <head>
@@ -601,7 +601,7 @@
                             <div class="caption vertical-top text-left">
                                 <h1 class="big-text"> Sốc</h1>
                                 <div class="excerpt hidden-sm hidden-md"> Giảm đến 49%</div>
-                                <div class="excerpt-normal hidden-sm hidden-md"> Dành cho những sản phẩm BOSCH
+                                <div class="excerpt-normal hidden-sm hidden-md"> Dành cho những sản phẩm bán chạy
                                 </div>
                             </div>
                             <!-- /.caption -->
@@ -616,11 +616,7 @@
                         <div class="col col-sm-6 col-md-2">
                             <div class="filter-tabs">
                                 <ul id="filter-tabs" class="nav nav-tabs nav-tab-box nav-tab-fa-icon">
-                                    <li class="active"><a data-toggle="tab" href="#grid-container"><i
-                                            class="icon fa fa-th-large"></i>Lưới</a></li>
-                                    <li><a data-toggle="tab" href="#list-container"><i class="icon fa fa-th-list"></i>Danh
-                                        sách</a>
-                                    </li>
+
                                 </ul>
                             </div>
                             <!-- /.filter-tabs -->
@@ -632,88 +628,49 @@
                     </div>
                     <!-- /.row -->
                 </div>
-                <div class="search-result-container ">
-                    <div id="myTabContent" class="tab-content category-list">
-                        <div class="tab-pane active " id="grid-container">
-                            <div class="category-product">
-                                <div class="row">
-                                    <%
-                                        List<Products> products = (List<Products>) sesion.getAttribute("product-list-by-producer");
+                <section class="section featured-product wow fadeInUp">
+                    <h3 class="section-title">Sản phẩm</h3>
+                    <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">
+                        <%
+                            int productsPerRow = 4;
+                            if (products != null && !products.isEmpty()) {
+                                for (int i = 0; i < products.size(); i++) {
+                                    Products p = products.get(i);
+                                    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                                    String formattedPrice = currencyFormat.format(p.getUnitPrice() * 1000);
+                        %>
+                        <div class="product">
+                            <div class="product-image">
+                                <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img height="189px" width="189px" src="<%=p.getImage()%>" alt="Ảnh sản phẩm"></a></div>
+                                <!-- /.image -->
+                            </div>
+                            <!-- /.product-image -->
 
-
-                                        for (Products p : products) {
-                                            NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
-                                            String formattedPrice = currencyFormat.format(p.getUnitPrice() * 1000);
-                                            request.setAttribute("formattedUnitPrice", formattedPrice);
-                                    %>
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"><a href="detail?productId=<%=p.getProductId()%>"><img
-                                                            src="<%=p.getImage()%>"
-                                                            alt="Ảnh sản phẩm"></a></div>
-                                                    <!-- /.image -->
-
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a
-                                                            href="detail?productId=<%=p.getProductId()%>"><%=p.getProductName()%>
-                                                    </a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"><span
-                                                            class="price"> <%= request.getAttribute("formattedUnitPrice")%> </span>
-                                                    </div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <%}%>
+                            <div class="product-info text-left">
+                                <h3 class="name"><a href="detail?productId=<%=p.getProductId()%>"><%=p.getProductName()%></a></h3>
+                                <div class="rating rateit-small"></div>
+                                <div class="description"></div>
+                                <div class="product-price">
+                                    <span  class="price"> <%=formattedPrice%></span>
                                 </div>
-                                <!-- /.row -->
+                                <!-- /.product-price -->
                             </div>
-                            <!-- /.category-product -->
-
+                            <!-- /.product-info -->
                         </div>
-                        <!-- /.tab-pane -->
 
-
-                        <!-- /.tab-pane #list-container -->
+                        <%
+                            // Tăng biến đếm, nếu đạt đến số sản phẩm trên mỗi hàng, bắt đầu hàng mới
+                            if ((i + 1) % productsPerRow == 0) {
+                        %>
                     </div>
-                    <!-- /.tab-content -->
-                    <div class="clearfix filters-container">
-                        <div class="text-right">
-                            <div class="pagination-container">
-                                <ul class="list-inline list-unstyled">
-                                    <li class="prev"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li class="active"><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li class="next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                                </ul>
-                                <!-- /.list-inline -->
-                            </div>
-                            <!-- /.pagination-container --> </div>
-                        <!-- /.text-right -->
-
+                    <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">
+                        <%
+                                    }
+                                }
+                            }
+                        %>
                     </div>
-                    <!-- /.filters-container -->
-
-                </div>
+                </section>
                 <!-- /.search-result-container -->
 
             </div>

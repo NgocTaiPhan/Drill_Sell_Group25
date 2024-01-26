@@ -45,7 +45,7 @@ public class LoginController extends HttpServlet {
         if (validInput(username, password)) {
 
             UserService userService = UserService.getInstance();
-            User auth = userService.getUser(username, password);
+            User auth = userService.getUser(username, UserService.getInstance().hashPassword(password));
 
 
             if (auth != null) {
@@ -53,19 +53,18 @@ public class LoginController extends HttpServlet {
                 String url = "login.jsp";
                 if (auth.isRoleUser()) {
 
-                    session.setAttribute("auth", auth);
-                    url += "?notify=admin";
+                    response.sendRedirect("login.jsp?notify=admin");
 
                 } else {
-                    session.setAttribute("user", auth);
-                    url += "?notify=user";
+                    response.sendRedirect("login.jsp?notify=user");
 
                 }
-                session.setMaxInactiveInterval(30);
+                session.setAttribute("auth", auth);
+//                session.setMaxInactiveInterval(30);
                 boolean isAdmin = false;
                 isAdmin = auth.isRoleUser();
                 session.setAttribute("role-acc", auth.isRoleUser());
-                response.sendRedirect(url);
+
             } else {
                 response.sendRedirect("login.jsp?notify=not-found-user-login");
             }

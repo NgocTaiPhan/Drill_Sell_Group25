@@ -139,7 +139,8 @@
                                         // Thực hiện chuyển hướng đến trang s.jsp khi nhấp vào
                                         window.location.href = 'cart.jsp';
                                     }
-                                    function history(){
+
+                                    function history() {
                                         window.location.href = 'history.jsp';
                                     }
                                 </script>
@@ -236,7 +237,6 @@
 </header>
 
 
-
 <div class="body-content outer-top-xs" id="top-banner-and-menu" style="font-size: medium">
     <div class="container">
         <div class="row">
@@ -314,7 +314,9 @@
                                                 <td><a class="btn btn-primary" href="#change-infor">Thay đổi thông
                                                     tin</a></td>
                                                 <td>
-                                                    <div class="btn btn-primary">Đổi mật khẩu</div>
+                                                    <%request.setAttribute("username-forgot-pass", u.getUsername());%>
+                                                    <a href="<%=request.getContextPath()%>/user-service/change-pass.jsp?"
+                                                       class="btn btn-primary">Đổi mật khẩu</a>
                                                 </td>
                                             </tr>
 

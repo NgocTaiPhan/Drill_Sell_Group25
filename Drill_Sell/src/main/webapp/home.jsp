@@ -14,12 +14,10 @@
 
 
 <%
-
+    HttpSession sesion = (HttpSession) request.getSession();
 
     HomeController homeCtroller = new HomeController();
     List<List<Products>> showProducts = homeCtroller.getAllProducts();
-
-    User u = (User) session.getAttribute("auth");
 
 
 %>
@@ -73,7 +71,9 @@
 <body class="cnt-home">
 <!-- ============================================== HEADER ============================================== -->
 <header class="header-style-1 ">
-
+    <%
+        User u = (User) session.getAttribute("auth");
+    %>
     <!-- ============================================== TOP MENU ============================================== -->
     <div class="top-bar animate-dropdown">
         <div class="container">
@@ -214,7 +214,8 @@
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
-                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product" methods="post">Sản phẩm</a></li>
+                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product"
+                                                               methods="post">Sản phẩm</a></li>
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
@@ -675,10 +676,12 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail?productId=<%= p.getProductId()%>" methods="get"> <img width="95px"
-                                                                                                      height="95px"
-                                                                                                      src="<%=p.getImage()%>"
-                                                                                                      alt="Ảnh sản phẩm">
+                                                        <div class="image"><a
+                                                                href="detail?productId=<%= p.getProductId()%>"
+                                                                methods="get"> <img width="95px"
+                                                                                    height="95px"
+                                                                                    src="<%=p.getImage()%>"
+                                                                                    alt="Ảnh sản phẩm">
                                                         </a>
                                                         </div>
                                                         <!-- /.image -->
@@ -689,7 +692,9 @@
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail?productId=<%= p.getProductId()%>" methods="get"><%=p.getProductName()%>
+                                                        <h3 class="name"><a
+                                                                href="detail?productId=<%= p.getProductId()%>"
+                                                                methods="get"><%=p.getProductName()%>
                                                         </a></h3>
                                                         <div class="rating rateit-small"></div>
                                                         <div class="product-price"><span
@@ -711,10 +716,12 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail?productId=<%= p.getProductId()%>" methods="get"> <img width="95px"
-                                                                                                      height="95px"
-                                                                                                      src="<%=p.getImage()%>"
-                                                                                                      alt="Ảnh sản phẩm">
+                                                        <div class="image"><a
+                                                                href="detail?productId=<%= p.getProductId()%>"
+                                                                methods="get"> <img width="95px"
+                                                                                    height="95px"
+                                                                                    src="<%=p.getImage()%>"
+                                                                                    alt="Ảnh sản phẩm">
                                                         </a>
                                                         </div>
 
@@ -725,7 +732,9 @@
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail?productId=<%= p.getProductId()%>" methods="get"><%=p.getProductName()%>
+                                                        <h3 class="name"><a
+                                                                href="detail?productId=<%= p.getProductId()%>"
+                                                                methods="get"><%=p.getProductName()%>
                                                         </a></h3>
                                                         <div class="rating rateit-small"></div>
                                                         <div class="product-price"><span
@@ -794,16 +803,18 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail?productId=<%= p.getProductId()%>" methods="get"><img height="189px" width="189px"
-                                                                                     src="<%=p.getImage()%>"
-                                                                                     alt="Ảnh sản phẩm"></a></div>
+                                        <div class="image"><a href="detail?productId=<%= p.getProductId()%>"
+                                                              methods="get"><img height="189px" width="189px"
+                                                                                 src="<%=p.getImage()%>"
+                                                                                 alt="Ảnh sản phẩm"></a></div>
 
 
                                     </div>
 
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail?productId=<%= p.getProductId()%>" methods="get"><%=p.getProductName()%>
+                                        <h3 class="name"><a href="detail?productId=<%= p.getProductId()%>"
+                                                            methods="get"><%=p.getProductName()%>
                                         </a>
                                         </h3>
                                         <div class="rating rateit-small"></div>
@@ -838,16 +849,18 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail?productId=<%= p.getProductId()%>" methods="get"><img height="189px" width="189px"
-                                                                                     src="<%=p.getImage()%>"
-                                                                                     alt="Ảnh sản phẩm"></a></div>
+                                        <div class="image"><a href="detail?productId=<%= p.getProductId()%>"
+                                                              methods="get"><img height="189px" width="189px"
+                                                                                 src="<%=p.getImage()%>"
+                                                                                 alt="Ảnh sản phẩm"></a></div>
                                         <!-- /.image -->
 
                                     </div>
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail?productId=<%= p.getProductId()%>" methods="get"><%=p.getProductName()%>
+                                        <h3 class="name"><a href="detail?productId=<%= p.getProductId()%>"
+                                                            methods="get"><%=p.getProductName()%>
                                         </a>
                                         </h3>
                                         <div class="rating rateit-small"></div>
@@ -906,10 +919,11 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail?productId=<%= a.getProductId()%>" methods="post"><img width="189px" height="189px"
+                                        <div class="image"><a href="detail?productId=<%= a.getProductId()%>"
+                                                              methods="post"><img width="189px" height="189px"
 
-                                                                                     src="<%=a.getImage()%>"
-                                                                                     alt="Ảnh sản phẩm"></a>
+                                                                                  src="<%=a.getImage()%>"
+                                                                                  alt="Ảnh sản phẩm"></a>
                                         </div>
                                         <!-- /.image -->
 
@@ -917,7 +931,8 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail?productId=<%= a.getProductId()%>" methods="get"><%=a.getProductName()%>
+                                        <h3 class="name"><a href="detail?productId=<%= a.getProductId()%>"
+                                                            methods="get"><%=a.getProductName()%>
                                         </a>
                                         </h3>
                                         <div class="rating rateit-small"></div>

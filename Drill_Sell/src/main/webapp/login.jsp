@@ -129,7 +129,7 @@
                                 <input id="optionsRadios2" name="optionsRadios" type="radio" value="">Lưu đăng
                                 nhập
                             </label>
-                            <a class="forgot-password pull-right" href="#">Quên mật khẩu?</a>
+                            <a class="forgot-password pull-right" href="./user-service/forgot-pas.jsp">Quên mật khẩu?</a>
                         </div>
                         <input class="btn-upper btn btn-primary checkout-page-button" type="submit"
                                value="Đăng nhập">
