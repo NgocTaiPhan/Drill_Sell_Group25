@@ -377,6 +377,8 @@
 
                                         // Recalculate the totalAmount based on all subtotals
                                         updateTotalAmount();
+                                        decrementQuantity();
+                                        incrementQuantity();
                                     }
                                     function updateTotalAmount() {
                                         var totalAmount = 0;

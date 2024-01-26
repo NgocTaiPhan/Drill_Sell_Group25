@@ -201,13 +201,6 @@
     <div class="header-nav animate-dropdown">
         <div class="container">
             <div class="yamm navbar navbar-default" role="navigation">
-                <!--                <div class="navbar-header">-->
-                <!--                    <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse"-->
-                <!--                            class="navbar-toggle collapsed"-->
-                <!--                            type="button">-->
-                <!--                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span-->
-                <!--                            class="icon-bar"></span> <span class="icon-bar"></span></button>-->
-                <!--                </div>-->
                 <div class="nav-bg-class">
                     <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse"
                     >
@@ -252,22 +245,6 @@
                                     }
                                 %>
 
-                                <%--                                <%--%>
-
-                                <%--                                    User user = (User) session.getAttribute("kh");--%>
-                                <%--                                    if (user != null) {--%>
-
-                                <%--                                                System.out.println("boxsell: " + user.getboxsell());--%>
-                                <%--                                                System.out.println("username: " + user.getUsername());--%>
-
-                                <%--                                                if (user.getboxsell() != 0 && user.getUsername() != null) {--%>
-                                <%--                                %>--%>
-                                <%--                                <li class="active yamm-fw"><a href="manager">quản lí sp</a></li>--%>
-                                <%--                                <%--%>
-                                <%--                                                }--%>
-                                <%--                                            }--%>
-
-                                <%--                                %>--%>
 
 
                             </ul>
