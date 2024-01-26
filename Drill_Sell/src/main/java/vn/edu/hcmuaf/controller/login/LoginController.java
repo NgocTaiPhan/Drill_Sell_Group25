@@ -38,23 +38,39 @@ public class LoginController extends HttpServlet {
     }
 
     public void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //Lấy username, pass nhập từ màn hình
         String username = request.getParameter("username-login");
         String password = request.getParameter("pass-login");
 
         if (validInput(username, password)) {
+
             UserService userService = UserService.getInstance();
             User auth = userService.getUser(username, password);
 
+
             if (auth != null) {
                 HttpSession session = request.getSession();
-                session.setAttribute("auth", auth);
-//                request.setAttribute("loginSuccess", true);
-                response.sendRedirect("home.jsp");
+                String url = "login.jsp";
+                if (auth.isRoleUser()) {
+
+                    session.setAttribute("auth", auth);
+                    url += "?notify=admin";
+
+                } else {
+                    session.setAttribute("user", auth);
+                    url += "?notify=user";
+
+                }
+                session.setMaxInactiveInterval(30);
+                boolean isAdmin = false;
+                isAdmin = auth.isRoleUser();
+                session.setAttribute("role-acc", auth.isRoleUser());
+                response.sendRedirect(url);
             } else {
-                response.sendRedirect("login.jsp?error=not-found-user");
+                response.sendRedirect("login.jsp?notify=not-found-user-login");
             }
         } else {
-            response.sendRedirect("login.jsp?error=null-value");
+            response.sendRedirect("login.jsp?notify=null-value-login");
         }
     }
 

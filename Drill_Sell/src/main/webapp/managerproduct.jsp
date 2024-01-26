@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="assets/css/my-css/footermenu.css">
     <link rel="stylesheet" href="assets/css/my-css/Style_managerproduct.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="assets/js/jquery-1.11.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
@@ -56,6 +57,7 @@
     <%@ page import="java.util.List" %>
     <%@ page import="vn.edu.hcmuaf.bean.Products" %>
     <%@ page import="vn.edu.hcmuaf.service.NewProduct" %>
+
 
 
     <!-- Main Style CSS -->
@@ -330,10 +332,10 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="modal-body">
-                                <div class="form-group">
-                                    <label>Mã sản phẩm</label>
-                                    <input name="productId" type="text" class="form-control" required>
-                                </div>
+<%--                                <div class="form-group">--%>
+<%--                                    <label>Mã sản phẩm</label>--%>
+<%--                                    <input name="productId" type="text" class="form-control" required>--%>
+<%--                                </div>--%>
                                 <div class="form-group">
                                     <label>Hình ảnh</label>
                                     <input name="image" type="text" class="form-control" required>
@@ -408,6 +410,7 @@
         <th>Mã nhà sản xuất</th>
         <th>Mã danh mục</th>
         <th>Hình ảnh</th>
+        <th>Sửa</th>
     </tr>
     </thead>
     <tbody>
@@ -427,6 +430,13 @@
         <td class="product-image">
             <img src="<%= products.getImage() %>" alt="Product Image" class="product-image" width="100" height="100">
         </td>
+        <td>
+            <form action="edit" method="get">
+                <input type="hidden" name="productId" value="<%= products.getProductId() %>">
+                <button type="submit">Sửa</button>
+            </form>
+        </td>
+
     </tr>
     <% } %>
     </tbody>
@@ -487,6 +497,7 @@
         document.getElementById("selectedNumber").innerHTML = "Số đã chọn: " + selectedValue;
     }
 </script>
+
 
 
 </body>

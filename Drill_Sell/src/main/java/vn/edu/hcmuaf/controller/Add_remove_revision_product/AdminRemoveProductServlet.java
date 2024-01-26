@@ -1,9 +1,8 @@
 package vn.edu.hcmuaf.controller.Add_remove_revision_product;
 import vn.edu.hcmuaf.bean.Product;
 import vn.edu.hcmuaf.bean.User;
-import vn.edu.hcmuaf.service.Addproduct;
 import vn.edu.hcmuaf.service.NewProduct;
-import vn.edu.hcmuaf.service.Productdown;
+import vn.edu.hcmuaf.service.ProductDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,10 +26,10 @@ public class AdminRemoveProductServlet extends HttpServlet {
             // Lấy thông tin user từ session (nếu cần)
             HttpSession session = request.getSession();
             User user = (User) session.getAttribute("auth");
-            int sid = user.getboxsell();
+            int sid = 0;
 
             // Gọi phương thức để lấy danh sách sản phẩm cho producer sau khi xóa
-            List<Product> productList = new Productdown().getProductsForProducer(sid);
+            List<Product> productList = new ProductDao().getProductsForProducer(sid);
 
             // Set danh sách sản phẩm vào request để sử dụng trong JSP
             request.setAttribute("listSP", productList);

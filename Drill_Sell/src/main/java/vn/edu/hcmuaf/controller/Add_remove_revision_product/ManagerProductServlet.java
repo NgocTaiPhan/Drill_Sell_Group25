@@ -4,7 +4,7 @@ import java.util.List;
 import vn.edu.hcmuaf.bean.Product;
 
 import vn.edu.hcmuaf.bean.User;
-import vn.edu.hcmuaf.service.Productdown;
+import vn.edu.hcmuaf.service.ProductDao;
 import vn.edu.hcmuaf.service.UserService;
 
 
@@ -28,12 +28,12 @@ public class ManagerProductServlet extends HttpServlet {
             User user = UserService.getInstance().getUser(username, password);
 
             if (user != null) {
-                int producerId = user.getboxsell();
+                int producerId = 0;
                 HttpSession session = request.getSession();
                 session.setAttribute("auth", user);
 
                 // Gọi phương thức để lấy danh sách sản phẩm cho producer
-                List<Product> productList = new Productdown().getProductsForProducer(producerId);
+                List<Product> productList = new ProductDao().getProductsForProducer(producerId);
 
                 // Set danh sách sản phẩm vào request để sử dụng trong JSP
                 request.setAttribute("listSP", productList);

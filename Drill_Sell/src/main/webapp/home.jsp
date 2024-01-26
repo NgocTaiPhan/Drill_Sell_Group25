@@ -168,7 +168,6 @@
                                 <%--                                </div>--%>
 
 
-
                             </div>
                         </a>
 
@@ -232,28 +231,31 @@
                                 </li>
                                 <li class="active  yamm-fw"><a href="contact.jsp">Liên hệ</a></li>
 
+                                <%
+                                    Boolean role = (Boolean) session.getAttribute("role-acc");
+                                    if (role != null && role) {
+                                %>
+                                <li class="active yamm-fw"><a href="managerproduct.jsp">Quản lí Sản phẩm</a></li>
+                                <%
+                                    }
+                                %>
 
+                                <%--                                <%--%>
 
-                                <li class="active yamm-fw"><a href="managerproduct.jsp">quản lí sp</a></li>
+                                <%--                                    User user = (User) session.getAttribute("kh");--%>
+                                <%--                                    if (user != null) {--%>
 
-<%--                                <%--%>
+                                <%--                                                System.out.println("boxsell: " + user.getboxsell());--%>
+                                <%--                                                System.out.println("username: " + user.getUsername());--%>
 
-<%--                                    User user = (User) session.getAttribute("kh");--%>
-<%--                                    if (user != null) {--%>
+                                <%--                                                if (user.getboxsell() != 0 && user.getUsername() != null) {--%>
+                                <%--                                %>--%>
+                                <%--                                <li class="active yamm-fw"><a href="manager">quản lí sp</a></li>--%>
+                                <%--                                <%--%>
+                                <%--                                                }--%>
+                                <%--                                            }--%>
 
-<%--                                                System.out.println("boxsell: " + user.getboxsell());--%>
-<%--                                                System.out.println("username: " + user.getUsername());--%>
-
-<%--                                                if (user.getboxsell() != 0 && user.getUsername() != null) {--%>
-<%--                                %>--%>
-<%--                                <li class="active yamm-fw"><a href="manager">quản lí sp</a></li>--%>
-<%--                                <%--%>
-<%--                                                }--%>
-<%--                                            }--%>
-
-<%--                                %>--%>
-
-
+                                <%--                                %>--%>
 
 
                             </ul>
@@ -287,7 +289,6 @@
 
                 <div class="sidebar-widget outer-bottom-small wow fadeInUp">
                     <h3 class="section-title">Ưu đãi</h3>
-                    <label for=>01/01/2023 - 20/11/2023</label>
                     <div class="sidebar-widget-body outer-top-xs">
                         <div class="owl-carousel sidebar-carousel special-offer custom-carousel owl-theme outer-top-xs">
 
@@ -767,7 +768,6 @@
                 <section class="section featured-product wow fadeInUp">
                     <h3 class="section-title">Sản phẩm</h3>
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">
-
 
 
                         <%
