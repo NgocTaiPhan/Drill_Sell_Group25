@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.controller.mail;
 
-import vn.edu.hcmuaf.mail.Mail;
+import vn.edu.hcmuaf.bean.User;
+import vn.edu.hcmuaf.service.EmailService;
 import vn.edu.hcmuaf.service.UserService;
 
 import javax.servlet.ServletException;
@@ -8,11 +9,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.UUID;
 
-@WebServlet(name = "ConfirmRegistration", value = "/confirm-registration")
-public class ConfirmRegistration extends HttpServlet {
+@WebServlet(name = "ConfirmRegistration", value = "/vertify-code")
+public class VerityInputCodeController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -22,10 +23,13 @@ public class ConfirmRegistration extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-//        String email = (String) request.getAttribute("email-for-mail");
-//        UserService.getInstance().addUser();
-
+        String inputCode = request.getParameter("input-code");
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("confirmation");
+        if (EmailService.getInstance().vertifyCode(user.getVerificationCode(), inputCode)) {
+            user.setVerified(true);
+            UserService.getInstance().addUser(user);
+        }
 
 
     }

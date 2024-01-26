@@ -1,6 +1,6 @@
 window.onload = function () {
     var urlParams = new URLSearchParams(window.location.search);
-    var errorParam = urlParams.get("error");
+    var errorParam = urlParams.get("notify");
 
     function handleErrorMessage(errorParam, errorMessage) {
         Swal.fire({
@@ -31,9 +31,7 @@ window.onload = function () {
             handleErrorMessage(errorParam, "Hãy nhập địa chỉ");
             break;
 
-        case "null-birthday":
-            handleErrorMessage(errorParam, "Hãy nhập ngày sinh");
-            break;
+
 
         case "null-phone":
             handleErrorMessage(errorParam, "Hãy nhập số điện thoại");
@@ -78,15 +76,38 @@ window.onload = function () {
         case "pass-not-match":
             handleErrorMessage(errorParam, "Mật khẩu không khớp");
             break;
-        case"none":
+        case "not-found-user-login":
+            handleErrorMessage(errorParam, "Không tìm thấy tài khoản");
+            break;
+        case "null-value-login":
+            handleErrorMessage(errorParam, "Không được để trống tên tài khoản và mật khẩu");
+            break;
+        case"register-success":
             Swal.fire({
                 icon: "success",
                 title: "Đăng kí thành công",
                 text: "Hãy xác nhận email và đăng nhập!",
                 confirmButtonText: "Đóng",
             }).then((result) => {
-                console.log("Redirecting to login.jsp");
                 window.location.href = "login.jsp";
+            });
+        case"admin":
+            Swal.fire({
+                icon: "success",
+                title: "Đăng nhập với quyền quản trị",
+                text: "Chào mừng",
+                confirmButtonText: "Đóng",
+            }).then((result) => {
+                window.location.href = "home.jsp";
+            });
+        case"user":
+            Swal.fire({
+                icon: "success",
+                title: "Đăng nhập thành công",
+                text: "Chào mừng",
+                confirmButtonText: "Đóng",
+            }).then((result) => {
+                window.location.href = "home.jsp";
             });
         default:
 
