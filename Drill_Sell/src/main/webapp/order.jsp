@@ -117,7 +117,7 @@
                     <div class="search-area">
                         <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
-                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown"
+                                <input id="searchInput" class="search-field dropdown-toggle" style="height: 44.5px;"data-toggle="dropdown"
                                        name="name" placeholder="Tìm kiếm...">
                                 <a style="height: 44.5px;" class="search-button" href="#"
                                    onclick="searchProduct(event)"></a>
@@ -288,6 +288,7 @@
 
             <%
                 List<Cart> detailedCartList = (List<Cart>) session.getAttribute("detailedCartList");
+                double totalAmount = 0;
                 if (detailedCartList != null && !detailedCartList.isEmpty()) {
                     for (Cart cart : detailedCartList) {
                         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
@@ -312,10 +313,12 @@
                         <%= currencyFormat.format(cart.getTotalPrice() * 1000) %>
                     </span>
                 </td>
+
             </tr>
 
 
             <%
+                        totalAmount += cart.getTotalPrice() * 1000;
                     } // End of the for loop
                 } // End of the if condition
             %>
@@ -326,8 +329,8 @@
             <div class="pay">
                 <table>
                     <tr>
-                        <td><label>Tổng tiền hàng: </label></td>
-                        <td><span id="totalAmount">0 VND</span></td>
+                        <td colspan="5"><label>Tổng tiền đơn hàng: </label></td>
+                        <td><span id="totalAmount" style="padding-left: 5px"><%= (totalAmount) %></span></td>
                     </tr>
                 </table>
                 <a>

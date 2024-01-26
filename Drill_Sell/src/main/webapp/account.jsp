@@ -125,50 +125,36 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
-
-                    <div class="dropdown dropdown-cart"><a href="#" class="dropdown-toggle lnk-cart"
-                                                           data-toggle="dropdown">
-                        <div class="items-cart-inner">
-                            <div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i></div>
-                            <div class="basket-item-count"><span class="count">1</span></div>
-
-                        </div>
-                    </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="cart-item product-summary">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            <div class="image"><a href="#"><img
-                                                    src="assets/images/products/power-drill/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"
-                                                    alt="Ảnh sản phẩm"></a></div>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <h3 class="name"><a href="">Máy khoan động lực Bosch GSB 16 RE -
-                                                06012281K1</a></h3>
-                                            <div class="price">1.599.000đ</div>
-                                        </div>
-                                        <div class="col-xs-1 action"><a href="#"><i class="fa fa-trash"></i></a></div>
-                                    </div>
+                    <div class="dropdown dropdown-cart">
+                        <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
+                            <div class="items-cart-inner">
+                                <!-- Thêm một sự kiện nhấp chuột vào div -->
+                                <div class="basket" id="basketIcon" onclick="redirectToCart()">
+                                    <i class="glyphicon glyphicon-shopping-cart"></i>
                                 </div>
-                                <!-- /.cart-item -->
-                                <div class="clearfix"></div>
-                                <hr>
-                                <div class="clearfix cart-total">
-                                    <div class="pull-right"><span class="text">Tổng tiền :</span><span class='price'>1.599.000đ</span>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <a href="oder.jsp" class="btn btn-upper btn-primary btn-block m-t-20">Thanh
-                                        toán</a>
-                                </div>
-                                <!-- /.cart-total-->
 
-                            </li>
-                        </ul>
-                        <!-- /.dropdown-menu-->
+                                <!-- Bạn có thể đặt mã JavaScript ở phía dưới trang hoặc tách riêng thành một tệp JS -->
+                                <script>
+                                    function redirectToCart() {
+                                        // Thực hiện chuyển hướng đến trang s.jsp khi nhấp vào
+                                        window.location.href = 'cart.jsp';
+                                    }
+                                    function history(){
+                                        window.location.href = 'history.jsp';
+                                    }
+                                </script>
+
+
+                                <%--                                <div id="cartItemCount" class="basket-item-count">--%>
+                                <%--                                    <span id="cartItemCountValue" class="count">0</span>--%>
+                                <%--                                </div>--%>
+
+
+                            </div>
+                        </a>
+
                     </div>
                     <!-- /.dropdown-cart -->
-
                     <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
                 </div>
                 <!-- /.top-cart-row -->
@@ -198,7 +184,8 @@
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
-                                <li class="active  yamm-fw"><a href="product.jsp">Sản phẩm</a></li>
+                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product"
+                                                               methods="post">Sản phẩm</a></li>
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
@@ -249,6 +236,7 @@
 </header>
 
 
+
 <div class="body-content outer-top-xs" id="top-banner-and-menu" style="font-size: medium">
     <div class="container">
         <div class="row">
@@ -257,7 +245,7 @@
                     <div class="col-sm-3" style="white-space: nowrap">
                         <ul id="product-tabs" class="nav nav-tabs nav-tab-cell">
                             <li class="active"><a data-toggle="tab" href="#profile">Hồ sơ</a></li>
-                            <li><a data-toggle="tab" href="#oder-history">Lịch sử đặt hàng</a>
+                            <li><a data-toggle="tab" href="#oder-history" onclick="history()">Lịch sử đặt hàng</a>
                             </li>
                         </ul><!-- /.nav-tabs #product-tabs -->
                     </div>
@@ -412,93 +400,6 @@
                                 </div>
                             </div>
 
-                            <div id="oder-history" class="tab-pane">
-                                <div class="product-tab container">
-
-                                    <table class="table table-bordered  " style="white-space: nowrap">
-                                        <thead>
-                                        <tr>
-
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Máy khoan động lực Bosch GSB 16 RE
-                                                -06012281K1
-                                            </td>
-                                            <td>01/01/2023</td>
-                                            <td>10</td>
-                                            <td>20</td>
-                                            <td>
-                                                <button class="btn btn-danger">Xóa</button>
-                                                <button class="btn btn-primary">Sửa</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Pin Bosch 12V 2.0Ah 1600A00F6X (1607A350C5)</td>
-                                            <td>01/01/2023</td>
-                                            <td>10</td>
-                                            <td>20</td>
-                                            <td>
-                                                <button class="btn btn-danger">Xóa</button>
-                                                <button class="btn btn-primary">Sửa</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Máy khoan vặn vít dùng pin 12V
-                                                Bosch GSR 120-LI GEN II
-                                            </td>
-                                            <td>01/01/2023</td>
-                                            <td>10</td>
-                                            <td>20</td>
-                                            <td>
-                                                <button class="btn btn-danger">Xóa</button>
-                                                <button class="btn btn-primary">Sửa</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tổng</td>
-                                            <td>3</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>
-                                                <a class="btn btn-danger" href="admin/insert-products.jsp">Thêm sản
-                                                    phẩm</a>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-
-                                </div><!-- /.product-tab -->
-                            </div><!-- /.tab-pane -->
-
-                            <%--                            <div id="change-password" class="tab-pane">--%>
-                            <%--                                <div class="product-tag container">--%>
-
-                            <%--                                    <table class="table table-bordered ">--%>
-                            <%--                                        <thead>--%>
-                            <%--                                        <tr>--%>
-                            <%--                                            <th>Số lượng bán ra</th>--%>
-                            <%--                                            <th>Tổng doan thu</th>--%>
-
-                            <%--                                        </tr>--%>
-                            <%--                                        </thead>--%>
-                            <%--                                        <tbody>--%>
-
-                            <%--                                        <tr>--%>
-                            <%--                                            <td>100</td>--%>
-                            <%--                                            <td>10.000.000đ</td>--%>
-
-                            <%--                                        </tr>--%>
-                            <%--                                        </tbody>--%>
-                            <%--                                    </table>--%>
-
-                            <%--                                </div><!-- /.product-tab -->--%>
-                            <%--                            </div><!-- /.tab-pane -->--%>
 
                         </div><!-- /.tab-content -->
                     </div><!-- /.col -->
