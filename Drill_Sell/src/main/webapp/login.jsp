@@ -181,10 +181,10 @@
                             <div class="radio outer-xs" id="gender"
                                  style="display: flex; justify-content: space-around">
                                 <label>
-                                    <input id="genderFemale" name="gender" type="radio" value="female" checked>Nữ
+                                    <input id="genderFemale" name="gender" type="radio" value="Nữ" checked>Nữ
                                 </label>
                                 <label>
-                                    <input id="genderMale" name="gender" type="radio" value="male">Nam
+                                    <input id="genderMale" name="gender" type="radio" value="Nam">Nam
                                 </label>
                             </div>
                         </div>
@@ -252,11 +252,10 @@
 
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <!-- ============================================================= Backtop ============================================================= -->
-<script src="assets/js/my-js/login.js">
 
 
 </script>
-<script src="assets/js/my-js/register.js"></script>
+<script src="assets/js/my-js/notify.js"></script>
 <script src="
 https://cdn.jsdelivr.net/npm/sweetalert2@11.10.3/dist/sweetalert2.all.min.js
 "></script>

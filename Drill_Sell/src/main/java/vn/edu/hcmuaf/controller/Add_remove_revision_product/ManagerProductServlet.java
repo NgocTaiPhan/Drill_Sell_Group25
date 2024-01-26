@@ -28,7 +28,7 @@ public class ManagerProductServlet extends HttpServlet {
             User user = UserService.getInstance().getUser(username, password);
 
             if (user != null) {
-                int producerId = user.getboxsell();
+                int producerId = 0;
                 HttpSession session = request.getSession();
                 session.setAttribute("auth", user);
 

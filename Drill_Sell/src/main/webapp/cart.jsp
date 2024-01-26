@@ -76,7 +76,7 @@
 
                         <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
                         <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="order.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
@@ -117,7 +117,7 @@
                     <div class="search-area">
                         <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
-                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown"
+                                <input id="searchInput" class="search-field dropdown-toggle" style="height: 44.5px" data-toggle="dropdown"
                                        name="name" placeholder="Tìm kiếm...">
                                 <a style="height: 44.5px;" class="search-button" href="#"
                                    onclick="searchProduct(event)"></a>
@@ -127,19 +127,18 @@
                         </form>
 
                     </div>
+                    <script>
+                        function searchProduct(event) {
+                            event.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
+                            var keyword = document.getElementById("searchInput").value;
+
+                            // Chuyển hướng đến trang seachProduct.jsp với tham số tìm kiếm
+                            window.location.href = "seachProduct?name=" + encodeURIComponent(keyword);
+                        }
+                    </script>
                     <!-- /.search-area -->
                     <!-- ============================================================= SEARCH AREA : END ============================================================= -->
                 </div>
-                <!-- /.top-search-holder -->
-                <script>
-                    function searchProduct(event) {
-                        event.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
-                        var keyword = document.getElementById("searchInput").value;
-
-                        // Chuyển hướng đến trang seachProduct.jsp với tham số tìm kiếm
-                        window.location.href = "seachProduct?name=" + encodeURIComponent(keyword);
-                    }
-                </script>
                 <!-- /.top-search-holder -->
 
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
@@ -364,6 +363,7 @@
                                     function updateCartItem(productId) {
                                         var quantityInput = document.getElementById('quantityInput_' + productId);
                                         var subtotalElement = document.getElementById('subtotal_' + productId);
+                                        var totalAmountElement = document.getElementById('totalAmount');  // Assuming you have an element with id 'totalAmount'
 
                                         // Your existing updateCartItem logic
 
@@ -374,6 +374,23 @@
 
                                         // Update the displayed subtotal on the client side with formatted currency
                                         subtotalElement.innerText = formatCurrency(subtotal);
+
+                                        // Recalculate the totalAmount based on all subtotals
+                                        updateTotalAmount();
+                                    }
+                                    function updateTotalAmount() {
+                                        var totalAmount = 0;
+
+                                        // Lấy tất cả các thẻ span có id bắt đầu bằng "subtotal_"
+                                        var subtotalElements = document.querySelectorAll('[id^="subtotal_"]');
+
+                                        // Duyệt qua mỗi thẻ span và cộng giá trị của nó vào tổng tiền
+                                        subtotalElements.forEach(function (element) {
+                                            totalAmount += parseFloat(element.innerText.replace(/\D/g, '')) || 0;
+                                        });
+
+                                        // Hiển thị tổng tiền trong thẻ span có id là "totalAmount"
+                                        document.getElementById('totalAmount').innerText = formatCurrency(totalAmount);
                                     }
 
                                     // Function to format currency with thousand separators
@@ -389,7 +406,7 @@
                                             updateCartItem(productId);
                                         }
                                     }
-                                    <!-- Add this element where you want to display the error message -->
+
 
 
                                     function incrementQuantity(productId) {

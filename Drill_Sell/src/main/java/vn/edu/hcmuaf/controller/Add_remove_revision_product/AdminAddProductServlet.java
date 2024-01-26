@@ -41,7 +41,7 @@ public class AdminAddProductServlet extends HttpServlet {
             // Lấy thông tin user từ session (nếu cần)
             HttpSession session = request.getSession();
             User user = (User) session.getAttribute("auth");
-            int sid = user.getboxsell();
+            int sid = 0;
 
             // Thêm sản phẩm vào cơ sở dữ liệu
             Addproduct.addProductForProducer(product, sid);

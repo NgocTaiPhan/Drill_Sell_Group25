@@ -7,18 +7,18 @@ import java.util.stream.Collectors;
 
 public class
 User {
-    private int id,
-         boxsell;
+    private int id;
     private String fullname,
 
-            address,
+    address,
             phone,
             email,
             username,
             passwords,
             sex,
-            yearOfBirth;
-
+            yearOfBirth,
+            verificationCode;
+    private boolean isVerified, roleUser;
 
 
     public User() {
@@ -29,7 +29,7 @@ User {
         this.passwords = passwords;
     }
 
-    public User(int id, String fullname, String address, String phone, String email, String username, String password, String sex, String yearOfBirth, int boxsell) {
+    public User(int id, String fullname, String address, String phone, String email, String username, String passwords, String sex, String yearOfBirth) {
         this.id = id;
         this.fullname = fullname;
         this.address = address;
@@ -41,7 +41,7 @@ User {
         this.yearOfBirth = yearOfBirth;
     }
 
-    public User(String fullname, String address, String phone, String email, String username, String passwords, String sex, String yearOfBirth) {
+    public User(String fullname, String address, String phone, String email, String username, String passwords, String sex, String yearOfBirth, String verificationCode, boolean isVerified, boolean roleUser) {
         this.fullname = fullname;
         this.address = address;
         this.phone = phone;
@@ -50,7 +50,9 @@ User {
         this.passwords = passwords;
         this.sex = sex;
         this.yearOfBirth = yearOfBirth;
-        this.boxsell = boxsell;
+        this.verificationCode = verificationCode;
+        this.isVerified = isVerified;
+        this.roleUser = roleUser;
     }
 
     public int getId() {
@@ -125,12 +127,28 @@ User {
         this.yearOfBirth = yearOfBirth;
     }
 
-    public int getboxsell() {
-        return boxsell;
+    public String getVerificationCode() {
+        return verificationCode;
     }
 
-    public void setboxsell(int boxsell) {
-        this.boxsell = boxsell;
+    public void setVerificationCode(String verificationCode) {
+        this.verificationCode = verificationCode;
+    }
+
+    public boolean isVerified() {
+        return isVerified;
+    }
+
+    public void setVerified(boolean verified) {
+        isVerified = verified;
+    }
+
+    public boolean isRoleUser() {
+        return roleUser;
+    }
+
+    public void setRoleUser(boolean roleUser) {
+        this.roleUser = roleUser;
     }
 
     @Override
@@ -158,4 +176,6 @@ User {
         System.out.println(users);
 
     }
+
+
 }

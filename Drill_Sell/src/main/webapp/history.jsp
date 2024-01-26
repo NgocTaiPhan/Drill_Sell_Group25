@@ -1,3 +1,8 @@
+<%@ page import="vn.edu.hcmuaf.bean.Cart" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.Set" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="java.util.Locale" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
@@ -60,7 +65,7 @@
 
                         <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
                         <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="order.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
@@ -101,7 +106,7 @@
                     <div class="search-area">
                         <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
-                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
+                                <input id="searchInput" class="search-field dropdown-toggle" style="height: 44.5px;" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
                                 <a style="height: 44.5px;" class="search-button" href="#" onclick="searchProduct(event)"></a>
 
 
@@ -239,6 +244,7 @@
         </div>
     </div>
 </div>
+
 <div class="cartHistory">
     <table class="table">
         <thead>
@@ -250,19 +256,54 @@
             </tr>
         </thead>
         <tbody>
+        <%
+            Map<Integer, Cart> cartMap = (Map<Integer, Cart>) session.getAttribute("cart");
+            if (cartMap != null && !cartMap.isEmpty()) {
+                Set<Map.Entry<Integer, Cart>> entrySet = cartMap.entrySet();
+                for (Map.Entry<Integer, Cart> entry : entrySet) {
+                    Cart cart = entry.getValue();
+                    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+                    String formattedPrice = currencyFormat.format(cart.getUnitPrice() * 1000);
+                    String tatolPrice = currencyFormat.format(cart.getTotalPrice() * 1000);
+                    request.setAttribute("formattedUnitPrice", formattedPrice);
+                    request.setAttribute("tatolPrice", tatolPrice);
+
+
+        %>
         <tr class="items">
-            <td class="li-product-thumbnail"><a href="order_details.jsp"><img
-                    src="assets/images/shoppingCart/may-khoan-dong-luc-bosch-gsb-16-re-300.jpg"></a></td>
-            <td class="nameProduct"> may-khoan-dong-luc-bosch-gsb-16-re-300 </td>
-            <td class="quantity"><input value="1"></td>
-            <td class="product-subtotal"><span class="amount">468.00 VND</span></td>
+            <td class="li-product-thumbnail"><a href="#"><img
+                    src="<%= cart.getImage()%>"></a></td>
+            <td class="nameProduct"> <%= cart.getProductName()%>> </td>
+            <td class="quantity">
+
+                <div class="cart-plus-minus">
+                    <input id="quantityInput_<%= cart.getProductId() %>" class="cart-plus-minus-box"
+                           value="<%= cart.getQuantity()%>"
+                           onchange="updateCartItem(<%= cart.getProductId() %>)">
+                </div>
+
+            </td>
+            <td class="product-subtotal"><span class="amount"><%=request.getAttribute("tatolPrice")%></span></td>
         </tr>
-<%--        <tr>--%>
-<%--            <td class="orderDate"> <input value="20/05/2020"></td>--%>
-<%--            <td class="codeProduct"> <input placeholder="002"></td>--%>
-<%--            <td class="quantity"><input value="4"></td>--%>
-<%--            <td class="product-subtotal"><span class="amount">1700.000 VND</span></td>--%>
-<%--        </tr>--%>
+        <script>
+
+            function updateCartItem(productId) {
+                var quantityInput = document.getElementById('quantityInput_' + productId);
+                var subtotalElement = document.getElementById('subtotal_' + productId);
+
+                // Your existing updateCartItem logic
+
+                // Recalculate the subtotal based on the updated quantity
+                var unitPrice = parseFloat('<%= cart.getUnitPrice() * 1000 %>');
+                var quantity = parseInt(quantityInput.value, 10);
+                var subtotal = unitPrice * quantity;
+
+                // Update the displayed subtotal on the client side with formatted currency
+                subtotalElement.innerText = formatCurrency(subtotal);
+            }
+        </script>
+        <%}}%>
+
         </tbody>
     </table>
 </div>

@@ -76,7 +76,7 @@
 
                         <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
                         <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="order.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
@@ -117,8 +117,10 @@
                     <div class="search-area">
                         <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
-                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown" name="name" placeholder="Tìm kiếm...">
-                                <a style="height: 44.5px;" class="search-button" href="#" onclick="searchProduct(event)"></a>
+                                <input id="searchInput" class="search-field dropdown-toggle" style="height: 44.5px;"data-toggle="dropdown"
+                                       name="name" placeholder="Tìm kiếm...">
+                                <a style="height: 44.5px;" class="search-button" href="#"
+                                   onclick="searchProduct(event)"></a>
 
 
                             </div>
@@ -164,7 +166,6 @@
                                 <%--                                </div>--%>
 
 
-
                             </div>
                         </a>
 
@@ -199,25 +200,31 @@
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
                                 <li class="active  yamm-fw"><a href="home.jsp">Trang chủ</a></li>
-                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product" methods="post"></i>Sản phẩm</a></li>
+                                <li class="active  yamm-fw"><a href="<%= request.getContextPath() %>/product"
+                                                               methods="post"></i>Sản phẩm</a></li>
                                 <li class="dropdown active  ">
                                     <a class="dropdown-menu-left" data-hover="dropdown">Danh mục sản phẩm</a>
                                     <ul class="dropdown-menu ">
 
-                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>Máy khoan pin</a>
+                                        <li><a href="<%= request.getContextPath() %>/battery_drill" methods="post"></i>
+                                            Máy khoan pin</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy khoan động lực</a>
+                                        <li><a href="<%= request.getContextPath() %>/movers" methods="post"></i>Máy
+                                            khoan động lực</a>
 
                                         </li>
 
-                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy khoan cầm tay gia đình</a>
+                                        <li><a href="<%= request.getContextPath() %>/hand_drill" methods="post"></i>Máy
+                                            khoan cầm tay gia đình</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy khoan mini</a>
+                                        <li><a href="<%= request.getContextPath() %>/mini_drill" methods="post"></i>Máy
+                                            khoan mini</a>
 
                                         </li>
-                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>Máy khoan bê tông, Máy khoan búa</a>
+                                        <li><a href="<%= request.getContextPath() %>/hammer_drill" methods="post"></i>
+                                            Máy khoan bê tông, Máy khoan búa</a>
 
                                         </li>
                                     </ul>
@@ -281,11 +288,11 @@
 
             <%
                 List<Cart> detailedCartList = (List<Cart>) session.getAttribute("detailedCartList");
+                double totalAmount = 0;
                 if (detailedCartList != null && !detailedCartList.isEmpty()) {
                     for (Cart cart : detailedCartList) {
                         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
                         String formattedPrice = currencyFormat.format(cart.getUnitPrice() * 1000);
-                        String tatolPrice = currencyFormat.format(cart.getTotalPrice() * 1000);
             %>
             <tr>
                 <td class="li-product-thumbnail">
@@ -296,77 +303,83 @@
                 </td>
                 <td class="quantity">
                     <div class="cart-plus-minus">
-                        <input class="cart-plus-minus-box" value="<%= cart.getQuantity() %>">
+                        <input class="cart-plus-minus-box" id="quantityInput_<%= cart.getProductId() %>"
+                               value="<%= cart.getQuantity()%>"
+                               onchange="updateCartItem(<%= cart.getProductId() %>)">
                     </div>
                 </td>
                 <td class="product-subtotal">
-                    <span class="amount"><%= tatolPrice %></span>
+                    <span class="amount" id="subtotal_<%= cart.getProductId() %>">
+                        <%= currencyFormat.format(cart.getTotalPrice() * 1000) %>
+                    </span>
                 </td>
+
             </tr>
-            <% } // Đóng vòng lặp for %>
-            <% } // Đóng if %>
+
+
+            <%
+                        totalAmount += cart.getTotalPrice() * 1000;
+                    } // End of the for loop
+                } // End of the if condition
+            %>
 
             </tbody>
-
         </table>
-    </div>
-    <div class="statistical">
+        <div class="statistical">
             <div class="pay">
-                <div class="method">
-                    <label >Tổng tiền:</label>
-                </div>
-                <div class="container">
-                    <table>
-                        <tr>
-                            <td><label>Tổng tiền hàng: </label></td>
-                            <td><input type="text" name="tienHang" value="468.000 VND"> <br></td>
-                        </tr>
-
-                    </table>
-
-                </div>
-
-               <a >  <button onclick="f()" class="order">Đặt hàng</button></a>
+                <table>
+                    <tr>
+                        <td colspan="5"><label>Tổng tiền đơn hàng: </label></td>
+                        <td><span id="totalAmount" style="padding-left: 5px"><%= (totalAmount) %></span></td>
+                    </tr>
+                </table>
+                <a>
+                    <button onclick="f()" class="order">Đặt hàng</button>
+                </a>
             </div>
         </div>
 
+
     </div>
+
+
 </div>
+
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <div class="social-button">
     <div class="social-button-content">
-      <a href="tel:0353933224" class="call-icon" rel="nofollow">
-        <i class="fa fa-whatsapp" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Hotline: 035 393 3224</span>
-      </a>
-      <a href="sms:0353933224" class="sms">
-        <i class="fa fa-weixin" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>SMS: 035 393 3224</span>
-      </a>
-      <a href="https://www.facebook.com/Ngocthang.net/" class="mes">
-        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Nhắn tin Facebook</span>
-      </a>
-      <a href="http://zalo.me/0353933224" class="zalo">
-        <i class="fa fa-commenting-o" aria-hidden="true"></i>
-        <div class="animated alo-circle"></div>
-        <div class="animated alo-circle-fill"></div>
-        <span>Zalo: 035.393.3224</span>
-      </a>
+        <a href="tel:0353933224" class="call-icon" rel="nofollow">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Hotline: 035 393 3224</span>
+        </a>
+        <a href="sms:0353933224" class="sms">
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>SMS: 035 393 3224</span>
+        </a>
+        <a href="https://www.facebook.com/Ngocthang.net/" class="mes">
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Nhắn tin Facebook</span>
+        </a>
+        <a href="http://zalo.me/0353933224" class="zalo">
+            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            <div class="animated alo-circle"></div>
+            <div class="animated alo-circle-fill"></div>
+            <span>Zalo: 035.393.3224</span>
+        </a>
     </div>
     <a href="#" class="user-support">
-      <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
-      <div class="animated alo-circle"></div>
-      <div class="animated alo-circle-fill"></div>
+        <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+        <div class="animated alo-circle"></div>
+        <div class="animated alo-circle-fill"></div>
     </a>
-  </div>
-  
+</div>
+
 <!-- ============================================================= FOOTER : MENU============================================================= -->
 <!-- ============================================================= Backtop ============================================================= -->
 <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class=" icon fa    fa-arrow-up"></i></button>
@@ -386,6 +399,7 @@
             }
         });
     }
+
 
 </script>
 </body>

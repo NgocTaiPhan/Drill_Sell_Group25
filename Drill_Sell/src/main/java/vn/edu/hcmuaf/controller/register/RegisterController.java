@@ -1,12 +1,15 @@
 package vn.edu.hcmuaf.controller.register;
 
-import vn.edu.hcmuaf.mail.Mail;
+import vn.edu.hcmuaf.bean.User;
+import vn.edu.hcmuaf.service.EmailService;
+import vn.edu.hcmuaf.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.UUID;
@@ -33,6 +36,7 @@ public class RegisterController extends HttpServlet {
         String password = request.getParameter("password-register");
         String confirmPassword = request.getParameter("confirm-password-register");
         String agreeToTerms = request.getParameter("agree-to-terms");
+        String gender = request.getParameter("gender");
 
 
 //        validFullName(request.getParameter("full-name-register"));
@@ -68,11 +72,11 @@ public class RegisterController extends HttpServlet {
         // Kiểm tra các điều kiện lỗi
         // Nếu có lỗi, chuyển hướng với tham số error
         if (fullName == null || fullName.trim().isEmpty()) {
-            response.sendRedirect("login.jsp?error=null-fullname");
+            response.sendRedirect("login.jsp?notify=null-fullname");
             return;
         }
         if (birthDate == null || birthDate.trim().isEmpty()) {
-            response.sendRedirect("login.jsp?error=null-birthday");
+            response.sendRedirect("login.jsp?notify=null-birthday");
             return;
         } else {
 //            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -80,61 +84,69 @@ public class RegisterController extends HttpServlet {
 
             // LocalDate.now() trả về ngày hiện tại
             if (inputDate.isAfter(LocalDate.now())) {
-                response.sendRedirect("login.jsp?error=future-birthday");
+                response.sendRedirect("login.jsp?notify=future-birthday");
                 return;
             }
 
         }
 
         if (address == null || address.trim().isEmpty()) {
-            response.sendRedirect("login.jsp?error=null-address");
+            response.sendRedirect("login.jsp?notify=null-address");
             return;
         }
         if (phoneNumber == null || phoneNumber.trim().isEmpty()) {
-            response.sendRedirect("login.jsp?error=null-phone");
+            response.sendRedirect("login.jsp?notify=null-phone");
             return;
         } else {
             if (!phoneNumber.matches("^(\\+84|0)[0-9]{9}$")) {
-                response.sendRedirect("login.jsp?error=invalid-phone");
+                response.sendRedirect("login.jsp?notify=invalid-phone");
                 return;
 
             }
         }
         if (email == null || email.trim().isEmpty()) {
-            response.sendRedirect("login.jsp?error=null-email");
+            response.sendRedirect("login.jsp?notify=null-email");
             return;
         } else {
             if (!email.matches("^[a-zA-Z0-9_+&*-/=?\\^\\s{|}]+@[a-zA-Z0-9-]+\\.[a-zA-Z]+$")) {
-                response.sendRedirect("login.jsp?error=invalid-email");
+                response.sendRedirect("login.jsp?notify=invalid-email");
                 return;
             }
         }
         if (username == null || username.trim().isEmpty()) {
-            response.sendRedirect("login.jsp?error=null-username");
+            response.sendRedirect("login.jsp?notify=null-username");
             return;
+        }else{
+            if (!UserService.getInstance().isUsernameDuplicate(username)){
+                response.sendRedirect("login.jsp?notify=duplicate-acc");
+
+            }
         }
         if (password == null || password.trim().isEmpty()) {
-            response.sendRedirect("login.jsp?error=null-pass");
+            response.sendRedirect("login.jsp?notify=null-pass");
             return;
         }
         if (confirmPassword == null || confirmPassword.trim().isEmpty()) {
-            response.sendRedirect("login.jsp?error=null-cfpass");
+            response.sendRedirect("login.jsp?notify=null-cfpass");
             return;
         } else {
             if (!password.equals(confirmPassword)) {
-                response.sendRedirect("login.jsp?error=pass-not-match");
+                response.sendRedirect("login.jsp?notify=pass-not-match");
                 return;
             }
         }
         if (agreeToTerms == null
                 || !agreeToTerms.equals("on")) {
-            response.sendRedirect("login.jsp?error=null-agree");
+            response.sendRedirect("login.jsp?notify=null-agree");
             return;
         }
-        request.setAttribute("email-for-mail", email);
-//        String confirmationCode = UUID.randomUUID().toString();
-//        Mail.sendMail(email, "Xác nhận đăng ký tài khoản", confirmationCode);
-        response.sendRedirect("login.jsp?error=none");
+//        request.setAttribute("email-for-mail", email);
+        String confirmationCode = UUID.randomUUID().toString();
+        EmailService.getInstance().sendMail(email, "Xác thực tài khoản", confirmationCode);
+        HttpSession session = request.getSession();
+        session.setAttribute("confirmation", new User(fullName, address, phoneNumber, email, username, password, gender, birthDate, confirmationCode, false, false));
+        response.sendRedirect("login.jsp?notify=register-success");
+//        response.sendRedirect("user-service/input-code.jsp");
 
     }
 

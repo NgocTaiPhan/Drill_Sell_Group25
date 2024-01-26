@@ -9,9 +9,12 @@ import vn.edu.hcmuaf.mail.MailProperties;
 import java.util.Properties;
 
 public class EmailService {
-    private static Properties prop = new Properties();
 
-    static {
+    public final String LINK = "http://localhost:8080/Drill_Sell_war_exploded/user-service/input-code.jsp";
+    private Properties prop = new Properties();
+    private static EmailService instance;
+
+    {
         prop.put("mail.smtp.host", MailProperties.getHost());
         prop.put("mail.smtp.port", MailProperties.getPort());
         prop.put("mail.smtp.auth", MailProperties.getAuth());
@@ -20,7 +23,12 @@ public class EmailService {
         prop.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
     }
 
-    public static boolean sendMail(String to, String subject, String confirmationCode) {
+    public static EmailService getInstance() {
+        if (instance == null) instance = new EmailService();
+        return instance;
+    }
+
+    public boolean sendMail(String to, String subject, String confirmationCode) {
         Session session = Session.getInstance(prop, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
@@ -35,22 +43,34 @@ public class EmailService {
             message.setSubject(subject);
 
             // Tạo liên kết xác nhận
-            String confirmationLink = "http://localhost:8080/Drill_Sell_war/confirm?code=" + confirmationCode;
+            String confirmationMessage = "Đây là mã của bạn để " + subject.toLowerCase() + " :" + confirmationCode;
+            String emailContent = "Hãy nhấn vào liên kết sau để " + subject.toLowerCase() + ": <a href=\"" + LINK + "\">Xác nhận đăng ký</a>";
 
-            // Nội dung email chứa liên kết
-            String emailContent = "Hãy nhấn vào liên kết sau để xác nhận đăng ký:\n" + confirmationLink;
-            message.setText(emailContent);
+            String fullEmailContent = confirmationMessage + "<br/><br/>" + emailContent;
 
+            message.setContent(fullEmailContent, "text/html; charset=utf-8");
+
+
+            message.setHeader("X-Mailer", "JavaMail API");
+            message.setHeader("Content-Type", "text/html; charset=utf-8");
+
+            message.getSentDate();
+            // Gửi email
             Transport.send(message);
             System.out.println("Done");
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         }
+
         return true;
     }
 
+    public boolean vertifyCode(String inputCode, String systemCode) {
+        return inputCode.equalsIgnoreCase(systemCode);
+    }
 
     public static void main(String[] args) throws MessagingException {
+        System.out.println( MailProperties.getUsername());
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "587");
@@ -78,7 +98,7 @@ public class EmailService {
 
         // Thiết lập các thuộc tính của MimeMessage
         message.setFrom(new InternetAddress(username));
-        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("ngoctaiphan.cv@gmail.com"));
+//        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse());
         message.setSubject("Subject");
         message.setText("Body");
 

@@ -64,7 +64,7 @@
 
                         <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
                         <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="order.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>

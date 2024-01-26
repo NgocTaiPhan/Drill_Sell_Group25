@@ -84,7 +84,7 @@
                         <li><a href="account.jsp"><i class="icon fa fa-user"></i><%=u.getFullname()%>
                         </a></li>
                         <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="order.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="<%=request.getContextPath()%>/logout"><i
                                 class="icon fa fa-arrow-circle-o-right"></i>Đăng xuất</a></li>
                         <%} else {%>
@@ -130,14 +130,25 @@
                     <div class="search-area">
                         <form action="seachProduct" method="get">
                             <div class="control-group dropdown">
-                                <input class="search-field dropdown-toggle" data-toggle="dropdown" name="name"
-                                       placeholder="Tìm kiếm...">
+                                <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown"
+                                       name="name" placeholder="Tìm kiếm...">
                                 <a style="height: 44.5px;" class="search-button" href="#"
-                                   onclick="this.parentNode.submit()"></a>
+                                   onclick="searchProduct(event)"></a>
+
+
                             </div>
                         </form>
 
                     </div>
+                    <script>
+                        function searchProduct(event) {
+                            event.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
+                            var keyword = document.getElementById("searchInput").value;
+
+                            // Chuyển hướng đến trang seachProduct.jsp với tham số tìm kiếm
+                            window.location.href = "seachProduct?name=" + encodeURIComponent(keyword);
+                        }
+                    </script>
                     <!-- /.search-area -->
                     <!-- ============================================================= SEARCH AREA : END ============================================================= -->
                 </div>
@@ -166,7 +177,6 @@
                                 <%--                                <div id="cartItemCount" class="basket-item-count">--%>
                                 <%--                                    <span id="cartItemCountValue" class="count">0</span>--%>
                                 <%--                                </div>--%>
-
 
 
                             </div>
@@ -232,28 +242,31 @@
                                 </li>
                                 <li class="active  yamm-fw"><a href="contact.jsp">Liên hệ</a></li>
 
+                                <%
+                                    Boolean role = (Boolean) session.getAttribute("role-acc");
+                                    if (role != null && role) {
+                                %>
+                                <li class="active yamm-fw"><a href="managerproduct.jsp">Quản lí Sản phẩm</a></li>
+                                <%
+                                    }
+                                %>
 
+                                <%--                                <%--%>
 
-                                <li class="active yamm-fw"><a href="managerproduct.jsp">quản lí sp</a></li>
+                                <%--                                    User user = (User) session.getAttribute("kh");--%>
+                                <%--                                    if (user != null) {--%>
 
-<%--                                <%--%>
+                                <%--                                                System.out.println("boxsell: " + user.getboxsell());--%>
+                                <%--                                                System.out.println("username: " + user.getUsername());--%>
 
-<%--                                    User user = (User) session.getAttribute("kh");--%>
-<%--                                    if (user != null) {--%>
+                                <%--                                                if (user.getboxsell() != 0 && user.getUsername() != null) {--%>
+                                <%--                                %>--%>
+                                <%--                                <li class="active yamm-fw"><a href="manager">quản lí sp</a></li>--%>
+                                <%--                                <%--%>
+                                <%--                                                }--%>
+                                <%--                                            }--%>
 
-<%--                                                System.out.println("boxsell: " + user.getboxsell());--%>
-<%--                                                System.out.println("username: " + user.getUsername());--%>
-
-<%--                                                if (user.getboxsell() != 0 && user.getUsername() != null) {--%>
-<%--                                %>--%>
-<%--                                <li class="active yamm-fw"><a href="manager">quản lí sp</a></li>--%>
-<%--                                <%--%>
-<%--                                                }--%>
-<%--                                            }--%>
-
-<%--                                %>--%>
-
-
+                                <%--                                %>--%>
 
 
                             </ul>
@@ -287,7 +300,6 @@
 
                 <div class="sidebar-widget outer-bottom-small wow fadeInUp">
                     <h3 class="section-title">Ưu đãi</h3>
-                    <label for=>01/01/2023 - 20/11/2023</label>
                     <div class="sidebar-widget-body outer-top-xs">
                         <div class="owl-carousel sidebar-carousel special-offer custom-carousel owl-theme outer-top-xs">
 
@@ -663,7 +675,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.jsp"> <img width="95px"
+                                                        <div class="image"><a href="detail?productId=<%= p.getProductId()%>" methods="get"> <img width="95px"
                                                                                                       height="95px"
                                                                                                       src="<%=p.getImage()%>"
                                                                                                       alt="Ảnh sản phẩm">
@@ -677,7 +689,7 @@
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp"><%=p.getProductName()%>
+                                                        <h3 class="name"><a href="detail?productId=<%= p.getProductId()%>" methods="get"><%=p.getProductName()%>
                                                         </a></h3>
                                                         <div class="rating rateit-small"></div>
                                                         <div class="product-price"><span
@@ -699,7 +711,7 @@
                                             <div class="row product-micro-row">
                                                 <div class="col col-xs-5">
                                                     <div class="product-image">
-                                                        <div class="image"><a href="detail.jsp"> <img width="95px"
+                                                        <div class="image"><a href="detail?productId=<%= p.getProductId()%>" methods="get"> <img width="95px"
                                                                                                       height="95px"
                                                                                                       src="<%=p.getImage()%>"
                                                                                                       alt="Ảnh sản phẩm">
@@ -713,7 +725,7 @@
                                                 <!-- /.col -->
                                                 <div class="col2 col-xs-7">
                                                     <div class="product-info">
-                                                        <h3 class="name"><a href="detail.jsp"><%=p.getProductName()%>
+                                                        <h3 class="name"><a href="detail?productId=<%= p.getProductId()%>" methods="get"><%=p.getProductName()%>
                                                         </a></h3>
                                                         <div class="rating rateit-small"></div>
                                                         <div class="product-price"><span
@@ -769,7 +781,6 @@
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs mb-10">
 
 
-
                         <%
 
                             List<Products> products = showProducts.get(0);
@@ -783,7 +794,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.jsp"><img height="189px" width="189px"
+                                        <div class="image"><a href="detail?productId=<%= p.getProductId()%>" methods="get"><img height="189px" width="189px"
                                                                                      src="<%=p.getImage()%>"
                                                                                      alt="Ảnh sản phẩm"></a></div>
 
@@ -792,7 +803,7 @@
 
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.jsp"><%=p.getProductName()%>
+                                        <h3 class="name"><a href="detail?productId=<%= p.getProductId()%>" methods="get"><%=p.getProductName()%>
                                         </a>
                                         </h3>
                                         <div class="rating rateit-small"></div>
@@ -827,7 +838,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.jsp"><img height="189px" width="189px"
+                                        <div class="image"><a href="detail?productId=<%= p.getProductId()%>" methods="get"><img height="189px" width="189px"
                                                                                      src="<%=p.getImage()%>"
                                                                                      alt="Ảnh sản phẩm"></a></div>
                                         <!-- /.image -->
@@ -836,7 +847,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.jsp"><%=p.getProductName()%>
+                                        <h3 class="name"><a href="detail?productId=<%= p.getProductId()%>" methods="get"><%=p.getProductName()%>
                                         </a>
                                         </h3>
                                         <div class="rating rateit-small"></div>
@@ -895,7 +906,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"><a href="detail.jsp"><img width="189px" height="189px"
+                                        <div class="image"><a href="detail?productId=<%= a.getProductId()%>" methods="post"><img width="189px" height="189px"
 
                                                                                      src="<%=a.getImage()%>"
                                                                                      alt="Ảnh sản phẩm"></a>
@@ -906,7 +917,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="detail.jsp"><%=a.getProductName()%>
+                                        <h3 class="name"><a href="detail?productId=<%= a.getProductId()%>" methods="get"><%=a.getProductName()%>
                                         </a>
                                         </h3>
                                         <div class="rating rateit-small"></div>

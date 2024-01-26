@@ -66,7 +66,7 @@
 
                         <li><a href="account.jsp"><i class="icon fa fa-user"></i>Tài khoản</a></li>
                         <li><a href="cart.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="order.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
@@ -106,7 +106,7 @@
                     <!-- ============================================================= SEARCH AREA ============================================================= -->
                     <div class="search-area">
                         <form action="seachProduct" method="get">
-                            <div class="control-group dropdown">
+                            <div class="control-group dropdown" >
                                 <input id="searchInput" class="search-field dropdown-toggle" data-toggle="dropdown"
                                        name="name" placeholder="Tìm kiếm...">
                                 <a style="height: 44.5px;" class="search-button" href="#"

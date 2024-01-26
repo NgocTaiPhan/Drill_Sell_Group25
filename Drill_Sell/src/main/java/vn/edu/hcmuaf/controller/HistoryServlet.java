@@ -1,5 +1,7 @@
 package vn.edu.hcmuaf.controller;
+
 import vn.edu.hcmuaf.bean.Cart;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,41 +10,49 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+@WebServlet("/History")
 
-@WebServlet("/checkOut")
-public class CheckOutController extends HttpServlet {
-
+public class HistoryServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         HttpSession session = request.getSession();
         Map<Integer, Cart> cartMap = (Map<Integer, Cart>) session.getAttribute("cart");
 
         if (cartMap == null || cartMap.isEmpty()) {
-            response.sendRedirect("cart.jsp");
+            request.getRequestDispatcher("order.jsp").forward(request, response);
             return;
         }
 
         String selectedProductsParam = request.getParameter("selectedProducts");
         String[] selectedProducts = selectedProductsParam != null ? selectedProductsParam.split(",") : new String[0];
 
+        // Khởi tạo selectedCartList
+        List<Cart> selectedCartList = new ArrayList<>();
+
         if (selectedProducts != null && selectedProducts.length > 0) {
-            List<Cart> detailedCartList = getSelectedCartItems(cartMap, selectedProducts);
-            session.setAttribute("detailedCartList", detailedCartList);
+            selectedCartList = getSelectedCartItems(cartMap, selectedProducts);
 
-
-            request.getRequestDispatcher("order.jsp").forward(request, response);
-        } else {
-            response.sendRedirect("cart.jsp");
+            // Xóa sản phẩm đã lấy khỏi giỏ hàng
+//            for (String productIdString : selectedProducts) {
+//                if (!productIdString.isEmpty()) {
+//                    try {
+//                        int productId = Integer.parseInt(productIdString);
+//                        cartMap.remove(productId);
+//                    } catch (NumberFormatException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }
         }
 
+        request.setAttribute("selectedCartList", selectedCartList);
+        request.getRequestDispatcher("history.jsp").forward(request, response);
     }
 
-    // Thêm phương thức sau đây vào servlet của bạn
+
     private List<Cart> getSelectedCartItems(Map<Integer, Cart> cartMap, String[] selectedProducts) {
         List<Cart> selectedCartList = new ArrayList<>();
         for (String productIdString : selectedProducts) {
