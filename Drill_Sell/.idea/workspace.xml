@@ -34,28 +34,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
 
     <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/BattteryDrillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/BattteryDrillController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/CheckOutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/CheckOutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/DetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/DetailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/HammerDrillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/HammerDrillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/HandDrillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/HandDrillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/MiniDrillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/MiniDrillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/MoversController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/MoversController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/ZBatteryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/ZBatteryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/ZChargerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/ZChargerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/ZCountersinkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/ZCountersinkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Hand_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Hand_drill.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/account.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/styleCheckOut.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/styleCheckOut.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/battery_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/battery_drill.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/hammer_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/hammer_drill.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/history.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/main/webapp/managerproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/managerproduct.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/mini_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mini_drill.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/movers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movers.jsp" afterDir="false" />
@@ -66,6 +48,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/webapp/seachProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/seachProduct.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/z_battery.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/z_battery.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/z_charger.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/z_charger.jsp" afterDir="false" />
+
 
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -696,6 +679,10 @@
       <workItem from="1706075327545" duration="3609000" />
       <workItem from="1706081236221" duration="55000" />
       <workItem from="1706176683059" duration="6799000" />
+
+      <workItem from="1706250962218" duration="13109000" />
+      <workItem from="1706269078188" duration="2642000" />
+
       <workItem from="1706250962218" duration="12507000" />
 
     </task>
