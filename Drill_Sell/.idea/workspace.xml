@@ -10,6 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành phần Đăng nhập/Đăng kí(gửi mail thử)">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
@@ -31,6 +32,41 @@
       <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/my-js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/my-js/notify.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+
+    <list default="true" id="f2bfb70e-abf7-4322-89d7-ba3ef8b63c9b" name="Changes" comment="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/BattteryDrillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/BattteryDrillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/CheckOutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/CheckOutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/DetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/DetailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/HammerDrillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/HammerDrillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/HandDrillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/HandDrillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/MiniDrillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/MiniDrillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/MoversController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/MoversController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/ZBatteryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/ZBatteryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/ZChargerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/ZChargerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/ZCountersinkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/controller/Category/ZCountersinkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Hand_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Hand_drill.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/account.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/styleCheckOut.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/styleCheckOut.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/battery_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/battery_drill.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/hammer_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/hammer_drill.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/history.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/managerproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/managerproduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/mini_drill.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mini_drill.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/movers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/oder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/order.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/order_details.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/producers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/producers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/seachProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/seachProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/z_battery.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/z_battery.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/z_charger.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/z_charger.jsp" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +77,21 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Filter" />
+
+        <option value="JavaScript File" />
+
         <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Servlet" />
         <option value="Jsp File" />
+
         <option value="Enum" />
+
+        <option value="Jsp File" />
+        <option value="HTML File" />
+        <option value="Servlet" />
+        <option value="JavaScript File" />
+
         <option value="Class" />
       </list>
     </option>
@@ -124,7 +170,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.qodana&quot;,
+
+    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
+
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -143,9 +191,25 @@
       <recent name="D:\WorkSpace\WebPrograming\WebProgramingProject\Drill_Sell\src\main\webapp\user-service" />
     </key>
   </component>
+
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.87">
     <configuration name="EmailService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.EmailService" />
+
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.871">
+    <configuration name="CheckOutService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DetailService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducersService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.ProducersService" />
+
       <module name="Drill_Sell" />
       <extension name="coverage">
         <pattern>
@@ -157,8 +221,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="Mail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.mail.Mail" />
+
+    <configuration name="ProductCategoryService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.serice.ProductCategoryService" />
+
       <module name="Drill_Sell" />
       <extension name="coverage">
         <pattern>
@@ -170,12 +239,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="ProducersService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.ProducersService" />
       <module name="Drill_Sell" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="vn.edu.hcmuaf.service.*" />
+
+    <configuration name="ProductService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.serice.UserService" />
+      <module name="Drill_Sell" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vn.edu.hcmuaf.serice.*" />
+
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -183,8 +266,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="UserService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.UserService" />
+
+    <configuration name="vn.edu.hcmuaf.service.ProductCategoryService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.service.ProductCategoryService" />
+
       <module name="Drill_Sell" />
       <extension name="coverage">
         <pattern>
@@ -228,6 +316,93 @@
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="54666" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Drill_Sell:war" />
+          <artifact name="Drill_Sell:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.871" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.871" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Drill_Sell:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Drill_Sell_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="282b51de-8681-4c05-aaa8-fb03df1d5f05" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53937" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -378,6 +553,7 @@
       </method>
     </configuration>
     <list>
+
       <item itemvalue="Application.UserService" />
       <item itemvalue="Application.EmailService" />
       <item itemvalue="Application.Mail" />
@@ -392,6 +568,30 @@
         <item itemvalue="Application.Mail" />
         <item itemvalue="Application.vn.edu.hcmuaf.service.ProductCategoryService" />
         <item itemvalue="Application.ProducersService" />
+
+      <item itemvalue="Application.ProducersService" />
+      <item itemvalue="Application.ProductCategoryService" />
+      <item itemvalue="Application.UserService" />
+      <item itemvalue="Application.vn.edu.hcmuaf.service.ProductCategoryService" />
+      <item itemvalue="Application.vn.edu.hcmuaf.service.UserService" />
+      <item itemvalue="Application.CheckOutService" />
+      <item itemvalue="Application.ProductService" />
+      <item itemvalue="Application.DetailService" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.87" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.871" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CheckOutService" />
+        <item itemvalue="Application.DetailService" />
+        <item itemvalue="Application.ProductService" />
+        <item itemvalue="Application.vn.edu.hcmuaf.service.UserService" />
+        <item itemvalue="Application.ProducersService" />
+        <item itemvalue="Application.ProductCategoryService" />
+        <item itemvalue="Application.UserService" />
+        <item itemvalue="Application.vn.edu.hcmuaf.service.ProductCategoryService" />
+        <item itemvalue="Tomcat Server.Tomcat 8.5.87" />
+
       </list>
     </recent_temporary>
   </component>
@@ -432,6 +632,23 @@
       <workItem from="1703571862892" duration="22102000" />
       <workItem from="1703999252410" duration="10000" />
       <workItem from="1703999363139" duration="1120000" />
+
+      <workItem from="1704209265680" duration="543000" />
+      <workItem from="1705132365547" duration="19417000" />
+      <workItem from="1705216855096" duration="19694000" />
+      <workItem from="1705419611810" duration="1168000" />
+      <workItem from="1705421007218" duration="3002000" />
+      <workItem from="1705583792120" duration="1815000" />
+      <workItem from="1705673875828" duration="7259000" />
+      <workItem from="1705682172194" duration="7508000" />
+      <workItem from="1705738506588" duration="9263000" />
+      <workItem from="1705756968800" duration="5809000" />
+      <workItem from="1705762794836" duration="3554000" />
+      <workItem from="1705827444774" duration="10006000" />
+      <workItem from="1705838901677" duration="7232000" />
+      <workItem from="1705930971652" duration="5002000" />
+      <workItem from="1705682172194" duration="45000" />
+
       <workItem from="1704209265680" duration="1551000" />
       <workItem from="1704246852482" duration="2648000" />
       <workItem from="1704345058036" duration="28000" />
@@ -444,6 +661,16 @@
       <workItem from="1704772435331" duration="589000" />
       <workItem from="1705043145614" duration="1000" />
       <workItem from="1705079006476" duration="11000" />
+
+      <workItem from="1705640499982" duration="372000" />
+      <workItem from="1705937968405" duration="411000" />
+      <workItem from="1705938391342" duration="10211000" />
+      <workItem from="1705977520011" duration="11967000" />
+      <workItem from="1706022725494" duration="1069000" />
+      <workItem from="1706064362969" duration="17688000" />
+      <workItem from="1706091111628" duration="27526000" />
+      <workItem from="1706155554016" duration="11640000" />
+
       <workItem from="1705640499982" duration="835000" />
       <workItem from="1705641455077" duration="6434000" />
       <workItem from="1705652578135" duration="122000" />
@@ -453,6 +680,7 @@
       <workItem from="1705904824158" duration="7965000" />
       <workItem from="1705935774660" duration="11482000" />
       <workItem from="1705984157284" duration="1942000" />
+
       <workItem from="1706075327545" duration="19218000" />
       <workItem from="1706094677360" duration="309000" />
       <workItem from="1706113518952" duration="6585000" />
@@ -464,6 +692,12 @@
       <workItem from="1706248297375" duration="11136000" />
       <workItem from="1706265390507" duration="1143000" />
       <workItem from="1706267956512" duration="6196000" />
+
+      <workItem from="1706075327545" duration="3609000" />
+      <workItem from="1706081236221" duration="55000" />
+      <workItem from="1706176683059" duration="6799000" />
+      <workItem from="1706250962218" duration="12507000" />
+
     </task>
     <task id="LOCAL-00001" summary="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ">
       <option name="closed" value="true" />
@@ -540,6 +774,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ" />
+
     <MESSAGE value="Push để pull code" />
     <MESSAGE value="Hoàn thành phần Đăng nhập" />
     <MESSAGE value="Hoàn thành phần Đăng nhập/Đăng kí(gửi mail thử)" />
@@ -548,5 +783,23 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+
+    <option name="LAST_COMMIT_MESSAGE" value="Hoàn thành load sản phẩm trong mục Sản phẩm ở Trang chủ" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/service/SearchService.java</url>
+          <line>25</line>
+          <properties class="vn.edu.hcmuaf.service.SearchService" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+
   </component>
 </project>

@@ -380,7 +380,7 @@
 
 
                                         <div class="col-sm-7">
-                                            <a href="oder.jsp" class="btn btn-danger" style="margin-bottom: 10px"><i
+                                            <a href="order.jsp" class="btn btn-danger" style="margin-bottom: 10px"><i
                                                     class="fa fa-check inner-right-vs"></i> Mua ngay</a>
 
 

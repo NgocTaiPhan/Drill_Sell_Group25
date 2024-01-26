@@ -20,7 +20,7 @@ import java.util.Optional;
 public class DetailController extends HttpServlet {
     DetailService detailService = new DetailService();
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Lấy giá trị productId từ tham số trong URL
         String productIdParam = request.getParameter("productId");
 
@@ -41,8 +41,8 @@ public class DetailController extends HttpServlet {
         request.getRequestDispatcher("detail.jsp").forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doPost(request, response);
     }
 
 

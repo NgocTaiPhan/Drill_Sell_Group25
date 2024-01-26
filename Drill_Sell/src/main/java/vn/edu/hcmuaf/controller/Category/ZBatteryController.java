@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.controller;
+package vn.edu.hcmuaf.controller.Category;
 
 import vn.edu.hcmuaf.bean.Products;
 import vn.edu.hcmuaf.service.ProductCategoryService;
