@@ -30,6 +30,7 @@ public class VerityInputCodeController extends HttpServlet {
             user.setVerified(true);
             UserService.getInstance().addUser(user);
         }
+        response.sendRedirect("input-code.jsp?notify=vertifed");
 
 
     }

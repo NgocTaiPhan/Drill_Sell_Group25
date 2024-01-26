@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.controller.register;
 
 import vn.edu.hcmuaf.bean.User;
 import vn.edu.hcmuaf.service.EmailService;
+import vn.edu.hcmuaf.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -115,6 +116,11 @@ public class RegisterController extends HttpServlet {
         if (username == null || username.trim().isEmpty()) {
             response.sendRedirect("login.jsp?notify=null-username");
             return;
+        }else{
+            if (!UserService.getInstance().isUsernameDuplicate(username)){
+                response.sendRedirect("login.jsp?notify=duplicate-acc");
+
+            }
         }
         if (password == null || password.trim().isEmpty()) {
             response.sendRedirect("login.jsp?notify=null-pass");
@@ -140,6 +146,7 @@ public class RegisterController extends HttpServlet {
         HttpSession session = request.getSession();
         session.setAttribute("confirmation", new User(fullName, address, phoneNumber, email, username, password, gender, birthDate, confirmationCode, false, false));
         response.sendRedirect("login.jsp?notify=register-success");
+//        response.sendRedirect("user-service/input-code.jsp");
 
     }
 
