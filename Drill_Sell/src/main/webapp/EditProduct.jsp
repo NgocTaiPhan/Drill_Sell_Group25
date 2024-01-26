@@ -38,8 +38,6 @@
     </div>
 
         <input type="submit" value="Cập nhật">
-
-
 </form>
 
 <%}%>
