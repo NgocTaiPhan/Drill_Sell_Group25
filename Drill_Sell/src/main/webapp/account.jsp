@@ -61,10 +61,12 @@
                 <div class="cnt-account">
                     <ul class="list-unstyled">
                         <%if (u != null) { %>
-                        <li><a href="account.jsp"><i class="icon fa fa-user"></i><%=u.getFullname()%></a></li>
+                        <li><a href="account.jsp"><i class="icon fa fa-user"></i><%=u.getFullname()%>
+                        </a></li>
                         <li><a href="card.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
                         <li><a href="oder.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                        <li><a href="<%=request.getContextPath()%>/logout"><i class="icon fa fa-arrow-circle-o-right"></i>Đăng xuất</a></li>
+                        <li><a href="<%=request.getContextPath()%>/logout"><i
+                                class="icon fa fa-arrow-circle-o-right"></i>Đăng xuất</a></li>
                         <%} else {%>
 
                         <li><a href="login.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
@@ -246,42 +248,6 @@
 
 </header>
 
-<div class="breadcrumb-area">
-    <div class="container">
-        <div class="breadcrumb-content" style="white-space: nowrap">
-            <ul>
-                <li><a href="home.jsp">Trang chủ</a></li>
-                <li class="active">Tài khoản</li>
-            </ul>
-            <style>
-
-                .breadcrumb-area {
-                    height: 15px;
-                    padding-bottom: 50px;
-
-                }
-
-                .breadcrumb-content li {
-                    font-size: 17px;
-                    margin-top: 0;
-                !important;
-                    padding-top: 0;
-                !important;
-                    color: black;
-                }
-
-                .body-content {
-                    margin-top: 0;
-                }
-
-                .myAccount .list li {
-                    padding-bottom: 10px;
-                }
-
-            </style>
-        </div>
-    </div>
-</div>
 
 <div class="body-content outer-top-xs" id="top-banner-and-menu" style="font-size: medium">
     <div class="container">
@@ -357,7 +323,8 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td><div class="btn btn-primary">Thay đổi thông tin</div></td>
+                                                <td><a class="btn btn-primary" href="#change-infor">Thay đổi thông
+                                                    tin</a></td>
                                                 <td>
                                                     <div class="btn btn-primary">Đổi mật khẩu</div>
                                                 </td>
@@ -369,6 +336,81 @@
                                     </div>
                                 </div>
                             </div><!-- /.tab-pane -->
+                            <div id="change-infor" class="tab-pane">
+                                <div class="product-tab">
+                                    <div class="container">
+
+                                        <form action="change-infor-user" method="get">
+                                            <table class="table table-border">
+                                                <thead>
+
+                                                <tr>
+                                                    <td>Tên khách hàng:</td>
+                                                    <td>
+                                                        <input type="text" name="input-fullname"
+                                                               value=" <%=u.getFullname()%>">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tên đăng nhập:</td>
+                                                    <td>
+                                                        <input type="text" name="input-username"
+                                                               value=" <%=u.getUsername()%>">
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email:</td>
+                                                    <td>
+                                                        <input type="text" name="input-email"
+                                                               value=" <%=u.getEmail()%>">
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Giới tính:</td>
+                                                    <td>
+                                                        <input type="text" name="input-phone" value="<%=u.getSex()%>">
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ngày sinh:</td>
+                                                    <td>
+                                                        <input type="date" name="input-date"
+                                                               value=" <%=u.getYearOfBirth()%>">
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Địa chỉ:</td>
+                                                    <td>
+                                                        <input type="text" name="input-address"
+                                                               value="<%=u.getAddress()%>">
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Số điện thoại:
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="input-phone" value="<%=u.getPhone()%>">
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input class="btn btn-primary" value="Thay đổi">
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div id="oder-history" class="tab-pane">
                                 <div class="product-tab container">
@@ -434,29 +476,29 @@
                                 </div><!-- /.product-tab -->
                             </div><!-- /.tab-pane -->
 
-<%--                            <div id="change-password" class="tab-pane">--%>
-<%--                                <div class="product-tag container">--%>
+                            <%--                            <div id="change-password" class="tab-pane">--%>
+                            <%--                                <div class="product-tag container">--%>
 
-<%--                                    <table class="table table-bordered ">--%>
-<%--                                        <thead>--%>
-<%--                                        <tr>--%>
-<%--                                            <th>Số lượng bán ra</th>--%>
-<%--                                            <th>Tổng doan thu</th>--%>
+                            <%--                                    <table class="table table-bordered ">--%>
+                            <%--                                        <thead>--%>
+                            <%--                                        <tr>--%>
+                            <%--                                            <th>Số lượng bán ra</th>--%>
+                            <%--                                            <th>Tổng doan thu</th>--%>
 
-<%--                                        </tr>--%>
-<%--                                        </thead>--%>
-<%--                                        <tbody>--%>
+                            <%--                                        </tr>--%>
+                            <%--                                        </thead>--%>
+                            <%--                                        <tbody>--%>
 
-<%--                                        <tr>--%>
-<%--                                            <td>100</td>--%>
-<%--                                            <td>10.000.000đ</td>--%>
+                            <%--                                        <tr>--%>
+                            <%--                                            <td>100</td>--%>
+                            <%--                                            <td>10.000.000đ</td>--%>
 
-<%--                                        </tr>--%>
-<%--                                        </tbody>--%>
-<%--                                    </table>--%>
+                            <%--                                        </tr>--%>
+                            <%--                                        </tbody>--%>
+                            <%--                                    </table>--%>
 
-<%--                                </div><!-- /.product-tab -->--%>
-<%--                            </div><!-- /.tab-pane -->--%>
+                            <%--                                </div><!-- /.product-tab -->--%>
+                            <%--                            </div><!-- /.tab-pane -->--%>
 
                         </div><!-- /.tab-content -->
                     </div><!-- /.col -->
